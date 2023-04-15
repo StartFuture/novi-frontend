@@ -5,9 +5,19 @@ import LPInicio from '../assets/img/LPInicio.png'
 
 function LandingPageInicio(){
     return (
-        <div className="LP">
-            <img src={LPInicio} alt="Imagem LP Inicio" />
-        </div>
+        <>
+            <header className="LP-header">
+                <div className="LP-navbar">
+                    <img src={LPInicio} alt="Imagem LP Inicio" />
+                    <h4> Noví </h4>
+                    <button> Entrar/Registrar </button>
+                </div>                
+            </header>
+            <div className="LP-banner">
+                <p>Descubra destinos emocionantes para explorar</p>
+                <button> Quero viajar  </button>
+            </div>
+        </>
     )
 }
 

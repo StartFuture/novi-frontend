@@ -1,0 +1,43 @@
+h4 {
+    font-family: 'Audiowide', cursive;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.LP-navbar {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+    z-index: 2;
+}
+
+.LP-navbar h4 {
+    margin-left: 5%;
+}
+
+.LP-navbar button {
+    margin-right: 10%;
+    font-size: 12px;
+}
+
+.LP-header img {
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    width: 12%;
+	height: 14%;
+    padding: 1%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #3BB39D;
+	border-radius: 8px;
+	border: none;
+	color: #FFF;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+}
