@@ -9,21 +9,20 @@ h4 {
     display: flex;
 	justify-content: space-between;
 	align-items: center;
-    z-index: 2;
-}
-
-.LP-navbar h4 {
-    margin-left: 5%;
+    backdrop-filter: blur(50px);
+    max-height: 10vh !important;
 }
 
 .LP-navbar button {
-    margin-right: 10%;
     font-size: 12px;
 }
 
-.LP-header img {
-    width: 100%;
-    height: 100%;
+.LP-header {
+    /* width: 100%; */
+    height: 100vh;
+    background-image: url('../img/LPInicio.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 button {
@@ -40,4 +39,10 @@ button {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 14px;
+}
+
+p {
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
 }
