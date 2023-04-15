@@ -1,0 +1,66 @@
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+a {
+    display: block;
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    color: #3BB29D;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.Footer {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-areas: "Logo Doubts Social-medias";
+    justify-content: space-evenly;
+    background-color: #FFF;
+}
+
+.Social-medias {
+    display: block;
+    margin-top: 1%;    
+}
+
+/*Mobile Query*/
+@media (max-width:480px) {
+    .Footer{
+        display: grid;
+        grid-template-areas: 
+        "Logo"
+        "Doubts"
+        "Social-medias";
+    }
+    .Logo {
+        height: auto;
+    }
+    .Landing-page  {
+        height: auto;
+    }
+}
+
+/*Tablet Query*/
+@media (min-width: 481px) and (max-width:768px) {
+    .tablet {
+        display: none;
+    }
+    .mobile, .desktop {
+        display: block;
+    }
+}
+
+/*Desktop Query
+@media (min-width: 768px) {
+    .desktop {
+        display: none;
+    }
+    .mobile, .tablet {
+        display: block;
+    }
+}
+*/
