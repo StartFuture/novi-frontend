@@ -1,6 +1,8 @@
-p {
+#Novi-description {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    /* color: #000 !important;
+    font-size: 12px !important; */
 }
 
 a {
@@ -18,8 +20,9 @@ a {
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
     grid-template-areas: "Logo Doubts Social-medias";
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #FFF;
+    padding: 0 5%;
 }
 
 .Social-medias {

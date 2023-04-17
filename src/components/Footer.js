@@ -11,7 +11,7 @@ export default function Footer(){
         <div className="Footer">
             <div className="Logo">
                 <NoviLogo />
-                <p>Especialista em viagens personalizada</p>
+                <p id="Novi-description">Especialista em viagens personalizada</p>
             </div>
             <div className="Doubts">
                 <a href="#">Dúvidas frequentes</a>
@@ -21,7 +21,7 @@ export default function Footer(){
             <div className="Social-medias">
                 <img src={Facebook} alt="Icone Facebook" />
                 <img src={Instagram} alt="Icone Instagram" />
-                <img src={Tiktok} alt="=Icone Tiktok" />
+                <img src={Tiktok} alt="Icone Tiktok" />
             </div>
         </div>
     )

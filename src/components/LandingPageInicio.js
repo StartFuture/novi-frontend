@@ -12,8 +12,8 @@ function LandingPageInicio(){
                 </div>
             </header>
             <div className="LP-banner">
-                <p><b>Descubra</b> destinos emocionantes para explorar</p>
-                <button> Quero viajar  </button>
+                <p id="banner-phrase"><b>Descubra</b> destinos emocionantes para explorar</p>
+                <button> Quero viajar > </button>
             </div>
         </div>
     )
