@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../assets/css/landingPageInicio.css'
+import '../assets/css/landingTop.css'
 
 function LandingPageInicio(){
     return (

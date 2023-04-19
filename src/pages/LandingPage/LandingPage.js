@@ -1,12 +1,12 @@
 import React from "react";
 
 import Footer from '../../components/footer.js';
-import LandingPageInicio from '../../components/landingPageInicio.js'
+import LandingTop from '../../components/landingTop.js'
 
 function LandingPage() {
     return (
         <div className='landingPage'>
-          <LandingPageInicio/>
+          <LandingTop/>
           <br/>
           <Footer />
         </div>
