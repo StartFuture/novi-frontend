@@ -4,14 +4,14 @@ import '../assets/css/landingTop.css'
 
 function LandingPageInicio(){
     return (
-        <div className="LpHeader">
+        <div className="LPHeader">
             <header>
-                <div className="LpNavbar">
+                <div className="LPNavbar">
                     <h4 className="noviLogo"> Noví </h4>
                     <button className="entrarRegistrar"> Entrar/Registrar </button>
                 </div>
             </header>
-            <div className="LpBanner">
+            <div className="LPBanner">
                 <p id="bannerPhrase"><b>Descubra</b> destinos emocionantes para explorar</p>
                 <button> Quero viajar > </button>
             </div>
