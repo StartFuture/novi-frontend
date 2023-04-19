@@ -1,4 +1,4 @@
-#Novi-description {
+#noviDescription {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     /* color: #000 !important;
@@ -16,44 +16,50 @@ a {
     font-size: 14px;
 }
 
-.Footer {
+.footer {
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-areas: "Logo Doubts Social-medias";
+    grid-template-areas: "logo doubts socialMedias";
     justify-content: space-between;
     background-color: #FFF;
     padding: 0 5%;
 }
 
-.Social-medias {
+.socialMedias {
     display: block;
     margin-top: 1%;
 }
 
 /*Mobile Query*/
 @media (max-width:480px) {
-    .Footer{
+    .footer{
         display: grid;
         grid-template-areas: 
-        "Logo"
-        "Doubts"
-        "Social-medias";
+        "logo"
+        "doubts"
+        "socialMedias";
+        grid-gap: 1rem;
     }
-    .Logo {
+    .logo {
         height: auto;
     }
-    .Landing-page  {
+    .landingPage  {
         height: auto;
     }
 }
 
 /*Tablet Query*/
 @media (min-width: 481px) and (max-width:768px) {
-    .tablet {
-        display: none;
+    .footer{
+        display: grid;
+        grid-template-areas: 
+        "logo"
+        "doubts"
+        "socialMedias";
+        grid-gap: 2rem;
     }
-    .mobile, .desktop {
-        display: block;
+    a,p {
+        font-size: 18px;
     }
 }
 
