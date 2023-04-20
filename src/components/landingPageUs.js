@@ -19,7 +19,7 @@ function LandingPageUs(){
                     odio, et molestie elit blandit in.
                 </p>
             </div>
-                <img className="LpUsUs" src={LpUs} alt="Nossa Imagem"/>
+                <img className="LpOurImage" src={LpUs} alt="Nossa Imagem"/>
                 <div className="LpBackgroundUs"/>
         </div>
     )

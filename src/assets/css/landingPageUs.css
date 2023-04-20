@@ -1,12 +1,13 @@
 .LPUs {
     display: grid;
     grid-template-columns: auto 4rem 1rem;
-    grid-template-areas: "LpUsText LpUsUs LpBackgroundUs";
+    grid-template-areas: "LpUsText LpOurImage LpBackgroundUs";
     align-items: center;
     /* grid-gap: 10rem; */
-    padding: 0 5%;
+    padding: 7% 5%;
     background-color: #FFF;
     max-width: 55%;
+    /* height: 300%; */
 }
 
 .h4AboutUs {
@@ -29,9 +30,10 @@
     width: 70%;
 }
 
-.LpUsUs {
+.LpOurImage {
     width: 70vh;
     height: 70vh;
+    z-index: 1;
 }
 
 .LpBackgroundUs {
@@ -39,7 +41,10 @@
     background-color: #318269;
     height: 70vh;
     width: 88.4vh;
+    /* width: 48.4vh; */
     opacity: .9;
-    position: relative;
-    z-index: 100;
+    position: absolute;
+    left: 75%;
+    bottom: 20%;
+
 }
