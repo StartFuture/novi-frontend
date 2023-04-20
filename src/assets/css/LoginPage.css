@@ -1,11 +1,12 @@
 :root {
     --primary-color: #3BB29D;
+    --secondary-color: #415580;
 }
 
 * { 
     margin: 0;
     padding: 0;
-    font-family: audiowide, montserrat;
+    font-family: 'Montserrat';
 }
 
 .login {
@@ -22,10 +23,17 @@
     max-width: 350px;
 }
 
+.logo h1{
+    width: 145px;
+    height: 50px;
+    font-family: 'Audiowide', cursive;
+    color: var(--primary-color);
+}
+
 .loginFields {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .loginFields label {
@@ -33,28 +41,36 @@
 }
 
 .loginFields input {
-    width: 100%;
+    max-width: 100%;
     line-height: 2rem;
     font-size: 0.9rem;
+    border: 1px solid #c1c1c1;
+    outline: none;
+    padding-left: 5px;
+}
+
+#loginPassword {
+    border: none;
+    width: 100%;
 }
 
 .passwordContent {
     display: flex;
+    border: 1px solid #c1c1c1;
 }
-
-/* .showHidePassword {
-    position: absolute;
-} */
 
 .showHidePassword svg {
     height: 20px;
     width: 20px;
+    margin: 5px;
+    color: #c1c1c1;
 }
 
 .loginSubmit {
     padding: 12px 24px;
     gap: 8px;
     width: 100%;
+    border: none;
     border-radius: 8px;
     color: white;
     background-color: var(--primary-color);

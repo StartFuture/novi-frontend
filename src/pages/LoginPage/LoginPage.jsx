@@ -57,7 +57,7 @@ const LoginPage = () => {
     <div className="login">
       <form action="" className="loginForm" onSubmit={handleSubmit}>
         <div className="logo">
-          <h1>NOVÍ</h1>
+          <h1>Noví</h1>
         </div>
         <div className="loginFields">
           <label htmlFor="email">Email</label>
