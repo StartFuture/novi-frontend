@@ -11,7 +11,7 @@
 	align-items: center;
     backdrop-filter: blur(10px);
     max-height: 10vh !important;
-    padding: 0 5%;
+    padding: 1% 5%;
     /* opacity: 0.3;
     background-color: rgb(0 0 0 / .8);; */
 }
@@ -45,10 +45,19 @@
 	font-size: 1rem;
 }
 
+.LPBanner .btnLandingPage {
+    margin-top: 1.5%;
+}
+
 #bannerPhrase {
     color: #FFF;
     font-family: 'Montserrat', sans-serif;
     font-size: 64px;
     max-width: 70vh;
     margin-top: 10%;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
 }

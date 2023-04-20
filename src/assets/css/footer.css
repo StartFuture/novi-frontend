@@ -1,8 +1,14 @@
 #noviDescription {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    margin-top: 5%;
+    font-size: 16px;
     /* color: #000 !important;
     font-size: 12px !important; */
+}
+
+.doubts {
+    margin-top: 5%;
 }
 
 .doubts a {
@@ -13,7 +19,7 @@
     color: #3BB29D;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .footer {
@@ -46,6 +52,14 @@
     .landingPage  {
         height: auto;
     }
+
+    #noviDescription {
+        font-size: 14px;
+    }
+
+    .doubts a {
+        font-size: 12px;
+    }
 }
 
 /*Tablet Query*/
@@ -57,9 +71,6 @@
         "doubts"
         "socialMedias";
         grid-gap: 2rem;
-    }
-   .dobuts  a,p {
-        font-size: 18px;
     }
 }
 
