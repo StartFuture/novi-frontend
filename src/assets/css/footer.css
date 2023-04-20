@@ -5,7 +5,7 @@
     font-size: 12px !important; */
 }
 
-a {
+.doubts a {
     display: block;
     border: none;
     background-color: white;
@@ -58,7 +58,7 @@ a {
         "socialMedias";
         grid-gap: 2rem;
     }
-    a,p {
+   .dobuts  a,p {
         font-size: 18px;
     }
 }
