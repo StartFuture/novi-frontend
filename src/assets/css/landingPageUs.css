@@ -3,11 +3,15 @@
     grid-template-columns: auto 4rem 1rem;
     grid-template-areas: "LpUsText LpOurImage LpBackgroundUs";
     align-items: center;
+    justify-content: center;
     /* grid-gap: 10rem; */
-    padding: 7% 5%;
+    padding: 10% 5%;
     background-color: #FFF;
-    max-width: 55%;
     /* height: 300%; */
+}
+
+.LpUsText {
+    max-width: 55%;
 }
 
 .h4AboutUs {
@@ -31,17 +35,20 @@
 }
 
 .LpOurImage {
+    position: absolute;
     width: 70vh;
     height: 70vh;
+    left: 55%;
+    top: 15%;
     z-index: 1;
 }
 
 .LpBackgroundUs {
     background-image: url('../img/LpBackgroundUs.png');
-    background-color: #318269;
+    background-color: #3BB29D;
     height: 70vh;
-    width: 88.4vh;
-    /* width: 48.4vh; */
+    /* width: 88.4vh; */
+    width: 49.8vh;
     opacity: .9;
     position: absolute;
     left: 75%;
