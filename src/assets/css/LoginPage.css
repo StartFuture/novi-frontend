@@ -49,6 +49,10 @@
     padding-left: 5px;
 }
 
+.loginFields small { 
+    margin-top: 5px;
+}
+
 #loginPassword {
     border: none;
     width: 100%;
@@ -57,12 +61,12 @@
 .passwordContent {
     display: flex;
     border: 1px solid #c1c1c1;
+    cursor: pointer;
 }
 
-.showHidePassword svg {
-    height: 20px;
-    width: 20px;
-    margin: 5px;
+.showHidePassword h4 {
+    margin: 5.5px;
+    font-size: 1.3rem;
     color: #c1c1c1;
 }
 
@@ -75,4 +79,5 @@
     color: white;
     background-color: var(--primary-color);
     font-size: 16px;
+    cursor: pointer;
 }
