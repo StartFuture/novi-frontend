@@ -1,6 +1,45 @@
 .LPUs {
-    
+    display: grid;
+    grid-template-columns: auto 4rem 1rem;
+    grid-template-areas: "LpUsText LpUsUs LpBackgroundUs";
+    align-items: center;
+    /* grid-gap: 10rem; */
+    padding: 0 5%;
+    background-color: #FFF;
+    max-width: 55%;
 }
-.descriptionUs {
 
+.h4AboutUs {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #000;
+    font-size: 14px;
+}
+
+.LogoNoviUs {
+    width: 40%;
+    height: 40%;
+}
+
+.descriptionUs {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 7%;
+    width: 70%;
+}
+
+.LpUsUs {
+    width: 70vh;
+    height: 70vh;
+}
+
+.LpBackgroundUs {
+    background-image: url('../img/LpBackgroundUs.png');
+    background-color: #318269;
+    height: 70vh;
+    width: 88.4vh;
+    opacity: .9;
+    position: relative;
+    z-index: 100;
 }

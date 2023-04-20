@@ -7,7 +7,7 @@ import LandingPageUs from '../../components/landingPageUs.js'
 function LandingPage() {
     return (
         <div className='Landing-page'>
-          <LandingPageInicio/>
+          {/* <LandingPageInicio/> */}
           <br/>
           <LandingPageUs/>
           <br/>
