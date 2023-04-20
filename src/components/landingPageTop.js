@@ -1,8 +1,8 @@
 import React from "react";
 
-import '../assets/css/landingTop.css'
+import '../assets/css/landingPageTop.css'
 
-function LandingPageInicio(){
+function LandingPageTop(){
     return (
         <div className="LPHeader">
             <header>
@@ -19,4 +19,4 @@ function LandingPageInicio(){
     )
 }
 
-export default LandingPageInicio;
+export default LandingPageTop;

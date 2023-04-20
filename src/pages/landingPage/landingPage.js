@@ -1,7 +1,7 @@
 import React from "react";
 
 import Footer from '../../components/footer.js';
-import LandingTop from '../../components/landingTop.js'
+import LandingTop from '../../components/landingPageTop.js'
 
 function LandingPage() {
     return (

@@ -1,6 +1,6 @@
 import './App.css';
 
-import LandingPage from './pages/LandingPage/LandingPage.js'
+import LandingPage from './pages/landingPage/landingPage.js'
 
 import './assets/css/fonts.css';
 
