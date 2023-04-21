@@ -7,6 +7,13 @@
     font-size: 12px !important; */
 }
 
+.footer .logo h1 {
+    color: #3BB29D;
+    font-family: 'Audiowide', cursive;
+    font-weight: 400;
+    font-size: 48px;
+}
+
 .doubts {
     margin-top: 5%;
 }
