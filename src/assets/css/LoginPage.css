@@ -29,7 +29,6 @@
 }
 
 .loginImage p {
-    font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     color: #FFF;
     font-weight: 700;
@@ -42,19 +41,24 @@
 }
 
 .loginForm {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    min-height: inherit;
-    max-width: 350px;
+    min-height: inherit; */
+    padding: 0% 4%;
 }
 
-.logo h1{
-    width: 145px;
-    height: 50px;
+.loginLogo {
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+
+.loginLogo h1{
     font-family: 'Audiowide', cursive;
     color: var(--primary-color);
+    font-size: 40px;
+    font-weight: 100
 }
 
 .loginFields {
@@ -68,12 +72,15 @@
 }
 
 .loginFields input {
+    padding-left: 5px;
+    width: 70vh;
     max-width: 100%;
+    height: 40px;
     line-height: 2rem;
+    font-weight: 400;
     font-size: 0.9rem;
     border: 1px solid #c1c1c1;
     outline: none;
-    padding-left: 5px;
 }
 
 .loginFields small { 
@@ -98,13 +105,87 @@
 }
 
 .loginSubmit {
-    padding: 12px 24px;
-    gap: 8px;
+    padding: 2.5% 5%;
     width: 100%;
     border: none;
     border-radius: 8px;
     color: white;
     background-color: var(--primary-color);
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
+}
+
+#btnForgotPassword {
+    border: none;
+    background-color: #FFF;
+    padding: 0px 0px 3% 0px;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.loginNewAccountSubmit {
+    padding: 2.5% 5%;
+    margin-top: 1vh;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #FFF;
+    color: #3BB29D;
+    font-weight: 500;
+}
+
+.loginOtherOption {
+    margin: 4vh 0;
+}
+
+.loginOtherOptionText {
+    color: #252525;
+    font-weight: 400;
+    font-size: .9rem;
+    margin: 100vh 0;
+}
+
+.loginOtherOptionText::before, .loginOtherOptionText::after {
+    content: '';
+    border-bottom: solid 1px #C1C1C1;
+    width: 28vh;
+    display: inline-block;
+    transform: translateY(-.2rem);
+}
+
+.loginFacebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    padding: 2.5% 5%;
+    margin-top: 3vh;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #4E64A0;
+    color: #FFF;
+    font-weight: 500;
+}
+
+.loginGoogle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    padding: 2.5% 5%;
+    margin-top: 2vh;
+    width: 100%;
+    border: 1px solid #252525;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #FFF;
+    color: #252525;
+    font-weight: 500;
 }
