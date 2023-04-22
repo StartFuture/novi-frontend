@@ -1,4 +1,44 @@
+:root {
+    --primary-color: #3BB29D;
+    --secondary-color: #415580;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+.lpCommentsContainer { 
+    display: block;
+    max-width: 100%;
+}
+
+.lpCommentsContent { 
+    display: flex;
+    list-style: none;
+}
+
+.lpCommentsCards {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 1rem;
+    padding: 10px;
+    border: 1px solid #c1c1c1;
+    font-size: 10px;
+}
+
+.lpCommentsCards #commentsCardsGrid1 { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lpCommentsCards #commentsGrid1ImgName { 
+    display: flex;
+}
+
+.lpCommentsCards #cardImg { 
+    margin-right: 1rem;
 }
