@@ -17,7 +17,10 @@
 
 .lpCommentsContent { 
     display: flex;
+    padding: 24px;
+    gap: 21px;
     list-style: none;
+    justify-content: space-between;
 }
 
 .lpCommentsCards {
@@ -25,20 +28,49 @@
     grid-template-rows: 1fr 1fr;
     margin: 1rem;
     padding: 10px;
+    width: 650px;
+    height: 160px;
     border: 1px solid #c1c1c1;
+    border-radius: 10px;
     font-size: 10px;
 }
 
 .lpCommentsCards #commentsCardsGrid1 { 
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .lpCommentsCards #commentsGrid1ImgName { 
     display: flex;
 }
 
-.lpCommentsCards #cardImg { 
+.lpCommentsCards #cardImg {
+    display: flex; 
+    margin-bottom: 1rem;
     margin-right: 1rem;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #c1c1c1;
+}
+
+.lpCommentsCards #cardName {
+    margin-top: 1rem;
+}
+
+.lpCommentsCards #cardStars {
+    display: flex;
+    padding: 1rem;
+    color: var(--primary-color);
+}
+
+.lpCommentsCards #cardStars h4{
+    font-size: 1rem;
+}
+
+.lpCommentsCards #cardComment {
+    padding: 8px;
+    font-size: 10px;
 }
