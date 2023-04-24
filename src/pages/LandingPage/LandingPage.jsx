@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import Api from "../../services/Api";
 import ShowComment from "../../components/showComment";
 
-import Footer from "../../components/footer.js";
-import LandingTop from "../../components/landingPageTop.js";
+import Footer from "../../components/footer";
+import LandingPageUs from "../../components/landingPageUs"
+import LandingTop from "../../components/landingPageTop";
 import "../../assets/css/LandingPage.css";
 
 
@@ -24,6 +25,9 @@ function LandingPage() {
     <div className="landingPage">
       <div>
         <LandingTop />
+      </div>
+      <div>
+        <LandingPageUs/>
       </div>
       <div className="lpCommentsContainer">
         <ShowComment comments={comments} />
