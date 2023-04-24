@@ -56,6 +56,11 @@
     background-color: #c1c1c1;
 }
 
+.lpCommentsCards #cardNamePerfil { 
+    display: flex;
+    flex-direction: column;
+}
+
 .lpCommentsCards #cardName {
     margin-top: 1rem;
 }
