@@ -3,6 +3,9 @@ import validator from "validator";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import "../../assets/css/LoginPage.css";
 
+import Facebook from '../../assets/svg/facebookIcon.svg';
+import Google from '../../assets/svg/googleIcon.svg';
+
 const LoginPage = () => {
   //Variables, constants, getters and setter
   const [email, setEmail] = useState("");
@@ -63,7 +66,7 @@ const LoginPage = () => {
       </div>
       
       <form action="" className="loginForm" onSubmit={handleSubmit}>
-        <div className="logo">
+        <div className="loginLogo">
           <h1>Noví</h1>
         </div>
         <div className="loginFields">
@@ -100,7 +103,14 @@ const LoginPage = () => {
           </div>
           <small>{passwordError}</small>
         </div>
+        <button id="btnForgotPassword">Esqueci minha senha</button>
         <input className="loginSubmit" type="submit" value="Entrar" />
+        <input className="loginNewAccountSubmit" type="submit" value="Registre-se" />
+        <div className="loginOtherOption">
+            <span className="loginOtherOptionText"> Ou entre com </span>
+        </div>
+        <button className="loginFacebook" type="submit"><img src={Facebook} alt="Icone Facebook"/> Entrar com Facebook</button>
+        <button className="loginGoogle" type="submit"><img src={Google} alt="Icone Google"/> Entrar com Google</button>
       </form>
     </div>
   );
