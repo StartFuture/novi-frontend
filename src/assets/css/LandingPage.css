@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #3BB29D;
+    --secondary-color: #415580;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+.lpCommentsContainer { 
+    display: block;
+    max-width: 100%;
+}
+
+.lpCommentsContent { 
+    display: flex;
+    padding: 24px;
+    gap: 21px;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.lpCommentsCards {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 1rem;
+    padding: 10px;
+    width: 650px;
+    height: 160px;
+    border: 1px solid #c1c1c1;
+    border-radius: 10px;
+    font-size: 10px;
+}
+
+.lpCommentsCards #commentsCardsGrid1 { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.lpCommentsCards #commentsGrid1ImgName { 
+    display: flex;
+}
+
+.lpCommentsCards #cardImg {
+    display: flex; 
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #c1c1c1;
+}
+
+.lpCommentsCards #cardNamePerfil { 
+    display: flex;
+    flex-direction: column;
+}
+
+.lpCommentsCards #cardName {
+    margin-top: 1rem;
+}
+
+.lpCommentsCards #cardStars {
+    display: flex;
+    padding: 1rem;
+    color: var(--primary-color);
+}
+
+.lpCommentsCards #cardStars h4{
+    font-size: 1rem;
+}
+
+.lpCommentsCards #cardComment {
+    padding: 8px;
+    font-size: 10px;
+}
