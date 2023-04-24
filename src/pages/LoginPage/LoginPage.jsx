@@ -56,6 +56,12 @@ const LoginPage = () => {
   //HTML structure
   return (
     <div className="login">
+      <div className="loginImage">
+        <div className="loginImageBackground">
+        </div>
+        <p>Deixe sua viagem com a gente! #sóvai</p>
+      </div>
+      
       <form action="" className="loginForm" onSubmit={handleSubmit}>
         <div className="logo">
           <h1>Noví</h1>
