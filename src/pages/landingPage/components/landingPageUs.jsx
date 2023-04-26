@@ -2,7 +2,7 @@ import React from "react";
 
 import '../assets/css/landingPageUs.css'
 import LogoNoviUs from '../assets/img/LogoNoviUs.png'
-import LpUs from '../assets/img/LpUs.png'
+import LpUs from '../assets/img/lpUs.png'
 
 
 function LandingPageUs(){

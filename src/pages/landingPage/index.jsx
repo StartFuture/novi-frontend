@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Api from "../../services/Api";
-import ShowComment from "../../components/showComment";
+import ShowComment from "./components/showComment";
 
 import Footer from "../../components/footer";
-import LandingPageUs from "../../components/landingPageUs"
-import LandingTop from "../../components/landingPageTop";
-import "../../assets/css/LandingPage.css";
+import LandingPageUs from "./components/landingPageUs"
+import LandingTop from "./components/landingPageTop";
+import "./assets/css/landingPage.css";
 
 
 function LandingPage() {
