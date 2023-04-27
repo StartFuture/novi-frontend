@@ -1,0 +1,16 @@
+.background-image {position: absolute;
+top: 0;
+left: 0;
+z-index: 1;}
+
+.arrow-icon {position: absolute;
+    top: 80px;
+    left: 170px;
+z-index: 2;
+color: white;}
+
+.p-back-to-login {position: absolute;
+    top: 80px;
+    left: 210px;
+z-index: 3;
+color: white;}

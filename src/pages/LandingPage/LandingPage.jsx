@@ -6,6 +6,7 @@ import Footer from "../../components/footer";
 import LandingPageUs from "../../components/landingPageUs"
 import LandingTop from "../../components/landingPageTop";
 import "../../assets/css/LandingPage.css";
+import Carrosel from "../../components/carrosel";
 
 
 function LandingPage() {
@@ -25,6 +26,9 @@ function LandingPage() {
     <div className="landingPage">
       <div>
         <LandingTop />
+      </div>
+      <div>
+        <Carrosel />
       </div>
       <div>
         <LandingPageUs/>
