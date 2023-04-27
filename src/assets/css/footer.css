@@ -1,15 +1,14 @@
+@import url("./novi.css");
+
 #noviDescription {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     margin-top: 5%;
     font-size: 16px;
-    /* color: #000 !important;
-    font-size: 12px !important; */
 }
 
 .footer .logo h1 {
-    color: #3BB29D;
-    font-family: 'Audiowide', cursive;
+    color: var(--primary-color);
+    font-family: var(--font-family-audiowide), cursive;
     font-weight: 400;
     font-size: 48px;
 }
@@ -23,15 +22,13 @@
     border: none;
     background-color: white;
     text-decoration: underline;
-    color: #3BB29D;
-    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
     font-weight: 700;
     font-size: 16px;
 }
 
 .footer {
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
     grid-template-areas: "logo doubts socialMedias";
     justify-content: space-between;
     background-color: #FFF;

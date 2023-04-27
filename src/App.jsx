@@ -1,5 +1,3 @@
-import './App.css';
-
 import './assets/css/fonts.css';
 import AppRoutes from './AppRoutes';
 

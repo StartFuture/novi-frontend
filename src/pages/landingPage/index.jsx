@@ -22,7 +22,7 @@ function LandingPage() {
   console.log(comments);
 
   return (
-    <div className="landingPage">
+    <div className="lp">
       <div>
         <LandingTop />
       </div>

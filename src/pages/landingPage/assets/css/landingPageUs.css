@@ -1,3 +1,5 @@
+@import url("../../../../assets/css/novi.css");
+
 .LPUs {
     display: grid;
     grid-template-columns: auto 4rem 1rem;
@@ -14,21 +16,19 @@
 }
 
 .h4AboutUs {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #000;
     font-size: 16px;
 }
 
 #noviLogoUs {
-    font-family: 'Audiowide', cursive;
-    color: #3BB29D;
+    font-family: var(--font-family-audiowide), cursive;
+    color: var(--primary-color);
     font-size: 120px;
     font-weight: 400;
 }
 
 .descriptionUs {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
     margin-top: 3%;
@@ -46,7 +46,7 @@
 
 .LpBackgroundUs {
     background-image: url('../img/lpBackgroundUs.png');
-    background-color: #3BB29D;
+    background-color: var(--primary-color);
     height: 70vh;
     /* width: 88.4vh; */
     width: 51.2vh;

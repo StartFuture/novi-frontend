@@ -1,14 +1,8 @@
-:root {
-    --primary-color: #3BB29D;
-    --secondary-color: #415580;
-}
+@import url("../../../../assets/css/novi.css");
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat';
-}
+.lp {
+    background-color: #F3F3F3;
+  }
 
 .lpCommentsContainer { 
     display: block;
@@ -30,7 +24,7 @@
     padding: 10px;
     width: 650px;
     height: 160px;
-    border: 1px solid #c1c1c1;
+    border: 1px solid var(--light-gray-color);
     border-radius: 10px;
     font-size: 10px;
 }
@@ -53,7 +47,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: #c1c1c1;
+    background-color: var(--light-gray-color);
 }
 
 .lpCommentsCards #cardNamePerfil { 
