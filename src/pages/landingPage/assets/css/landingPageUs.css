@@ -15,21 +15,23 @@
 
 .h4AboutUs {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-.LogoNoviUs {
-    width: 40%;
-    height: 40%;
+#noviLogoUs {
+    font-family: 'Audiowide', cursive;
+    color: #3BB29D;
+    font-size: 120px;
+    font-weight: 400;
 }
 
 .descriptionUs {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    margin-top: 7%;
+    margin-top: 3%;
     width: 70%;
 }
 

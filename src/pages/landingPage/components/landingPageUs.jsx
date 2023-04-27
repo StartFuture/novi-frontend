@@ -1,7 +1,6 @@
 import React from "react";
 
 import '../assets/css/landingPageUs.css'
-import LogoNoviUs from '../assets/img/LogoNoviUs.png'
 import LpUs from '../assets/img/lpUs.png'
 
 
@@ -10,7 +9,7 @@ function LandingPageUs(){
         <div className="LPUs">
             <div className="LpUsText">
                 <h4 className="h4AboutUs">Quem somos nós</h4>
-                <img className="LogoNoviUs" src={LogoNoviUs} alt="Logo Novi"/>
+                <h1 id="noviLogoUs"> Noví </h1>
                 <p className="descriptionUs">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur et arcu a ullamcorper.
                     Morbi fringilla purus quis eros pharetra sollicitudin et in quam. Nam quis rhoncus ipsum, ac varius nibh.
