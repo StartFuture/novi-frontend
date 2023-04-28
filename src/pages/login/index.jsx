@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import validator from "validator";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
-import "../../assets/css/LoginPage.css";
+import "./assets/css/login.css";
 
-import Facebook from '../../assets/svg/facebookIcon.svg';
-import Google from '../../assets/svg/googleIcon.svg';
+import Facebook from './assets/svg/LoginFacebookIcons.svg';
+import Google from './assets/svg/LoginGoogleIcon.svg';
 
 const LoginPage = () => {
   //Variables, constants, getters and setter
