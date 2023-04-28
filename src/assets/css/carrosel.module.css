@@ -62,6 +62,7 @@ width: 1000px;}
 .img-size {height: 421px;
 width: 391px;}
 
-.carousel .thumb {width: 80% !important;
-height: 430px !important ;}
+.thumbs.animated {display: none;}
+
+
 
