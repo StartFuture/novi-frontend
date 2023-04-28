@@ -73,3 +73,153 @@
     padding: 8px;
     font-size: 10px;
 }
+
+/*Mobile Query*/
+@media (max-width:480px) {
+
+    .LPNavbar .btnLandingPage {
+        display: none;
+    }
+
+    .LPBanner .btnLandingPage {
+        width: 40%;
+        height: 14%;
+        padding: 3%;
+        font-size: .8rem;
+        margin-top: 5%;
+    }
+
+    .LPHeader {
+        height: 50vh;
+        background-image: url('../img/lpTopBackground.png');
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-position: center 0;
+    }    
+    
+    #bannerPhrase {
+        color: #FFF;
+        font-size: 32px;
+        max-width: 40vh;
+        margin-top: 10%;
+    }
+
+    .LPUs {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "LpUsText"
+        "LpOurImage"
+        "LpBackgroundUs";
+        height: 100vh;
+        width: 100vh;
+        /* height: 160vh;
+        max-height: 100vh;
+        max-width: 10vh; */
+    }
+
+    .h4AboutUs {
+        font-size: 14px;
+    }
+
+    #noviLogoUs {
+        font-size: 80px;
+    }
+
+    .LpUsText {
+        max-width: 100%;
+    }
+
+    .descriptionUs {
+        margin-bottom: 10%;
+        width: 50vh;
+        position: relative;
+    }
+
+    .LpOurImage {
+        position: relative;
+        width: 40vh;
+        height: 40vh;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .LpBackgroundUs {
+        position: relative;
+        width: 33.4vh;
+        height: 40vh;
+        left: 20%;
+        bottom: 95%;
+    }
+    
+}
+
+/*Tablet Query*/
+@media (min-width: 481px) and (max-width:768px) {
+    .LPNavbar .btnLandingPage {
+        display: none;
+    }
+
+    .LPBanner .btnLandingPage {
+        width: 20%;
+        height: 14%;
+        padding: 1%;
+        font-size: .8rem;
+    }
+
+    #bannerPhrase {
+        color: #FFF;
+        font-size: 32px;
+        max-width: 70vh;
+        margin-top: 10%;
+    }
+    .LPHeader {
+        height: 60vh;
+    }
+
+    .LPUs {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "LpUsText"
+        "LpOurImage"
+        "LpBackgroundUs";
+        height: 160vh;
+        width: 108vh;
+    }
+
+    .LpUsText {
+        max-width: 100%;
+    }
+
+    .descriptionUs {
+        margin-bottom: 10%;
+        width: 100vh;
+        position: relative;
+    }
+
+    .LpOurImage {
+        position: relative;
+        width: 90vh;
+        height: 90vh;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .LpBackgroundUs {
+        position: relative;
+        width: 81vh;
+        height: 85vh;
+        left: 30%;
+        bottom: 95%;
+    }
+
+    #noviLogoUs {
+        font-size: 100px;
+    }
+
+}
