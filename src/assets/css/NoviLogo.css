@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #3BB29D;
+    --secondary-color: #415580;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#noviLogo { 
+    font-family: "Audiowide";
+    color: var(--primary-color);
+    font-size: 3rem;
+}
