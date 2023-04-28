@@ -1,9 +1,9 @@
 import React from "react";
 
 import '../assets/css/footer.css';
-import Facebook from '../assets/svg/facebook.svg';
-import Instagram from '../assets/svg/instagram.svg';
-import Tiktok from '../assets/svg/tiktok.svg';
+import Facebook from '../assets/svg/facebookFooterIcon.svg';
+import Instagram from '../assets/svg/instagramFooterIcon.svg';
+import Tiktok from '../assets/svg/tiktokFooterIcon.svg';
 
 export default function Footer(){
     return (

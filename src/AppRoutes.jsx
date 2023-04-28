@@ -5,9 +5,9 @@ import {
     Navigate
 } from "react-router-dom";
 
-import LandingPage from "./pages/LandingPage/LandingPage";
-import LoginPage from "./pages/LoginPage/LoginPage";
-import TermsConditionsPage from "./pages/TermsConditionsPage";
+import LandingPage from "./pages/landingPage/index";
+import LoginPage from "./pages/login/index";
+import TermsConditionsPage from "./pages/termsConditionsPage/index";
 
 const AppRoutes = () => {
     return (
