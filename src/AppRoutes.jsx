@@ -7,7 +7,7 @@ import {
 
 import LandingPage from "./pages/landingPage/index";
 import LoginPage from "./pages/login/index";
-import TermsConditionsPage from "./pages/termsConditionsPage/index";
+import TermsConditionsPage from "./pages/termsConditions/index";
 
 const AppRoutes = () => {
     return (
