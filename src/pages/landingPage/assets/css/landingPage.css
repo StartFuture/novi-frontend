@@ -128,12 +128,12 @@
     }
 
     .LpUsText {
-        max-width: 100%;
+        max-width: 100vh;
     }
 
     .descriptionUs {
         margin-bottom: 10%;
-        width: 50vh;
+        width: 40vh;
         position: relative;
     }
 
@@ -148,7 +148,7 @@
 
     .LpBackgroundUs {
         position: relative;
-        width: 33.4vh;
+        width: 52vw;
         height: 40vh;
         left: 20%;
         bottom: 95%;
@@ -212,7 +212,7 @@
 
     .LpBackgroundUs {
         position: relative;
-        width: 81vh;
+        width: 65vw;
         height: 85vh;
         left: 30%;
         bottom: 95%;
