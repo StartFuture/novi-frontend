@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import  "../assets/css/NoviLogo.css";
+import  "../assets/css/noviLogo.css";
 
-export default class  extends Component {
+export default class noviLogo extends Component {
   render() {
     return (
       <h1 id="noviLogo">Noví</h1>

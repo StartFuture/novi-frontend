@@ -1,18 +1,21 @@
 import React from "react";
 
-import ButtonToLogin from "./components/buttonToLogin";
+import {Container} from "./styles";
+import ButtonToLogin from "./components/buttonToLogin/index";
 import NoviLogo from "../../components/noviLogo";
-import Form from "./components/form";
+import Form from "./components/form/index";
 
 function TermsConditionsPage() {
   return (
-    <div>
-      <div>
-        <ButtonToLogin />
-        <NoviLogo />
-      </div>
-      <Form />
-    </div>
+      <Container>
+        <div>
+          <ButtonToLogin />
+        </div>
+        <div>
+          <NoviLogo />
+          <Form />
+        </div>
+      </Container>
   );
 }
 
