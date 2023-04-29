@@ -1,9 +1,9 @@
 import styles from '../assets/css/carrosel.module.css'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Frame8 from '../assets/img/Frame8.png';
-import Frame9 from '../assets/img/Frame9.png';
-import Frame10 from '../assets/img/Frame10.png';
+import Frame8 from '../pages/landingPage/assets/img/Frame8.png';
+import Frame9 from '../pages/landingPage/assets/img/Frame9.png';
+import Frame10 from '../pages/landingPage/assets/img/Frame10.png';
 
 export default function Carrosel(props) {
 

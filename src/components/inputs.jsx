@@ -1,5 +1,5 @@
 import styles from '../assets/css/inputs.module.css'
-import LogoNoviUs from '../assets/img/LogoNoviUs.png'
+import LogoNovi from '../pages/registerPage/assets/image/Noví(1).png'
 
 export default function Inputs() {
 
@@ -9,7 +9,7 @@ export default function Inputs() {
             <div className={styles["layout-grid"]}>
                 <div className={styles["forms-align-logo"]}>
 
-                    <img src={LogoNoviUs} alt="Logo" />
+                    <img src={LogoNovi} alt="Logo" />
 
                     <form className={styles["forms-align"]}>
 

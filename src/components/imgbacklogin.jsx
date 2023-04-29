@@ -1,6 +1,6 @@
 import {AiOutlineArrowLeft} from 'react-icons/ai'
 import styles from '../assets/css/imgbacklogin.module.css'
-import  Maskgroup from '../assets/img/Maskgroup.png'
+import  Maskgroup from '../pages/login/assets/img/Maskgroup.png'
 
 export default function ImgBackLogin()
 
