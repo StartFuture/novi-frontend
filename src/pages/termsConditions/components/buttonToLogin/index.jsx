@@ -1,16 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ButtonToLoginStyled } from "./styles";
+import { Container } from "./styles";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
-export default function ButtonToLogin() {
+export default class ButtonToLogin extends Component {
+  render() {
     return (
       <Link to="/login">
-        <ButtonToLoginStyled>
-          <AiOutlineArrowLeft style={{fontSize: "10px", marginRight: "10px"}}/>
+        <Container>
+          <AiOutlineArrowLeft
+            style={{ fontSize: "10px", marginRight: "10px" }}
+          />
           Voltar ao login
-        </ButtonToLoginStyled>
+        </Container>
       </Link>
     );
-};
+  }
+}

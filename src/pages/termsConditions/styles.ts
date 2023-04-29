@@ -1,8 +1,14 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 90%;
+export const MainContainer = styled.div`
+    background: url("svg/termsBg.svg") no-repeat left;
     height: 100vh;
-    max-width: 100vh;
-`
+`;
+
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 660px;
+    margin: 110px auto;
+`;

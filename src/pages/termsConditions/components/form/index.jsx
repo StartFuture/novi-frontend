@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 
+import { Form } from "./styles";
+
+import Title from "../../../../components/title";
+import WrapperCheckbox from "../wrapperCheckbox";
+
 export default class form extends Component {
   render() {
     return (
-      <form action="" id="termsConditionsForm">
+      <Form action="" id="termsConditionsForm">
         <div>
-          <h2>Termos e condições</h2>
+          <Title>Termos e condições</Title>
           <p>
             Lorem ipsum dolor sit amet consectetur. Nisi non sem mauris eget.
             Amet semper ultricies dui nunc duis aliquet dolor imperdiet dictum.
@@ -21,18 +26,18 @@ export default class form extends Component {
           <input type="checkbox" name="acceptAll" id="acceptAll" />
           <label htmlFor="acceptAll">Aceito todos os termos</label>
         </div>
-        <div>
+        <WrapperCheckbox>
           <input type="checkbox" name="noviNews" id="noviNews" />
           <label htmlFor="noviNews">Você deseja receber novidades sobre a NOVI ?</label>
           <input type="checkbox" name="acceptUseData" id="acceptUseData" />
           <label htmlFor="acceptUseData">Aceito que utilizem os meus dados informados</label>
           <input type="checkbox" name="acceptTermsConditions" id="acceptTermsConditions" />
           <label htmlFor="acceptTermsConditions">Aceito os termos e condições</label>
-        </div>
+        </WrapperCheckbox>
         <div>
           <input type="submit" value="Continuar" />
         </div>
-      </form>
+      </Form>
     );
   }
 }
