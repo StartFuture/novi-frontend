@@ -1,21 +1,13 @@
 import styled from "styled-components";
 
 import img from './assets/img/interviewStartImage.png';
-import imgFilter from './assets/img/interviewStartImageFilter.png';
 
 const primaryColor = '#3BB29D';
-const lightGrayColor = '#c1c1c1';
-const fontFamilyAudiowide = 'Audiowide';
-const fontFamilyCursive = 'cursive';
 const fontFamilyMontserrat = 'Montserrat';
 
 export const FilterStartImage = styled.div`
     background-color: #218581;
     background-size: 80vw;
-    /* background-image: url(${imgFilter});
-    background-repeat: no-repeat;
-   
-    */
 `;
 
 export const InterviewStart = styled.div`
