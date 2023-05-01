@@ -8,10 +8,8 @@ export const ButtonYes = styled.button`
     width: 100%;
     border: none;
     border-radius: 8px;
-    color: white;
-    background-color: var(--primary-color);
-    margin-left: -10%;
+    color: '#fff';
+    /* margin-left: -10%; */
     font-size: 14px;
-    margin-top: 10%;
     cursor: pointer;
 `;

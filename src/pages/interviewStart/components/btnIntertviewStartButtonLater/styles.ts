@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ButtonYes } from "../btnInterviewStartYes/style.ts";
+import { ButtonYes } from "../btnInterviewStartYes/styles.ts";
 
 // const primaryColor = '#3BB29D';
 
