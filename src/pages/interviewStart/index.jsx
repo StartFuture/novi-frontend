@@ -1,21 +1,27 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import BtnInterviewStartYes from "./components/btnInterviewStartYes/index.jsx";
+import BtnInterviewStartLater from "./components/btnIntertviewStartButtonLater/index.jsx";
+
+import {InterviewStart, InterviewStartImage, InterviewStartWelcome, InterviewStartQuestion, InterviewStartText} from "./styles.ts";
 
 function IntertviewStart(){
 
     return(
-        <div>
-            <div className="interviewStartImage">
-            </div>
-            <div className="interviewStartWelcome">
-                <h2> Vamos iniciar o mapeamento do seu perfil, *Nome* ? </h2>
-                <pre>O mapeamento é importante para conhecermos melhor você, assim escolhendo a viagem perfeita !</pre>
-                <button className="btnInterviewStartYes"><Link to='/interview' className="link">Sim</Link></button>
-                <button className="btnInterviewStartLater"><Link to='/home' className="link">Fazer mais tarde</Link></button>
-            </div>
-
-        </div>
+        <InterviewStart>
+            <InterviewStartImage>
+            </InterviewStartImage>
+            <InterviewStartWelcome>
+                <InterviewStartQuestion>
+                    Vamos iniciar o mapeamento do seu perfil, *Nome* ? 
+                </InterviewStartQuestion>
+                <InterviewStartText>
+                    O mapeamento é importante para conhecermos melhor você, assim escolhendo a viagem perfeita !
+                </InterviewStartText>
+                <BtnInterviewStartYes/>
+                <BtnInterviewStartLater/>
+            </InterviewStartWelcome>
+        </InterviewStart>
     )
 }
 
