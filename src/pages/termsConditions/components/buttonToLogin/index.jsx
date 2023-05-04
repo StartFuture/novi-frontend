@@ -10,7 +10,7 @@ export default class ButtonToLogin extends Component {
       <Link to="/login">
         <Container>
           <AiOutlineArrowLeft
-            style={{ fontSize: "10px", marginRight: "10px" }}
+            style={{ fontSize: "20px", paddingTop: "5px", color: "#ffff" }}
           />
           Voltar ao login
         </Container>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
     background: url("svg/termsBg.svg") no-repeat left;
     height: 100vh;
+    display: flex;
 `;
 
 export const Container = styled.div`
