@@ -153,6 +153,14 @@
         left: 20%;
         bottom: 95%;
     }
+
+    .carrosel_layout-grid__p84Pn {
+        display: none;
+    }
+
+    .lpCommentsContainer {
+        display: none;
+    }
     
 }
 
@@ -163,9 +171,10 @@
     }
 
     .LPBanner .btnLandingPage {
-        width: 20%;
-        height: 14%;
+        width: 25vw;
+        height: 7vh;
         padding: 1%;
+        margin-top: 3vh;
         font-size: .8rem;
     }
 
@@ -176,8 +185,12 @@
         margin-top: 10%;
     }
     .LPHeader {
-        height: 60vh;
-    }
+        height: 50vh;
+        background-image: url('../img/lpTopBackground.png');
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-position: center center;
+    }    
 
     .LPUs {
         display: grid;
@@ -220,6 +233,14 @@
 
     #noviLogoUs {
         font-size: 100px;
+    }
+
+    .carrosel_layout-grid__p84Pn {
+        display: none;
+    }
+
+    .lpCommentsContainer {
+        display: none;
     }
 
 }
