@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button, StyledLink} from './styles.ts';
 
-function StyledButton2(props){
+function StyledButton(props){
     return(
             <StyledLink to={props.link}>
                 <Button variant={props.variant}>{props.text}</Button>
@@ -10,4 +10,4 @@ function StyledButton2(props){
     )
 }
 
-export default StyledButton2;
+export default StyledButton;
