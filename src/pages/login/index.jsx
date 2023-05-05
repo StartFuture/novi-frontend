@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import validator from "validator";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import "./assets/css/login.css";
+import axios from 'axios'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 import Facebook from './assets/svg/LoginFacebookIcons.svg';
 import Google from './assets/svg/LoginGoogleIcon.svg';
@@ -55,6 +57,25 @@ const LoginPage = () => {
       setHidePassword("none");
     }
   };
+
+  //Envio de formulario atraves do axios
+
+  const form = document.getElementById('form');
+
+form.addEventListener('submit', function(e) {e.preventDefault();
+
+const formData = new FormData(form);
+
+formData.append('email', document.getElementsByClassName('email').value);
+formData.append('password', document.getElementsByClassName('password').value);
+
+axios.post('http://127.0.0.1:8000', formData)
+.then(res => console.log(res))
+.catch(err => console.log(err))
+
+})
+
+ 
 
   //HTML structure
   return (
