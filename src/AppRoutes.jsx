@@ -8,6 +8,7 @@ import {
 import LandingPage from "./pages/landingPage/index";
 import Login from "./pages/login/index";
 import InterviewStart from "./pages/interviewStart";
+import Registro from "./pages/registerPage/assets/css/img/svg/index";
 
 const AppRoutes = () => {
     return (
