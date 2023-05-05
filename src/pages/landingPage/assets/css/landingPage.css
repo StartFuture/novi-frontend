@@ -90,7 +90,7 @@
     }
 
     .LPHeader {
-        height: 50vh;
+        height: 41vh;
         background-image: url('../img/lpTopBackground.png');
         background-repeat: no-repeat;
         background-size: 200%;
@@ -154,8 +154,18 @@
         bottom: 95%;
     }
 
-    .carrosel_layout-grid__p84Pn {
+    #layoutCarrosel{
+        padding-top: 7vh;
+    }
+
+    #layoutImagesCarrosel {
         display: none;
+    }
+
+    #verticalLineCarrosel {
+        margin-top: -.2vh;
+        height: 10vh;
+        padding-right: 2vw;
     }
 
     .lpCommentsContainer {
@@ -235,12 +245,22 @@
         font-size: 100px;
     }
 
-    .carrosel_layout-grid__p84Pn {
+    #layoutCarrosel{
+        padding-top: 10vh;
+    }
+
+    #verticalLineCarrosel {
+        margin-top: -.2vh;
+        height: 13vh;
+        padding-right: 2vw;
+    }
+
+    #layoutImagesCarrosel {
         display: none;
+        padding-top: 5vh;
     }
 
     .lpCommentsContainer {
         display: none;
     }
-
 }
