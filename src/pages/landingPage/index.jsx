@@ -3,7 +3,8 @@ import Api from "../../services/Api";
 import ShowComment from "./components/showComment";
 
 import Footer from "../../components/footer";
-import LandingPageUs from "./components/landingPageUs"
+import Carrosel from "../../components/carrosel";
+import LandingPageUs from "./components/landingPageUs";
 import LandingTop from "./components/landingPageTop";
 import "./assets/css/landingPage.css";
 
@@ -25,6 +26,9 @@ function LandingPage() {
     <div className="lp">
       <div>
         <LandingTop />
+      </div>
+      <div>
+        <Carrosel />
       </div>
       <div>
         <LandingPageUs/>
