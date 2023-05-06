@@ -17,7 +17,7 @@
 }
 
 .LPHeader {
-    height: 100vh;
+    height: 91vh;
     background-image: url('../img/lpTopBackground.png');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -50,7 +50,7 @@
     color: #FFF;
     font-size: 64px;
     max-width: 70vh;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .link {
