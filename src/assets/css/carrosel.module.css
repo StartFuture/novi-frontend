@@ -1,5 +1,34 @@
+.layout-flexbox {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 5%;
+    row-gap: 200px;
+    background-color: #FFF;
+    padding-top: 25vh;
+}
 
+.label-new-experiences {
+    display: flex;
+    flex-direction: row;
+}
 
+.text-new-experiences h2 {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 2rem;
+    padding-left: 2vw;
+}
+
+.vertical-line {
+    border-left: 6px solid var(--primary-color);
+    height: 17vh;
+    margin-top: 2%;
+}
+
+.text-new-experiences span {
+    font-size: .8rem;
+}
 
 .layout-grid {
     max-width: 1920px;
