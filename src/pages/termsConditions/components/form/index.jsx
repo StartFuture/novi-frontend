@@ -4,8 +4,8 @@ import { FormStyled } from "./styles";
 
 import Title from "../../../../components/title";
 import WrapperCheckbox from "../wrapperCheckbox";
-import markAll from "../acceptAll";
-import rmAcceptAll from "../rmAcceptAll";
+import { acceptAll } from "../acceptAll";
+import { rmAcceptAll } from "../rmAcceptAll";
 
 export default function Form() {
   return (
@@ -24,7 +24,7 @@ export default function Form() {
         </p>
       </div>
       <div className="formCheckbox">
-        <input type="checkbox" name="acceptAll" id="acceptAll" onClick={markAll}/>
+        <input type="checkbox" name="acceptAll" id="acceptAll" onClick={acceptAll}/>
         <label htmlFor="acceptAll">Aceito todos os termos</label>
       </div>
       <WrapperCheckbox>

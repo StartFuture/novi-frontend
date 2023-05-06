@@ -7,12 +7,10 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 export default class ButtonToLogin extends Component {
   render() {
     return (
-      <Link to="/login">
+      <Link to="/login" style={{textDecoration: "none"}}>
         <Container>
-          <AiOutlineArrowLeft
-            style={{ fontSize: "20px", paddingTop: "5px", color: "#ffff" }}
-          />
-          Voltar ao login
+          <AiOutlineArrowLeft style={{ fontSize: "30px", marginRight: "5px",color: "#ffff"}}/>
+          <p>Voltar ao login</p>
         </Container>
       </Link>
     );
