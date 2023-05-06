@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import validator from "validator";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import "./assets/css/login.css";
-import axios from 'axios'
-import { Navigate, useNavigate } from 'react-router-dom'
+import axios from "axios";
+import { Navigate, useNavigate } from "react-router-dom";
 
-import Facebook from './assets/svg/LoginFacebookIcons.svg';
-import Google from './assets/svg/LoginGoogleIcon.svg';
+import Facebook from "./assets/svg/LoginFacebookIcons.svg";
+import Google from "./assets/svg/LoginGoogleIcon.svg";
 
 const LoginPage = () => {
   //Variables, constants, getters and setter
@@ -60,32 +60,36 @@ const LoginPage = () => {
 
   //Envio de formulario atraves do axios
 
-  const form = document.getElementById('form');
+  const form = document.getElementById("form");
 
-form.addEventListener('submit', function(e) {e.preventDefault();
-
-const formData = new FormData(form);
-
-formData.append('email', document.getElementsByClassName('email').value);
-formData.append('password', document.getElementsByClassName('password').value);
-
-axios.post('http://127.0.0.1:8000', formData)
-.then(res => console.log(res))
-.catch(err => console.log(err))
-
-})
-
- 
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      const formData = new FormData(form);
+  
+      formData.append("email", document.getElementsByClassName("email").value);
+      formData.append(
+        "password",
+        document.getElementsByClassName("password").value
+      );
+  
+      axios
+        .post("http://127.0.0.1:8000", formData)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+    });
+  }
+  
 
   //HTML structure
   return (
     <div className="login">
       <div className="loginImage">
-        <div className="loginImageBackground">
-        </div>
+        <div className="loginImageBackground"></div>
         <p>Deixe sua viagem com a gente! #sóvai</p>
       </div>
-      
+
       <form action="" className="loginForm" onSubmit={handleSubmit}>
         <div className="loginLogo">
           <h1>Noví</h1>
@@ -118,20 +122,35 @@ axios.post('http://127.0.0.1:8000', formData)
               }}
             />
             <div className="showHidePassword">
-              <h4 ><BsFillEyeFill onClick={togglePassword} display={showPasswor}/></h4>
-              <h4 ><BsFillEyeSlashFill onClick={togglePassword} display={hidePassword}/></h4>
+              <h4>
+                <BsFillEyeFill onClick={togglePassword} display={showPasswor} />
+              </h4>
+              <h4>
+                <BsFillEyeSlashFill
+                  onClick={togglePassword}
+                  display={hidePassword}
+                />
+              </h4>
             </div>
           </div>
           <small>{passwordError}</small>
         </div>
         <button id="btnForgotPassword">Esqueci minha senha</button>
         <input className="loginSubmit" type="submit" value="Entrar" />
-        <input className="loginNewAccountSubmit" type="submit" value="Registre-se" />
+        <input
+          className="loginNewAccountSubmit"
+          type="submit"
+          value="Registre-se"
+        />
         <div className="loginOtherOption">
-            <span className="loginOtherOptionText"> Ou entre com </span>
+          <span className="loginOtherOptionText"> Ou entre com </span>
         </div>
-        <button className="loginFacebook" type="submit"><img src={Facebook} alt="Icone Facebook"/> Entrar com Facebook</button>
-        <button className="loginGoogle" type="submit"><img src={Google} alt="Icone Google"/> Entrar com Google</button>
+        <button className="loginFacebook" type="submit">
+          <img src={Facebook} alt="Icone Facebook" /> Entrar com Facebook
+        </button>
+        <button className="loginGoogle" type="submit">
+          <img src={Google} alt="Icone Google" /> Entrar com Google
+        </button>
       </form>
     </div>
   );
