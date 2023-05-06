@@ -138,3 +138,9 @@ background-color: #3BB29D;
 color: white;
 font-family: Montserrat;
 font-weight: 700;}
+
+form small {
+    display: inline-block;
+    margin-bottom: 5%;
+    color: red;
+}
