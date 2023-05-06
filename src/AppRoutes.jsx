@@ -19,7 +19,6 @@ const AppRoutes = () => {
                 <Route exact path="/login" element={<Login/>}></Route>
                 <Route exact path="/interviewStart" element={<InterviewStart/>}></Route>
                 <Route exact path="/registro" element={<Registro/>}></Route>
-                <Route exact path="/login" element={<LoginPagePage/>}></Route>
                 <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
             </Routes>
         </Router>
