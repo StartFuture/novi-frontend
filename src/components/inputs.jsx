@@ -12,12 +12,14 @@ export default function Inputs() {
     const [dtBirthError, setDtBirthError] = useState("");
     const [phone, setPhone] = useState("");
     const [phoneError, setPhoneError] = useState("");
+    const [cpf, setCpf] = useState("");
+    const [cpfError, setCpfError] = useState("");
 
     const handleSubmit = (e) => {
 
         //Email
         if (validator.isEmpty(email)) {
-            setEmailError("Por favor, insira um email está vazio");
+            setEmailError("Por favor, insira um email!");
             e.preventDefault();
             return;
         }
@@ -31,9 +33,42 @@ export default function Inputs() {
         setEmailError("");
 
 
+        // CPF
+        if (validator.isEmpty(cpf)) {
+            setCpfError("Por favor, insira um CPF!");
+            e.preventDefault();
+            return;
+        }
+
+        if(cpf.length != 11){
+            setCpfError('CPF deve ter 11 digitos');
+            e.preventDefault();
+            return;
+        }
+        
+        setCpfError("");
+
+        
+        // Date Birth
+        if(validator.isEmpty(dtBirth)){
+            console.log('vazio');
+            setDtBirthError("Por favor, insira uma data!")
+            e.preventDefault();
+            return;
+        }
+
+        if (!validator.isDate(dtBirth)) {
+            setDtBirthError("Por favor, insira uma data válida");
+            e.preventDefault();
+            return;
+        }
+        
+        setDtBirthError("");
+    
+        
         //Phone
         if (validator.isEmpty(phone)) {
-            setPhoneError("Por favor, insira um telefone está vazio");
+            setPhoneError("Por favor, insira um telefone!");
             e.preventDefault();
             return;
         }
@@ -47,21 +82,6 @@ export default function Inputs() {
         setPhoneError("");
 
         
-        // Date Birth
-        if(validator.isEmpty(dtBirth)){
-            console.log('vazio');
-            setDtBirthError("Por favor, insira uma data está vazia")
-            e.preventDefault();
-            return;
-        }
-
-        if (!validator.isDate(dtBirth)) {
-            setDtBirthError("Por favor, insira uma data válida");
-            e.preventDefault();
-            return;
-        }
-        
-        setDtBirthError("");
 
         return true;
     }
@@ -92,7 +112,12 @@ export default function Inputs() {
                                 <br/>
 
                                 <label>CPF</label>
-                                <input id='accountCpf' placeholder='Digite aqui'></input>
+                                <input placeholder='Digite aqui'
+                                    value={cpf}
+                                    onChange={(e) => {setCpf(e.target.value)}}
+                                ></input>
+                                <small>{cpfError}</small>
+                                <br/>
                             </div>
 
                             <div className={styles["second-section"]}>
@@ -119,7 +144,6 @@ export default function Inputs() {
                         </div>
 
                         <div className={styles["second-block-inputs"]}>
-
                             <div className={styles["first-section"]}>
                                 <label>CEP</label>
                                 <input placeholder='Digite aqui'></input>
