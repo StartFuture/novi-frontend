@@ -77,14 +77,3 @@
         grid-gap: 2rem;
     }
 }
-
-/*Desktop Query
-@media (min-width: 768px) {
-    .desktop {
-        display: none;
-    }
-    .mobile, .tablet {
-        display: block;
-    }
-}
-*/
