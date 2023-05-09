@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validations</title>
+</head>
+<body>
+  <h1>Validations</h1>
+  <div>
+    <label>Insira seu CPF:</label>
+    <input id="CPFInput" maxlength="11" oninput="criaMascara('CPF')">
+  </div>
+  <div>
+    <label>Insira seu celular</label>
+    <input id="CelularInput" maxlength="11" oninput="criaMascara('Celular')">
+  </div>
+  <div>
+    <label>Insira seu CEP</label>
+    <input id="CEPInput" maxlength="8" oninput="criaMascara('CEP')">
+  </div>
+</body>
+<script>
+function criaMascara(mascaraInput) {
+  const maximoInput = document.getElementById(`${mascaraInput}Input`).maxLength;
+  let valorInput = document.getElementById(`${mascaraInput}Input`).value;
+  let valorSemPonto = document.getElementById(`${mascaraInput}Input`).value.replace(/([^0-9])+/g, "");
+  const mascaras = {
+    CPF: valorInput.replace(/[^\d]/g, "").replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4"),
+    Celular: valorInput.replace(/[^\d]/g, "").replace(/^(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"),
+    CEP: valorInput.replace(/[^\d]/g, "").replace(/(\d{5})(\d{3})/, "$1-$2")
+  };
+
+  valorInput.length === maximoInput ? document.getElementById(`${mascaraInput}Input`).value = mascaras[mascaraInput]
+: document.getElementById(`${mascaraInput}Input`).value = valorSemPonto;
+};
+</script>
+
+</html>
