@@ -1,12 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-  text-decoration: none;
+  display: flex;
+  height: 22px;
   text-align: center;
   border: none;
   background: none;
   margin: 118px auto auto 195px;
-  font-size: 18px;
   color: #ffff;
   cursor: pointer;
-  `;
+
+  p { 
+    font-size: 18px;
+    margin-top: 5px;
+  }
+`;
+
+
