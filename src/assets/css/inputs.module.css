@@ -51,7 +51,7 @@ margin-bottom: 10px;}
 
         
     .first-block-inputs   .second-section{width: 680px;
-    height: 100px;
+    height: 140px;
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;
@@ -138,3 +138,9 @@ background-color: #3BB29D;
 color: white;
 font-family: Montserrat;
 font-weight: 700;}
+
+form small {
+    display: inline-block;
+    margin-bottom: 5%;
+    color: red;
+}

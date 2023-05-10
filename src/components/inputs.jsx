@@ -1,7 +1,90 @@
+import { valid } from 'semver';
 import styles from '../assets/css/inputs.module.css'
 import LogoNovi from '../pages/registerPage/assets/image/Noví(1).png'
+import { useState } from 'react';
+import validator from 'validator';
 
 export default function Inputs() {
+
+    const [email, setEmail] = useState("");
+    const [emailError, setEmailError] = useState("");
+    const [dtBirth, setDtBirth] = useState("");
+    const [dtBirthError, setDtBirthError] = useState("");
+    const [phone, setPhone] = useState("");
+    const [phoneError, setPhoneError] = useState("");
+    const [cpf, setCpf] = useState("");
+    const [cpfError, setCpfError] = useState("");
+
+    const handleSubmit = (e) => {
+
+        //Email
+        if (validator.isEmpty(email)) {
+            setEmailError("Por favor, insira um email!");
+            e.preventDefault();
+            return;
+        }
+
+        if (!validator.isEmail(email)) {
+            setEmailError("Por favor, insira um email válido");
+            e.preventDefault();
+            return;
+        }
+
+        setEmailError("");
+
+
+        // CPF
+        if (validator.isEmpty(cpf)) {
+            setCpfError("Por favor, insira um CPF!");
+            e.preventDefault();
+            return;
+        }
+
+        if(cpf.length != 11){
+            setCpfError('CPF deve ter 11 digitos');
+            e.preventDefault();
+            return;
+        }
+        
+        setCpfError("");
+
+        
+        // Date Birth
+        if(validator.isEmpty(dtBirth)){
+            console.log('vazio');
+            setDtBirthError("Por favor, insira uma data!")
+            e.preventDefault();
+            return;
+        }
+
+        if (!validator.isDate(dtBirth)) {
+            setDtBirthError("Por favor, insira uma data válida");
+            e.preventDefault();
+            return;
+        }
+        
+        setDtBirthError("");
+    
+        
+        //Phone
+        if (validator.isEmpty(phone)) {
+            setPhoneError("Por favor, insira um telefone!");
+            e.preventDefault();
+            return;
+        }
+
+        if (!validator.isMobilePhone(phone, 'pt-BR')) {
+            setPhoneError("Por favor, insira um telefone válido");
+            e.preventDefault();
+            return;
+        }
+        
+        setPhoneError("");
+
+        
+
+        return true;
+    }
 
     return (
 
@@ -19,24 +102,48 @@ export default function Inputs() {
                                 <input placeholder='Digite aqui'></input>
 
                                 <label>Email</label>
-                                <input placeholder='Digite aqui' type='email'></input>
+                                <input
+                                    type='email'
+                                    placeholder='Digite aqui'
+                                    value={email}
+                                    onChange={(e) => {setEmail(e.target.value)}}
+                                    ></input>
+                                <small>{emailError}</small>
+                                <br/>
 
                                 <label>CPF</label>
-                                <input placeholder='Digite aqui'></input>
+                                <input placeholder='Digite aqui'
+                                    value={cpf}
+                                    onChange={(e) => {setCpf(e.target.value)}}
+                                ></input>
+                                <small>{cpfError}</small>
+                                <br/>
                             </div>
 
                             <div className={styles["second-section"]}>
                                 <label>Data de nascimento</label>
-                                <input placeholder='Digite aqui'></input>
-                                
-                                    <label>Celular</label>
-                                    <input type='tel' placeholder='DDD + Celular'></input>
+                                <input 
+                                placeholder='Digite aqui'
+                                value={dtBirth}
+                                onChange={(e) =>{setDtBirth(e.target.value)}}
+                                ></input>
+                                <small>{dtBirthError}</small>
+                                <br/>
+                            
+                                <label>Celular</label>
+                                <input
+                                    type='tel'
+                                    placeholder='DDD + Celular'
+                                    value={phone}
+                                    onChange={(e) => {setPhone(e.target.value)}}
+                                ></input>
+                                <small>{phoneError}</small>
+                                <br/>
                                 <hr></hr>
                             </div>
                         </div>
 
                         <div className={styles["second-block-inputs"]}>
-
                             <div className={styles["first-section"]}>
                                 <label>CEP</label>
                                 <input placeholder='Digite aqui'></input>
@@ -78,7 +185,7 @@ export default function Inputs() {
                             </div>
                         </div>
 
-                        <button className={styles.button}>Cadastrar</button>
+                        <button className={styles.button} onClick={handleSubmit}>Cadastrar</button>
 
                     </form>
 
