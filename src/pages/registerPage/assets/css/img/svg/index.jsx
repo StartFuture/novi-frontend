@@ -4,7 +4,7 @@ import Inputs from "../../../../../../components/inputs"
 function Registro() {
     return (<>
 
-<ImgBackLogin/>
+{/* <ImgBackLogin/> */}
 
 <Inputs/>
         

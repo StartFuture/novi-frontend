@@ -1,8 +1,9 @@
-import { valid } from 'semver';
 import styles from '../assets/css/inputs.module.css'
 import LogoNovi from '../pages/registerPage/assets/image/Noví(1).png'
 import { useState } from 'react';
 import validator from 'validator';
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import TermsConditionsPage from "../pages/termsConditions/index";
 
 export default function Inputs() {
 
@@ -14,6 +15,8 @@ export default function Inputs() {
     const [phoneError, setPhoneError] = useState("");
     const [cpf, setCpf] = useState("");
     const [cpfError, setCpfError] = useState("");
+
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
 
@@ -51,7 +54,6 @@ export default function Inputs() {
         
         // Date Birth
         if(validator.isEmpty(dtBirth)){
-            console.log('vazio');
             setDtBirthError("Por favor, insira uma data!")
             e.preventDefault();
             return;
@@ -80,10 +82,53 @@ export default function Inputs() {
         }
         
         setPhoneError("");
-
         
+        return true
+    }
 
-        return true;
+    //Envio de formulario atraves do axios
+    const form = document.getElementById("form");
+
+    if (form) {
+        form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const userInfo = {
+            "name_user": document.getElementById("name").value,
+            "date_birth": document.getElementById("dateBirth").value,
+            "email": document.getElementById("email").value,
+            "cpf": document.getElementById("cpf").value,
+            "cellphone": document.getElementById("phone").value,
+            "password_user": document.getElementById("password").value,
+            "news": false,
+            "info_conditions": false,
+        }
+
+        const addressInfo = {
+            "cep": document.getElementById("cep").value,
+            "state_user": document.getElementById("state").value,
+            "city": document.getElementById("city").value,
+            "address_user": document.getElementById("address").value,
+            "address_number": document.getElementById("address_number").value,
+            "complements": document.getElementById("complements").value
+        }
+
+        console.log(addressInfo)
+        console.log(userInfo)
+
+        navigate('/terms-conditions', {state : {address : addressInfo, user: userInfo}});
+    
+        // const formData = new FormData(form);
+    
+        // formData.append("address", address);
+        // formData.append("user", userInfo);
+    
+        // axios
+        //     .post("http://127.0.0.1:8000", formData)
+        //     .then((res) => console.log(res))
+        //     .catch((err) => console.log(err));
+        
+        });
     }
 
     return (
@@ -94,49 +139,63 @@ export default function Inputs() {
 
                     <img src={LogoNovi} alt="Logo" />
 
-                    <form className={styles["forms-align"]}>
+                    <form id="form" className={styles["forms-align"]}>
 
                         <div className={styles["first-block-inputs"]}>
                             <div className={styles["first-section"]}>
                                 <label>Nome completo</label>
-                                <input placeholder='Digite aqui'></input>
+                                <input
+                                    required
+                                    id="name"
+                                    placeholder='Digite aqui'
+                                />
 
                                 <label>Email</label>
                                 <input
+                                    required
                                     type='email'
+                                    id="email"
                                     placeholder='Digite aqui'
                                     value={email}
                                     onChange={(e) => {setEmail(e.target.value)}}
-                                    ></input>
+                                />
                                 <small>{emailError}</small>
                                 <br/>
 
                                 <label>CPF</label>
-                                <input placeholder='Digite aqui'
+                                <input
+                                    required
+                                    id="cpf"
+                                    placeholder='Digite aqui'
                                     value={cpf}
                                     onChange={(e) => {setCpf(e.target.value)}}
-                                ></input>
+                                />
                                 <small>{cpfError}</small>
                                 <br/>
                             </div>
 
                             <div className={styles["second-section"]}>
                                 <label>Data de nascimento</label>
-                                <input 
-                                placeholder='Digite aqui'
-                                value={dtBirth}
-                                onChange={(e) =>{setDtBirth(e.target.value)}}
-                                ></input>
+                                <input
+                                    required
+                                    id="dateBirth"
+                                    type="date"
+                                    placeholder='Digite aqui'
+                                    value={dtBirth}
+                                    onChange={(e) =>{setDtBirth(e.target.value)}}
+                                />
                                 <small>{dtBirthError}</small>
                                 <br/>
                             
                                 <label>Celular</label>
                                 <input
+                                    required
+                                    id="phone"
                                     type='tel'
                                     placeholder='DDD + Celular'
                                     value={phone}
                                     onChange={(e) => {setPhone(e.target.value)}}
-                                ></input>
+                                />
                                 <small>{phoneError}</small>
                                 <br/>
                                 <hr></hr>
@@ -146,30 +205,53 @@ export default function Inputs() {
                         <div className={styles["second-block-inputs"]}>
                             <div className={styles["first-section"]}>
                                 <label>CEP</label>
-                                <input placeholder='Digite aqui'></input>
+                                <input
+                                    required
+                                    id="cep"
+                                    placeholder='Digite aqui'
+                                />
 
                                 <div className={styles["second-section"]}>
 
                                     <label>Estado</label>
-                                    <input placeholder='Digite aqui'></input>
+                                    <input 
+                                        required
+                                        id="state"
+                                        placeholder='Digite aqui'
+                                    />
 
                                     <label>Endereço</label>
-                                    <input placeholder='Digite aqui'></input>
+                                    <input
+                                        required
+                                        id="address"
+                                        placeholder='Digite aqui'
+                                    />
 
                                     <div className={styles["third-section"]}>
 
                                         <label>Cidade</label>
-                                        <input placeholder='Digite aqui'></input>
+                                        <input
+                                            required
+                                            id="city"
+                                            placeholder='Digite aqui'
+                                        />
 
                                         <label>Nº</label>
-                                        <input placeholder='Digite aqui'></input>
+                                        <input
+                                            required
+                                            id="address_number"
+                                            placeholder='Digite aqui'
+                                        />
 
                                     </div>
 
                                 </div>
 
                                 <label>complemento</label>
-                                <input placeholder='Digite aqui'></input>
+                                <input
+                                    id="complements" 
+                                    placeholder='Digite aqui'
+                                />
                             </div>
                         </div>
 
@@ -178,19 +260,32 @@ export default function Inputs() {
                             <div className={styles["first-section"]}>
                                 <hr></hr>
                                 <label>Senha</label>
-                                <input placeholder='Digite aqui'></input>
+                                <input
+                                    required
+                                    id="password"
+                                    placeholder='Digite aqui'
+                                />
 
                                 <label>Confirmar senha</label>
-                                <input placeholder='Digite aqui'></input>
+                                <input
+                                    required
+                                    id="confirm_password"
+                                    placeholder='Digite aqui'
+                                />
                             </div>
                         </div>
 
                         <button className={styles.button} onClick={handleSubmit}>Cadastrar</button>
+                        {/* <button className={styles.button}>Cadastrar</button> */}
 
                     </form>
 
                 </div>
             </div>
+
+            <Routes>
+            <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
+            </Routes>
 
         </>
 
