@@ -1,7 +1,9 @@
 import axios from "axios";
 
-const Api = axios.create({
+export const api = axios.create({
     baseURL: "http://127.0.0.1:8000",
 });
 
-export default Api;
+export const authLogin = async (email, password) => {
+    return api.post("/auth/login", {email, password});
+};

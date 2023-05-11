@@ -1,48 +1,50 @@
 import React, {createContext, useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 
+import {api, authLogin} from  "../../services/Api"
+
 export const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
     const navigate = useNavigate();
-    const [user, setUser] = useState(null);
+    const [token, setToken] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const loggedUser = localStorage.getItem("user");
+        const loggedUser = localStorage.getItem("token");
 
         if (loggedUser) {
-            setUser(JSON.parse(loggedUser));
+            setToken(loggedUser);
         }
 
         setLoading(false);
     }, []);
 
-    const login = (email, password) => {
+    const login = async (email, password) => {
 
-        const loggedUser = {
-            id: "123",
-            email,
-        };
+        const response = await authLogin(email, password);
 
-        localStorage.setItem("user", JSON.stringify(loggedUser));
+        const token = response.data.access_token;
 
-        if ( password === "secret") {
-            console.log("login auth", {email, password});
-            setUser(loggedUser)
-            navigate("/home");    
-        }
+        localStorage.setItem("token", token);
+
+        api.defaults.headers.Authorization = `Bearer ${token}`
+
+        setToken(token)
+        navigate("/home");    
+        
     };
 
     const logout = () => {
         console.log("logout");
-        setUser(null);
-        localStorage.removeItem("user");
+        localStorage.removeItem("token");
+        api.defaults.headers.Authorization = null;
+        setToken(null);
         navigate("/");
     };
 
     return(
-        <AuthContext.Provider value={{authenticated: !!user, user, loading, login, logout}}>
+        <AuthContext.Provider value={{authenticated: !!token, token, loading, login, logout}}>
             {children}
         </AuthContext.Provider>
     );
