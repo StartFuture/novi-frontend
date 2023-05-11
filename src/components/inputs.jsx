@@ -20,16 +20,16 @@ export default function Inputs() {
 
     const handleSubmit = (e) => {
 
+        e.preventDefault();
+
         //Email
         if (validator.isEmpty(email)) {
             setEmailError("Por favor, insira um email!");
-            e.preventDefault();
             return;
         }
 
         if (!validator.isEmail(email)) {
             setEmailError("Por favor, insira um email válido");
-            e.preventDefault();
             return;
         }
 
@@ -39,13 +39,11 @@ export default function Inputs() {
         // CPF
         if (validator.isEmpty(cpf)) {
             setCpfError("Por favor, insira um CPF!");
-            e.preventDefault();
             return;
         }
 
         if(cpf.length != 11){
             setCpfError('CPF deve ter 11 digitos');
-            e.preventDefault();
             return;
         }
         
@@ -55,13 +53,11 @@ export default function Inputs() {
         // Date Birth
         if(validator.isEmpty(dtBirth)){
             setDtBirthError("Por favor, insira uma data!")
-            e.preventDefault();
             return;
         }
 
         if (!validator.isDate(dtBirth)) {
             setDtBirthError("Por favor, insira uma data válida");
-            e.preventDefault();
             return;
         }
         
@@ -71,27 +67,17 @@ export default function Inputs() {
         //Phone
         if (validator.isEmpty(phone)) {
             setPhoneError("Por favor, insira um telefone!");
-            e.preventDefault();
             return;
         }
 
         if (!validator.isMobilePhone(phone, 'pt-BR')) {
             setPhoneError("Por favor, insira um telefone válido");
-            e.preventDefault();
             return;
         }
         
         setPhoneError("");
         
-        return true
-    }
-
-    //Envio de formulario atraves do axios
-    const form = document.getElementById("form");
-
-    if (form) {
-        form.addEventListener("submit", function (e) {
-        e.preventDefault();
+        // return true
 
         const userInfo = {
             "name_user": document.getElementById("name").value,
@@ -100,8 +86,6 @@ export default function Inputs() {
             "cpf": document.getElementById("cpf").value,
             "cellphone": document.getElementById("phone").value,
             "password_user": document.getElementById("password").value,
-            "news": false,
-            "info_conditions": false,
         }
 
         const addressInfo = {
@@ -112,23 +96,7 @@ export default function Inputs() {
             "address_number": document.getElementById("address_number").value,
             "complements": document.getElementById("complements").value
         }
-
-        console.log(addressInfo)
-        console.log(userInfo)
-
         navigate('/terms-conditions', {state : {address : addressInfo, user: userInfo}});
-    
-        // const formData = new FormData(form);
-    
-        // formData.append("address", address);
-        // formData.append("user", userInfo);
-    
-        // axios
-        //     .post("http://127.0.0.1:8000", formData)
-        //     .then((res) => console.log(res))
-        //     .catch((err) => console.log(err));
-        
-        });
     }
 
     return (

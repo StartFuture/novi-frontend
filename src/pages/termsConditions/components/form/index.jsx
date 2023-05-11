@@ -7,9 +7,37 @@ import WrapperCheckbox from "../wrapperCheckbox";
 import { acceptAll } from "../acceptAll";
 import { rmAcceptAll } from "../rmAcceptAll";
 
+import { useLocation } from "react-router-dom";
+import axios from "axios";
+
 export default function Form() {
+
+  const location = useLocation();
+  const user = location.state.user;
+  const address = location.state.address;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    user.news = document.getElementById("noviNews").checked;
+    user.info_conditions = document.getElementById("acceptTermsConditions").checked;
+    user.accept_use_data = document.getElementById("acceptUseData").checked;
+
+    const formData = new FormData();
+  
+    formData.append("address", address);
+    formData.append("user", user);
+
+    axios
+        .post("http://127.0.0.1:8000/user", formData)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+
+    console.log("---------------------------------------------");
+  } 
+
   return (
-    <FormStyled action="" id="termsConditionsForm">
+    <FormStyled id="termsConditionsForm">
       <div>
         <Title>Termos e condições</Title>
         <p>
@@ -53,7 +81,7 @@ export default function Form() {
         </div>
       </WrapperCheckbox>
       <div>
-        <input id="submit" type="submit" value="Continuar" />
+        <input id="submit" type="submit" value="Continuar" onClick={handleSubmit}/>
       </div>
     </FormStyled>
   );
