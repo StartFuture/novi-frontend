@@ -1,4 +1,5 @@
 import React from "react";
+// import { useEffect } from "react";
 
 import { FormStyled } from "./styles";
 
@@ -8,7 +9,8 @@ import { acceptAll } from "../acceptAll";
 import { rmAcceptAll } from "../rmAcceptAll";
 
 import { useLocation } from "react-router-dom";
-import axios from "axios";
+
+import Api from "../../../../services/Api";
 
 export default function Form() {
 
@@ -21,19 +23,21 @@ export default function Form() {
 
     user.news = document.getElementById("noviNews").checked;
     user.info_conditions = document.getElementById("acceptTermsConditions").checked;
-    user.accept_use_data = document.getElementById("acceptUseData").checked;
+    // user.share_data = document.getElementById("acceptUseData").checked;
 
-    const formData = new FormData();
-  
-    formData.append("address", address);
-    formData.append("user", user);
+    if(address.complements || address.complements === ""){
+      address.complements = null
+    }
 
-    axios
-        .post("http://127.0.0.1:8000/user", formData)
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err));
+    const form_values = {
+      "address": address,
+      "user": user,
+    }
 
-    console.log("---------------------------------------------");
+    Api.post("/user/user", form_values)
+      .catch((err) => {
+        console.log("error: " + err);
+    });
   } 
 
   return (
