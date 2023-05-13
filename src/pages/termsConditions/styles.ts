@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-    background: url("svg/termsBg.svg") no-repeat left;
+    background: url("img/termsBg.png") no-repeat left;
     height: 100vh;
     display: flex;
 `;
