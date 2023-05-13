@@ -8,11 +8,13 @@ import WrapperCheckbox from "../wrapperCheckbox";
 import { acceptAll } from "../acceptAll";
 import { rmAcceptAll } from "../rmAcceptAll";
 
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import Api from "../../../../services/Api";
 
 export default function Form() {
+
+  const navigate = useNavigate();
 
   const location = useLocation();
   const user = location.state.user;
@@ -38,6 +40,8 @@ export default function Form() {
       .catch((err) => {
         console.log("error: " + err);
     });
+
+    navigate('/');
   } 
 
   return (
