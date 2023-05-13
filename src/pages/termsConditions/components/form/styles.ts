@@ -4,11 +4,14 @@ export const FormStyled = styled.form`
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    
 
     p {
         margin-top: 8px;
         margin-bottom: 16px;
     }
+
+
 
     .formCheckbox {
         display: flex;

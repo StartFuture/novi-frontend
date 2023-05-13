@@ -3,7 +3,7 @@ import styles from '../assets/css/inputs.module.css'
 import LogoNovi from '../pages/registerPage/assets/image/Noví(1).png'
 import { useState } from 'react';
 import validator from 'validator';
-
+import useCallback from "react"
 
 export default function Inputs(props) {
 
