@@ -39,9 +39,7 @@ const LoginPage = () => {
       return;
     }
     setEmailError("");
-
-
-    console.log("Submit: ", {email, password });
+    
     login(email, password)
   };
 

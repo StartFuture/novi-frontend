@@ -31,9 +31,7 @@ export const AuthProvider = ({children}) => {
         api.defaults.headers.Authorization = `Bearer ${token}`
 
         setToken(token)
-        navigate("/home");    
-        console.log("toke: ", token)
-        
+        navigate("/home");
     };
 
     const logout = () => {
