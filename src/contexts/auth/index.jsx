@@ -20,9 +20,9 @@ export const AuthProvider = ({children}) => {
         setLoading(false);
     }, []);
 
-    const login = async (email, password) => {
+    const login = async (email, password_user) => {
 
-        const response = await authLogin(email, password);
+        const response = await authLogin(email, password_user);
 
         const token = response.data.access_token;
 
@@ -32,6 +32,7 @@ export const AuthProvider = ({children}) => {
 
         setToken(token)
         navigate("/home");    
+        console.log("toke: ", token)
         
     };
 
