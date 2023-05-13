@@ -96,7 +96,10 @@ export default function Inputs() {
             "address_number": document.getElementById("address_number").value,
             "complements": document.getElementById("complements").value
         }
-        navigate('/terms-conditions', {state : {address : addressInfo, user: userInfo}});
+
+        sessionStorage.setItem('address', JSON.stringify(addressInfo));
+        sessionStorage.setItem('user', JSON.stringify(userInfo));
+        navigate('/terms-conditions');
     }
 
     return (

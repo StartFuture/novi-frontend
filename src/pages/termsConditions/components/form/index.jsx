@@ -1,5 +1,4 @@
 import React from "react";
-// import { useEffect } from "react";
 
 import { FormStyled } from "./styles";
 
@@ -8,7 +7,7 @@ import WrapperCheckbox from "../wrapperCheckbox";
 import { acceptAll } from "../acceptAll";
 import { rmAcceptAll } from "../rmAcceptAll";
 
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Api from "../../../../services/Api";
 
@@ -16,12 +15,11 @@ export default function Form() {
 
   const navigate = useNavigate();
 
-  const location = useLocation();
-  const user = location.state.user;
-  const address = location.state.address;
-
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const address = JSON.parse(sessionStorage.getItem('address'));
+    const user = JSON.parse(sessionStorage.getItem('user'));
 
     user.news = document.getElementById("noviNews").checked;
     user.info_conditions = document.getElementById("acceptTermsConditions").checked;
