@@ -14,9 +14,6 @@ import TermsConditionsPage from "./pages/termsConditions/index";
 import { AuthProvider } from "contexts/auth";
 import { Private } from "./components/Private";
 
-import { AuthProvider } from "contexts/auth";
-import { Private } from "./components/Private";
-
 const AppRoutes = () => {
   return (
     <Router>

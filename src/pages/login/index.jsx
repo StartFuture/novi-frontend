@@ -58,30 +58,6 @@ const LoginPage = () => {
     }
   };
 
-  //Envio de formulario atraves do axios
-
-  // const form = document.getElementById("form");
-
-  // if (form) {
-  //   form.addEventListener("submit", function (e) {
-  //     e.preventDefault();
-  
-  //     const formData = new FormData(form);
-  
-  //     formData.append("email", document.getElementsByClassName("email").value);
-  //     formData.append(
-  //       "password",
-  //       document.getElementsByClassName("password").value
-  //     );
-  
-  //     axios
-  //       .post("http://127.0.0.1:8000", formData)
-  //       .then((res) => console.log(res))
-  //       .catch((err) => console.log(err));
-  //   });
-  // }
-  
-
   //HTML structure
   return (
     <div className="login">
