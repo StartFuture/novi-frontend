@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext} from "react";
 import validator from "validator";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import "./assets/css/login.css";
-import axios from "axios";
-import { Navigate, useNavigate } from "react-router-dom";
+// import axios from "axios";
+// import { Navigate, useNavigate } from "react-router-dom";
+
+import { AuthContext } from "contexts/auth";
 
 import Facebook from "./assets/svg/LoginFacebookIcons.svg";
 import Google from "./assets/svg/LoginGoogleIcon.svg";
 
 const LoginPage = () => {
+  const {authenticated, login} = useContext(AuthContext);
+
   //Variables, constants, getters and setter
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -35,14 +39,8 @@ const LoginPage = () => {
       return;
     }
     setEmailError("");
-
-    //Checking if is not a strong password
-    if (!validator.isStrongPassword(password)) {
-      setPasswordError("Por favor, insira uma senha mais forte");
-      return;
-    }
-    setPasswordError("");
-    console.log({ email, password });
+    
+    login(email, password)
   };
 
   //Function to toggle password view
@@ -57,30 +55,6 @@ const LoginPage = () => {
       setHidePassword("none");
     }
   };
-
-  //Envio de formulario atraves do axios
-
-  const form = document.getElementById("form");
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-  
-      const formData = new FormData(form);
-  
-      formData.append("email", document.getElementsByClassName("email").value);
-      formData.append(
-        "password",
-        document.getElementsByClassName("password").value
-      );
-  
-      axios
-        .post("http://127.0.0.1:8000", formData)
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err));
-    });
-  }
-  
 
   //HTML structure
   return (
@@ -133,7 +107,7 @@ const LoginPage = () => {
               </h4>
             </div>
           </div>
-          <small>{passwordError}</small>
+          <small>{}</small>
         </div>
         <button id="btnForgotPassword">Esqueci minha senha</button>
         <input className="loginSubmit" type="submit" value="Entrar" />
