@@ -4,8 +4,31 @@ import { useState } from 'react';
 import validator from 'validator';
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import TermsConditionsPage from "../pages/termsConditions/index";
+import useCallback from "react"
 
-export default function Inputs() {
+export default function Inputs(props) {
+
+//Mascara do CEP
+//99999-999
+//REGEX
+const handleKeyUp = useCallback((e) => {
+    e.currentTarget.maxLength = 9;
+    let value = e.currentTarget.value;
+    value = value.replace(/\D/g, "")
+    value = value.replace(/^(\d{5})(\d)/, "$1-$2")
+    e.currentTarget.value = value;
+}, []);
+
+//check CEP
+
+const checkCEP = (e) => 
+{
+const cep = e.target.value.replace(/\D/g, '')
+console.log(cep);
+fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data => {console.log(data);
+
+});
+}
 
     const [email, setEmail] = useState("");
     const [emailError, setEmailError] = useState("");
@@ -176,11 +199,7 @@ export default function Inputs() {
                         <div className={styles["second-block-inputs"]}>
                             <div className={styles["first-section"]}>
                                 <label>CEP</label>
-                                <input
-                                    required
-                                    id="cep"
-                                    placeholder='Digite aqui'
-                                />
+                                <input required id="cep" placeholder='99999-999' name='cep' onKeyUp={handleKeyUp} onBlur={checkCEP}></input>
 
                                 <div className={styles["second-section"]}>
 
