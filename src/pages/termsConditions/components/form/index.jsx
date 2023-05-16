@@ -6,10 +6,12 @@ import Title from "../../../../components/title";
 import WrapperCheckbox from "../wrapperCheckbox";
 import { acceptAll } from "../acceptAll";
 import { rmAcceptAll } from "../rmAcceptAll";
+import SecNameEmail from "../sectionNameEmailUser";
 
 export default function Form() {
   return (
     <FormStyled action="" id="termsConditionsForm">
+        <SecNameEmail/>
       <div>
         <Title>Termos e condições</Title>
         <p>
