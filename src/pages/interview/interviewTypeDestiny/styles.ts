@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
-export const LeftContainer = styled.div`
+export const Container = styled.div`
     display: flex;
+    flex-direction: row;
+`
+
+export const LeftContainer = styled.div`
+    width: 35vw;
+    background-color: ${props => props.theme.colors.primaryColor};
+    height: 100vh;
 `;
 
 export const MainContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 660px;
-    margin: 110px auto;
+    width: 70vw;
+    height: 100vh;
 `;

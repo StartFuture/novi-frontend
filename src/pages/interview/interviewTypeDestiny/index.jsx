@@ -1,14 +1,18 @@
 import React from "react";
-import { Container } from "./styles";
+import { Container, LeftContainer, MainContainer } from "./styles";
+import ButtonBack from "./components/buttonBack";
+import Form from "./components/form";
 
 function InterviewTypeDestiny(){
     return(
-        <LeftContainer>
-            <ButtonBack/>
+        <Container>
+            <LeftContainer>
+                <ButtonBack/>
+            </LeftContainer>
             <MainContainer>
                 <Form/>
             </MainContainer>
-        </LeftContainer>
+        </Container>
     )
 }
 
