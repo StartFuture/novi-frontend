@@ -21,7 +21,7 @@ function Registro() {
     return (
 <>
 
-{/* <ImgBackLogin/> */}
+<ImgBackLogin/>
 
 <Inputs/>
         
