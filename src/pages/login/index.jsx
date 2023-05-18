@@ -7,6 +7,8 @@ import "./assets/css/login.css";
 
 import { AuthContext } from "contexts/auth";
 
+import { Link } from 'react-router-dom';
+
 import Facebook from "./assets/svg/LoginFacebookIcons.svg";
 import Google from "./assets/svg/LoginGoogleIcon.svg";
 
@@ -111,11 +113,12 @@ const LoginPage = () => {
         </div>
         <button id="btnForgotPassword">Esqueci minha senha</button>
         <input className="loginSubmit" type="submit" value="Entrar" />
+        <Link to='/registro' className="link">
         <input
           className="loginNewAccountSubmit"
           type="submit"
           value="Registre-se"
-        />
+        /></Link>
         <div className="loginOtherOption">
           <span className="loginOtherOptionText"> Ou entre com </span>
         </div>

@@ -1,10 +1,9 @@
 import styles from '../assets/css/inputs.module.css'
 import LogoNovi from '../pages/registerPage/assets/image/Noví(1).png'
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import validator from 'validator';
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import TermsConditionsPage from "../pages/termsConditions/index";
-import useCallback from "react"
 
 export default function Inputs(props) {
 
@@ -30,14 +29,11 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
 });
 }
 
-    const [email, setEmail] = useState("");
     const [emailError, setEmailError] = useState("");
-    const [dtBirth, setDtBirth] = useState("");
     const [dtBirthError, setDtBirthError] = useState("");
-    const [phone, setPhone] = useState("");
     const [phoneError, setPhoneError] = useState("");
-    const [cpf, setCpf] = useState("");
     const [cpfError, setCpfError] = useState("");
+    const [userInfo, setUserInfo] = useState({ name_user: '', date_birth: '', email: '', cpf: '', cellphone: '', password_user: '' });
 
     const navigate = useNavigate();
 
@@ -46,12 +42,12 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
         e.preventDefault();
 
         //Email
-        if (validator.isEmpty(email)) {
+        if (validator.isEmpty(userInfo.email)) {
             setEmailError("Por favor, insira um email!");
             return;
         }
 
-        if (!validator.isEmail(email)) {
+        if (!validator.isEmail(userInfo.email)) {
             setEmailError("Por favor, insira um email válido");
             return;
         }
@@ -60,12 +56,12 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
 
 
         // CPF
-        if (validator.isEmpty(cpf)) {
+        if (validator.isEmpty(userInfo.cpf)) {
             setCpfError("Por favor, insira um CPF!");
             return;
         }
 
-        if(cpf.length != 11){
+        if(userInfo.cpf.length != 11){
             setCpfError('CPF deve ter 11 digitos');
             return;
         }
@@ -74,12 +70,12 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
 
         
         // Date Birth
-        if(validator.isEmpty(dtBirth)){
+        if(validator.isEmpty(userInfo.date_birth)){
             setDtBirthError("Por favor, insira uma data!")
             return;
         }
 
-        if (!validator.isDate(dtBirth)) {
+        if (!validator.isDate(userInfo.date_birth)) {
             setDtBirthError("Por favor, insira uma data válida");
             return;
         }
@@ -88,12 +84,12 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
     
         
         //Phone
-        if (validator.isEmpty(phone)) {
+        if (validator.isEmpty(userInfo.cellphone)) {
             setPhoneError("Por favor, insira um telefone!");
             return;
         }
 
-        if (!validator.isMobilePhone(phone, 'pt-BR')) {
+        if (!validator.isMobilePhone(userInfo.cellphone, 'pt-BR')) {
             setPhoneError("Por favor, insira um telefone válido");
             return;
         }
@@ -102,14 +98,14 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
         
         // return true
 
-        const userInfo = {
-            "name_user": document.getElementById("name").value,
-            "date_birth": document.getElementById("dateBirth").value,
-            "email": document.getElementById("email").value,
-            "cpf": document.getElementById("cpf").value,
-            "cellphone": document.getElementById("phone").value,
-            "password_user": document.getElementById("password").value,
-        }
+        // const userInfo = {
+        //     "name_user": document.getElementById("name").value,
+        //     "date_birth": document.getElementById("dateBirth").value,
+        //     "email": document.getElementById("email").value,
+        //     "cpf": document.getElementById("cpf").value,
+        //     "cellphone": document.getElementById("phone").value,
+        //     "password_user": document.getElementById("password").value,
+        // }
 
         const addressInfo = {
             "cep": document.getElementById("cep").value,
@@ -140,18 +136,18 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                                 <label>Nome completo</label>
                                 <input
                                     required
-                                    id="name"
                                     placeholder='Digite aqui'
+                                    value={userInfo.user_name}
+                                    onChange={(e) => {setUserInfo({...userInfo, user_name: e.target.value})}}
                                 />
 
                                 <label>Email</label>
                                 <input
                                     required
                                     type='email'
-                                    id="email"
                                     placeholder='Digite aqui'
-                                    value={email}
-                                    onChange={(e) => {setEmail(e.target.value)}}
+                                    value={userInfo.email}
+                                    onChange={(e) => {setUserInfo({...userInfo, email: e.target.value})}}
                                 />
                                 <small>{emailError}</small>
                                 <br/>
@@ -159,10 +155,9 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                                 <label>CPF</label>
                                 <input
                                     required
-                                    id="cpf"
                                     placeholder='Digite aqui'
-                                    value={cpf}
-                                    onChange={(e) => {setCpf(e.target.value)}}
+                                    value={userInfo.cpf}
+                                    onChange={(e) => {setUserInfo({...userInfo, cpf: e.target.value})}}
                                 />
                                 <small>{cpfError}</small>
                                 <br/>
@@ -172,11 +167,10 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                                 <label>Data de nascimento</label>
                                 <input
                                     required
-                                    id="dateBirth"
                                     type="date"
                                     placeholder='Digite aqui'
-                                    value={dtBirth}
-                                    onChange={(e) =>{setDtBirth(e.target.value)}}
+                                    value={userInfo.date_birth}
+                                    onChange={(e) =>{setUserInfo({...userInfo, date_birth: e.target.value})}}
                                 />
                                 <small>{dtBirthError}</small>
                                 <br/>
@@ -184,11 +178,10 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                                 <label>Celular</label>
                                 <input
                                     required
-                                    id="phone"
                                     type='tel'
                                     placeholder='DDD + Celular'
-                                    value={phone}
-                                    onChange={(e) => {setPhone(e.target.value)}}
+                                    value={userInfo.cellphone}
+                                    onChange={(e) => {setUserInfo({...userInfo, cellphone: e.target.value})}}
                                 />
                                 <small>{phoneError}</small>
                                 <br/>
@@ -252,8 +245,9 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                                 <label>Senha</label>
                                 <input
                                     required
-                                    id="password"
+                                    value={userInfo.password_user}
                                     placeholder='Digite aqui'
+                                    onChange={(e) => {setUserInfo({...userInfo, password_user: e.target.value})}}
                                 />
 
                                 <label>Confirmar senha</label>

@@ -9,7 +9,7 @@ import { rmAcceptAll } from "../rmAcceptAll";
 
 import { useNavigate } from "react-router-dom";
 
-import Api from "../../../../services/Api";
+import { api } from "../../../../services/Api";
 
 export default function Form() {
 
@@ -20,6 +20,9 @@ export default function Form() {
 
     const address = JSON.parse(sessionStorage.getItem('address'));
     const user = JSON.parse(sessionStorage.getItem('user'));
+
+    console.log(address);
+    console.log(user);
 
     user.news = document.getElementById("noviNews").checked;
     user.info_conditions = document.getElementById("acceptTermsConditions").checked;
@@ -34,7 +37,7 @@ export default function Form() {
       "user": user,
     }
 
-    Api.post("/user/user", form_values)
+    api.post("/user/user", form_values)
       .catch((err) => {
         console.log("error: " + err);
     });
