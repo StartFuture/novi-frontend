@@ -21,9 +21,6 @@ export default function Form() {
     const address = JSON.parse(sessionStorage.getItem('address'));
     const user = JSON.parse(sessionStorage.getItem('user'));
 
-    console.log(address);
-    console.log(user);
-
     user.news = document.getElementById("noviNews").checked;
     user.info_conditions = document.getElementById("acceptTermsConditions").checked;
     // user.share_data = document.getElementById("acceptUseData").checked;
