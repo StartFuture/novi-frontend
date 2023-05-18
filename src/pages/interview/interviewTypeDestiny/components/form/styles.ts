@@ -13,19 +13,46 @@ export const FormStyled = styled.form`
     }
 
     .labelDestinyType {
-        font-weight: bold;
+        font-size: 18px;
+        font-weight: 600;
     }
-
 
     small {
-        margin-top: 3px;
-        color: #000
+        margin-top: 5px;
+        color: #000;
+        font-weight: 400;
     }
 
-    .formCheckbox input:checked + label {
-        color: ${props => props.theme.colors.primaryColor};
+    .custom-radio-btn {
+        width: 21px;
+        height: 20px;
+        border 2px solid ${props => props.theme.colors.primaryColor};
+        border-radius: 50%;
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    
+
+    .custom-radio-btn .checkmark {
+        width: calc(100% - 7px);
+        height: calc(100% - 7px);
+        border-radius: 50%;
+        background-color: ${props => props.theme.colors.primaryColor};
+        display: inline-block;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .custom-radio-btn input {
+        display: none;
+    }
+
+    .custom-radio-btn input:checked + .checkmark {
+        opacity: 1
+    }
+
+
     .formCheckbox {
         display: flex;
         flex-direction: row;
