@@ -12,10 +12,6 @@ import { useNavigate } from "react-router-dom";
 
 import { api } from "../../../../services/Api";
 
-import { useNavigate } from "react-router-dom";
-
-import { api } from "../../../../services/Api";
-
 export default function Form() {
 
   const navigate = useNavigate();
