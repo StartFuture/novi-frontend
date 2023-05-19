@@ -1,9 +1,9 @@
-import { valid } from 'semver';
 import styles from '../assets/css/inputs.module.css'
 import LogoNovi from '../pages/registerPage/assets/image/Noví(1).png'
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import validator from 'validator';
-import useCallback from "react"
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import TermsConditionsPage from "../pages/termsConditions/index";
 
 export default function Inputs(props) {
 
@@ -29,27 +29,28 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
 });
 }
 
-    const [email, setEmail] = useState("");
     const [emailError, setEmailError] = useState("");
-    const [dtBirth, setDtBirth] = useState("");
     const [dtBirthError, setDtBirthError] = useState("");
-    const [phone, setPhone] = useState("");
     const [phoneError, setPhoneError] = useState("");
-    const [cpf, setCpf] = useState("");
     const [cpfError, setCpfError] = useState("");
+    const [userInfo, setUserInfo] = useState({ name_user: '', date_birth: '', email: '', cpf: '', cellphone: '', password_user: '' });
+    const [addressInfo, setAddressInfo] = useState({ cep: '', state_user: '', city: '', address_user: '', address_number: '', complements: ''});
+    
+
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
 
+        e.preventDefault();
+
         //Email
-        if (validator.isEmpty(email)) {
+        if (validator.isEmpty(userInfo.email)) {
             setEmailError("Por favor, insira um email!");
-            e.preventDefault();
             return;
         }
 
-        if (!validator.isEmail(email)) {
+        if (!validator.isEmail(userInfo.email)) {
             setEmailError("Por favor, insira um email válido");
-            e.preventDefault();
             return;
         }
 
@@ -57,15 +58,13 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
 
 
         // CPF
-        if (validator.isEmpty(cpf)) {
+        if (validator.isEmpty(userInfo.cpf)) {
             setCpfError("Por favor, insira um CPF!");
-            e.preventDefault();
             return;
         }
 
-        if(cpf.length != 11){
+        if(userInfo.cpf.length != 11){
             setCpfError('CPF deve ter 11 digitos');
-            e.preventDefault();
             return;
         }
         
@@ -73,16 +72,13 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
 
         
         // Date Birth
-        if(validator.isEmpty(dtBirth)){
-            console.log('vazio');
+        if(validator.isEmpty(userInfo.date_birth)){
             setDtBirthError("Por favor, insira uma data!")
-            e.preventDefault();
             return;
         }
 
-        if (!validator.isDate(dtBirth)) {
+        if (!validator.isDate(userInfo.date_birth)) {
             setDtBirthError("Por favor, insira uma data válida");
-            e.preventDefault();
             return;
         }
         
@@ -90,23 +86,21 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
     
         
         //Phone
-        if (validator.isEmpty(phone)) {
+        if (validator.isEmpty(userInfo.cellphone)) {
             setPhoneError("Por favor, insira um telefone!");
-            e.preventDefault();
             return;
         }
 
-        if (!validator.isMobilePhone(phone, 'pt-BR')) {
+        if (!validator.isMobilePhone(userInfo.cellphone, 'pt-BR')) {
             setPhoneError("Por favor, insira um telefone válido");
-            e.preventDefault();
             return;
         }
         
         setPhoneError("");
 
-        
-
-        return true;
+        sessionStorage.setItem('address', JSON.stringify(addressInfo));
+        sessionStorage.setItem('user', JSON.stringify(userInfo));
+        navigate('/terms-conditions');
     }
 
     return (
@@ -117,49 +111,60 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
 
                     <img src={LogoNovi} alt="Logo" />
 
-                    <form className={styles["forms-align"]}>
+                    <form id="form" className={styles["forms-align"]}>
 
                         <div className={styles["first-block-inputs"]}>
                             <div className={styles["first-section"]}>
                                 <label>Nome completo</label>
-                                <input placeholder='Digite aqui'></input>
+                                <input
+                                    required
+                                    placeholder='Digite aqui'
+                                    value={userInfo.name_user}
+                                    onChange={(e) => {setUserInfo({...userInfo, name_user: e.target.value})}}
+                                />
 
                                 <label>Email</label>
                                 <input
+                                    required
                                     type='email'
                                     placeholder='Digite aqui'
-                                    value={email}
-                                    onChange={(e) => {setEmail(e.target.value)}}
-                                    ></input>
+                                    value={userInfo.email}
+                                    onChange={(e) => {setUserInfo({...userInfo, email: e.target.value})}}
+                                />
                                 <small>{emailError}</small>
                                 <br/>
 
                                 <label>CPF</label>
-                                <input placeholder='Digite aqui'
-                                    value={cpf}
-                                    onChange={(e) => {setCpf(e.target.value)}}
-                                ></input>
+                                <input
+                                    required
+                                    placeholder='Digite aqui'
+                                    value={userInfo.cpf}
+                                    onChange={(e) => {setUserInfo({...userInfo, cpf: e.target.value})}}
+                                />
                                 <small>{cpfError}</small>
                                 <br/>
                             </div>
 
                             <div className={styles["second-section"]}>
                                 <label>Data de nascimento</label>
-                                <input 
-                                placeholder='Digite aqui'
-                                value={dtBirth}
-                                onChange={(e) =>{setDtBirth(e.target.value)}}
-                                ></input>
+                                <input
+                                    required
+                                    type="date"
+                                    placeholder='Digite aqui'
+                                    value={userInfo.date_birth}
+                                    onChange={(e) =>{setUserInfo({...userInfo, date_birth: e.target.value})}}
+                                />
                                 <small>{dtBirthError}</small>
                                 <br/>
                             
                                 <label>Celular</label>
                                 <input
+                                    required
                                     type='tel'
                                     placeholder='DDD + Celular'
-                                    value={phone}
-                                    onChange={(e) => {setPhone(e.target.value)}}
-                                ></input>
+                                    value={userInfo.cellphone}
+                                    onChange={(e) => {setUserInfo({...userInfo, cellphone: e.target.value})}}
+                                />
                                 <small>{phoneError}</small>
                                 <br/>
                                 <hr></hr>
@@ -169,30 +174,62 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                         <div className={styles["second-block-inputs"]}>
                             <div className={styles["first-section"]}>
                                 <label>CEP</label>
-                                <input placeholder='99999-999' name='cep' onKeyUp={handleKeyUp} onBlur={checkCEP}></input>
+                                <input 
+                                    required 
+                                    placeholder='99999-999' 
+                                    name='cep' 
+                                    onKeyUp={handleKeyUp} 
+                                    onBlur={checkCEP}
+                                    value={addressInfo.cep}
+                                    onChange={(e) => {setAddressInfo({...addressInfo, cep: e.target.value})}}
+                                    ></input>
 
                                 <div className={styles["second-section"]}>
 
                                     <label>Estado</label>
-                                    <input placeholder='Digite aqui'></input>
+                                    <input 
+                                        required
+                                        placeholder='Digite aqui'
+                                        value={addressInfo.state_user}
+                                        onChange={(e) => {setAddressInfo({...addressInfo, state_user: e.target.value})}}
+                                    />
 
                                     <label>Endereço</label>
-                                    <input placeholder='Digite aqui'></input>
+                                    <input
+                                        required
+                                        placeholder='Digite aqui'
+                                        value={addressInfo.address_user}
+                                        onChange={(e) => {setAddressInfo({...addressInfo, address_user: e.target.value})}}
+                                    />
 
                                     <div className={styles["third-section"]}>
 
                                         <label>Cidade</label>
-                                        <input placeholder='Digite aqui'></input>
+                                        <input
+                                            required
+                                            placeholder='Digite aqui'
+                                            value={addressInfo.city}
+                                            onChange={(e) => {setAddressInfo({...addressInfo, city: e.target.value})}}
+                                        />
 
                                         <label>Nº</label>
-                                        <input placeholder='Digite aqui'></input>
+                                        <input
+                                            required
+                                            placeholder='Digite aqui'
+                                            value={addressInfo.address_number}
+                                            onChange={(e) => {setAddressInfo({...addressInfo, address_number: e.target.value})}}
+                                        />
 
                                     </div>
 
                                 </div>
 
                                 <label>complemento</label>
-                                <input placeholder='Digite aqui'></input>
+                                <input
+                                    placeholder='Digite aqui'
+                                    value={addressInfo.complements}
+                                    onChange={(e) => {setAddressInfo({...addressInfo, complements: e.target.value})}}
+                                />
                             </div>
                         </div>
 
@@ -201,10 +238,20 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                             <div className={styles["first-section"]}>
                                 <hr></hr>
                                 <label>Senha</label>
-                                <input placeholder='Digite aqui'></input>
+                                <input
+                                    required
+                                    type="password"
+                                    value={userInfo.password_user}
+                                    placeholder='Digite aqui'
+                                    onChange={(e) => {setUserInfo({...userInfo, password_user: e.target.value})}}
+                                />
 
                                 <label>Confirmar senha</label>
-                                <input placeholder='Digite aqui'></input>
+                                <input
+                                    required
+                                    type="password"
+                                    placeholder='Digite aqui'
+                                />
                             </div>
                         </div>
 
@@ -214,6 +261,10 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
 
                 </div>
             </div>
+
+            <Routes>
+            <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
+            </Routes>
 
         </>
 

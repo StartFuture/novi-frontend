@@ -7,6 +7,7 @@ import { MainContainer, Container } from "./styles";
 import SecNameEmail from "./components/sectionNameEmailUser";
 
 function TermsConditionsPage() {
+
   return (
       <MainContainer>
         <ButtonToLogin />
