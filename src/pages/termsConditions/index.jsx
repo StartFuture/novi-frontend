@@ -6,6 +6,7 @@ import Form from "./components/form/index";
 import { MainContainer, Container } from "./styles";
 
 function TermsConditionsPage() {
+
   return (
       <MainContainer>
         <ButtonToLogin />
