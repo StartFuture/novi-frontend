@@ -245,6 +245,7 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                                 <label>Senha</label>
                                 <input
                                     required
+                                    type="password"
                                     value={userInfo.password_user}
                                     placeholder='Digite aqui'
                                     onChange={(e) => {setUserInfo({...userInfo, password_user: e.target.value})}}
@@ -253,7 +254,7 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                                 <label>Confirmar senha</label>
                                 <input
                                     required
-                                    id="confirm_password"
+                                    type="password"
                                     placeholder='Digite aqui'
                                 />
                             </div>
