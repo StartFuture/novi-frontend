@@ -260,7 +260,6 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                         </div>
 
                         <button className={styles.button} onClick={handleSubmit}>Cadastrar</button>
-                        {/* <button className={styles.button}>Cadastrar</button> */}
 
                     </form>
 
