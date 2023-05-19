@@ -34,6 +34,8 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
     const [phoneError, setPhoneError] = useState("");
     const [cpfError, setCpfError] = useState("");
     const [userInfo, setUserInfo] = useState({ name_user: '', date_birth: '', email: '', cpf: '', cellphone: '', password_user: '' });
+    const [addressInfo, setAddressInfo] = useState({ cep: '', state_user: '', city: '', address_user: '', address_number: '', complements: ''});
+    
 
     const navigate = useNavigate();
 
@@ -95,15 +97,6 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
         }
         
         setPhoneError("");
-        
-        const addressInfo = {
-            "cep": document.getElementById("cep").value,
-            "state_user": document.getElementById("state").value,
-            "city": document.getElementById("city").value,
-            "address_user": document.getElementById("address").value,
-            "address_number": document.getElementById("address_number").value,
-            "complements": document.getElementById("complements").value
-        }
 
         sessionStorage.setItem('address', JSON.stringify(addressInfo));
         sessionStorage.setItem('user', JSON.stringify(userInfo));
@@ -126,8 +119,8 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                                 <input
                                     required
                                     placeholder='Digite aqui'
-                                    value={userInfo.user_name}
-                                    onChange={(e) => {setUserInfo({...userInfo, user_name: e.target.value})}}
+                                    value={userInfo.name_user}
+                                    onChange={(e) => {setUserInfo({...userInfo, name_user: e.target.value})}}
                                 />
 
                                 <label>Email</label>
@@ -181,22 +174,32 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                         <div className={styles["second-block-inputs"]}>
                             <div className={styles["first-section"]}>
                                 <label>CEP</label>
-                                <input required id="cep" placeholder='99999-999' name='cep' onKeyUp={handleKeyUp} onBlur={checkCEP}></input>
+                                <input 
+                                    required 
+                                    placeholder='99999-999' 
+                                    name='cep' 
+                                    onKeyUp={handleKeyUp} 
+                                    onBlur={checkCEP}
+                                    value={addressInfo.cep}
+                                    onChange={(e) => {setAddressInfo({...addressInfo, cep: e.target.value})}}
+                                    ></input>
 
                                 <div className={styles["second-section"]}>
 
                                     <label>Estado</label>
                                     <input 
                                         required
-                                        id="state"
                                         placeholder='Digite aqui'
+                                        value={addressInfo.state_user}
+                                        onChange={(e) => {setAddressInfo({...addressInfo, state_user: e.target.value})}}
                                     />
 
                                     <label>Endereço</label>
                                     <input
                                         required
-                                        id="address"
                                         placeholder='Digite aqui'
+                                        value={addressInfo.address_user}
+                                        onChange={(e) => {setAddressInfo({...addressInfo, address_user: e.target.value})}}
                                     />
 
                                     <div className={styles["third-section"]}>
@@ -204,15 +207,17 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
                                         <label>Cidade</label>
                                         <input
                                             required
-                                            id="city"
                                             placeholder='Digite aqui'
+                                            value={addressInfo.city}
+                                            onChange={(e) => {setAddressInfo({...addressInfo, city: e.target.value})}}
                                         />
 
                                         <label>Nº</label>
                                         <input
                                             required
-                                            id="address_number"
                                             placeholder='Digite aqui'
+                                            value={addressInfo.address_number}
+                                            onChange={(e) => {setAddressInfo({...addressInfo, address_number: e.target.value})}}
                                         />
 
                                     </div>
@@ -221,8 +226,9 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
 
                                 <label>complemento</label>
                                 <input
-                                    id="complements" 
                                     placeholder='Digite aqui'
+                                    value={addressInfo.complements}
+                                    onChange={(e) => {setAddressInfo({...addressInfo, complements: e.target.value})}}
                                 />
                             </div>
                         </div>
