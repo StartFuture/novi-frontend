@@ -96,17 +96,6 @@ fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data
         
         setPhoneError("");
         
-        // return true
-
-        // const userInfo = {
-        //     "name_user": document.getElementById("name").value,
-        //     "date_birth": document.getElementById("dateBirth").value,
-        //     "email": document.getElementById("email").value,
-        //     "cpf": document.getElementById("cpf").value,
-        //     "cellphone": document.getElementById("phone").value,
-        //     "password_user": document.getElementById("password").value,
-        // }
-
         const addressInfo = {
             "cep": document.getElementById("cep").value,
             "state_user": document.getElementById("state").value,
