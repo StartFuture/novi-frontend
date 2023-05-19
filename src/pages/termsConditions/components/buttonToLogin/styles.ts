@@ -14,6 +14,10 @@ export const Container = styled.button`
     font-size: 18px;
     margin-top: 5px;
   }
+
+  @media screen and (max-width: 1112px){
+    display: none;
+  }
 `;
 
 

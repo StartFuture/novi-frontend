@@ -6,6 +6,7 @@ import Title from "../../../../components/title";
 import WrapperCheckbox from "../wrapperCheckbox";
 import { acceptAll } from "../acceptAll";
 import { rmAcceptAll } from "../rmAcceptAll";
+import SecNameEmail from "../sectionNameEmailUser";
 
 import { useNavigate } from "react-router-dom";
 
@@ -44,6 +45,7 @@ export default function Form() {
 
   return (
     <FormStyled id="termsConditionsForm">
+        <SecNameEmail/>
       <div>
         <Title>Termos e condições</Title>
         <p>

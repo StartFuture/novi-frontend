@@ -11,8 +11,6 @@ export const FormStyled = styled.form`
         margin-bottom: 16px;
     }
 
-
-
     .formCheckbox {
         display: flex;
         margin: 16px 0;
@@ -21,6 +19,10 @@ export const FormStyled = styled.form`
 
     .formCheckbox input {
         display: none;
+    }
+
+    .formCheckbox label {
+        cursor: pointer;
     }
 
     .formCheckbox input + label::before { 
@@ -32,7 +34,6 @@ export const FormStyled = styled.form`
         border-radius: 8px;
         margin-right: 24px;
         vertical-align: middle;
-        cursor: pointer;
     }
 
     .formCheckbox input:checked + label::before {
@@ -57,5 +58,14 @@ export const FormStyled = styled.form`
         color: white;
         font-size: 18px;
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 1112px){
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 340px;  
+        font-size: 12px;
     }
 `;
