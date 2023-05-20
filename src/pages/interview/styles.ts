@@ -6,7 +6,7 @@ export const Container = styled.div`
 `
 
 export const LeftContainer = styled.div`
-    width: 35vw;
+    width: 25vw;
     background-color: ${props => props.theme.colors.primaryColor};
     height: 100vh;
 `;
@@ -148,7 +148,7 @@ export const NavStyled = styled.nav`
   background-color: ${props => props.theme.colors.primaryColor};
 
   ul {
-    padding-left: 170px;
+    padding-left: 140px;
     position: relative;
     list-style: none;
   }
@@ -158,7 +158,7 @@ export const NavStyled = styled.nav`
     position: absolute;
     width: 1px;
     height: calc(100% - 85px);
-    left: 160px;
+    left: 120px;
     top: 10px;
     background: #FFF;
     z-index: -1;
@@ -167,7 +167,7 @@ export const NavStyled = styled.nav`
 
   ul li {
     padding: 35px 0;
-    padding-left: 20px;
+    padding-left: 10px;
   }
 
   ul li a {
