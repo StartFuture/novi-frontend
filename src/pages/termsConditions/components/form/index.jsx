@@ -6,10 +6,46 @@ import Title from "../../../../components/title";
 import WrapperCheckbox from "../wrapperCheckbox";
 import { acceptAll } from "../acceptAll";
 import { rmAcceptAll } from "../rmAcceptAll";
+import SecNameEmail from "../sectionNameEmailUser";
+
+import { useNavigate } from "react-router-dom";
+
+import { api } from "../../../../services/Api";
 
 export default function Form() {
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const address = JSON.parse(sessionStorage.getItem('address'));
+    const user = JSON.parse(sessionStorage.getItem('user'));
+
+    user.news = document.getElementById("noviNews").checked;
+    user.info_conditions = document.getElementById("acceptTermsConditions").checked;
+    // user.share_data = document.getElementById("acceptUseData").checked;
+
+    if(address.complements || address.complements === ""){
+      address.complements = null
+    }
+
+    const form_values = {
+      "address": address,
+      "user": user,
+    }
+
+    api.post("/user/user", form_values)
+      .catch((err) => {
+        console.log("error: " + err);
+    });
+
+    navigate('/');
+  } 
+
   return (
-    <FormStyled action="" id="termsConditionsForm">
+    <FormStyled id="termsConditionsForm">
+        <SecNameEmail/>
       <div>
         <Title>Termos e condições</Title>
         <p>
@@ -53,7 +89,7 @@ export default function Form() {
         </div>
       </WrapperCheckbox>
       <div>
-        <input id="submit" type="submit" value="Continuar" />
+        <input id="submit" type="submit" value="Continuar" onClick={handleSubmit}/>
       </div>
     </FormStyled>
   );

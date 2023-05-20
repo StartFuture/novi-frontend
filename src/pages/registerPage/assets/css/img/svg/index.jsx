@@ -1,6 +1,7 @@
-import ImgBackLogin from "../../../../../../components/imgbacklogin"
-import Inputs from "../../../../../../components/inputs"
-import React, {useCallback, useState} from "react"
+import React, {useCallback, useState} from "react";
+import ImgBackLogin from "../../../../../../components/imgbacklogin";
+import Inputs from "../../../../../../components/inputs";
+
 
 
 
@@ -19,13 +20,13 @@ function Registro() {
 
 
     return (
-<>
+            <>
 
-<ImgBackLogin/>
+            <ImgBackLogin/>
 
-<Inputs/>
+            <Inputs/>
         
-        </>
+            </>
     )
 }
 

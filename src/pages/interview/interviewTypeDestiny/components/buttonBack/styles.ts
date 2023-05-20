@@ -6,17 +6,13 @@ export const Container = styled.button`
   text-align: center;
   border: none;
   background: none;
-  margin: 118px auto auto 195px;
+  margin: 60px auto auto 80px;
   color: #ffff;
   cursor: pointer;
 
   p { 
     font-size: 18px;
     margin-top: 5px;
-  }
-
-  @media screen and (max-width: 1112px){
-    display: none;
   }
 `;
 
