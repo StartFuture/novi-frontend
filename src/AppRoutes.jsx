@@ -10,6 +10,7 @@ import Login from "./pages/login/index";
 import InterviewStart from "./pages/interviewStart";
 import Registro from "./pages/registerPage/assets/css/img/svg/index";
 import TermsConditionsPage from "./pages/termsConditions/index";
+import QuizObejtivoViagem from "pages/quiz/quizObjetivosDaViagem";
 
 const AppRoutes = () => {
     return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
                 <Route exact path="/interviewStart" element={<InterviewStart/>}></Route>
                 <Route exact path="/registro" element={<Registro/>}></Route>
                 <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
+                <Route exact path="/quizObjetivos" element={<QuizObejtivoViagem/>}></Route>
             </Routes>
         </Router>
     );

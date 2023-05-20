@@ -15,7 +15,7 @@ function LandingPageTop(){
             </header>
             <div className="LPBanner">
                 <p id="bannerPhrase"><b>Descubra</b> destinos emocionantes para explorar</p>
-                <button className="btnLandingPage"> Quero viajar > </button>
+                <button className="btnLandingPage"> Quero viajar  </button>
             </div>
         </div>
     )
