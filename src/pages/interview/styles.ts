@@ -6,13 +6,13 @@ export const Container = styled.div`
 `
 
 export const LeftContainer = styled.div`
-    width: 25vw;
+    width: 22vw;
     background-color: ${props => props.theme.colors.primaryColor};
     height: 100vh;
 `;
 
 export const MainContainer = styled.div`
-    width: 70vw;
+    width: 78vw;
     height: 100vh;
 `;
 
@@ -26,46 +26,23 @@ export const FormStyled = styled.div`
     align-items: center;
 
     .form-container {
-        width: 400px;
-        height: 400px;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
+        // background-color: blue;
+        width: 80%;
+        height: 80%;
       }
       
       .form-container .header {
-        flex: 20%;
-        display: grid;
-        place-items: center;
+        display: flex;
+        justify-content: flex-init;
+        margin: 9vh 0 5vh 15vw;
       }
       
       .form-container .body {
-        flex: 60%;
+        
       }
-      
-      .form-container .footer {
-        flex: 20%;
-        display: flex;
-        justify-content: center;
-      }
-      
-      .form-container .footer button {
-        border-radius: 7px;
-        width: 100px;
-        height: 40px;
-        background-color: rgb(255, 0, 140);
-        font-weight: bold;
-        color: white;
-        border: 0 none;
-        border-radius: 1px;
-        cursor: pointer;
-        padding: 10px 5px;
-        margin: 10px 5px;
-        margin: 5px;
-      }
-      
+
       .sign-up-container {
         height: 100%;
         width: 100%;
@@ -100,20 +77,6 @@ export const FormStyled = styled.div`
         font-size: 20px;
       }
       
-      /* PROGRESS BAR */
-      .progressbar {
-        width: 400px;
-        height: 10px;
-        background-color: white;
-        margin-bottom: 50px;
-      }
-      
-      .progressbar div {
-        width: 33.3%;
-        height: 100%;
-        background-color: rgb(98, 0, 255);
-      }
-      
       .other-info-container {
         height: 100%;
         width: 100%;
@@ -143,12 +106,12 @@ export const FormStyled = styled.div`
 
 export const NavStyled = styled.nav`
   position: absolute;
-  top: 50%;
+  top: 50vh;
   transform: translateY(-50%);
   background-color: ${props => props.theme.colors.primaryColor};
 
   ul {
-    padding-left: 140px;
+    padding-left: 8vw;
     position: relative;
     list-style: none;
   }
@@ -158,7 +121,7 @@ export const NavStyled = styled.nav`
     position: absolute;
     width: 1px;
     height: calc(100% - 85px);
-    left: 120px;
+    left: 7vw;
     top: 10px;
     background: #FFF;
     z-index: -1;
@@ -200,4 +163,35 @@ export const NavStyled = styled.nav`
   ul li a.active::before {
     background: #FFF;
   }
+`;
+
+export const Footer = styled.div`
+  display: flex;
+  margin-top: 4vh;
+  margin-right: 14vw;
+  justify-content: flex-end;
+`;
+
+export const ButtonPrev = styled.button`
+  color: ${props => props.theme.colors.primaryColor};
+  border: none;
+  background-color: white;
+  width: 10vw;
+  height: 7vh;
+  font-family: ${props => props.theme.fonts.fontMontserrat};
+  font-size: 18px;
+  font-weight: 500;
+`;
+
+export const ButtonNext = styled.button`
+  color: white;
+  border: none;
+  background-color: ${props => props.theme.colors.primaryColor};
+  width: 12vw;
+  height: 5vh;
+  font-family: ${props => props.theme.fonts.fontMontserrat};
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 8px;
+
 `;

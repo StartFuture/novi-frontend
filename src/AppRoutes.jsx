@@ -10,7 +10,6 @@ import Login from "./pages/login/index";
 import InterviewStart from "./pages/interviewStart";
 import Registro from "./pages/registerPage/assets/css/img/svg/index";
 import TermsConditionsPage from "./pages/termsConditions/index";
-import InterviewTypeDestiny from "./pages/interview/interviewTypeDestiny/index";
 import Interview from "pages/interview";
 
 import { AuthProvider } from "contexts/auth";
@@ -27,7 +26,6 @@ const AppRoutes = () => {
                 <Route exact path="/interviewStart" element={<InterviewStart />}></Route>
                 <Route exact path="/registro" element={<Registro />}></Route>
                 <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
-                <Route exact path="/interview-type-destiny" element={<InterviewTypeDestiny/>}></Route>
                 <Route exact path="/interview" element={<Interview/>}></Route>
             </Routes>
         </AuthProvider>
