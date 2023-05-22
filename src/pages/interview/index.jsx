@@ -1,19 +1,21 @@
 import React from "react";
 import { Container, LeftContainer, MainContainer } from "./styles";
 import ButtonBack from "./components/buttonBack";
-import Form from "./components/form";
+import TravelType from "./components/TravelType";
+import TravelTours from "./components/TravelTours";
 
-function InterviewTypeDestiny(){
+function Interview(){
     return(
         <Container>
             <LeftContainer>
                 <ButtonBack/>
             </LeftContainer>
             <MainContainer>
-                <Form/>
+                <TravelType/>
+                <TravelTours/>
             </MainContainer>
         </Container>
     )
 }
 
-export default InterviewTypeDestiny;
+export default Interview;

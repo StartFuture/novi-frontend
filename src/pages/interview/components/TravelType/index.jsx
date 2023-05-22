@@ -2,7 +2,7 @@ import React from "react";
 
 import { FormStyled } from "./styles";
 
-function Form(){
+function TravelType(){
     return(
         <FormStyled>
             <h1 className="titleDestinyType">Qual tipo de destino você prefere?</h1>
@@ -41,4 +41,4 @@ function Form(){
     );
 }
 
-export default Form;
+export default TravelType;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FormStyled = styled.form`
 
-    display: flex;
+    display: none; // mude para diplay: flex;
     flex-direction: column;
     max-width: 100%;
 
