@@ -10,6 +10,10 @@ export const Container = styled.button`
   color: #ffff;
   cursor: pointer;
 
+  :hover {
+    text-decoration: underline;
+  }
+
   p { 
     font-size: 18px;
     margin-top: .7vh;

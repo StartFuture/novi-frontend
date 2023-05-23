@@ -39,6 +39,10 @@ export const FormStyled = styled.div`
       margin: 9vh 0 5vh 15vw;
     }
 
+    .form-container .body {
+        height: 68vh;
+    }
+
     .sign-up-container {
       height: 100%;
       width: 100%;
@@ -166,6 +170,7 @@ export const Footer = styled.div`
   margin-top: 4vh;
   margin-right: 14vw;
   justify-content: flex-end;
+  align-items: flex-end;
 `;
 
 export const ButtonPrev = styled.button`
@@ -177,6 +182,11 @@ export const ButtonPrev = styled.button`
   font-family: ${props => props.theme.fonts.fontMontserrat};
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
+  
+  :hover {
+    background-color: ${props => props.theme.colors.lightGreyColor};
+  }
 `;
 
 export const ButtonNext = styled.button`
@@ -189,5 +199,10 @@ export const ButtonNext = styled.button`
   font-size: 18px;
   font-weight: 500;
   border-radius: 8px;
+  cursor: pointer;
 
+  :hover {
+    background-color: #277567;
+    
+  }
 `;
