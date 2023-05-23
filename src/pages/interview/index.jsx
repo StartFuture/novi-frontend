@@ -4,7 +4,7 @@ import SignUpInfo from "./teste/SignUpInfo";
 import PersonalInfo from "./teste/PersonalInfo";
 import OtherInfo from "./teste/OtherInfo";
 
-import InterviewTypeDestiny from "./components/interviewTypeDestiny";
+import TravelType from "./components/TravelType";
 
 import { Container, LeftContainer, MainContainer, FormStyled, NavStyled, Footer, ButtonPrev, ButtonNext } from "./styles";
 
@@ -19,27 +19,28 @@ function Interview(){
         });
     })
     const [page, setPage] = useState(0);
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    confirmPassword: "",
-    firstName: "",
-    lastName: "",
-    username: "",
-    nationality: "",
-    other: "",
-  });
 
-  const FormTitles = ["Qual o tipo de destino você prefere?", "Personal Info", "Other", "Last"];
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+        confirmPassword: "",
+        firstName: "",
+        lastName: "",
+        username: "",
+        nationality: "",
+        other: "",
+    });
 
-  const PageDisplay = () => {
-    if (page === 0) {
-      return <InterviewTypeDestiny formData={formData} setFormData={setFormData} />;
-    } else if (page === 1) {
-      return <PersonalInfo formData={formData} setFormData={setFormData} />;
-    } else {
-      return <OtherInfo formData={formData} setFormData={setFormData} />;
-    }
+    const FormTitles = ["Qual o tipo de destino você prefere?", "Personal Info", "Other", "Last"];
+
+    const PageDisplay = () => {
+        if (page === 0) {
+        return <TravelType formData={formData} setFormData={setFormData} />;
+        } else if (page === 1) {
+        return <PersonalInfo formData={formData} setFormData={setFormData} />;
+        } else {
+        return <OtherInfo formData={formData} setFormData={setFormData} />;
+        }
     };
   
     return (

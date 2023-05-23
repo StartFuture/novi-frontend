@@ -26,82 +26,78 @@ export const FormStyled = styled.div`
     align-items: center;
 
     .form-container {
-        // display: flex;
-        // flex-direction: column;
-        // background-color: blue;
-        width: 80%;
-        height: 80%;
-      }
+      display: flex;
+      flex-direction: column;
+      // background-color: blue;
+      width: 80%;
+      height: 80%;
+    }
       
-      .form-container .header {
-        display: flex;
-        justify-content: flex-init;
-        margin: 9vh 0 5vh 15vw;
-      }
-      
-      .form-container .body {
-        
-      }
+    .form-container .header {
+      display: flex;
+      justify-content: flex-init;
+      margin: 9vh 0 5vh 15vw;
+    }
 
-      .sign-up-container {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      .sign-up-container input {
-        margin: 5px;
-        width: 200px;
-        height: 40px;
-        padding-left: 5px;
-        font-size: 20px;
-      }
-      
-      .personal-info-container {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      .personal-info-container input {
-        margin: 5px;
-        width: 200px;
-        height: 40px;
-        padding-left: 5px;
-        font-size: 20px;
-      }
-      
-      .other-info-container {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      .other-info-container input {
-        margin: 5px;
-        width: 200px;
-        height: 40px;
-        padding-left: 5px;
-        font-size: 20px;
-      }
-      
-      input {
-        border: 2px solid rgb(98, 0, 255);
-        border-radius: 5px;
-      }
-      
-      input:focus {
-        border: 3px solid rgb(98, 0, 255);
-      }
+    .sign-up-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .sign-up-container input {
+      margin: 5px;
+      width: 200px;
+      height: 40px;
+      padding-left: 5px;
+      font-size: 20px;
+    }
+    
+    .personal-info-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .personal-info-container input {
+      margin: 5px;
+      width: 200px;
+      height: 40px;
+      padding-left: 5px;
+      font-size: 20px;
+    }
+    
+    .other-info-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .other-info-container input {
+      margin: 5px;
+      width: 200px;
+      height: 40px;
+      padding-left: 5px;
+      font-size: 20px;
+    }
+    
+    input {
+      border: 2px solid rgb(98, 0, 255);
+      border-radius: 5px;
+    }
+    
+    input:focus {
+      border: 3px solid rgb(98, 0, 255);
+    }
 `
 
 export const NavStyled = styled.nav`
@@ -176,8 +172,8 @@ export const ButtonPrev = styled.button`
   color: ${props => props.theme.colors.primaryColor};
   border: none;
   background-color: white;
-  width: 10vw;
-  height: 7vh;
+  width: 12vw;
+  height: 5vh;
   font-family: ${props => props.theme.fonts.fontMontserrat};
   font-size: 18px;
   font-weight: 500;
