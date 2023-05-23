@@ -177,15 +177,15 @@ export const ButtonPrev = styled.button`
   color: ${props => props.theme.colors.primaryColor};
   border: none;
   background-color: white;
+  padding: 16px;
   width: 12vw;
-  height: 5vh;
   font-family: ${props => props.theme.fonts.fontMontserrat};
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   
   :hover {
-    background-color: ${props => props.theme.colors.lightGreyColor};
+    text-decoration: underline;
   }
 `;
 
@@ -193,8 +193,8 @@ export const ButtonNext = styled.button`
   color: white;
   border: none;
   background-color: ${props => props.theme.colors.primaryColor};
+  padding: 16px;
   width: 12vw;
-  height: 5vh;
   font-family: ${props => props.theme.fonts.fontMontserrat};
   font-size: 18px;
   font-weight: 500;
