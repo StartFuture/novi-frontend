@@ -6,13 +6,17 @@ export const Container = styled.button`
   text-align: center;
   border: none;
   background: none;
-  margin: 60px auto auto 80px;
+  margin: 9vh auto auto 6vw;
   color: #ffff;
   cursor: pointer;
 
+  :hover {
+    text-decoration: underline;
+  }
+
   p { 
     font-size: 18px;
-    margin-top: 5px;
+    margin-top: .7vh;
   }
 `;
 

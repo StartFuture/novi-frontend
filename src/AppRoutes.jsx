@@ -11,6 +11,7 @@ import InterviewStart from "./pages/interviewStart";
 import Interview from "./pages/interview";
 import Registro from "./pages/registerPage/assets/css/img/svg/index";
 import TermsConditionsPage from "./pages/termsConditions/index";
+
 import QuizObejtivoViagem from "pages/quiz/quizObjetivosDaViagem";
 import { Private } from "./components/Private";
 import { AuthProvider } from "./contexts/auth";
