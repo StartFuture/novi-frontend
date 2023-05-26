@@ -2,19 +2,17 @@ import React from "react";
 
 import { FormStyled } from "./styles";
 
-function TravelType() {
-  return (
-    <FormStyled>
-      <h1 className="titleDestinyType">Qual tipo de destino você prefere?</h1>
-    
-      <div className="formCheckbox" htmlFor="optionDestinyType1">
+function FavoriteTravelType(){
+    return(
+        <FormStyled>
+        <h1 className="titleDestinyType">Qual é o seu estilo favorito de viagens?</h1>
+        <div className="formCheckbox">
             <label className="custom-radio-btn">
                 <input type="radio" name="optionDestinyType" id="optionDestinyType1"/>
                 <span className="checkmark"></span>
             </label>
             <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType1">Praia e litoral</label>
-                <small>Belissimas praias ao redor do nosso Brasilzao</small>
+                <label className="labelDestinyType" htmlFor="optionDestinyType1">Viagens relaxantes e tranquilas</label>
             </div>
         </div>
         <div className="formCheckbox">
@@ -23,8 +21,7 @@ function TravelType() {
                 <span className="checkmark"></span>
             </label>
             <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType2">Montanhas e paisagens naturais</label>
-                <small>Se impressione com vistas maravilhosas</small>
+                <label className="labelDestinyType" htmlFor="optionDestinyType2">Exploração e descoberta de novos lugares</label>
             </div>
         </div>
         <div className="formCheckbox">
@@ -33,32 +30,29 @@ function TravelType() {
                 <span className="checkmark"></span>
             </label>
             <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType3">Cidades históricas e culturas</label>
-                <small>Conheça pontos turísticos nas cidades nas lindas</small>
+                <label className="labelDestinyType" htmlFor="optionDestinyType3">Imersão cultural e histórica</label>
             </div>
         </div>
         <div className="formCheckbox">
             <label className="custom-radio-btn">
-                <input type="radio" name="optionDestinyType" id="optionDestinyType4"/>
+                <input type="radio" name="optionDestinyType" id="optionDestinyType3"/>
                 <span className="checkmark"></span>
             </label>
             <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType4">Aventuras e esportes radicais </label>
-                <small>Aventureiro? Conheça as melhores aventuras</small>
+                <label className="labelDestinyType" htmlFor="optionDestinyType3">Em busca de adrenalina e emoções</label>
             </div>
         </div>
         <div className="formCheckbox">
             <label className="custom-radio-btn">
-                <input type="radio" name="optionDestinyType" id="optionDestinyType5"/>
+                <input type="radio" name="optionDestinyType" id="optionDestinyType3"/>
                 <span className="checkmark"></span>
             </label>
             <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType5">Natureza exuberante e vida selvagem</label>
-                <small>Conecte com a natureza com experiências incriveis</small>
+                <label className="labelDestinyType" htmlFor="optionDestinyType3">Conexão com a natureza e ecoturismo</label>
             </div>
         </div>
     </FormStyled>
-  );
+    )
 }
 
-export default TravelType;
+export default FavoriteTravelType;

@@ -2,12 +2,11 @@ import React from "react";
 
 import { FormStyled } from "./styles";
 
-function TravelType() {
-  return (
-    <FormStyled>
-      <h1 className="titleDestinyType">Qual tipo de destino você prefere?</h1>
-    
-      <div className="formCheckbox" htmlFor="optionDestinyType1">
+function InternationalTravel(){
+    return(
+        <FormStyled>
+        <h1 className="titleDestinyType">Qual tipo de destino você prefere?</h1>
+        <div className="formCheckbox">
             <label className="custom-radio-btn">
                 <input type="radio" name="optionDestinyType" id="optionDestinyType1"/>
                 <span className="checkmark"></span>
@@ -39,26 +38,26 @@ function TravelType() {
         </div>
         <div className="formCheckbox">
             <label className="custom-radio-btn">
-                <input type="radio" name="optionDestinyType" id="optionDestinyType4"/>
+                <input type="radio" name="optionDestinyType" id="optionDestinyType3"/>
                 <span className="checkmark"></span>
             </label>
             <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType4">Aventuras e esportes radicais </label>
+                <label className="labelDestinyType" htmlFor="optionDestinyType3">Aventuras e esportes radicais </label>
                 <small>Aventureiro? Conheça as melhores aventuras</small>
             </div>
         </div>
         <div className="formCheckbox">
             <label className="custom-radio-btn">
-                <input type="radio" name="optionDestinyType" id="optionDestinyType5"/>
+                <input type="radio" name="optionDestinyType" id="optionDestinyType3"/>
                 <span className="checkmark"></span>
             </label>
             <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType5">Natureza exuberante e vida selvagem</label>
+                <label className="labelDestinyType" htmlFor="optionDestinyType3">Natureza exuberante e vida selvagem</label>
                 <small>Conecte com a natureza com experiências incriveis</small>
             </div>
         </div>
     </FormStyled>
-  );
+    )
 }
 
-export default TravelType;
+export default InternationalTravel;
