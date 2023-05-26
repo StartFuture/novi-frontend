@@ -7,29 +7,27 @@ export default function TravelClimate() {
     <Content>
       <form>
         <div>
-          <h2>Quais atividades você mais gosta durante a viagem?</h2>
+          <h2>Qual é a sua preferência em relação ao clima durante a viagem</h2>
         </div>
         <div>
-        <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="relax"/>
-          <label htmlFor="relax">Relaxar na praia ou à beira da piscina</label>
-        </div>
-        <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="hiking"/>
-          <label htmlFor="hiking">Fazer trilhas e caminhadas ao ar livre</label>
-        </div>
-        <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="history"/>
-          <label htmlFor="history">Explorar museus e locais históricos</label>
-        </div>
-        <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="sports"/>
-          <label htmlFor="sports">Praticar esportes radicais e de aventura</label>
-        </div>
-        <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="gastronomic"/>
-          <label htmlFor="gastronomic">Experimentar a gastronomia e fazer passeios gastronômicos</label>
-        </div>
+          <div className="checkboxWrapper">
+            <div className="formCheckbox">
+              <input type="checkbox" name="acceptTerm" id="relax" />
+              <label htmlFor="relax">Clima quente</label>
+            </div>
+            <div className="formCheckbox">
+              <input type="checkbox" name="acceptTerm" id="hiking" />
+              <label htmlFor="hiking">Clima ameno e temperado</label>
+            </div>
+            <div className="formCheckbox">
+              <input type="checkbox" name="acceptTerm" id="history" />
+              <label htmlFor="history">Clima frio e neve</label>
+            </div>
+          </div>
+          <div className="formCheckbox">
+            <input type="checkbox" name="acceptTerm" id="gastronomic" />
+            <label htmlFor="gastronomic">Não tenho preferência</label>
+          </div>
         </div>
       </form>
     </Content>

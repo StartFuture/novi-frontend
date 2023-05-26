@@ -136,7 +136,7 @@ export const NavStyled = styled.nav`
   ul li a {
     text-decoration: none;
     position: relative;
-    color #FFF;
+    color: #FFF;
     font-size: 18px;
     line-height: 1rem;
     font-weight: 600;

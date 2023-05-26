@@ -6,51 +6,42 @@ function FavoriteTravelType(){
     return(
         <FormStyled>
         <h1 className="titleDestinyType">Qual é o seu estilo favorito de viagens?</h1>
-        <div className="formCheckbox">
-            <label className="custom-radio-btn">
+
+        <label className="formCheckbox" htmlFor="optionDestinyType1">
+            <div className="custom-radio-btn">
                 <input type="radio" name="optionDestinyType" id="optionDestinyType1"/>
                 <span className="checkmark"></span>
-            </label>
-            <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType1">Viagens relaxantes e tranquilas</label>
             </div>
-        </div>
-        <div className="formCheckbox">
-            <label className="custom-radio-btn">
+            <h2 className="checkboxTitle">Viagens relaxantes e tranquilas</h2>
+        </label>
+        <label className="formCheckbox" htmlFor="optionDestinyType2">
+            <div className="custom-radio-btn">
                 <input type="radio" name="optionDestinyType" id="optionDestinyType2"/>
                 <span className="checkmark"></span>
-            </label>
-            <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType2">Exploração e descoberta de novos lugares</label>
             </div>
-        </div>
-        <div className="formCheckbox">
-            <label className="custom-radio-btn">
+            <h2 className="checkboxTitle">Exploração e descoberta de novos lugares</h2>
+        </label>
+        <label className="formCheckbox" htmlFor="optionDestinyType3">
+            <div className="custom-radio-btn">
                 <input type="radio" name="optionDestinyType" id="optionDestinyType3"/>
                 <span className="checkmark"></span>
-            </label>
-            <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType3">Imersão cultural e histórica</label>
             </div>
-        </div>
-        <div className="formCheckbox">
-            <label className="custom-radio-btn">
-                <input type="radio" name="optionDestinyType" id="optionDestinyType3"/>
+            <h2 className="checkboxTitle">Imersão cultural e histórica</h2>
+        </label>
+        <label className="formCheckbox" htmlFor="optionDestinyType4">
+            <div className="custom-radio-btn">
+                <input type="radio" name="optionDestinyType" id="optionDestinyType4"/>
                 <span className="checkmark"></span>
-            </label>
-            <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType3">Em busca de adrenalina e emoções</label>
             </div>
-        </div>
-        <div className="formCheckbox">
-            <label className="custom-radio-btn">
-                <input type="radio" name="optionDestinyType" id="optionDestinyType3"/>
+            <h2 className="checkboxTitle">Em busca de adrenalina e emoções</h2>
+        </label>
+        <label className="formCheckbox" htmlFor="optionDestinyType5">
+            <div className="custom-radio-btn">
+                <input type="radio" name="optionDestinyType" id="optionDestinyType5"/>
                 <span className="checkmark"></span>
-            </label>
-            <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType3">Conexão com a natureza e ecoturismo</label>
             </div>
-        </div>
+            <h2 className="checkboxTitle">Conexão com a natureza e ecoturismo</h2>
+        </label>
     </FormStyled>
     )
 }

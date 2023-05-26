@@ -7,28 +7,28 @@ export default function TravelAccomodation() {
     <Content>
       <form>
         <div>
-          <h2>Quais atividades você mais gosta durante a viagem?</h2>
+          <h2>Quais dessas acomodações você prefere?</h2>
         </div>
         <div>
         <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="relax"/>
-          <label htmlFor="relax">Relaxar na praia ou à beira da piscina</label>
+          <input type="checkbox" id="hotelResort"/>
+          <label htmlFor="hotelResort">Hotéis de luxo e resorts</label>
         </div>
         <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="hiking"/>
-          <label htmlFor="hiking">Fazer trilhas e caminhadas ao ar livre</label>
+          <input type="checkbox" id="inn"/>
+          <label htmlFor="inn">Pousadas e acomodações charmosas</label>
         </div>
         <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="history"/>
-          <label htmlFor="history">Explorar museus e locais históricos</label>
+          <input type="checkbox" id="houses"/>
+          <label htmlFor="houses">Apartamentos e casas de temporada</label>
         </div>
         <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="sports"/>
-          <label htmlFor="sports">Praticar esportes radicais e de aventura</label>
+          <input type="checkbox" id="hostels"/>
+          <label htmlFor="hostels">Hostels</label>
         </div>
         <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="gastronomic"/>
-          <label htmlFor="gastronomic">Experimentar a gastronomia e fazer passeios gastronômicos</label>
+          <input type="checkbox" id="camping"/>
+          <label htmlFor="camping">Acampamentos e contato direto com a natureza</label>
         </div>
         </div>
       </form>

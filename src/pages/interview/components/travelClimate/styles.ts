@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const Content = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 108px;
-    margin-left: 300px;
     width: 795px;
+    margin: -1vh 0 2vh 8vw;
 
     h2 {
         font-weight: 600;
@@ -34,7 +33,7 @@ export const Content = styled.div`
     display: inline-block;
     height: 24px;
     width: 24px;
-    border: 1px solid ${(props) => props.theme.colors.lightGreyColor};
+    border: 1px solid #000;
     border-radius: 8px;
     margin-right: 24px;
     vertical-align: middle;
@@ -49,5 +48,9 @@ export const Content = styled.div`
 
   .formCheckbox input:checked + label {
     color: ${(props) => props.theme.colors.primaryColor};
+  }
+
+  .checkboxWrapper { 
+    border-bottom: 1px solid ${(props) => props.theme.colors.lightGreyColor};
   }
 `;

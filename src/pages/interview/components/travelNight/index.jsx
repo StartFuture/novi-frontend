@@ -5,57 +5,38 @@ import { FormStyled } from "./styles";
 function TravelNight(){
     return(
         <FormStyled>
-        <h1 className="titleDestinyType">Qual tipo de destino você prefere?</h1>
-        <div className="formCheckbox">
-            <label className="custom-radio-btn">
-                <input type="radio" name="optionDestinyType" id="optionDestinyType1"/>
-                <span className="checkmark"></span>
-            </label>
-            <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType1">Praia e litoral</label>
-                <small>Belissimas praias ao redor do nosso Brasilzao</small>
-            </div>
-        </div>
-        <div className="formCheckbox">
-            <label className="custom-radio-btn">
-                <input type="radio" name="optionDestinyType" id="optionDestinyType2"/>
-                <span className="checkmark"></span>
-            </label>
-            <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType2">Montanhas e paisagens naturais</label>
-                <small>Se impressione com vistas maravilhosas</small>
-            </div>
-        </div>
-        <div className="formCheckbox">
-            <label className="custom-radio-btn">
-                <input type="radio" name="optionDestinyType" id="optionDestinyType3"/>
-                <span className="checkmark"></span>
-            </label>
-            <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType3">Cidades históricas e culturas</label>
-                <small>Conheça pontos turísticos nas cidades nas lindas</small>
-            </div>
-        </div>
-        <div className="formCheckbox">
-            <label className="custom-radio-btn">
-                <input type="radio" name="optionDestinyType" id="optionDestinyType3"/>
-                <span className="checkmark"></span>
-            </label>
-            <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType3">Aventuras e esportes radicais </label>
-                <small>Aventureiro? Conheça as melhores aventuras</small>
-            </div>
-        </div>
-        <div className="formCheckbox">
-            <label className="custom-radio-btn">
-                <input type="radio" name="optionDestinyType" id="optionDestinyType3"/>
-                <span className="checkmark"></span>
-            </label>
-            <div className="descriptionDestinyType">
-                <label className="labelDestinyType" htmlFor="optionDestinyType3">Natureza exuberante e vida selvagem</label>
-                <small>Conecte com a natureza com experiências incriveis</small>
-            </div>
-        </div>
+        <h1 className="titleDestinyType">Tem preferência por agitação à noite?</h1>
+    
+    <label className="formCheckbox" htmlFor="option1">
+          <div className="custom-radio-btn">
+              <input type="radio" name="optionaNight" id="option1"/>
+              <span className="checkmark"></span>
+          </div>
+          <div className="descriptionDestinyType">
+              <h2 className="checkboxTitle">Vida noturna animada</h2>
+              <small>Gosto de ir em shows, musicais, baladas, etc. Quero curtir !</small>
+          </div>
+      </label>
+      <label className="formCheckbox" htmlFor="option2">
+          <label className="custom-radio-btn">
+              <input type="radio" name="optionaNight" id="option2"/>
+              <span className="checkmark"></span>
+          </label>
+          <div className="descriptionDestinyType">
+              <h2 className="checkboxTitle">Gosto de ter opções para sair a noite</h2>
+              <small>Se algo me chamar atenção, vou optar por incluir no meu roteiro</small>
+          </div>
+      </label>
+      <label className="formCheckbox" htmlFor="option3">
+          <label className="custom-radio-btn">
+              <input type="radio" name="optionaNight" id="option3"/>
+              <span className="checkmark"></span>
+          </label>
+          <div className="descriptionDestinyType">
+              <h2 className="checkboxTitle">Não gostaria</h2>
+              <small>Evito sair a noite durante as minhas viagens</small>
+          </div>
+      </label>
     </FormStyled>
     )
 }
