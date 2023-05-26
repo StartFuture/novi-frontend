@@ -15,6 +15,7 @@ import TermsConditionsPage from "./pages/termsConditions/index";
 import QuizObejtivoViagem from "pages/quiz/quizObjetivosDaViagem";
 import { Private } from "./components/Private";
 import { AuthProvider } from "./contexts/auth";
+import InterviewEnd from "pages/interviewEnd";
 
 const AppRoutes = () => {
   return (
@@ -29,6 +30,7 @@ const AppRoutes = () => {
                 <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
                 <Route exact path="/quizObjetivos" element={<QuizObejtivoViagem/>}></Route>
                 <Route exact path="/interview" element={<Interview/>}></Route>
+                <Route exact path="/interviewEnd" element={<InterviewEnd/>}></Route>
             </Routes>
         </AuthProvider>
     </Router>
