@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import TravelType from "./components/travelType";
+import TravelType from "./components/TravelType";
 import FavoriteTravelType from "./components/favoriteTravelType";
 import TravelAccomodation from "./components/travelAccomodation";
 import TravelActivities from "./components/travelActivities";
