@@ -99,16 +99,31 @@ function Interview() {
           <NavStyled>
             <ul>
               <li>
-                <a className={page >= 0 ? "active" : ""}>Objetivo</a>
+                <a className={page >= 0 ? "active" : ""}>Destino</a>
               </li>
               <li>
-                <a className={page > 0 ? "active" : ""}>Destino</a>
+                <a className={page > 0 ? "active" : ""}>Estilo da viagem</a>
               </li>
               <li>
-                <a className={page > 1 ? "active" : ""}>Passeios</a>
+                <a className={page > 1 ? "active" : ""}>Acomodações</a>
               </li>
               <li>
-                <a className={page === 3 ? "active" : ""}>Saúde</a>
+                <a className={page > 2 ? "active" : ""}>Atividades</a>
+              </li>
+              <li>
+                <a className={page > 3 ? "active" : ""}>Preferência</a>
+              </li>
+              <li>
+                <a className={page > 4 ? "active" : ""}>Interesses culturais</a>
+              </li>
+              <li>
+                <a className={page > 5 ? "active" : ""}>Internacional</a>
+              </li>
+              <li>
+                <a className={page > 6 ? "active" : ""}>Transporte</a>
+              </li>
+              <li>
+                <a className={page > 7 ? "active" : ""}>Clima</a>
               </li>
             </ul>
           </NavStyled>
@@ -139,7 +154,7 @@ function Interview() {
                     }
                   }}
                 >
-                  {page === FormTitles.length - 1 ? "Submit" : "Prosseguir"}
+                  {page === FormTitles.length - 1 ? "Finalizar" : "Prosseguir"}
                 </ButtonNext>
               </Footer>
             </div>

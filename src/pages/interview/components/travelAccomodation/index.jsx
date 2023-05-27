@@ -1,37 +1,73 @@
 import React from "react";
 
-import { Content } from "./styles";
+import { FormStyled } from "./styles";
 
-export default function TravelAccomodation() {
+function TravelAccomodation() {
   return (
-    <Content>
-      <form>
-        <div>
-          <h2>Quais dessas acomodações você prefere?</h2>
+    <FormStyled>
+      <h1 className="titleDestinyType">
+        Quais dessas acomodações você prefere?
+      </h1>
+
+      <label className="formCheckbox" htmlFor="optionDestinyType1">
+        <div className="custom-radio-btn">
+          <input
+            type="radio"
+            name="optionDestinyType"
+            id="optionDestinyType1"
+          />
+          <span className="checkmark"></span>
         </div>
-        <div>
-        <div className="formCheckbox">
-          <input type="checkbox" id="hotelResort"/>
-          <label htmlFor="hotelResort">Hotéis de luxo e resorts</label>
+        <h2 className="checkboxTitle">Hotéis de luxo e resorts</h2>
+      </label>
+      <label className="formCheckbox" htmlFor="optionDestinyType2">
+        <div className="custom-radio-btn">
+          <input
+            type="radio"
+            name="optionDestinyType"
+            id="optionDestinyType2"
+          />
+          <span className="checkmark"></span>
         </div>
-        <div className="formCheckbox">
-          <input type="checkbox" id="inn"/>
-          <label htmlFor="inn">Pousadas e acomodações charmosas</label>
+        <h2 className="checkboxTitle">Pousadas e acomodações charmosas</h2>
+      </label>
+      <label className="formCheckbox" htmlFor="optionDestinyType3">
+        <div className="custom-radio-btn">
+          <input
+            type="radio"
+            name="optionDestinyType"
+            id="optionDestinyType3"
+          />
+          <span className="checkmark"></span>
         </div>
-        <div className="formCheckbox">
-          <input type="checkbox" id="houses"/>
-          <label htmlFor="houses">Apartamentos e casas de temporada</label>
+        <h2 className="checkboxTitle">Apartamentos e casas de temporada</h2>
+      </label>
+      <label className="formCheckbox" htmlFor="optionDestinyType4">
+        <div className="custom-radio-btn">
+          <input
+            type="radio"
+            name="optionDestinyType"
+            id="optionDestinyType4"
+          />
+          <span className="checkmark"></span>
         </div>
-        <div className="formCheckbox">
-          <input type="checkbox" id="hostels"/>
-          <label htmlFor="hostels">Hostels</label>
+        <h2 className="checkboxTitle">Hostels</h2>
+      </label>
+      <label className="formCheckbox" htmlFor="optionDestinyType5">
+        <div className="custom-radio-btn">
+          <input
+            type="radio"
+            name="optionDestinyType"
+            id="optionDestinyType5"
+          />
+          <span className="checkmark"></span>
         </div>
-        <div className="formCheckbox">
-          <input type="checkbox" id="camping"/>
-          <label htmlFor="camping">Acampamentos e contato direto com a natureza</label>
-        </div>
-        </div>
-      </form>
-    </Content>
+        <h2 className="checkboxTitle">
+          Acampamentos e contato direto com a natureza
+        </h2>
+      </label>
+    </FormStyled>
   );
 }
+
+export default TravelAccomodation;
