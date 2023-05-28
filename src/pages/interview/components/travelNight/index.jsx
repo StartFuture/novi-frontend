@@ -2,7 +2,14 @@ import React from "react";
 
 import { FormStyled } from "./styles";
 
-function TravelNight(){
+function TravelNight(formData){
+    var formData = useRef(formData)
+
+    const handler = (e) => {
+        formData.current.travel_type = e.target.value;
+        sessionStorage.setItem("currInterview", JSON.stringify(formData.current))
+    }
+
     return(
         <FormStyled>
         <h1 className="titleDestinyType">Tem preferência por agitação à noite?</h1>

@@ -34,7 +34,35 @@ function Interview() {
 
   const getFormData = () => {
     var formData = {
-      travel_type: 0,
+      option: {
+        travel_destination: 0,
+        travel_style: 0,
+        accomodation_style: 0,
+        night_style: 0,
+        can_leave_country: 0,
+        transport_style: 0
+      },
+      activities: {
+        water_preference: 0,
+        walk_preference: 0,
+        historic_preference: 0,
+        sport_preference: 0,
+        food_preference: 0
+      },
+      culture: {
+        music_preference: 0,
+        building_preference: 0,
+        tradiction_preference: 0,
+        party_preference: 0,
+        no_preference: true
+      },
+      weather: {
+        warm: 0,
+        mild: 0,
+        cold: 0,
+        no_preference: 0
+      },
+      id_user: {}
     }
 
     var crrFormData = sessionStorage.getItem("currInterview");

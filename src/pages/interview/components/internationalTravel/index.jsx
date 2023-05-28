@@ -2,7 +2,14 @@ import React from "react";
 
 import { FormStyled } from "./styles";
 
-function InternationalTravel(){
+function InternationalTravel(formData){
+    var formData = useRef(formData)
+
+    const handler = (e) => {
+        formData.current.travel_type = e.target.value;
+        sessionStorage.setItem("currInterview", JSON.stringify(formData.current))
+    }
+
     return(
         <FormStyled>
         <h1 className="titleDestinyType">Você topa viajar para fora do seu país?</h1>

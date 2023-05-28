@@ -2,7 +2,14 @@ import React from "react";
 
 import { Content } from "./styles";
 
-export default function TravelInterest() {
+export default function TravelInterest(formData) {
+  var formData = useRef(formData)
+
+    const handler = (e) => {
+        formData.current.travel_type = e.target.value;
+        sessionStorage.setItem("currInterview", JSON.stringify(formData.current))
+    }
+
   return (
     <Content>
       <form>
