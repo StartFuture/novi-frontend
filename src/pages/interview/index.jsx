@@ -54,7 +54,7 @@ function Interview() {
         building_preference: 0,
         tradiction_preference: 0,
         party_preference: 0,
-        no_preference: true
+        no_preference: 0
       },
       weather: {
         warm: 0,
@@ -180,8 +180,7 @@ function Interview() {
                   onClick={() => {
                     if (page === FormTitles.length - 1) {
                       alert("FORM SUBMITTED");
-                      console.log(formData);
-
+                      console.log(getFormData());
                     } else {
                       setPage((currPage) => currPage + 1);
                     }

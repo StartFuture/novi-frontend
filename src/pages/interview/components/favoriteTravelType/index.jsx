@@ -6,7 +6,7 @@ function FavoriteTravelType({ formData }) {
   var formData = useRef(formData);
 
   const handler = (e) => {
-    formData.current.option.travel_style = e.target.value;
+    formData.current.options.travel_style = e.target.value;
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
   };
 
@@ -25,7 +25,7 @@ function FavoriteTravelType({ formData }) {
             onChange={handler}
             value={1}
             defaultChecked={
-              formData.current.option.travel_style == 1 ? true : false
+              formData.current.options.travel_style == 1 ? true : false
             }
           />
           <span className="checkmark"></span>
@@ -41,7 +41,7 @@ function FavoriteTravelType({ formData }) {
             onChange={handler}
             value={2}
             defaultChecked={
-              formData.current.option.travel_style == 2 ? true : false
+              formData.current.options.travel_style == 2 ? true : false
             }
           />
           <span className="checkmark"></span>
@@ -59,7 +59,7 @@ function FavoriteTravelType({ formData }) {
             onChange={handler}
             value={3}
             defaultChecked={
-              formData.current.option.travel_style == 3 ? true : false
+              formData.current.options.travel_style == 3 ? true : false
             }
           />
           <span className="checkmark"></span>
@@ -75,7 +75,7 @@ function FavoriteTravelType({ formData }) {
             onChange={handler}
             value={4}
             defaultChecked={
-              formData.current.option.travel_style == 4 ? true : false
+              formData.current.options.travel_style == 4 ? true : false
             }
           />
           <span className="checkmark"></span>
@@ -91,7 +91,7 @@ function FavoriteTravelType({ formData }) {
             onChange={handler}
             value={5}
             defaultChecked={
-              formData.current.option.travel_style == 5 ? true : false
+              formData.current.options.travel_style == 5 ? true : false
             }
           />
           <span className="checkmark"></span>

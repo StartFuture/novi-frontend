@@ -6,12 +6,9 @@ export default function TravelActivities({ formData }) {
   var formData = useRef(formData);
 
   const handler = (e) => {
-    if (e.target.value === 1) {
-      formData.current.activitie.target = e.target.value;
-    }
+    formData.current.activities = e.target.value;
+    sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
   };
-
-  sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
 
   return (
     <Content>
@@ -28,7 +25,7 @@ export default function TravelActivities({ formData }) {
               onChange={handler}
               value={1}
               defaultChecked={
-                formData.current.activite.water_preference == 1 ? true : false
+                formData.current.activities.water_preference == 1 ? true : false
               }
             />
             <label htmlFor="relax">
@@ -43,7 +40,7 @@ export default function TravelActivities({ formData }) {
               onChange={handler}
               value={1}
               defaultChecked={
-                formData.current.activite.walk_preference == 1 ? true : false
+                formData.current.activities.walk_preference == 1 ? true : false
               }
             />
             <label htmlFor="hiking">
@@ -58,7 +55,9 @@ export default function TravelActivities({ formData }) {
               onChange={handler}
               value={1}
               defaultChecked={
-                formData.current.activite.historic_preference == 1 ? true : false
+                formData.current.activities.historic_preference == 1
+                  ? true
+                  : false
               }
             />
             <label htmlFor="history">Explorar museus e locais históricos</label>
@@ -71,7 +70,7 @@ export default function TravelActivities({ formData }) {
               onChange={handler}
               value={1}
               defaultChecked={
-                formData.current.activite.sport_preference == 1 ? true : false
+                formData.current.activities.sport_preference == 1 ? true : false
               }
             />
             <label htmlFor="sports">
@@ -86,7 +85,7 @@ export default function TravelActivities({ formData }) {
               onChange={handler}
               value={1}
               defaultChecked={
-                formData.current.activite.food_preference == 1 ? true : false
+                formData.current.activities.food_preference == 1 ? true : false
               }
             />
             <label htmlFor="gastronomic">

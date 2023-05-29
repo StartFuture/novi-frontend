@@ -26,7 +26,7 @@ export default function TravelClimate({ formData }) {
                 onChange={handler}
                 value={1}
                 defaultChecked={
-                  formData.current.activite.warm == 1 ? true : false
+                  formData.current.weather.warm == 1 ? true : false
                 }
               />
               <label htmlFor="relax">Clima quente</label>
@@ -39,7 +39,7 @@ export default function TravelClimate({ formData }) {
                 onChange={handler}
                 value={1}
                 defaultChecked={
-                  formData.current.activite.mild == 1 ? true : false
+                  formData.current.weather.mild == 1 ? true : false
                 }
               />
               <label htmlFor="hiking">Clima ameno e temperado</label>
@@ -52,7 +52,7 @@ export default function TravelClimate({ formData }) {
                 onChange={handler}
                 value={1}
                 defaultChecked={
-                  formData.current.activite.cold == 1 ? true : false
+                  formData.current.weather.cold == 1 ? true : false
                 }
               />
               <label htmlFor="history">Clima frio e neve</label>
@@ -66,7 +66,7 @@ export default function TravelClimate({ formData }) {
               onChange={handler}
               value={1}
               defaultChecked={
-                formData.current.activite.no_preference == 1 ? true : false
+                formData.current.weather.no_preference == 1 ? true : false
               }
             />
             <label htmlFor="gastronomic">Não tenho preferência</label>
