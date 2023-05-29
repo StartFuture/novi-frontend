@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { FormStyled } from "./styles";
 
-function FavoriteTravelType(formData) {
+function FavoriteTravelType({ formData }) {
   var formData = useRef(formData);
 
   const handler = (e) => {

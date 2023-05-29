@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { Content } from "./styles";
 
-export default function TravelActivities(formData) {
+export default function TravelActivities({ formData }) {
   var formData = useRef(formData);
 
   const handler = (e) => {

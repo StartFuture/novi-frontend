@@ -34,7 +34,7 @@ function Interview() {
 
   const getFormData = () => {
     var formData = {
-      option: {
+      options: {
         travel_destination: 0,
         travel_style: 0,
         accomodation_style: 0,
@@ -86,10 +86,6 @@ function Interview() {
     "Quais são suas preferências em relação a transporte durante a viagem?",
     "Qual é a sua preferência em relação ao clima durante a viagem",
   ];
-
-  const activateButton = () => { 
-
-  }
 
   const PageDisplay = () => {
     if (page === 0) {

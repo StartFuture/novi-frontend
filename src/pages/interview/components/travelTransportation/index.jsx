@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { Content } from "./styles";
 
-export default function TravelTransportation() {
+export default function TravelTransportation({ formData }) {
   var formData = useRef(formData);
 
   const handler = (e) => {
-    formData.current.option.travel_style = e.target.value;
+    formData.current.options.transport_style = e.target.value;
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
   };
 
@@ -26,9 +26,10 @@ export default function TravelTransportation() {
                 type="checkbox"
                 name="acceptTerm"
                 id="relax"
+                onChange={handler}
                 value={1}
                 defaultChecked={
-                  formData.current.option.travel_style == 1 ? true : false
+                  formData.current.options.transport_style === 1 ? true : false
                 }
               />
               <label htmlFor="relax">Voo direto para o destino</label>
@@ -38,9 +39,10 @@ export default function TravelTransportation() {
                 type="checkbox"
                 name="acceptTerm"
                 id="hiking"
-                value={2}
+                onChange={handler}
+                value={1}
                 defaultChecked={
-                  formData.current.option.travel_style == 2 ? true : false
+                  formData.current.options.transport_style === 1 ? true : false
                 }
               />
               <label htmlFor="hiking">
@@ -52,9 +54,10 @@ export default function TravelTransportation() {
                 type="checkbox"
                 name="acceptTerm"
                 id="history"
-                value={3}
+                onChange={handler}
+                value={1}
                 defaultChecked={
-                  formData.current.option.travel_style == 3 ? true : false
+                  formData.current.options.transport_style === 1 ? true : false
                 }
               />
               <label htmlFor="history">Viagens de trens e/ou ônibus</label>
@@ -65,9 +68,10 @@ export default function TravelTransportation() {
               type="checkbox"
               name="acceptTerm"
               id="gastronomic"
-              value={4}
+              onChange={handler}
+              value={1}
               defaultChecked={
-                formData.current.option.travel_style == 4 ? true : false
+                formData.current.options.transport_style === 1 ? true : false
               }
             />
             <label htmlFor="gastronomic">Não tenho preferência</label>

@@ -23,7 +23,7 @@ function TravelType({ formData }) {
             onChange={handler}
             value={1}
             defaultChecked={
-              formData.current.options.travel_destination == 1 ? true : false
+              formData.current.options.travel_destination === 1 ? true : false
             }
           />
           <span className="checkmark"></span>
@@ -42,7 +42,7 @@ function TravelType({ formData }) {
             onChange={handler}
             value={2}
             defaultChecked={
-              formData.current.options.travel_destination == 2 ? true : false
+              formData.current.options.travel_destination === 2 ? true : false
             }
           />
           <span className="checkmark"></span>
@@ -61,7 +61,7 @@ function TravelType({ formData }) {
             onChange={handler}
             value={3}
             defaultChecked={
-              formData.current.options.travel_destination == 3 ? true : false
+              formData.current.options.travel_destination === 3 ? true : false
             }
           />
           <span className="checkmark"></span>
@@ -80,7 +80,7 @@ function TravelType({ formData }) {
             onChange={handler}
             value={4}
             defaultChecked={
-              formData.current.options.travel_destination == 4 ? true : false
+              formData.current.options.travel_destination === 4 ? true : false
             }
           />
           <span className="checkmark"></span>
@@ -99,7 +99,7 @@ function TravelType({ formData }) {
             onChange={handler}
             value={5}
             defaultChecked={
-              formData.current.options.travel_destination == 5 ? true : false
+              formData.current.options.travel_destination === 5 ? true : false
             }
           />
           <span className="checkmark"></span>

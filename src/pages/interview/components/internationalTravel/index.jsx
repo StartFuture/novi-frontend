@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { FormStyled } from "./styles";
 
-function InternationalTravel(formData){
+function InternationalTravel({ formData }){
     var formData = useRef(formData)
 
     const handler = (e) => {
