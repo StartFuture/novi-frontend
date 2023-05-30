@@ -28,12 +28,12 @@ export const MainDiv = styled.div`
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   justify: space-between;
+   
 
 
 
    p {font-family: ${props => props.theme.fonts.fontMontserrat};
-   font-size: 24px;
+   font-size: 16px;
    font-weight: 700;}`
 ;
 
@@ -77,3 +77,5 @@ export const Button = styled.button`
    font-weight: 500;
   cursor: pointer;
   margin-top: 20px;`
+
+ 
