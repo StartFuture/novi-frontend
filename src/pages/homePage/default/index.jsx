@@ -1,17 +1,19 @@
 import React from "react";
-import {LayoutGrid, PageGrid, MainDiv, SecondaryDiv, Button
+import {LayoutGrid, MainDiv, SecondaryDiv, Button
 
   } from "../default/style"
 import {ImAirplane} from "react-icons/im";
 
+import UserMenu from "../userMenu";
+
   function DefaultHome(){
 return(
 
-<PageGrid>
 <LayoutGrid>
+<UserMenu/>
 
 <MainDiv>
-<p>Fala <b> Marcelo </b>, vamos viajar?</p>
+<h2>Fala <b> Marcelo </b>, vamos viajar?</h2>
 <SecondaryDiv>
 
 <ImAirplane className="iconAirplane"/>
@@ -29,7 +31,6 @@ return(
 
 
 </LayoutGrid>
-</PageGrid>
 
 
 
