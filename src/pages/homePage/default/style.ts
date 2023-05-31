@@ -5,6 +5,7 @@ import React from "react";
 export const PageGrid = styled.div`
     width:1920px ;
     height:1080px ;
+    background-color: gray;
 `
 ;
 
@@ -78,4 +79,60 @@ export const Button = styled.button`
   cursor: pointer;
   margin-top: 20px;`
 
- 
+export const Wrapper =styled.div `
+display: flex;
+max-width: 1200px;
+position: relative;
+
+.father i{
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343F4F;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.father i:active{
+  transform: translateY(-50%) scale(0.9);
+}
+.father i:hover{
+  background: #f2f2f2;
+}
+.father i:first-child{
+  left: -22px;
+  display: none;
+}
+.father i:last-child{
+  right: -22px;
+}
+.father #carousel{
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+#carousel.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+#carousel.dragging img{
+  pointer-events: none;
+}
+#carousel img{
+  height: 340px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+#carousel img:first-child{
+  margin-left: 0px;
+}`
