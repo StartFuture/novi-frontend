@@ -109,13 +109,6 @@ function Interview() {
     }
   };
 
-  const checkForm = () => { 
-    if (formData) {
-      return false
-    }
-    return true
-  }
-
   return (
     <div>
       <Container>
@@ -170,7 +163,6 @@ function Interview() {
                   Voltar
                 </ButtonPrev>
                 <ButtonNext
-                  disabled={checkForm()}
                   onClick={() => {
                     if (page === FormTitles.length - 1) {
                       alert("FORM SUBMITTED");

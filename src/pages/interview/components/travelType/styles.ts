@@ -20,7 +20,7 @@ export const FormStyled = styled.form`
   }
 
   .custom-radio-btn {
-    width: 21px;
+    width: 20px;
     height: 20px;
     border: 2px solid ${(props) => props.theme.colors.primaryColor};
     border-radius: 50%;
@@ -29,8 +29,9 @@ export const FormStyled = styled.form`
   }
 
   .custom-radio-btn .checkmark {
-    width: 100%;
-    height: 100%;
+    width: 10px;
+    height: 10px;
+    margin: 18%;
     border-radius: 50%;
     background-color: ${(props) => props.theme.colors.primaryColor};
     display: inline-block;
