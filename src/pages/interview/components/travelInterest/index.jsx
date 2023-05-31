@@ -1,14 +1,71 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import { Content } from "./styles";
 
 export default function TravelInterest({ formData }) {
   var formData = useRef(formData);
 
+  const [culture, setCulture] = useState(formData.current.culture);
+
   const handler = (e) => {
-    if (e.target.value === 1) {
-      formData.current.culture.target = e.target.value;
+    var value = 0;
+    var noPref = document.getElementById("noPref")
+    var checkboxList = document.querySelectorAll("input[name=option]");
+
+    switch (Number(e.target.value)) {
+      case 0:
+        value = culture.music_preference == 1 ? 0 : 1;
+        formData.current.culture.music_preference = value;
+        value = 0;
+        formData.current.culture.no_preference = value;
+        noPref.checked = false;
+        break;
+
+      case 1:
+        value = culture.building_preference == 1 ? 0 : 1;
+        formData.current.culture.building_preference = value;
+        value = 0;
+        formData.current.culture.no_preference = value;
+        noPref.checked = false;
+        break;
+
+      case 2:
+        value = culture.tradiction_preference == 1 ? 0 : 1;
+        formData.current.culture.tradiction_preference = value;
+        value = 0;
+        formData.current.culture.no_preference = value;
+        noPref.checked = false;
+        break;
+
+      case 3:
+        value = culture.party_preference == 1 ? 0 : 1;
+        formData.current.culture.party_preference = value;
+        value = 0;
+        formData.current.culture.no_preference = value;
+        noPref.checked = false;
+        break;
+
+      case 4:
+        value = culture.no_preference == 1 ? 0 : 1;
+
+        if (e.target.checked) {
+          for (let i = 0; i < checkboxList.length; i++) {
+            checkboxList[i].checked = false; 
+          }
+        }
+        formData.current.culture.no_preference = value;
+        value = 0;
+        formData.current.culture.music_preference = value;
+        formData.current.culture.building_preference = value;
+        formData.current.culture.tradiction_preference = value;
+        formData.current.culture.party_preference = value;
+        break;
+
+      default:
+        break;
     }
+    sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
+    console.log(formData)
   };
 
   return (
@@ -22,68 +79,72 @@ export default function TravelInterest({ formData }) {
             <div className="formCheckbox">
               <input
                 type="checkbox"
-                name="acceptTerm"
-                id="relax"
+                name="option"
+                id="music"
                 onChange={handler}
-                value={1}
+                value={0}
                 defaultChecked={
                   formData.current.culture.music_preference == 1 ? true : false
                 }
               />
-              <label htmlFor="relax">Arte e música</label>
+              <label htmlFor="music">Arte e música</label>
             </div>
             <div className="formCheckbox">
               <input
                 type="checkbox"
-                name="acceptTerm"
-                id="hiking"
+                name="option"
+                id="building"
                 onChange={handler}
                 value={1}
                 defaultChecked={
-                  formData.current.culture.building_preference == 1 ? true : false
+                  formData.current.culture.building_preference == 1
+                    ? true
+                    : false
                 }
               />
-              <label htmlFor="hiking">Histórias e arquitetura</label>
+              <label htmlFor="building">Histórias e arquitetura</label>
             </div>
             <div className="formCheckbox">
               <input
                 type="checkbox"
-                name="acceptTerm"
-                id="history"
+                name="option"
+                id="tradicion"
                 onChange={handler}
-                value={1}
+                value={2}
                 defaultChecked={
-                  formData.current.culture.tradicion_preference == 1 ? true : false
+                  formData.current.culture.tradiction_preference == 1
+                    ? true
+                    : false
                 }
               />
-              <label htmlFor="history">Cultura local e tradições</label>
+              <label htmlFor="tradicion">Cultura local e tradições</label>
             </div>
             <div className="formCheckbox">
               <input
                 type="checkbox"
-                name="acceptTerm"
-                id="sports"
+                name="option"
+                id="party"
                 onChange={handler}
-                value={1}
+                value={3}
                 defaultChecked={
                   formData.current.culture.party_preference == 1 ? true : false
                 }
               />
-              <label htmlFor="sports">Festivais e eventos culturais</label>
+              <label htmlFor="party">Festivais e eventos culturais</label>
             </div>
           </div>
           <div className="formCheckbox">
             <input
               type="checkbox"
-              name="acceptTerm"
-              id="gastronomic"
+              name="noOption"
+              id="noPref"
               onChange={handler}
-              value={1}
+              value={4}
               defaultChecked={
                 formData.current.culture.no_preference == 1 ? true : false
               }
             />
-            <label htmlFor="gastronomic">Não tenho preferência</label>
+            <label htmlFor="noPref">Não tenho preferência</label>
           </div>
         </div>
       </form>

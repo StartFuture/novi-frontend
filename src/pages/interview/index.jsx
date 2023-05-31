@@ -40,30 +40,30 @@ function Interview() {
         accomodation_style: 0,
         night_style: 0,
         can_leave_country: 0,
-        transport_style: 0
+        transport_style: 0,
       },
       activities: {
         water_preference: 0,
         walk_preference: 0,
         historic_preference: 0,
         sport_preference: 0,
-        food_preference: 0
+        food_preference: 0,
       },
       culture: {
         music_preference: 0,
         building_preference: 0,
         tradiction_preference: 0,
         party_preference: 0,
-        no_preference: 0
+        no_preference: 0,
       },
       weather: {
         warm: 0,
         mild: 0,
         cold: 0,
-        no_preference: 0
+        no_preference: 0,
       },
-      id_user: {}
-    }
+      id_user: {},
+    };
 
     var crrFormData = sessionStorage.getItem("currInterview");
 
@@ -71,7 +71,7 @@ function Interview() {
       formData = JSON.parse(crrFormData);
     }
     return formData;
-  }
+  };
 
   const [formData, setFormData] = useState(getFormData());
 
@@ -91,37 +91,30 @@ function Interview() {
     if (page === 0) {
       return <TravelType formData={formData} />;
     } else if (page === 1) {
-      return (
-        <FavoriteTravelType formData={formData} />
-      );
+      return <FavoriteTravelType formData={formData} />;
     } else if (page === 2) {
-      return (
-        <TravelAccomodation formData={formData} />
-      );
+      return <TravelAccomodation formData={formData} />;
     } else if (page === 3) {
-      return (
-        <TravelActivities formData={formData} />
-      );
+      return <TravelActivities formData={formData} />;
     } else if (page === 4) {
-      return (
-        <TravelNight formData={formData} />
-      );
+      return <TravelNight formData={formData} />;
     } else if (page === 5) {
-      return (
-        <TravelInterest formData={formData} />
-      );
+      return <TravelInterest formData={formData} />;
     } else if (page === 6) {
-      return (
-        <InternationalTravel formData={formData} />
-      );
+      return <InternationalTravel formData={formData} />;
     } else if (page === 7) {
-      return (
-        <TravelTransportation formData={formData} />
-      );
+      return <TravelTransportation formData={formData} />;
     } else {
       return <TravelClimate formData={formData} />;
     }
   };
+
+  const checkForm = () => { 
+    if (formData) {
+      return false
+    }
+    return true
+  }
 
   return (
     <div>
@@ -176,7 +169,8 @@ function Interview() {
                 >
                   Voltar
                 </ButtonPrev>
-                <ButtonNext 
+                <ButtonNext
+                  disabled={checkForm()}
                   onClick={() => {
                     if (page === FormTitles.length - 1) {
                       alert("FORM SUBMITTED");

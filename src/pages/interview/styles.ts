@@ -203,6 +203,5 @@ export const ButtonNext = styled.button`
 
   :hover {
     background-color: #277567;
-    
   }
 `;

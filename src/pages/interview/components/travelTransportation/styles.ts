@@ -1,56 +1,66 @@
 import styled from "styled-components";
 
-export const Content = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 795px;
+export const FormStyled = styled.form`
+  .titleDestinyType {
+    font-size: 24px;
     margin: -1vh 0 2vh 8vw;
-
-    h2 {
-        font-weight: 600;
-        font-size: 32px;
-        margin-bottom: 40px;
-    }
+    font-weight: 600;
+  }
 
   .formCheckbox {
     display: flex;
-    margin: 16px 0;
+    flex-direction: row;
     align-items: center;
-  }
-
-  .formCheckbox input {
-    display: none;
-  }
-
-  .formCheckbox label {
-    font-weight: 400;
-    font-size: 20px;
+    border: 1px solid ${(props) => props.theme.colors.lightGreyColor};
+    padding: 15px;
+    height: 115px;
+    margin: 1vh 14vw 0 8vw;
+    border-radius: 10px;
     cursor: pointer;
   }
 
-  .formCheckbox input + label::before {
-    content: "";
+  .custom-radio-btn {
+    width: 21px;
+    height: 20px;
+    border: 2px solid ${(props) => props.theme.colors.primaryColor};
+    border-radius: 50%;
+    margin-left: 20px;
+    display: flex;
+  }
+
+  .custom-radio-btn .checkmark {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: ${(props) => props.theme.colors.primaryColor};
     display: inline-block;
-    height: 24px;
-    width: 24px;
-    border: 1px solid #000;
-    border-radius: 8px;
-    margin-right: 24px;
-    vertical-align: middle;
+    opacity: 0;
+    transition: opacity 0.5s ease;
   }
 
-  .formCheckbox input:checked + label::before {
-    background-image: url("svg/check.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    border-color: ${(props) => props.theme.colors.primaryColor};
+  .custom-radio-btn input {
+    display: none;
   }
 
-  .formCheckbox input:checked + label {
-    color: ${(props) => props.theme.colors.primaryColor};
+  .custom-radio-btn input:checked + .checkmark {
+    opacity: 1;
   }
 
-  .checkboxWrapper { 
-    border-bottom: 1px solid ${(props) => props.theme.colors.lightGreyColor};
+  .checkboxTitle {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  small {
+    margin-top: 5px;
+    color: #000;
+    font-weight: 400;
+  }
+
+  .descriptionDestinyType {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 10px;
   }
 `;

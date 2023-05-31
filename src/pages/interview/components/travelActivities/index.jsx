@@ -1,12 +1,45 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import { Content } from "./styles";
 
 export default function TravelActivities({ formData }) {
   var formData = useRef(formData);
 
+  const [activities, setActivities] = useState(formData.current.activities);
+
   const handler = (e) => {
-    formData.current.activities = e.target.value;
+    var value = 0;
+
+    switch (Number(e.target.value)) {
+      case 0:
+        value = activities.water_preference == 1 ? 0 : 1;
+        formData.current.activities.water_preference = value;
+        break;
+
+      case 1:
+        value = activities.walk_preference == 1 ? 0 : 1;
+        formData.current.activities.walk_preference = value;
+        break;
+
+      case 2:
+        value = activities.historic_preference == 1 ? 0 : 1;
+        formData.current.activities.historic_preference = value;
+        break;
+
+      case 3:
+        value = activities.sport_preference == 1 ? 0 : 1;
+        formData.current.activities.sport_preference = value;
+        break;
+
+      case 4:
+        value = activities.food_preference == 1 ? 0 : 1;
+        formData.current.activities.food_preference = value;
+        break;
+
+      default:
+        break;
+    }
+
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
   };
 
@@ -23,7 +56,7 @@ export default function TravelActivities({ formData }) {
               name="acceptTerm"
               id="relax"
               onChange={handler}
-              value={1}
+              value={0}
               defaultChecked={
                 formData.current.activities.water_preference == 1 ? true : false
               }
@@ -53,7 +86,7 @@ export default function TravelActivities({ formData }) {
               name="acceptTerm"
               id="history"
               onChange={handler}
-              value={1}
+              value={2}
               defaultChecked={
                 formData.current.activities.historic_preference == 1
                   ? true
@@ -68,7 +101,7 @@ export default function TravelActivities({ formData }) {
               name="acceptTerm"
               id="sports"
               onChange={handler}
-              value={1}
+              value={3}
               defaultChecked={
                 formData.current.activities.sport_preference == 1 ? true : false
               }
@@ -83,7 +116,7 @@ export default function TravelActivities({ formData }) {
               name="acceptTerm"
               id="gastronomic"
               onChange={handler}
-              value={1}
+              value={4}
               defaultChecked={
                 formData.current.activities.food_preference == 1 ? true : false
               }

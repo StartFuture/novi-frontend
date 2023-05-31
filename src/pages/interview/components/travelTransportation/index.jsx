@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-import { Content } from "./styles";
+import { FormStyled } from "./styles";
 
 export default function TravelTransportation({ formData }) {
   var formData = useRef(formData);
@@ -11,73 +11,81 @@ export default function TravelTransportation({ formData }) {
   };
 
   return (
-    <Content>
-      <form>
-        <div>
-          <h2>
-            Quais são suas preferências em relação a transporte durante a
-            viagem?
-          </h2>
+    <FormStyled>
+      <h1 className="titleDestinyType">Quais são suas preferências em relação a transporte durante a viagem?</h1>
+
+      <label className="formCheckbox" htmlFor="option1">
+        <div className="custom-radio-btn">
+          <input
+            type="radio"
+            name="optionDestinyType"
+            id="option1"
+            onChange={handler}
+            value={1}
+            defaultChecked={
+              formData.current.options.travel_destination == 1 ? true : false
+            }
+          />
+          <span className="checkmark"></span>
         </div>
-        <div>
-          <div className="checkboxWrapper">
-            <div className="formCheckbox">
-              <input
-                type="checkbox"
-                name="acceptTerm"
-                id="relax"
-                onChange={handler}
-                value={1}
-                defaultChecked={
-                  formData.current.options.transport_style === 1 ? true : false
-                }
-              />
-              <label htmlFor="relax">Voo direto para o destino</label>
-            </div>
-            <div className="formCheckbox">
-              <input
-                type="checkbox"
-                name="acceptTerm"
-                id="hiking"
-                onChange={handler}
-                value={1}
-                defaultChecked={
-                  formData.current.options.transport_style === 1 ? true : false
-                }
-              />
-              <label htmlFor="hiking">
-                Voos com escalas para economizar dinheiro
-              </label>
-            </div>
-            <div className="formCheckbox">
-              <input
-                type="checkbox"
-                name="acceptTerm"
-                id="history"
-                onChange={handler}
-                value={1}
-                defaultChecked={
-                  formData.current.options.transport_style === 1 ? true : false
-                }
-              />
-              <label htmlFor="history">Viagens de trens e/ou ônibus</label>
-            </div>
-          </div>
-          <div className="formCheckbox">
-            <input
-              type="checkbox"
-              name="acceptTerm"
-              id="gastronomic"
-              onChange={handler}
-              value={1}
-              defaultChecked={
-                formData.current.options.transport_style === 1 ? true : false
-              }
-            />
-            <label htmlFor="gastronomic">Não tenho preferência</label>
-          </div>
+        <div className="descriptionDestinyType">
+          <h2 className="checkboxTitle">Voo direto para o destino</h2>
         </div>
-      </form>
-    </Content>
+      </label>
+      <label className="formCheckbox" htmlFor="option2">
+        <label className="custom-radio-btn">
+          <input
+            type="radio"
+            name="optionDestinyType"
+            id="option2"
+            onChange={handler}
+            value={2}
+            defaultChecked={
+              formData.current.options.travel_destination == 2 ? true : false
+            }
+          />
+          <span className="checkmark"></span>
+        </label>
+        <div className="descriptionDestinyType">
+          <h2 className="checkboxTitle">Voos com escalas para economizar dinheiro</h2>
+        </div>
+      </label>
+      <label className="formCheckbox" htmlFor="option3">
+        <label className="custom-radio-btn">
+          <input
+            type="radio"
+            name="optionDestinyType"
+            id="option3"
+            onChange={handler}
+            value={3}
+            defaultChecked={
+              formData.current.options.travel_destination == 3 ? true : false
+            }
+          />
+          <span className="checkmark"></span>
+        </label>
+        <div className="descriptionDestinyType">
+          <h2 className="checkboxTitle">Viagens de trens e/ou ônibus</h2>
+        </div>
+      </label>
+      <label className="formCheckbox" htmlFor="option4">
+        <label className="custom-radio-btn">
+          <input
+            type="radio"
+            name="optionDestinyType"
+            id="option4"
+            onChange={handler}
+            value={4}
+            defaultChecked={
+              formData.current.options.travel_destination == 4 ? true : false
+            }
+          />
+          <span className="checkmark"></span>
+        </label>
+        <div className="descriptionDestinyType">
+          <h2 className="checkboxTitle">Não tenho preferência</h2>
+        </div>
+      </label>
+    </FormStyled>
   );
 }
