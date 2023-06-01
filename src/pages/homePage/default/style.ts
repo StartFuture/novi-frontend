@@ -1,45 +1,41 @@
 import styled from "styled-components";
-import React from "react";
-
-
-export const PageGrid = styled.div`
-    width:1920px ;
-    height:1080px ;
-`
-;
 
 export const LayoutGrid = styled.div`
     
-    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
     
-
-*{margin: 0;
-    padding: 0;
-    box-sizing: border-box;}`
+`
 ;
 
 export const MainDiv = styled.div`
-   height: 1240px;
-   width: 645px;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   justify: space-between;
+   justify-content: flex-start;
+   width: 80vw;
+   background-color: #f6f6f6;
+   padding: 0px 148px;
+
+   h2 {
+        font-family: ${props => props.theme.fonts.fontMontserrat};
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 90px;
+        margin-bottom: 20px;
+    }
 
 
-
-   p {font-family: ${props => props.theme.fonts.fontMontserrat};
-   font-size: 24px;
-   font-weight: 700;}`
+   p {
+        font-family: ${props => props.theme.fonts.fontMontserrat};
+        font-size: 24px;
+        font-weight: 400;
+    }
+`
 ;
 
 export const SecondaryDiv = styled.div`
    height: 567px;
-   width: 1205px;
+   width: 1240px;
    display: flex;
    flex-direction: column;
    align-items: center;
