@@ -2,10 +2,24 @@ import React, { useRef, useState } from "react";
 
 import { Content } from "./styles";
 
-export default function TravelInterest({ formData }) {
-  var formData = useRef(formData);
+export default function TravelInterest(props) {
+  var formData = useRef(props.formData);
 
   const [culture, setCulture] = useState(formData.current.culture);
+
+  const checkBtn = () => {
+    var isDisable = true;
+
+    Object.keys(formData.current.culture).map(function (key, value) {
+      if (formData.current.culture[key] == 1) {
+        isDisable = false;
+      }
+    });
+
+    props.setDisableBtn(isDisable);
+  };
+
+  checkBtn();
 
   const handler = (e) => {
     var value = 0;
@@ -65,7 +79,8 @@ export default function TravelInterest({ formData }) {
         break;
     }
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
-    console.log(formData)
+    checkBtn();
+    
   };
 
   return (

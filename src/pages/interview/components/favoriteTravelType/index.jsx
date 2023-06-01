@@ -2,12 +2,16 @@ import React, { useRef } from "react";
 
 import { FormStyled } from "./styles";
 
-function FavoriteTravelType({ formData }) {
-  var formData = useRef(formData);
+function FavoriteTravelType(props) {
+  var formData = useRef(props.formData);
+  props.setDisableBtn(
+    formData.current.options.travel_style == 0 ? true : false
+  );
 
   const handler = (e) => {
     formData.current.options.travel_style = e.target.value;
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
+    props.setDisableBtn(false);
   };
 
   return (

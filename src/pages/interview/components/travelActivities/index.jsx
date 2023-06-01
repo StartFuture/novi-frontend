@@ -12,17 +12,15 @@ export default function TravelActivities(props) {
 
     Object.keys(formData.current.activities).map(function (key, value) {
       if (formData.current.activities[key] == 1) {
-      console.log("caiu no check")
-
         isDisable = false;
       }
     });
-  
+
     props.setDisableBtn(isDisable);
-  }
+  };
 
   checkBtn();
-  
+
   const handler = (e) => {
     var value = 0;
 
@@ -58,7 +56,6 @@ export default function TravelActivities(props) {
 
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
     checkBtn();
-
   };
 
   return (

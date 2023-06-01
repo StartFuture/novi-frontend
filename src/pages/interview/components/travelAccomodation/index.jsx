@@ -2,13 +2,17 @@ import React, { useRef } from "react";
 
 import { FormStyled } from "./styles";
 
-function TravelAccomodation({ formData }) {
-  var formData = useRef(formData)
+function TravelAccomodation(props) {
+  var formData = useRef(props.formData);
+  props.setDisableBtn(
+    formData.current.options.accomodation_style == 0 ? true : false
+  );
 
-    const handler = (e) => {
-        formData.current.options.accomodation_style = e.target.value;
-        sessionStorage.setItem("currInterview", JSON.stringify(formData.current))
-    }
+  const handler = (e) => {
+    formData.current.options.accomodation_style = e.target.value;
+    sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
+    props.setDisableBtn(false);
+  };
 
   return (
     <FormStyled>

@@ -2,12 +2,16 @@ import React, { useRef } from "react";
 
 import { FormStyled } from "./styles";
 
-function InternationalTravel({ formData }) {
-  var formData = useRef(formData);
+function InternationalTravel(props) {
+  var formData = useRef(props.formData);
+  props.setDisableBtn(
+    formData.current.options.can_leave_country == 0 ? true : false
+  );
 
   const handler = (e) => {
     formData.current.options.can_leave_country = e.target.value;
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
+    props.setDisableBtn(false);
   };
 
   return (

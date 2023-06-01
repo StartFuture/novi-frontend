@@ -2,14 +2,28 @@ import React, { useRef, useState } from "react";
 
 import { Content } from "./styles";
 
-export default function TravelClimate({ formData }) {
-  var formData = useRef(formData);
+export default function TravelClimate(props) {
+  var formData = useRef(props.formData);
 
   const [weather, setWeather] = useState(formData.current.weather);
 
+  const checkBtn = () => {
+    var isDisable = true;
+
+    Object.keys(formData.current.weather).map(function (key, value) {
+      if (formData.current.weather[key] == 1) {
+        isDisable = false;
+      }
+    });
+
+    props.setDisableBtn(isDisable);
+  };
+
+  checkBtn();
+
   const handler = (e) => {
     var value = 0;
-    var noPref = document.getElementById("noPref")
+    var noPref = document.getElementById("noPref");
     var checkboxList = document.querySelectorAll("input[name=option]");
 
     switch (Number(e.target.value)) {
@@ -42,7 +56,7 @@ export default function TravelClimate({ formData }) {
 
         if (e.target.checked) {
           for (let i = 0; i < checkboxList.length; i++) {
-            checkboxList[i].checked = false; 
+            checkboxList[i].checked = false;
           }
         }
         formData.current.weather.no_preference = value;
@@ -57,6 +71,7 @@ export default function TravelClimate({ formData }) {
     }
 
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
+    checkBtn();
   };
 
   return (
