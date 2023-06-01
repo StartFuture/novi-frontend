@@ -12,7 +12,6 @@ import Interview from "./pages/interview";
 import Registro from "./pages/registerPage/assets/css/img/svg/index";
 import TermsConditionsPage from "./pages/termsConditions/index";
 
-import QuizObejtivoViagem from "pages/quiz/quizObjetivosDaViagem";
 import { Private } from "./components/Private";
 import { AuthProvider } from "./contexts/auth";
 
@@ -29,7 +28,6 @@ const AppRoutes = () => {
                 <Route exact path="/interviewStart" element={<InterviewStart />}></Route>
                 <Route exact path="/registro" element={<Registro />}></Route>
                 <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
-                <Route exact path="/quizObjetivos" element={<QuizObejtivoViagem/>}></Route>
                 <Route exact path="/interview" element={<Interview/>}></Route>
                 <Route exact path="/menuUser" element={<UserMenu/>}></Route>
             </Routes>
