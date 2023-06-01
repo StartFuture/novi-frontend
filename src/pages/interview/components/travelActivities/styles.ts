@@ -4,13 +4,7 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     width: 795px;
-    margin: -1vh 0 2vh 8vw;
-
-    h2 {
-        font-weight: 600;
-        font-size: 32px;
-        margin-bottom: 40px;
-    }
+    margin-left: 8vh;
 
   .formCheckbox {
     display: flex;

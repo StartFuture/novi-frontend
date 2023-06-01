@@ -1,114 +1,114 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: flex;
-    flex-direction: row;
-`
+  display: flex;
+  flex-direction: row;
+`;
 
 export const LeftContainer = styled.div`
-    width: 22vw;
-    background-color: ${props => props.theme.colors.primaryColor};
-    height: 100vh;
+  width: 22vw;
+  background-color: ${(props) => props.theme.colors.primaryColor};
+  height: 100vh;
 `;
 
 export const MainContainer = styled.div`
-    width: 78vw;
-    height: 100vh;
+  width: 78vw;
+  height: 100vh;
 `;
 
 export const FormStyled = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    // background-color: blue;
+    width: 80%;
+    height: 80%;
+  }
+
+  .form-container .header {
+    font-size: 20px;
+    margin: -1vh 0 2vh 8vw;
+    font-weight: 600;
+    max-width: 796px;
+  }
+
+  .form-container .body {
+    height: 68vh;
+  }
+
+  .sign-up-container {
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
 
-    .form-container {
-      display: flex;
-      flex-direction: column;
-      // background-color: blue;
-      width: 80%;
-      height: 80%;
-    }
-      
-    .form-container .header {
-      display: flex;
-      justify-content: flex-init;
-      margin: 9vh 0 5vh 15vw;
-    }
+  .sign-up-container input {
+    margin: 5px;
+    width: 200px;
+    height: 40px;
+    padding-left: 5px;
+    font-size: 20px;
+  }
 
-    .form-container .body {
-        height: 68vh;
-    }
+  .personal-info-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .sign-up-container {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .sign-up-container input {
-      margin: 5px;
-      width: 200px;
-      height: 40px;
-      padding-left: 5px;
-      font-size: 20px;
-    }
-    
-    .personal-info-container {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .personal-info-container input {
-      margin: 5px;
-      width: 200px;
-      height: 40px;
-      padding-left: 5px;
-      font-size: 20px;
-    }
-    
-    .other-info-container {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .other-info-container input {
-      margin: 5px;
-      width: 200px;
-      height: 40px;
-      padding-left: 5px;
-      font-size: 20px;
-    }
-    
-    input {
-      border: 2px solid rgb(98, 0, 255);
-      border-radius: 5px;
-    }
-    
-    input:focus {
-      border: 3px solid rgb(98, 0, 255);
-    }
-`
+  .personal-info-container input {
+    margin: 5px;
+    width: 200px;
+    height: 40px;
+    padding-left: 5px;
+    font-size: 20px;
+  }
+
+  .other-info-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .other-info-container input {
+    margin: 5px;
+    width: 200px;
+    height: 40px;
+    padding-left: 5px;
+    font-size: 20px;
+  }
+
+  input {
+    border: 2px solid rgb(98, 0, 255);
+    border-radius: 5px;
+  }
+
+  input:focus {
+    border: 3px solid rgb(98, 0, 255);
+  }
+`;
 
 export const NavStyled = styled.nav`
   position: absolute;
   top: 50vh;
   transform: translateY(-50%);
-  background-color: ${props => props.theme.colors.primaryColor};
+  background-color: ${(props) => props.theme.colors.primaryColor};
 
   ul {
     padding-left: 8vw;
@@ -123,7 +123,7 @@ export const NavStyled = styled.nav`
     height: calc(100% - 85px);
     left: 7vw;
     top: 10px;
-    background: #FFF;
+    background: #fff;
     z-index: -1;
     margin-top: 29px;
   }
@@ -136,7 +136,7 @@ export const NavStyled = styled.nav`
   ul li a {
     text-decoration: none;
     position: relative;
-    color: #FFF;
+    color: #fff;
     font-size: 18px;
     line-height: 1rem;
     font-weight: 600;
@@ -145,14 +145,14 @@ export const NavStyled = styled.nav`
   ul li a:before {
     content: "";
     position: absolute;
-    background: ${props => props.theme.colors.primaryColor};
+    background: ${(props) => props.theme.colors.primaryColor};
     width: 18px;
     height: 18px;
     left: -39px;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 50px;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     transition: background 250ms;
   }
 
@@ -161,7 +161,7 @@ export const NavStyled = styled.nav`
   }
 
   ul li a.active::before {
-    background: #FFF;
+    background: #fff;
   }
 `;
 
@@ -174,16 +174,16 @@ export const Footer = styled.div`
 `;
 
 export const ButtonPrev = styled.button`
-  color: ${props => props.theme.colors.primaryColor};
+  color: ${(props) => props.theme.colors.primaryColor};
   border: none;
   background-color: white;
   padding: 16px;
   width: 12vw;
-  font-family: ${props => props.theme.fonts.fontMontserrat};
+  font-family: ${(props) => props.theme.fonts.fontMontserrat};
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  
+
   :hover {
     text-decoration: underline;
   }
@@ -192,10 +192,10 @@ export const ButtonPrev = styled.button`
 export const ButtonNext = styled.button`
   color: white;
   border: none;
-  background-color: ${props => props.theme.colors.primaryColor};
+  background-color: ${(props) => props.theme.colors.primaryColor};
   padding: 16px;
   width: 12vw;
-  font-family: ${props => props.theme.fonts.fontMontserrat};
+  font-family: ${(props) => props.theme.fonts.fontMontserrat};
   font-size: 18px;
   font-weight: 500;
   border-radius: 8px;

@@ -63,9 +63,6 @@ export default function TravelClimate({ formData }) {
     <Content>
       <form>
         <div>
-          <h2>Qual é a sua preferência em relação ao clima durante a viagem</h2>
-        </div>
-        <div>
           <div className="checkboxWrapper">
             <div className="formCheckbox">
               <input

@@ -12,10 +12,6 @@ function InternationalTravel({ formData }) {
 
   return (
     <FormStyled>
-      <h1 className="titleDestinyType">
-        Você topa viajar para fora do seu país?
-      </h1>
-
       <label className="formCheckbox" htmlFor="optionDestinyType1">
         <div className="custom-radio-btn">
           <input

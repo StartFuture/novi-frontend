@@ -1,16 +1,11 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 795px;
-    margin: -1vh 0 2vh 8vw;
+  display: flex;
+  justify-content: center;
+  width: 795px;
+  margin-left: 7vw;
 
-    h2 {
-        font-weight: 600;
-        font-size: 32px;
-        margin-bottom: 40px;
-    }
 
   .formCheckbox {
     display: flex;
@@ -50,7 +45,8 @@ export const Content = styled.div`
     color: ${(props) => props.theme.colors.primaryColor};
   }
 
-  .checkboxWrapper { 
+  .checkboxWrapper {
+    width: 750px;
     border-bottom: 1px solid ${(props) => props.theme.colors.lightGreyColor};
   }
 `;

@@ -12,8 +12,6 @@ export default function TravelTransportation({ formData }) {
 
   return (
     <FormStyled>
-      <h1 className="titleDestinyType">Quais são suas preferências em relação a transporte durante a viagem?</h1>
-
       <label className="formCheckbox" htmlFor="option1">
         <div className="custom-radio-btn">
           <input

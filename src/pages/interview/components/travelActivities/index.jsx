@@ -2,11 +2,27 @@ import React, { useRef, useState } from "react";
 
 import { Content } from "./styles";
 
-export default function TravelActivities({ formData }) {
-  var formData = useRef(formData);
+export default function TravelActivities(props) {
+  var formData = useRef(props.formData);
 
   const [activities, setActivities] = useState(formData.current.activities);
 
+  const checkBtn = () => {
+    var isDisable = true;
+
+    Object.keys(formData.current.activities).map(function (key, value) {
+      if (formData.current.activities[key] == 1) {
+      console.log("caiu no check")
+
+        isDisable = false;
+      }
+    });
+  
+    props.setDisableBtn(isDisable);
+  }
+
+  checkBtn();
+  
   const handler = (e) => {
     var value = 0;
 
@@ -41,14 +57,13 @@ export default function TravelActivities({ formData }) {
     }
 
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
+    checkBtn();
+
   };
 
   return (
     <Content>
       <form>
-        <div>
-          <h2>Quais atividades você mais gosta durante a viagem?</h2>
-        </div>
         <div>
           <div className="formCheckbox">
             <input

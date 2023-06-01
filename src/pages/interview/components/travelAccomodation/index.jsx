@@ -12,10 +12,6 @@ function TravelAccomodation({ formData }) {
 
   return (
     <FormStyled>
-      <h1 className="titleDestinyType">
-        Quais dessas acomodações você prefere?
-      </h1>
-
       <label className="formCheckbox" htmlFor="option1">
         <div className="custom-radio-btn">
           <input

@@ -74,6 +74,7 @@ function Interview() {
   };
 
   const [formData, setFormData] = useState(getFormData());
+  const [disableBtn, setDisableBtn] = useState(true);
 
   const FormTitles = [
     "Qual o tipo de destino você prefere?",
@@ -89,23 +90,23 @@ function Interview() {
 
   const PageDisplay = () => {
     if (page === 0) {
-      return <TravelType formData={formData} />;
+      return <TravelType formData={formData} setDisableBtn={setDisableBtn} />;
     } else if (page === 1) {
-      return <FavoriteTravelType formData={formData} />;
+      return <FavoriteTravelType formData={formData} setDisableBtn={setDisableBtn} />;
     } else if (page === 2) {
-      return <TravelAccomodation formData={formData} />;
+      return <TravelAccomodation formData={formData} setDisableBtn={setDisableBtn} />;
     } else if (page === 3) {
-      return <TravelActivities formData={formData} />;
+      return <TravelActivities formData={formData} setDisableBtn={setDisableBtn} />;
     } else if (page === 4) {
-      return <TravelNight formData={formData} />;
+      return <TravelNight formData={formData} setDisableBtn={setDisableBtn} />;
     } else if (page === 5) {
-      return <TravelInterest formData={formData} />;
+      return <TravelInterest formData={formData} setDisableBtn={setDisableBtn} />;
     } else if (page === 6) {
-      return <InternationalTravel formData={formData} />;
+      return <InternationalTravel formData={formData} setDisableBtn={setDisableBtn} />;
     } else if (page === 7) {
-      return <TravelTransportation formData={formData} />;
+      return <TravelTransportation formData={formData} setDisableBtn={setDisableBtn} />;
     } else {
-      return <TravelClimate formData={formData} />;
+      return <TravelClimate formData={formData} setDisableBtn={setDisableBtn} />;
     }
   };
 
@@ -149,9 +150,11 @@ function Interview() {
         <MainContainer>
           <FormStyled>
             <div className="form-container">
-              {/* <div className="header">
-                                <h1>{FormTitles[page]}</h1>
-                            </div> */}
+              {
+                <div className="header">
+                  <h1>{FormTitles[page]}</h1>
+                </div>
+              }
               <div className="body">{PageDisplay()}</div>
               <Footer>
                 <ButtonPrev
@@ -163,6 +166,8 @@ function Interview() {
                   Voltar
                 </ButtonPrev>
                 <ButtonNext
+                  disabled={disableBtn}
+                  style={{backgroundColor: !disableBtn ? "" : "gray"}}
                   onClick={() => {
                     if (page === FormTitles.length - 1) {
                       alert("FORM SUBMITTED");

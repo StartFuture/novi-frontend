@@ -11,10 +11,6 @@ function TravelNight({ formData }) {
   };
   return (
     <FormStyled>
-      <h1 className="titleDestinyType">
-        Tem preferência por agitação à noite?
-      </h1>
-
       <label className="formCheckbox" htmlFor="option1">
         <div className="custom-radio-btn">
           <input

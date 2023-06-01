@@ -72,9 +72,6 @@ export default function TravelInterest({ formData }) {
     <Content>
       <form>
         <div>
-          <h2>Quais são seus interesses culturais durante uma viagem?</h2>
-        </div>
-        <div>
           <div className="checkboxWrapper">
             <div className="formCheckbox">
               <input

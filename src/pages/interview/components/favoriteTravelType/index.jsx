@@ -12,10 +12,6 @@ function FavoriteTravelType({ formData }) {
 
   return (
     <FormStyled>
-      <h1 className="titleDestinyType">
-        Qual é o seu estilo favorito de viagens?
-      </h1>
-
       <label className="formCheckbox" htmlFor="option1">
         <div className="custom-radio-btn">
           <input

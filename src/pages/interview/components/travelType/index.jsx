@@ -2,18 +2,18 @@ import React, { useRef } from "react";
 
 import { FormStyled } from "./styles";
 
-function TravelType({ formData }) {
-  var formData = useRef(formData);
+function TravelType(props) {
+  var formData = useRef(props.formData);
+  props.setDisableBtn(formData.current.options.travel_destination == 0 ? true : false);
 
   const handler = (e) => {
     formData.current.options.travel_destination = e.target.value;
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
+    props.setDisableBtn(false);
   };
 
   return (
     <FormStyled>
-      <h1 className="titleDestinyType">Qual tipo de destino você prefere?</h1>
-
       <label className="formCheckbox" htmlFor="option1">
         <div className="custom-radio-btn">
           <input
