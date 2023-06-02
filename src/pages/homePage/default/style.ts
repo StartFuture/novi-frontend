@@ -79,60 +79,58 @@ export const Button = styled.button`
   cursor: pointer;
   margin-top: 20px;`
 
-export const Wrapper =styled.div `
-display: flex;
-max-width: 1200px;
-position: relative;
 
-.father i{
-  top: 50%;
-  height: 44px;
-  width: 44px;
-  color: #343F4F;
-  cursor: pointer;
-  font-size: 1.15rem;
-  position: absolute;
-  text-align: center;
-  line-height: 44px;
-  background: #fff;
-  border-radius: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.1s linear;
-}
-.father i:active{
-  transform: translateY(-50%) scale(0.9);
-}
-.father i:hover{
-  background: #f2f2f2;
-}
-.father i:first-child{
-  left: -22px;
-  display: none;
-}
-.father i:last-child{
-  right: -22px;
-}
-.father #carousel{
-  font-size: 0px;
-  cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
-  scroll-behavior: smooth;
-}
-#carousel.dragging{
-  cursor: grab;
-  scroll-behavior: auto;
-}
-#carousel.dragging img{
-  pointer-events: none;
-}
-#carousel img{
-  height: 340px;
-  object-fit: cover;
-  user-select: none;
-  margin-left: 14px;
-  width: calc(100% / 3);
-}
-#carousel img:first-child{
-  margin-left: 0px;
-}`
+  export const BoxCarrossel = styled.div`
+  width: auto;
+  height: auto;
+  margin-top: 300px;
+margin-left: 300px;
+
+  .slideshow {
+    
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 100%;
+    height: 400px;
+  }
+  
+  .slideshowSlider {
+    width: 670px;
+    height: 600px;
+    white-space: nowrap;
+    transition: ease 1000ms;
+  }
+  
+  .slide {
+    display: inline-block;
+  
+    height: 400px;
+    width: 100%;
+    border-radius: 40px;
+  }
+  
+  /* Buttons */
+  
+  .slideshowDots {
+    text-align: center;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  
+    cursor: pointer;
+    margin: 15px 7px 0px;
+  
+    background-color: #c4c4c4;
+  }
+  
+  .slideshowDot.active {
+    background-color: #6a0dad;
+  }
+
+
+
+  `

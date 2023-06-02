@@ -7,6 +7,7 @@ import Carrosel from "../../components/carrosel";
 import LandingPageUs from "./components/landingPageUs";
 import LandingTop from "./components/landingPageTop";
 import "./assets/css/landingPage.css";
+import CarrosselComment from "pages/homePage/default";
 
 
 function LandingPage() {
@@ -34,7 +35,8 @@ function LandingPage() {
         <LandingPageUs/>
       </div>
       <div className="lpCommentsContainer">
-        <ShowComment comments={comments} />
+        {/* <ShowComment comments={comments} /> */}
+        <CarrosselComment></CarrosselComment>
       </div>
       <div>
         <Footer />
