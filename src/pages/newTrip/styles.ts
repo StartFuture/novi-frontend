@@ -77,7 +77,7 @@ export const Container = styled.div`
     }
 
     small {
-        margin: 30px auto 20px auto;
+        margin: 50px auto 20px auto;
         font-size: 16px;
         font-weight: 600;
     }
@@ -173,14 +173,13 @@ export const Container = styled.div`
     /* Create a custom radio button */
     .checkmark {
         position: relative;
-        top: 0;
+        top: 2vh;
         left: 5.3vw;
         height: 25px;
         width: 25px;
         background-color: #FFF;
         border: .1rem solid ${props => props.theme.colors.primaryColor};
         border-radius: 50%;
-        margin-top: 20px;
     }
     
     /* On mouse-over, add a grey background color */
@@ -263,7 +262,7 @@ export const Container = styled.div`
         }
         
         small {
-            margin: 20px auto 10px auto;
+            margin: 40px auto 10px auto;
             font-size: 14px;
         }
 
@@ -272,7 +271,7 @@ export const Container = styled.div`
         }
 
         .peopleIcon {
-            font-size: 23px;
+            font-size: 20px;
         }
 
         .numberPeople {
@@ -318,13 +317,13 @@ export const Container = styled.div`
         }
 
         .btnNext {
-            padding: 1% 2.5%;
+            padding: 2% 5%;
             width: 85%;
             font-size: 14px;
         }
     
         .btnPrevious {
-            padding: 1% 2.5%;
+            padding: 2% 5%;
             width: 85%;
             font-size: 14px;
         }
@@ -333,7 +332,7 @@ export const Container = styled.div`
     
     @media only screen and (max-device-width: 900px) {
         width: 100vw;
-        height: 60vh;
+        height: 100vh;
         padding: 30px 80px 0px 80px;
 
         .displayFlexColumnRow {
@@ -350,8 +349,11 @@ export const Container = styled.div`
         }
 
         .checkmark {
-            top: 1vh;
-            left: 6.8vw;
+            top: 40%;
+            bottom: 30%;
+            left: 7%;
+            height: 15px;
+            width: 15px;
         }
 
         h3 {
@@ -359,8 +361,8 @@ export const Container = styled.div`
         }
         
         small {
-            margin: 30px auto 10px auto;
-            font-size: 18px;
+            margin: auto;
+            font-size: 14px;
         }
 
         .peopleIcon {
@@ -389,10 +391,12 @@ export const Container = styled.div`
         }
 
         .btnNext {
+            padding: 3% 8%;
             width: 100%;
         }
     
         .btnPrevious {
+            padding: 3% 8%;
             width: 100%;
         }
     }
