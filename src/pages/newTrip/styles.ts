@@ -82,6 +82,44 @@ export const Container = styled.div`
         justify-content: flex-start;
     }
 
+    .peopleIcon {
+        font-size: 30px;
+        position: relative;
+        bottom: 5px;
+        margin-right: 20px;
+        margin-left: 10px;
+        color: #3BB29D;
+    }
+
+    .quantityPeopleTrip {
+        padding-bottom: 40px;
+    }
+
+    .numberPeople {
+        font-size: 30px;
+        font-weight: 700;
+        color: ${props => props.theme.colors.primaryColor};
+        position: relative;
+        bottom: 7px;
+        margin-right: 20px;
+        margin-left: -5px;
+    }
+
+    .btnPlus {
+        padding: 0px 1px;
+        border: 2px solid #C1C1C1;
+        border-radius: 5px 0px 0px 5px;
+        background-color: #FFF;
+    }
+
+    .btnMinus {
+        padding: 0px 1px;
+        border: 2px solid #C1C1C1;
+        border-radius: 0px 5px 5px 0px;
+        background-color: #FFF;
+        margin-left: -1px;
+    }   
+
     .container {
         display: flex;
         flex-direction: column;
@@ -138,5 +176,36 @@ export const Container = styled.div`
         border-left: 6px solid var(--primary-color);
         height: 6vh;
         margin-right: 3%;
+    }
+
+    .btnNavigator {
+        position: relative;
+        top: 200px;
+    }
+    
+    .btnNext {
+        padding: 2.5% 5%;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        background-color: ${props => props.theme.colors.primaryColor};;
+        font-size: 14px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .btnPrevious {
+        padding: 2.5% 5%;
+        margin-top: 1vh;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #F6F6F6;
+        color: ${props => props.theme.colors.primaryColor};;
+        font-size: 18px;
+        font-weight: 500;
     }
 `;

@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
 import { FaUserAlt} from "react-icons/fa"
+import { FaPlus, FaMinus } from "react-icons/fa"
 
 import { MainContainer, ContainerLeft, LeftImage, Container } from "./styles";
 
 function NewTrip(){
+
+    const [numberPeople, setNumberPeople] = useState(1);
+
+    const AddPeople = () => {
+        setNumberPeople(numberPeople => numberPeople + 1);
+    }
+
+    const RemovePeople = () => {
+        if (numberPeople < 2){
+            setNumberPeople(1);
+        }
+        else {
+            setNumberPeople(numberPeople => numberPeople - 1);
+        }
+        
+    }
+
     return(
         <MainContainer>
             <ContainerLeft>
@@ -40,7 +58,22 @@ function NewTrip(){
                 <h3>Quantas pessoas vão viajar?</h3>
 
                 <div className="displayFlexRow">
-                    <FaUserAlt style={{fontSize: "30px", marginRight: "20px", marginLeft: "10px", color: "#3BB29D"}}/>
+                    <div className="quantityPeopleTrip">
+                        <FaUserAlt className="peopleIcon"/>
+                        <span
+                        type="number"
+                        className="numberPeople"
+                        >
+                            {numberPeople}
+                        </span>
+                        {/* <button className="btnPlus" onClick={AddPeople}> */}
+                            <FaPlus style={{fontSize: "40px", padding: "9px", color: "#3BB29D"}} className="btnPlus" onClick={AddPeople}/>
+                        {/* </button> */}
+                        {/* <button className="btnMinus" onClick={RemovePeople}> */}
+                        <FaMinus style={{fontSize: "40px", padding: "0px 11px", color: "#3BB29D"}} className="btnMinus" onClick={RemovePeople}/>
+                        {/* </button> */}
+                        
+                    </div>
                 </div>
 
                 <div className="horizontalLine"></div>
@@ -57,8 +90,15 @@ function NewTrip(){
                 </div>
                 
                 <br/>
-                <input type="button" value="Prosseguir"/>
-                <input type="button" value="Voltar"/>
+                <div className="btnNavigator">
+                    <input className="btnNext" type="submit" value="Prosseguir" />
+                    <input
+                        className="btnPrevious"
+                        type="submit"
+                        value="Voltar"
+                    />
+                </div>
+                
             </Container>
         </MainContainer>
     )
