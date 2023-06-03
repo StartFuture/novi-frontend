@@ -22,11 +22,11 @@ function CardComponent() {
           </div>
 
           <div className="rating">
-            <AiOutlineStar></AiOutlineStar>
-            <AiOutlineStar></AiOutlineStar>
-            <AiOutlineStar></AiOutlineStar>
-            <AiOutlineStar></AiOutlineStar>
-            <AiOutlineStar></AiOutlineStar>
+            <AiOutlineStar className="starSize"></AiOutlineStar>
+            <AiOutlineStar className="starSize"></AiOutlineStar>
+            <AiOutlineStar className="starSize"></AiOutlineStar>
+            <AiOutlineStar className="starSize"></AiOutlineStar>
+            <AiOutlineStar className="starSize"></AiOutlineStar>
           </div>
         </div>
 

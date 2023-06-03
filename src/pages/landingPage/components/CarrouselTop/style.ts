@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const DivCarrouselTop = styled.div `
 width: auto;
 height: auto;
+margin-left: 1050px;
 
 
 .slideshow {
@@ -21,7 +22,7 @@ height: auto;
   display: inline-block;
 
   height: 400px;
-  width: 300px;
+  width: 500px;
   border-radius: 40px;
 }
 
@@ -33,8 +34,8 @@ height: auto;
 
 .slideshowDot {
   display: inline-block;
-  height: 14px;
-  width: 50px;
+  height: 10px;
+  width: 40px;
   border-radius: 22px;
 
   cursor: pointer;

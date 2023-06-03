@@ -9,7 +9,7 @@ import LandingTop from "./components/landingPageTop";
 import "./assets/css/landingPage.css";
 import CarrosselComment from "./components/CarrosselComment/CarroselComment";
 import CarrouselTop from "./components/CarrouselTop/carrouselTop";
-
+import DescubraNovasExperiencias from "./components/CarrouselTop/CarrouselTopText/DescubraNovasExperiencias"
 
 
 function LandingPage() {
@@ -30,7 +30,8 @@ function LandingPage() {
       <div>
         <LandingTop />
       </div>
-      <div>
+      <div style={{display:"flex", margin:"150px 0px" }}>
+        <DescubraNovasExperiencias></DescubraNovasExperiencias>
         <CarrouselTop></CarrouselTop>
       </div>
       <div>

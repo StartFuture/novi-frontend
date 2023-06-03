@@ -4,7 +4,7 @@ import styled from "styled-components"
 export const BoxComment = styled.div`
 width: 650px;
 height: 235px;
-background-color: green;
+background-color: white;
 border-radius: 8px;
 display: flex;
 flex-direction: column;
@@ -49,6 +49,8 @@ gap: 7px;
 color: ${props => props.theme.colors.primaryColor};
 margin-left: 150px;}
 
+.rating .starSize {height: 25px;
+width: 25px;}
 
 .comment {width: 595px;
 height: 80%;

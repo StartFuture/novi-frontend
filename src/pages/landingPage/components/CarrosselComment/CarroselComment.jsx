@@ -3,6 +3,22 @@ import { BoxCarrossel1 } from "./style";
 
 import CardComponent from "pages/landingPage/components/CarrosselComment/card/cardComponent"
 
+const cardInfo = [
+{foto: "",
+
+ nome: "",
+
+ nota: "",
+ 
+ comentario: "",
+
+
+}
+
+
+]
+
+
 
 const images = [
 CardComponent,

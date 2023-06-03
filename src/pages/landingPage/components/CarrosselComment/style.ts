@@ -4,7 +4,7 @@ export const BoxCarrossel1 = styled.div`
 width: auto;
 height: auto;
 margin-top: 300px;
-margin-left: 300px;
+margin-left: 30px;
 
 .slideshow {
   
