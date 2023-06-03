@@ -11,21 +11,12 @@ export const PageGrid = styled.div`
 
 export const LayoutGrid = styled.div`
     
-    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
     
-
-*{margin: 0;
-    padding: 0;
-    box-sizing: border-box;}`
+`
 ;
 
 export const MainDiv = styled.div`
-   height: 1240px;
-   width: 645px;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
@@ -40,7 +31,7 @@ export const MainDiv = styled.div`
 
 export const SecondaryDiv = styled.div`
    height: 567px;
-   width: 1205px;
+   width: 1240px;
    display: flex;
    flex-direction: column;
    align-items: center;
