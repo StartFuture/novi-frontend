@@ -4,24 +4,46 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
     display: flex;
     flex-direction: row;
+
+    @media only screen and (max-device-width: 900px) {
+        flex-direction: column;
+    }
 `;
 
 export const ContainerLeft = styled.div`
-    width: 40vw;    
-    height: 100vh;
+    width: 40%;    
+    height: 100%;
+
+    @media only screen and (max-device-width: 1570px) {
+        width: 30%;
+    }
+
+    @media only screen and (max-device-width: 900px) {
+        height: 3vh;
+        width: 100%;
+        background-color: ${props => props.theme.colors.primaryColor}
+    }
 `
 
 export const LeftImage = styled.div`
     background-image: url("img/interviewStartBG.png");
     background-repeat: no-repeat;
-    background-size: fill;
+    background-size: contain;
     height: 100vh;
     max-width: 810px;
     width: 70vw;
+
+    @media only screen and (max-device-width: 1570px) {
+        max-width: 510px;
+    }
+    
+    @media only screen and (max-device-width: 900px) {
+        background-image: none;
+    }
 `;
 
 export const Container = styled.div`
-    width: 80vw;
+    width: 80%;
     height: 100vh;
     background-color: #F6F6F6;
     padding: 100px 150px 80px 150px;
@@ -64,6 +86,11 @@ export const Container = styled.div`
         font-size: 18px;
         font-weight: 400;
         margin: 10px 0px;
+    }
+
+    .displayFlexColumnRow {
+        display: flex;
+        flex-direction: row;
     }
 
     .displayFlexRow{
@@ -190,7 +217,6 @@ export const Container = styled.div`
         border-radius: 8px;
         color: white;
         background-color: ${props => props.theme.colors.primaryColor};;
-        font-size: 14px;
         cursor: pointer;
         font-size: 18px;
         font-weight: 500;
@@ -207,5 +233,167 @@ export const Container = styled.div`
         color: ${props => props.theme.colors.primaryColor};;
         font-size: 18px;
         font-weight: 500;
+    }
+
+    @media only screen and (max-device-width: 1570px) {
+        width: 70%;
+        height: 100vh;
+        padding: 30px 0px 20px 80px;
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .tripDetails {
+            font-size: 14px;
+        }
+
+        h3 {
+            font-size: 14px;
+            margin: 20px 0px;
+        }
+
+        .container {
+            width: 16vw;
+            margin-bottom: 10px;
+        }
+
+        .checkmark {
+            left: 6.8vw;
+        }
+        
+        small {
+            margin: 20px auto 10px auto;
+            font-size: 14px;
+        }
+
+        .quantityPeopleTrip {
+            padding-bottom: 20px;
+        }
+
+        .peopleIcon {
+            font-size: 23px;
+        }
+
+        .numberPeople {
+            position: relative;
+            bottom: 8px;
+            font-size: 23px;
+        }
+
+        .btnPlus {
+            padding: 0px 0px;
+        }
+    
+        .btnMinus {
+            padding: 0px 0px;
+            margin-left: -3px;
+        }
+
+        .horizontalLine {
+            padding: 20px;
+            border-top: 2px solid #CECECE;
+            width: 52.5vw;
+        }
+
+        .verticalLine {
+            height: 9.7vh;
+        }
+
+        h4 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        a {
+            font-size: 12px;
+        }
+
+        .btnNavigator {
+            position: relative;
+            top: 40px;
+        }
+
+        .btnNext {
+            padding: 1% 2.5%;
+            width: 85%;
+            font-size: 14px;
+        }
+    
+        .btnPrevious {
+            padding: 1% 2.5%;
+            width: 85%;
+            font-size: 14px;
+        }
+
+    }
+    
+    @media only screen and (max-device-width: 900px) {
+        width: 100vw;
+        height: 60vh;
+        padding: 30px 80px 0px 80px;
+
+        .displayFlexColumnRow {
+            flex-direction: column;
+        }
+
+        .container {
+            flex-direction: row;
+            width: 100%;
+            height: 8vh;
+            cursor: pointer;
+            padding-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .checkmark {
+            top: 1vh;
+            left: 6.8vw;
+        }
+
+        h3 {
+            margin: 10px 0px;
+        }
+        
+        small {
+            margin: 30px auto 10px auto;
+            font-size: 18px;
+        }
+
+        .peopleIcon {
+            margin-bottom: 2px;
+        }
+
+        .numberPeople {
+            bottom: 10px;
+        }
+
+        .horizontalLine {
+            padding: 10px;
+            border-top: 2px solid #CECECE;
+            margin-left: -80px !important;
+            width: 100vw;
+        }
+
+        .verticalLine {
+            height: 5.5vh;
+            margin-right: 3%;
+        }
+
+        .btnNavigator {
+            position: relative;
+            top: 40px;
+        }
+
+        .btnNext {
+            width: 100%;
+        }
+    
+        .btnPrevious {
+            width: 100%;
+        }
     }
 `;

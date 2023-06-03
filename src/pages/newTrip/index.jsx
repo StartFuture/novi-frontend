@@ -35,7 +35,7 @@ function NewTrip(){
                 <p className="tripDetails">Informe mais alguns detalhes sobre sua viagem</p>
                 
                 <h3>Qual o período que deseja viajar?</h3>
-                <div className="displayFlexRow">
+                <div className="displayFlexColumnRow">
                     
                     <label class="container">
                         <input type="radio" name="radio"/>
