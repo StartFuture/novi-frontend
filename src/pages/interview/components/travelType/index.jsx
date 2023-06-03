@@ -4,7 +4,9 @@ import { FormStyled } from "./styles";
 
 function TravelType(props) {
   var formData = useRef(props.formData);
-  props.setDisableBtn(formData.current.options.travel_destination == 0 ? true : false);
+  props.setDisableBtn(
+    formData.current.options.travel_destination == 0 ? true : false
+  );
 
   const handler = (e) => {
     formData.current.options.travel_destination = e.target.value;
@@ -34,7 +36,7 @@ function TravelType(props) {
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option2">
-        <label className="custom-radio-btn">
+        <div className="custom-radio-btn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -46,14 +48,14 @@ function TravelType(props) {
             }
           />
           <span className="checkmark"></span>
-        </label>
+        </div>
         <div className="descriptionDestinyType">
           <h2 className="checkboxTitle">Montanhas e paisagens naturais</h2>
           <small>Se impressione com vistas maravilhosas</small>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option3">
-        <label className="custom-radio-btn">
+        <div className="custom-radio-btn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -65,14 +67,14 @@ function TravelType(props) {
             }
           />
           <span className="checkmark"></span>
-        </label>
+        </div>
         <div className="descriptionDestinyType">
           <h2 className="checkboxTitle">Cidades históricas e culturas</h2>
           <small>Conheça pontos turísticos nas cidades nas lindas</small>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option4">
-        <label className="custom-radio-btn">
+        <div className="custom-radio-btn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -84,14 +86,14 @@ function TravelType(props) {
             }
           />
           <span className="checkmark"></span>
-        </label>
+        </div>
         <div className="descriptionDestinyType">
           <h2 className="checkboxTitle">Aventuras e esportes radicais </h2>
           <small>Aventureiro? Conheça as melhores aventuras</small>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option5">
-        <label className="custom-radio-btn">
+        <div className="custom-radio-btn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -103,7 +105,7 @@ function TravelType(props) {
             }
           />
           <span className="checkmark"></span>
-        </label>
+        </div>
         <div className="descriptionDestinyType">
           <h2 className="checkboxTitle">Natureza exuberante e vida selvagem</h2>
           <small>Conecte com a natureza com experiências incriveis</small>

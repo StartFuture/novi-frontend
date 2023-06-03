@@ -59,4 +59,19 @@ export const FormStyled = styled.form`
     margin-left: 30px;
     margin-top: 10px;
   }
+
+  @media screen and (max-width: 1090px) {
+    .formCheckbox {
+      width: 85%;
+      height: 100%;
+    }    
+
+    .checkboxTitle {
+      font-size: 16px;
+    }
+
+    .descriptionDestinyType {
+      font-size: 14px;
+    }
+  }
 `;

@@ -3,17 +3,38 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
+
+  @media screen and (max-width: 1090px) {
+    display: block;
+  }
 `;
 
 export const LeftContainer = styled.div`
-  width: 22vw;
+  width: 400px;
   background-color: ${(props) => props.theme.colors.primaryColor};
   height: 100vh;
+  @media screen and (max-width: 1090px) {
+    display: none;
+  }
 `;
 
 export const MainContainer = styled.div`
   width: 78vw;
   height: 100vh;
+
+  @media screen and (max-width: 1090px) {
+    width: 100%;
+    height: 100vh;
+
+    ::before {
+      content: "";
+      background-color: ${(props) => props.theme.colors.primaryColor};
+      max-width: 100vh;
+      min-width: 100%;
+      height: 33px;
+      display: block;
+    }
+  }
 `;
 
 export const FormStyled = styled.div`
@@ -102,30 +123,33 @@ export const FormStyled = styled.div`
   input:focus {
     border: 3px solid rgb(98, 0, 255);
   }
+
+  @media screen and (max-width: 1090px) {
+    .form-container {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .form-container .header {
+      font-size: 13.5px;
+      font-weight: 600;
+      margin: -4vh 0 2vh 8vw;
+    }
+
+    .form-container .body {
+      width: 100%;
+      overflow: scroll;
+    }
+  }
 `;
 
 export const NavStyled = styled.nav`
-  position: absolute;
-  top: 50vh;
-  transform: translateY(-50%);
-  background-color: ${(props) => props.theme.colors.primaryColor};
+  margin-top: 70px;
+  margin-left: 185px;
 
   ul {
-    padding-left: 8vw;
     position: relative;
     list-style: none;
-  }
-
-  ul::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: calc(100% - 85px);
-    left: 7vw;
-    top: 10px;
-    background: #fff;
-    z-index: -1;
-    margin-top: 29px;
   }
 
   ul li {
@@ -148,7 +172,7 @@ export const NavStyled = styled.nav`
     background: ${(props) => props.theme.colors.primaryColor};
     width: 18px;
     height: 18px;
-    left: -39px;
+    left: -2vw;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 50px;
@@ -156,11 +180,11 @@ export const NavStyled = styled.nav`
     transition: background 250ms;
   }
 
-  ul li a.active {
+  ul li a.act {
     font-weight: 700;
   }
 
-  ul li a.active::before {
+  ul li a.act::before {
     background: #fff;
   }
 `;
@@ -171,6 +195,11 @@ export const Footer = styled.div`
   margin-right: 14vw;
   justify-content: flex-end;
   align-items: flex-end;
+
+  @media screen and (max-width: 1090px) {
+    flex-direction: column-reverse;
+    margin: 4vh 6vw 0 6vw;
+  }
 `;
 
 export const ButtonPrev = styled.button`
@@ -186,6 +215,10 @@ export const ButtonPrev = styled.button`
 
   :hover {
     text-decoration: underline;
+  }
+
+  @media screen and (max-width: 1090px) {
+    width: 100%;
   }
 `;
 
@@ -203,5 +236,9 @@ export const ButtonNext = styled.button`
 
   :hover {
     background-color: #277567;
+  }
+
+  @media screen and (max-width: 1090px) {
+    width: 100%;
   }
 `;

@@ -14,6 +14,7 @@ export const FormStyled = styled.form`
     border: 1px solid ${(props) => props.theme.colors.lightGreyColor};
     padding: 15px;
     height: 115px;
+    width: 80%;
     margin: 1vh 14vw 0 8vw;
     border-radius: 10px;
     cursor: pointer;
@@ -25,16 +26,15 @@ export const FormStyled = styled.form`
     border: 2px solid ${(props) => props.theme.colors.primaryColor};
     border-radius: 50%;
     margin-left: 20px;
-    display: flex;
   }
 
   .custom-radio-btn .checkmark {
     width: 10px;
     height: 10px;
-    margin: 18%;
+    margin: 23% auto;
     border-radius: 50%;
     background-color: ${(props) => props.theme.colors.primaryColor};
-    display: inline-block;
+    display: block;
     opacity: 0;
     transition: opacity 0.5s ease;
   }
@@ -63,5 +63,19 @@ export const FormStyled = styled.form`
     flex-direction: column;
     margin-left: 30px;
     margin-top: 10px;
+  }
+
+  @media screen and (max-width: 1090px) {
+    .formCheckbox {
+      width: 85%;
+    }    
+
+    .checkboxTitle {
+      font-size: 16px;
+    }
+
+    .descriptionDestinyType {
+      font-size: 14px;
+    }
   }
 `;

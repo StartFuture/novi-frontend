@@ -6,9 +6,10 @@ export const Container = styled.button`
   text-align: center;
   border: none;
   background: none;
-  margin: 9vh auto auto 6vw;
+  margin: 118px auto auto 155px;
   color: #ffff;
   cursor: pointer;
+  font-weight: 400;
 
   :hover {
     text-decoration: underline;
@@ -16,7 +17,7 @@ export const Container = styled.button`
 
   p { 
     font-size: 18px;
-    margin-top: .7vh;
+    margin-top: 5px;
   }
 `;
 

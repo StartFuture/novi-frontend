@@ -4,7 +4,7 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     width: 795px;
-    margin-left: 8vh;
+    margin-left: 10vh;
 
   .formCheckbox {
     display: flex;
