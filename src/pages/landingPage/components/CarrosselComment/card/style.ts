@@ -18,7 +18,8 @@ gap: 10px;
     display: flex;
 align-items: center;
 flex-direction: row;
-gap: 25px;}
+gap: 25px;
+padding-top: 8px;}
 
 .boxUserImage {width: 71px;
 height: 71px;
@@ -50,12 +51,17 @@ margin-left: 150px;}
 
 
 .comment {width: 595px;
-height: 88px;
+height: 80%;
+padding-top: 20px;
 }
 
 .comment p {font-family: ${props => props.theme.fonts.fontMontserrat};
    font-size: 18px;
-   font-weight: 400;}
+   font-weight: 400;
+   max-width: 100%;
+   white-space: break-spaces;
+   overflow: hidden;
+   text-overflow: ellipsis;}
 
 
 `

@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { api } from "../../services/Api";
-import ShowComment from "./components/showComment";
+
 
 import Footer from "../../components/footer";
 import Carrosel from "../../components/carrosel";
 import LandingPageUs from "./components/landingPageUs";
 import LandingTop from "./components/landingPageTop";
 import "./assets/css/landingPage.css";
-import CarrosselComment from "pages/homePage/default";
+import CarrosselComment from "./components/CarrosselComment/CarroselComment";
+import CarrouselTop from "./components/CarrouselTop/carrouselTop";
+
 
 
 function LandingPage() {
@@ -29,13 +31,12 @@ function LandingPage() {
         <LandingTop />
       </div>
       <div>
-        <Carrosel />
+        <CarrouselTop></CarrouselTop>
       </div>
       <div>
         <LandingPageUs/>
       </div>
       <div className="lpCommentsContainer">
-        {/* <ShowComment comments={comments} /> */}
         <CarrosselComment></CarrosselComment>
       </div>
       <div>
