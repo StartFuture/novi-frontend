@@ -1,67 +1,68 @@
 import styled from "styled-components";
 
 export const FormStyled = styled.form`
-  .titleDestinyType {
-    font-size: 24px;
-    margin: -1vh 0 2vh 8vw;
-    font-weight: 600;
-  }
-
   .formCheckbox {
     display: flex;
     flex-direction: row;
-    align-items: center;
     border: 1px solid ${(props) => props.theme.colors.lightGreyColor};
-    padding: 15px;
-    height: 115px;
-    margin: 1vh 14vw 0 8vw;
-    border-radius: 10px;
+    border-radius: 16px;
+    margin-bottom: 2%;
     cursor: pointer;
+    align-items: center;
+    padding: 16px;
   }
 
-  .custom-radio-btn {
-    width: 20px;
-    height: 20px;
-    border: 2px solid ${(props) => props.theme.colors.primaryColor};
-    border-radius: 50%;
-    margin-left: 20px;
-    display: flex;
+  .customBtn {
+    min-height: 100%;
+    min-width: 10%;
   }
 
-  .custom-radio-btn .checkmark {
-    width: 10px;
-    height: 10px;
-    margin: 18%;
-    border-radius: 50%;
-    background-color: ${(props) => props.theme.colors.primaryColor};
-    display: inline-block;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-
-  .custom-radio-btn input {
+  .customBtn input {
     display: none;
   }
 
-  .custom-radio-btn input:checked + .checkmark {
-    opacity: 1;
+  .checkmark {
+    display: block;
+    height: 24px;
+    width: 24px;
+    margin: 50% auto;
+    border: 2px solid ${(props) => props.theme.colors.primaryColor};
+    border-radius: 50%;
   }
 
-  .checkboxTitle {
+  .customBtn input:checked + .checkmark span {
+    display: block;
+    height: 12px;
+    width: 12px;
+    margin: 20% auto 20% auto;
+    background-color: ${(props) => props.theme.colors.primaryColor};
+    border-radius: 50%;
+    transition: opacity 0.5s ease;
+  }
+
+  .checkboxContent {
+    margin-left: 32px;
+  }
+
+  .checkboxContent h3 {
     font-size: 18px;
     font-weight: 600;
   }
 
-  small {
-    margin-top: 5px;
+  .checkboxContent small {
+    font-size: 16px;
     color: #000;
     font-weight: 400;
+    margin-bottom: 0;
   }
 
-  .descriptionDestinyType {
-    display: flex;
-    flex-direction: column;
-    margin-left: 30px;
-    margin-top: 10px;
+  @media screen and (max-width: 1100px) {
+    .formCheckbox {
+      margin-bottom: 5.5%;
+    }
+
+    .checkboxContent h3 {
+      font-size: 16px;
+    }
   }
 `;

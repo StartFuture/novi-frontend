@@ -17,7 +17,7 @@ function TravelType(props) {
   return (
     <FormStyled>
       <label className="formCheckbox" htmlFor="option1">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -28,15 +28,15 @@ function TravelType(props) {
               formData.current.options.travel_destination == 1 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </div>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Praia e litoral</h2>
+        <div className="checkboxContent">
+          <h3>Praia e litoral</h3>
           <small>Belissimas praias ao redor do nosso Brasilzao</small>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option2">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -47,15 +47,15 @@ function TravelType(props) {
               formData.current.options.travel_destination == 2 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </div>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Montanhas e paisagens naturais</h2>
+        <div className="checkboxContent">
+          <h3>Montanhas e paisagens naturais</h3>
           <small>Se impressione com vistas maravilhosas</small>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option3">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -66,15 +66,15 @@ function TravelType(props) {
               formData.current.options.travel_destination == 3 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </div>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Cidades históricas e culturas</h2>
+        <div className="checkboxContent">
+          <h3>Cidades históricas e culturas</h3>
           <small>Conheça pontos turísticos nas cidades nas lindas</small>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option4">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -85,15 +85,15 @@ function TravelType(props) {
               formData.current.options.travel_destination == 4 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </div>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Aventuras e esportes radicais </h2>
+        <div className="checkboxContent">
+          <h3>Aventuras e esportes radicais </h3>
           <small>Aventureiro? Conheça as melhores aventuras</small>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option5">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -104,10 +104,10 @@ function TravelType(props) {
               formData.current.options.travel_destination == 5 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </div>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Natureza exuberante e vida selvagem</h2>
+        <div className="checkboxContent">
+          <h3>Natureza exuberante e vida selvagem</h3>
           <small>Conecte com a natureza com experiências incriveis</small>
         </div>
       </label>

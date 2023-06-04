@@ -6,7 +6,8 @@ export const Container = styled.button`
   text-align: center;
   border: none;
   background: none;
-  margin: 118px auto auto 155px;
+  margin-top: 30.5%;
+  margin-left: 40%;
   color: #ffff;
   cursor: pointer;
   font-weight: 400;

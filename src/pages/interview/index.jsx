@@ -170,40 +170,36 @@ function Interview() {
       </LeftContainer>
       <MainContainer>
         <FormStyled>
-          <div className="form-container">
-            {
-              <div className="header">
-                <h1>{FormTitles[page]}</h1>
-              </div>
-            }
-            <div className="body">{PageDisplay()}</div>
-            <Footer>
-              <ButtonPrev
-                disabled={page == 0}
-                onClick={() => {
-                  setPage((currPage) => currPage - 1);
-                }}
-              >
-                Voltar
-              </ButtonPrev>
-              <ButtonNext
-                disabled={disableBtn}
-                style={{ backgroundColor: !disableBtn ? "" : "gray" }}
-                onClick={() => {
-                  if (page === FormTitles.length - 1) {
-                    alert("FORM SUBMITTED");
-                    console.log(getFormData());
-                    nav("/interview-end");
-                  } else {
-                    setPage((currPage) => currPage + 1);
-                  }
-                }}
-              >
-                {page === FormTitles.length - 1 ? "Finalizar" : "Prosseguir"}
-              </ButtonNext>
-            </Footer>
+          <div className="header">
+            <h2>{FormTitles[page]}</h2>
           </div>
+          <div className="body">{PageDisplay()}</div>
         </FormStyled>
+        <Footer>
+          <ButtonPrev
+            disabled={page == 0}
+            onClick={() => {
+              setPage((currPage) => currPage - 1);
+            }}
+          >
+            Voltar
+          </ButtonPrev>
+          <ButtonNext
+            disabled={disableBtn}
+            style={{ backgroundColor: !disableBtn ? "" : "gray" }}
+            onClick={() => {
+              if (page === FormTitles.length - 1) {
+                alert("FORM SUBMITTED");
+                console.log(getFormData());
+                nav("/interview-end");
+              } else {
+                setPage((currPage) => currPage + 1);
+              }
+            }}
+          >
+            {page === FormTitles.length - 1 ? "Finalizar" : "Prosseguir"}
+          </ButtonNext>
+        </Footer>
       </MainContainer>
     </Container>
   );

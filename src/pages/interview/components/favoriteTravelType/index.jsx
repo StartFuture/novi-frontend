@@ -17,7 +17,7 @@ function FavoriteTravelType(props) {
   return (
     <FormStyled>
       <label className="formCheckbox" htmlFor="option1">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optional"
@@ -28,12 +28,18 @@ function FavoriteTravelType(props) {
               formData.current.options.travel_style == 1 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark">
+            <span />
+          </div>
         </div>
-        <h2 className="checkboxTitle">Viagens relaxantes e tranquilas</h2>
+        <div>
+          <div className="checkboxContent">
+            <h3 >Viagens relaxantes e tranquilas</h3>
+          </div>
+        </div>
       </label>
       <label className="formCheckbox" htmlFor="option2">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optional"
@@ -44,14 +50,18 @@ function FavoriteTravelType(props) {
               formData.current.options.travel_style == 2 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark">
+            <span />
+          </div>
         </div>
-        <h2 className="checkboxTitle">
-          Exploração e descoberta de novos lugares
-        </h2>
+        <div className="checkboxContent">
+          <h3 >
+            Exploração e descoberta de novos lugares
+          </h3>
+        </div>
       </label>
       <label className="formCheckbox" htmlFor="option3">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optional"
@@ -62,12 +72,16 @@ function FavoriteTravelType(props) {
               formData.current.options.travel_style == 3 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark">
+            <span />
+          </div>
         </div>
-        <h2 className="checkboxTitle">Imersão cultural e histórica</h2>
+        <div className="checkboxContent">
+          <h3 >Imersão cultural e histórica</h3>
+        </div>
       </label>
       <label className="formCheckbox" htmlFor="option4">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optional"
@@ -78,12 +92,16 @@ function FavoriteTravelType(props) {
               formData.current.options.travel_style == 4 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark">
+            <span />
+          </div>
         </div>
-        <h2 className="checkboxTitle">Em busca de adrenalina e emoções</h2>
+        <div className="checkboxContent">
+          <h3 >Em busca de adrenalina e emoções</h3>
+        </div>
       </label>
       <label className="formCheckbox" htmlFor="option5">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optional"
@@ -94,9 +112,15 @@ function FavoriteTravelType(props) {
               formData.current.options.travel_style == 5 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark">
+            <span />
+          </div>
         </div>
-        <h2 className="checkboxTitle">Conexão com a natureza e ecoturismo</h2>
+        <div className="checkboxContent">
+          <h3 >
+            Conexão com a natureza e ecoturismo
+          </h3>
+        </div>
       </label>
     </FormStyled>
   );
