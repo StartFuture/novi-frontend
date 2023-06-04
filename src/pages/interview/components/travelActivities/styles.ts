@@ -1,14 +1,11 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 795px;
-    margin-left: 10vh;
+  display: flex;
 
   .formCheckbox {
     display: flex;
-    margin: 16px 0;
+    margin: 3% 0;
     align-items: center;
   }
 
@@ -42,5 +39,15 @@ export const Content = styled.div`
 
   .formCheckbox input:checked + label {
     color: ${(props) => props.theme.colors.primaryColor};
+  }
+
+  @media screen and (max-width: 1100px) {
+    .formCheckbox {
+      margin: 5% 0;
+    }
+
+    .formCheckbox label {
+      font-size: 16px;
+    }
   }
 `;

@@ -9,7 +9,7 @@ export const FormStyled = styled.form`
     margin-bottom: 2%;
     cursor: pointer;
     align-items: center;
-    padding: 16px;
+    padding: 1%;
   }
 
   .customBtn {
@@ -47,13 +47,6 @@ export const FormStyled = styled.form`
   .checkboxContent h3 {
     font-size: 18px;
     font-weight: 600;
-  }
-
-  .checkboxContent small {
-    font-size: 16px;
-    color: #000;
-    font-weight: 400;
-    margin-bottom: 0;
   }
 
   @media screen and (max-width: 1100px) {

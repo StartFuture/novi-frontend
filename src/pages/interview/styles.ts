@@ -14,14 +14,14 @@ export const Container = styled.div`
 export const LeftContainer = styled.div`
   min-width: 25%;
   background-color: ${(props) => props.theme.colors.primaryColor};
-  height: 100vh;
+  min-height: 100%;
   @media screen and (max-width: 1100px) {
     display: none;
   }
 `;
 
 export const NavStyled = styled.nav`
-  margin-top: 25%;
+  margin-top: 16%;
   margin-left: 40%;
   max-height: 100vh;
 
@@ -83,10 +83,11 @@ export const MainContainer = styled.div`
 
 export const FormStyled = styled.div`
   width: 52%;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   margin-left: 18%;
-  margin-top: 7%;
+  margin-top: 5.5%;
 
   .header {
     font-size: 22px;

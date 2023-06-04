@@ -2,14 +2,10 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   display: flex;
-  justify-content: center;
-  width: 795px;
-  margin-left: 7vw;
-
 
   .formCheckbox {
     display: flex;
-    margin: 16px 0;
+    margin: 3% 0;
     align-items: center;
   }
 
@@ -46,7 +42,22 @@ export const Content = styled.div`
   }
 
   .checkboxWrapper {
-    width: 750px;
+    width: 30vw;
     border-bottom: 1px solid ${(props) => props.theme.colors.lightGreyColor};
+  }
+
+  @media screen and (max-width: 1100px) {
+    .formCheckbox {
+      margin: 5% 0;
+    }
+
+    .formCheckbox label {
+      font-size: 16px;
+    }
+
+    .checkboxWrapper {
+    width: 80vw;
+    border-bottom: 1px solid ${(props) => props.theme.colors.lightGreyColor};
+  }
   }
 `;

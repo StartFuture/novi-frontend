@@ -9,7 +9,7 @@ export const FormStyled = styled.form`
     margin-bottom: 2%;
     cursor: pointer;
     align-items: center;
-    padding: 16px;
+    padding: 1%;
   }
 
   .customBtn {
