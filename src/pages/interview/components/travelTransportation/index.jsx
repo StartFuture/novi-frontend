@@ -16,7 +16,7 @@ export default function TravelTransportation(props) {
   return (
     <FormStyled>
       <label className="formCheckbox" htmlFor="option1">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -27,14 +27,14 @@ export default function TravelTransportation(props) {
               formData.current.options.transport_style == 1 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </div>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Voo direto para o destino</h2>
+        <div className="checkboxContent">
+          <h3>Voo direto para o destino</h3>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option2">
-        <label className="custom-radio-btn">
+        <label className="customBtn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -45,14 +45,14 @@ export default function TravelTransportation(props) {
               formData.current.options.transport_style == 2 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </label>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Voos com escalas para economizar dinheiro</h2>
+        <div className="checkboxContent">
+          <h3>Voos com escalas para economizar dinheiro</h3>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option3">
-        <label className="custom-radio-btn">
+        <label className="customBtn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -63,14 +63,14 @@ export default function TravelTransportation(props) {
               formData.current.options.transport_style == 3 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </label>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Viagens de trens e/ou ônibus</h2>
+        <div className="checkboxContent">
+          <h3>Viagens de trens e/ou ônibus</h3>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option4">
-        <label className="custom-radio-btn">
+        <label className="customBtn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -81,10 +81,10 @@ export default function TravelTransportation(props) {
               formData.current.options.transport_style == 4 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </label>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Não tenho preferência</h2>
+        <div className="checkboxContent">
+          <h3>Não tenho preferência</h3>
         </div>
       </label>
     </FormStyled>

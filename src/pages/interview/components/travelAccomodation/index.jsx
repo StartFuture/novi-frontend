@@ -17,7 +17,7 @@ function TravelAccomodation(props) {
   return (
     <FormStyled>
       <label className="formCheckbox" htmlFor="option1">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="accomodationStyle"
@@ -28,12 +28,16 @@ function TravelAccomodation(props) {
               formData.current.options.accomodation_style == 1 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark">
+            <span />
+          </div>
         </div>
-        <h2 className="checkboxTitle">Hotéis de luxo e resorts</h2>
+        <div className="checkboxContent">
+          <h3>Hotéis de luxo e resorts</h3>
+        </div>
       </label>
       <label className="formCheckbox" htmlFor="option2">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="accomodationStyle"
@@ -44,12 +48,16 @@ function TravelAccomodation(props) {
               formData.current.options.accomodation_style == 2 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark">
+            <span />
+          </div>
         </div>
-        <h2 className="checkboxTitle">Pousadas e acomodações charmosas</h2>
+        <div className="checkboxContent">
+          <h3>Pousadas e acomodações charmosas</h3>
+        </div>
       </label>
       <label className="formCheckbox" htmlFor="option3">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="accomodationStyle"
@@ -60,12 +68,16 @@ function TravelAccomodation(props) {
               formData.current.options.accomodation_style == 3 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark">
+            <span />
+          </div>
         </div>
-        <h2 className="checkboxTitle">Apartamentos e casas de temporada</h2>
+        <div className="checkboxContent">
+          <h3>Apartamentos e casas de temporada</h3>
+        </div>
       </label>
       <label className="formCheckbox" htmlFor="option4">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="accomodationStyle"
@@ -76,12 +88,16 @@ function TravelAccomodation(props) {
               formData.current.options.accomodation_style == 4 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark">
+            <span />
+          </div>
         </div>
-        <h2 className="checkboxTitle">Hostels</h2>
+        <div className="checkboxContent">
+          <h3>Hostels</h3>
+        </div>
       </label>
       <label className="formCheckbox" htmlFor="option5">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="accomodationStyle"
@@ -92,11 +108,15 @@ function TravelAccomodation(props) {
               formData.current.options.accomodation_style == 5 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark">
+            <span />
+          </div>
         </div>
-        <h2 className="checkboxTitle">
-          Acampamentos e contato direto com a natureza
-        </h2>
+        <div className="checkboxContent">
+          <h3>
+            Acampamentos e contato direto com a natureza
+          </h3>
+        </div>
       </label>
     </FormStyled>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import TravelType from "./components/travelType";
 import FavoriteTravelType from "./components/favoriteTravelType";
@@ -75,6 +76,7 @@ function Interview() {
 
   const [formData, setFormData] = useState(getFormData());
   const [disableBtn, setDisableBtn] = useState(true);
+  const nav = useNavigate();
 
   const FormTitles = [
     "Qual o tipo de destino você prefere?",
@@ -92,99 +94,114 @@ function Interview() {
     if (page === 0) {
       return <TravelType formData={formData} setDisableBtn={setDisableBtn} />;
     } else if (page === 1) {
-      return <FavoriteTravelType formData={formData} setDisableBtn={setDisableBtn} />;
+      return (
+        <FavoriteTravelType formData={formData} setDisableBtn={setDisableBtn} />
+      );
     } else if (page === 2) {
-      return <TravelAccomodation formData={formData} setDisableBtn={setDisableBtn} />;
+      return (
+        <TravelAccomodation formData={formData} setDisableBtn={setDisableBtn} />
+      );
     } else if (page === 3) {
-      return <TravelActivities formData={formData} setDisableBtn={setDisableBtn} />;
+      return (
+        <TravelActivities formData={formData} setDisableBtn={setDisableBtn} />
+      );
     } else if (page === 4) {
       return <TravelNight formData={formData} setDisableBtn={setDisableBtn} />;
     } else if (page === 5) {
-      return <TravelInterest formData={formData} setDisableBtn={setDisableBtn} />;
+      return (
+        <TravelInterest formData={formData} setDisableBtn={setDisableBtn} />
+      );
     } else if (page === 6) {
-      return <InternationalTravel formData={formData} setDisableBtn={setDisableBtn} />;
+      return (
+        <InternationalTravel
+          formData={formData}
+          setDisableBtn={setDisableBtn}
+        />
+      );
     } else if (page === 7) {
-      return <TravelTransportation formData={formData} setDisableBtn={setDisableBtn} />;
+      return (
+        <TravelTransportation
+          formData={formData}
+          setDisableBtn={setDisableBtn}
+        />
+      );
     } else {
-      return <TravelClimate formData={formData} setDisableBtn={setDisableBtn} />;
+      return (
+        <TravelClimate formData={formData} setDisableBtn={setDisableBtn} />
+      );
     }
   };
 
   return (
-    <div>
-      <Container>
-        <LeftContainer>
-          <ButtonBack />
-          <NavStyled>
-            <ul>
-              <li>
-                <a className={page >= 0 ? "active" : ""}>Destino</a>
-              </li>
-              <li>
-                <a className={page > 0 ? "active" : ""}>Estilo da viagem</a>
-              </li>
-              <li>
-                <a className={page > 1 ? "active" : ""}>Acomodações</a>
-              </li>
-              <li>
-                <a className={page > 2 ? "active" : ""}>Atividades</a>
-              </li>
-              <li>
-                <a className={page > 3 ? "active" : ""}>Preferência</a>
-              </li>
-              <li>
-                <a className={page > 4 ? "active" : ""}>Interesses culturais</a>
-              </li>
-              <li>
-                <a className={page > 5 ? "active" : ""}>Internacional</a>
-              </li>
-              <li>
-                <a className={page > 6 ? "active" : ""}>Transporte</a>
-              </li>
-              <li>
-                <a className={page > 7 ? "active" : ""}>Clima</a>
-              </li>
-            </ul>
-          </NavStyled>
-        </LeftContainer>
-        <MainContainer>
-          <FormStyled>
-            <div className="form-container">
-              {
-                <div className="header">
-                  <h1>{FormTitles[page]}</h1>
-                </div>
+    <Container>
+      <LeftContainer>
+        <ButtonBack />
+        <NavStyled>
+          <ul>
+            <li>
+              <a className={page >= 0 ? "act" : ""}>Destino</a>
+            </li>
+            <li>
+              <a className={page > 0 ? "act" : ""}>Estilo da viagem</a>
+            </li>
+            <li>
+              <a className={page > 1 ? "act" : ""}>Acomodações</a>
+            </li>
+            <li>
+              <a className={page > 2 ? "act" : ""}>Atividades</a>
+            </li>
+            <li>
+              <a className={page > 3 ? "act" : ""}>Preferência</a>
+            </li>
+            <li>
+              <a className={page > 4 ? "act" : ""}>Interesses culturais</a>
+            </li>
+            <li>
+              <a className={page > 5 ? "act" : ""}>Internacional</a>
+            </li>
+            <li>
+              <a className={page > 6 ? "act" : ""}>Transporte</a>
+            </li>
+            <li>
+              <a className={page > 7 ? "act" : ""}>Clima</a>
+            </li>
+          </ul>
+        </NavStyled>
+      </LeftContainer>
+      <MainContainer>
+        <FormStyled>
+          <div className="header">
+            <h2>{FormTitles[page]}</h2>
+          </div>
+          <div className="body">{PageDisplay()}</div>
+        </FormStyled>
+        <Footer>
+          <ButtonPrev
+            disabled={page == 0}
+            onClick={() => {
+              setPage((currPage) => currPage - 1);
+            }}
+          >
+            Voltar
+          </ButtonPrev>
+          <ButtonNext
+            disabled={disableBtn}
+            style={{ backgroundColor: !disableBtn ? "" : "gray" }}
+            onClick={() => {
+              if (page === FormTitles.length - 1) {
+                alert("FORM SUBMITTED");
+                console.log(getFormData());
+                nav("/interview-end");
+              } else {
+                setPage((currPage) => currPage + 1);
               }
-              <div className="body">{PageDisplay()}</div>
-              <Footer>
-                <ButtonPrev
-                  disabled={page == 0}
-                  onClick={() => {
-                    setPage((currPage) => currPage - 1);
-                  }}
-                >
-                  Voltar
-                </ButtonPrev>
-                <ButtonNext
-                  disabled={disableBtn}
-                  style={{backgroundColor: !disableBtn ? "" : "gray"}}
-                  onClick={() => {
-                    if (page === FormTitles.length - 1) {
-                      alert("FORM SUBMITTED");
-                      console.log(getFormData());
-                    } else {
-                      setPage((currPage) => currPage + 1);
-                    }
-                  }}
-                >
-                  {page === FormTitles.length - 1 ? "Finalizar" : "Prosseguir"}
-                </ButtonNext>
-              </Footer>
-            </div>
-          </FormStyled>
-        </MainContainer>
-      </Container>
-    </div>
+            }}
+          >
+            {page === FormTitles.length - 1 ? "Finalizar" : "Prosseguir"}
+          </ButtonNext>
+        </Footer>
+      </MainContainer>
+    </Container>
   );
 }
 export default Interview;

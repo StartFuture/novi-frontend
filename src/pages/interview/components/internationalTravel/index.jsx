@@ -17,7 +17,7 @@ function InternationalTravel(props) {
   return (
     <FormStyled>
       <label className="formCheckbox" htmlFor="optionDestinyType1">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -28,15 +28,15 @@ function InternationalTravel(props) {
               formData.current.options.can_leave_country == 1 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </div>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Sim</h2>
+        <div className="checkboxContent">
+          <h3>Sim</h3>
           <small>Adoraria uma viagem internacional</small>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="optionDestinyType2">
-        <label className="custom-radio-btn">
+        <label className="customBtn">
           <input
             type="radio"
             name="optionDestinyType"
@@ -47,10 +47,10 @@ function InternationalTravel(props) {
               formData.current.options.can_leave_country == 2 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </label>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Não</h2>
+        <div className="checkboxContent">
+          <h3>Não</h3>
           <small>Não me sinto confortável em sair do meu país</small>
         </div>
       </label>

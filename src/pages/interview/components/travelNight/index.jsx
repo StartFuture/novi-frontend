@@ -16,7 +16,7 @@ function TravelNight(props) {
   return (
     <FormStyled>
       <label className="formCheckbox" htmlFor="option1">
-        <div className="custom-radio-btn">
+        <div className="customBtn">
           <input
             type="radio"
             name="optionaNight"
@@ -27,17 +27,17 @@ function TravelNight(props) {
               formData.current.options.night_style == 1 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </div>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Vida noturna animada</h2>
+        <div className="checkboxContent">
+          <h3>Vida noturna animada</h3>
           <small>
             Gosto de ir em shows, musicais, baladas, etc. Quero curtir !
           </small>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option2">
-        <label className="custom-radio-btn">
+        <label className="customBtn">
           <input
             type="radio"
             name="optionaNight"
@@ -48,19 +48,19 @@ function TravelNight(props) {
               formData.current.options.night_style == 2 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </label>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">
+        <div className="checkboxContent">
+          <h3>
             Gosto de ter opções para sair a noite
-          </h2>
+          </h3>
           <small>
             Se algo me chamar atenção, vou optar por incluir no meu roteiro
           </small>
         </div>
       </label>
       <label className="formCheckbox" htmlFor="option3">
-        <label className="custom-radio-btn">
+        <label className="customBtn">
           <input
             type="radio"
             name="optionaNight"
@@ -71,10 +71,10 @@ function TravelNight(props) {
               formData.current.options.night_style == 3 ? true : false
             }
           />
-          <span className="checkmark"></span>
+          <div className="checkmark"><span/></div>
         </label>
-        <div className="descriptionDestinyType">
-          <h2 className="checkboxTitle">Não gostaria</h2>
+        <div className="checkboxContent">
+          <h3>Não gostaria</h3>
           <small>Evito sair a noite durante as minhas viagens</small>
         </div>
       </label>
