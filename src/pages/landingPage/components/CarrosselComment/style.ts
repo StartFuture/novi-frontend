@@ -13,10 +13,7 @@ margin-left: 30px;
   max-width: 100%;
   height: 400px;
 
-  @media only screen and (max-device-width: 668px) {
-    height: 100px;
-
-  }
+  
 }
 
 .slideshowSlider {
@@ -33,10 +30,7 @@ margin-left: 30px;
   width: 100%;
   border-radius: 40px;
 
-  @media only screen and (max-device-width: 668px) {
-    height: 200px;
-
-} 
+  
 }
 
 /* Buttons */

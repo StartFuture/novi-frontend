@@ -1,5 +1,10 @@
 @import url("../../../../assets/css/novi.css");
 
+
+.carroselTopContainer {display: flex;
+margin: 150px 0px;
+position: relative;}
+
 .lp {
     background-color: #F3F3F3;
   }
@@ -263,4 +268,11 @@
     .lpCommentsContainer {
         display: none;
     }
+
+    @media only screen and (max-width: 900px)  {
+
+        .carroselTopContainer {position: relative;
+
+    }}
+
 }

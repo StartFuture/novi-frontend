@@ -10,6 +10,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap: 10px;
+background-color: green;
 
 
 .upperCard {
@@ -65,5 +66,34 @@ padding-top: 20px;
    overflow: hidden;
    text-overflow: ellipsis;}
 
+   
 
+   @media only screen and (max-device-width: 900px) {
+    height:317px;
+    width: 316px;
+    
+
+    .rating {
+gap: 2px;
+margin-top: 135px;
+margin-left: -270px;}
+
+    .rating .starSize {height: 25px;
+width: 25px;}
+
+    .comment {width: 260px;
+   margin-top: 25px;}
+
+    .comment p {font-size: 14px;}
+    
+
+    .upperCard {
+    width: 290px;
+    height: 85px;
+    display: flex;
+align-items: center;
+flex-direction: row;
+gap: 25px;
+padding-top: 8px;}
+    }
 `

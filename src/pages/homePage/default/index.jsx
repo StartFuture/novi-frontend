@@ -1,7 +1,8 @@
 import React from "react";
 import { LayoutGrid, PageGrid, MainDiv, SecondaryDiv, Button, Wrapper } from "../default/style"
 import { ImAirplane } from "react-icons/im";
-import CarrouselTop from "pages/landingPage/components/CarrouselTop/carrouselTop";
+import { useState } from "react";
+import LoggedHome from "../loggedHome";
 
 
 
@@ -10,6 +11,16 @@ import CarrouselTop from "pages/landingPage/components/CarrouselTop/carrouselTop
 
 
 function DefaultHome() {
+
+  const [travel, setTravel] = useState(0);
+
+  const HomeDisplay = () => {
+    if (travel.size > 0) {
+    return <LoggedHome></LoggedHome>;
+    } else {
+    return <><DefaultHome></DefaultHome>;</>;
+    }
+};
 
   return (
 

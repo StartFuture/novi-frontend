@@ -10,6 +10,11 @@ align-items: center;
 justify-content: center;
 margin-left: 325px;
 
+@media only screen and (max-width: 900px)  {margin-left: 100px;
+position:absolute;
+left: 0;
+top: -685px;}
+
 
 .divTextAlign {display: flex;
 align-items: center;

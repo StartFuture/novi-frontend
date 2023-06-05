@@ -7,11 +7,12 @@ height: auto;
 margin-left: 1050px;
 
 
+
 .slideshow {
   margin: 0 auto;
   overflow: hidden;
   max-width: 500px;
-}
+  }
 
 .slideshowSlider {
   white-space: nowrap;
@@ -47,4 +48,16 @@ margin-left: 1050px;
 .slideshowDot.active {
   background-color: ${props => props.theme.colors.primaryColor};
 }
+
+@media only screen and (max-width: 900px)  {
+  
+.slide {width: 85%;}
+
+  .slideshow { position: absolute;
+left: 98px;
+top: -370px;}
+  }
+
 `
+
+

@@ -25,7 +25,6 @@ const AppRoutes = () => {
             <Routes>
                 <Route exact path="/" element={<LandingPage />}></Route>
                 <Route exact path="/defaultHome" element={<DefaultHome/>}></Route>
-                <Route exact path="/loggedHome" element={<LoggedHome/>}></Route>
                 <Route exact path="/login" element={<Login />}></Route>
                 <Route exact path="/interviewStart" element={<InterviewStart />}></Route>
                 <Route exact path="/registro" element={<Registro />}></Route>
