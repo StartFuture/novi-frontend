@@ -29,7 +29,6 @@ const AppRoutes = () => {
                 <Route exact path="/interviewStart" element={<InterviewStart />}></Route>
                 <Route exact path="/registro" element={<Registro />}></Route>
                 <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
-                <Route exact path="/quizObjetivos" element={<QuizObejtivoViagem/>}></Route>
                 <Route exact path="/interview" element={<Interview/>}></Route>
                 <Route exact path="/menuUser" element={<UserMenu/>}></Route>
             </Routes>
