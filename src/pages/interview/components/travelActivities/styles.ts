@@ -1,21 +1,11 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-    display: flex;
-    justify-content: center;
-    margin-top: 108px;
-    margin-left: 300px;
-    width: 795px;
-
-    h2 {
-        font-weight: 600;
-        font-size: 32px;
-        margin-bottom: 40px;
-    }
+  display: flex;
 
   .formCheckbox {
     display: flex;
-    margin: 16px 0;
+    margin: 3% 0;
     align-items: center;
   }
 
@@ -34,7 +24,7 @@ export const Content = styled.div`
     display: inline-block;
     height: 24px;
     width: 24px;
-    border: 1px solid ${(props) => props.theme.colors.lightGreyColor};
+    border: 1px solid #000;
     border-radius: 8px;
     margin-right: 24px;
     vertical-align: middle;
@@ -49,5 +39,15 @@ export const Content = styled.div`
 
   .formCheckbox input:checked + label {
     color: ${(props) => props.theme.colors.primaryColor};
+  }
+
+  @media screen and (max-width: 1100px) {
+    .formCheckbox {
+      margin: 5% 0;
+    }
+
+    .formCheckbox label {
+      font-size: 16px;
+    }
   }
 `;
