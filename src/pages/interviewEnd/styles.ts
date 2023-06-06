@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   display: flex;
+  flex-direction: row-reverse;
 
   .content {
-    width: 794px;
-    margin-top: 314px;
-    margin-left: 152px;
+    width: 100%;
+    margin-top: 16.5%;
+    margin-left: 8%;
+    margin-right: 5.5%;
   }
 
   h2 {
@@ -32,8 +34,7 @@ export const MainContainer = styled.div`
 export const BackgroundImg = styled.div`
     background-image: url("img/interviewEndBg.png");
     background-repeat: no-repeat;
-    background-size: fill;
-    height: 100%;
-    width: 866px;
-    margin-left: 108px;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
 `;
