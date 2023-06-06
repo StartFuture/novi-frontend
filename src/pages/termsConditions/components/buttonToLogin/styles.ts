@@ -9,6 +9,11 @@ export const Container = styled.button`
   margin: 118px auto auto 195px;
   color: #ffff;
   cursor: pointer;
+  font-weight: 500;
+
+  :hover {
+    text-decoration: underline;
+  }
 
   p { 
     font-size: 18px;

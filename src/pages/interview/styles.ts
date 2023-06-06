@@ -1,201 +1,155 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: flex;
-    flex-direction: row;
-`
+  display: flex;
+  flex-direction: row;
+  max-width: 100vw;
+  max-height: 100vh;
+
+  @media screen and (max-width: 1100px) {
+    display: block;
+  }
+`;
 
 export const LeftContainer = styled.div`
-    width: 22vw;
-    background-color: ${props => props.theme.colors.primaryColor};
-    height: 100vh;
+  min-width: 25%;
+  background-color: ${(props) => props.theme.colors.primaryColor};
+  min-height: 100%;
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
 `;
-
-export const MainContainer = styled.div`
-    width: 78vw;
-    height: 100vh;
-`;
-
-export const FormStyled = styled.div`
-
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .form-container {
-      display: flex;
-      flex-direction: column;
-      // background-color: blue;
-      width: 80%;
-      height: 80%;
-    }
-      
-    .form-container .header {
-      display: flex;
-      justify-content: flex-init;
-      margin: 9vh 0 5vh 15vw;
-    }
-
-    .form-container .body {
-        height: 68vh;
-    }
-
-    .sign-up-container {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .sign-up-container input {
-      margin: 5px;
-      width: 200px;
-      height: 40px;
-      padding-left: 5px;
-      font-size: 20px;
-    }
-    
-    .personal-info-container {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .personal-info-container input {
-      margin: 5px;
-      width: 200px;
-      height: 40px;
-      padding-left: 5px;
-      font-size: 20px;
-    }
-    
-    .other-info-container {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .other-info-container input {
-      margin: 5px;
-      width: 200px;
-      height: 40px;
-      padding-left: 5px;
-      font-size: 20px;
-    }
-    
-    input {
-      border: 2px solid rgb(98, 0, 255);
-      border-radius: 5px;
-    }
-    
-    input:focus {
-      border: 3px solid rgb(98, 0, 255);
-    }
-`
 
 export const NavStyled = styled.nav`
-  position: absolute;
-  top: 50vh;
-  transform: translateY(-50%);
-  background-color: ${props => props.theme.colors.primaryColor};
+  margin-top: 16%;
+  margin-left: 40%;
+  max-height: 100vh;
 
   ul {
-    padding-left: 8vw;
-    position: relative;
     list-style: none;
   }
 
-  ul::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: calc(100% - 85px);
-    left: 7vw;
-    top: 10px;
-    background: #FFF;
-    z-index: -1;
-    margin-top: 29px;
-  }
-
   ul li {
-    padding: 35px 0;
-    padding-left: 10px;
+    margin-bottom: 6vh;
   }
 
   ul li a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    position: relative;
-    color #FFF;
+    color: #fff;
     font-size: 18px;
-    line-height: 1rem;
     font-weight: 600;
   }
 
   ul li a:before {
     content: "";
-    position: absolute;
-    background: ${props => props.theme.colors.primaryColor};
-    width: 18px;
-    height: 18px;
-    left: -39px;
-    top: 50%;
-    transform: translateY(-50%);
+    display: block;
+    background: ${(props) => props.theme.colors.primaryColor};
+    min-width: 18px;
+    min-height: 18px;
+    margin-right: 16px;
     border-radius: 50px;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     transition: background 250ms;
   }
 
-  ul li a.active {
+  ul li a.act {
     font-weight: 700;
   }
 
-  ul li a.active::before {
-    background: #FFF;
+  ul li a.act::before {
+    background: #fff;
+  }
+`;
+
+export const MainContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+
+  @media screen and (max-width: 1100px) {
+    width: 100vw;
+    height: 100vh;
+
+    ::before {
+      content: "";
+      background-color: ${(props) => props.theme.colors.primaryColor};
+      width: 100vw;
+      height: 33px;
+      display: block;
+    }
+  }
+`;
+
+export const FormStyled = styled.div`
+  width: 52%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 18%;
+  margin-top: 5.5%;
+
+  .header {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5.5%;
+  }
+
+  @media screen and (max-width: 1100px) {
+    margin: 0 auto;
+    margin-top: 4.5%;
+    width: 80%;
+
+    .header {
+      font-size: 17px;
+      font-weight: 600;
+    }
   }
 `;
 
 export const Footer = styled.div`
   display: flex;
-  margin-top: 4vh;
-  margin-right: 14vw;
   justify-content: flex-end;
-  align-items: flex-end;
+  width: 70%;
+  margin-top: 4.5%;
+
+  @media screen and (max-width: 1100px) {
+    margin: 0 auto;
+    margin-top: 4%;
+    width: 80%;
+    flex-direction: column-reverse;
+  }
 `;
 
 export const ButtonPrev = styled.button`
-  color: ${props => props.theme.colors.primaryColor};
+  color: ${(props) => props.theme.colors.primaryColor};
   border: none;
   background-color: white;
   padding: 16px;
   width: 12vw;
-  font-family: ${props => props.theme.fonts.fontMontserrat};
+  font-family: ${(props) => props.theme.fonts.fontMontserrat};
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  
+
   :hover {
     text-decoration: underline;
+  }
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 24px 12px 24px;
   }
 `;
 
 export const ButtonNext = styled.button`
   color: white;
   border: none;
-  background-color: ${props => props.theme.colors.primaryColor};
+  background-color: ${(props) => props.theme.colors.primaryColor};
   padding: 16px;
   width: 12vw;
-  font-family: ${props => props.theme.fonts.fontMontserrat};
+  font-family: ${(props) => props.theme.fonts.fontMontserrat};
   font-size: 18px;
   font-weight: 500;
   border-radius: 8px;
@@ -203,6 +157,11 @@ export const ButtonNext = styled.button`
 
   :hover {
     background-color: #277567;
-    
+  }
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 24px 12px 24px;
   }
 `;
