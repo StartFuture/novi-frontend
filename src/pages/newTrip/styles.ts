@@ -47,6 +47,7 @@ export const Container = styled.div`
     height: 100vh;
     background-color: #F6F6F6;
     padding: 100px 150px 80px 150px;
+    overflow : visible;
 
     h1 {
         font-size: 42px;
@@ -239,6 +240,27 @@ export const Container = styled.div`
         font-weight: 500;
     }
 
+    .customDate {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .customDateInfo {
+        padding: 2%;
+    }
+
+    .customDateInfo h5 {
+        font-size: 18px;
+        font-weight: 600;
+        color: ${props => props.theme.colors.primaryColor};
+    }
+
+    .rowDateInfo p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
     @media only screen and (max-device-width: 1570px) {
         width: 70%;
         height: 100vh;
@@ -414,3 +436,129 @@ export const Container = styled.div`
         }
     }
 `;
+
+export const Calendar = styled.div`
+    display:inline-grid;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    padding:30px 20px 20px 20px;
+    border-radius:8px;
+    box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
+    // position: relative;
+    // top: -155px;
+    // height: 525px;
+
+    .arrowRPosition {
+        position:relative;
+        right: -180px;
+    }
+
+    .arrowLPosition {
+        position:relative;
+        right: -140px;
+    }
+
+    .month{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        font-size:16px;
+        margin-bottom:10px;
+        font-weight:600;
+    }
+
+    .month div{
+        font-family: ${props => props.theme.fonts.fontMontserrat};
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+    .year{
+      font-weight:600;
+      margin-left:5px;
+    }
+    
+    .nav{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-decoration:none;
+      color:#0a3d62;
+      width:40px;
+      height:40px;
+      border-radius:40px;
+      transition-duration:.2s;
+      position:relative;}
+      
+      &:hover{
+        background:#eee;
+      }
+    
+  
+    .days{
+        display: grid;
+        justify-content:center;
+        align-items:center;
+        grid-template-columns: repeat(7, 1fr);
+        color:#999;
+        font-weight:400;
+        margin-bottom: 14px;
+    }
+        
+    span{
+        width:50px;
+        justify-self:center;
+        align-self:center;
+        text-align:center;
+        font-family: ${props => props.theme.fonts.fontMontserrat};
+        font-weight: 400;
+        font-size: 16px;
+    }
+    
+    .dates{
+        display:grid;
+        grid-template-columns: repeat(7, 1fr);
+    }
+        
+    .dates button:nth-child(-n + 14) {
+        background-color: ${props => props.theme.colors.primaryColor};
+        color: white;
+    }
+
+    button{
+      cursor:pointer;
+      outline:0;
+      border:0;
+      background:transparent;
+      font-family: 'Montserrat', sans-serif;
+      font-size:16px;
+      justify-self:center;
+      align-self:center;
+      width:50px;
+      height:30px;
+      border-radius:0px;
+      margin: 5px 0px;
+      transition-duration:.2s;
+    }
+      
+    &.today{
+        box-shadow:inset 0px 0px 0px 2px #0a3d62;
+    }
+    
+    &:first-child{
+        grid-column:3;
+    }
+    
+    &:hover{
+        background:#eee;
+    }
+    
+    &:focus{
+        background:#0a3d62;
+        color:#fff;
+        font-weight:600;
+    }
+      
+    
+`

@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import { FaUserAlt} from "react-icons/fa"
-import { FaPlus, FaMinus } from "react-icons/fa"
+import { FaUserAlt, FaPlus, FaMinus } from "react-icons/fa";
 
-import { MainContainer, ContainerLeft, LeftImage, Container } from "./styles";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
+
+import { MainContainer, ContainerLeft, LeftImage, Container, Calendar } from "./styles";
 
 function NewTrip(){
 
     const [numberPeople, setNumberPeople] = useState(1);
+    const [activeCalendar, setActiveCalendar] = useState(false)
 
     const AddPeople = () => {
         setNumberPeople(numberPeople => numberPeople + 1);
@@ -24,6 +26,17 @@ function NewTrip(){
         }
         
     }
+
+    useEffect(() => {
+        if (activeCalendar) {
+            console.log("ATIVO")
+            document.getElementById("calendar").style.display = "block";
+        }
+        else {
+            console.log("INATIVO")
+            document.getElementById("calendar").style.display = "none";
+        }
+      });
 
     return(
         <MainContainer>
@@ -43,6 +56,7 @@ function NewTrip(){
                             name="period"
                             id="option1"
                             value={1}
+                            onClick={() => {setActiveCalendar(false)}}
                         />
                         <div className="checkmark"><span/></div>
                         <div className="checkboxContent">
@@ -58,6 +72,7 @@ function NewTrip(){
                             name="period"
                             id="option2"
                             value={2}
+                            onClick={() => {setActiveCalendar(false)}}
                         />
                         <div className="checkmark"><span/></div>
                         <div className="checkboxContent">
@@ -73,6 +88,7 @@ function NewTrip(){
                             name="period"
                             id="option3"
                             value={3}
+                            onClick={() => {setActiveCalendar(true)}}
                         />
                         <div className="checkmark"><span/></div>
                         <div className="checkboxContent">
@@ -82,6 +98,139 @@ function NewTrip(){
                     </label>            
                 </div>
                
+                <div id="calendar" style={{display: 'none'}}>
+                    <div className="customDate">
+                        <div>
+                            <Calendar>
+                                <div className="month"><div>Janeiro <span className="year">2023</span> <a><IoIosArrowBack className="arrowLPosition"></IoIosArrowBack></a><a><IoIosArrowForward className="arrowRPosition"></IoIosArrowForward></a></div></div>
+                                <div className="days">
+                                    <span>Seg</span>
+                                    <span>Ter</span>
+                                    <span>Quar</span>
+                                    <span>Quin</span>
+                                    <span>Sex</span>
+                                    <span>Sab</span>
+                                    <span>Dom</span>
+                                </div>
+                                <div className="dates">
+                                    <button>
+                                    <time>1</time>
+                                    </button>
+                                    <button>
+                                    <time>2</time>
+                                    </button>
+                                    <button>
+                                    <time>3</time>
+                                    </button>
+                                    <button>
+                                    <time>4</time>
+                                    </button>
+                                    <button>
+                                    <time>5</time>
+                                    </button>
+                                    <button>
+                                    <time>6</time>
+                                    </button>
+                                    <button>
+                                    <time>7</time>
+                                    </button>
+                                    <button>
+                                    <time>8</time>
+                                    </button>
+                                    <button>
+                                    <time>9</time>
+                                    </button>
+                                    <button>
+                                    <time>10</time>
+                                    </button>
+                                    <button>
+                                    <time>11</time>
+                                    </button>
+                                    <button>
+                                    <time>12</time>
+                                    </button>
+                                    <button>
+                                    <time>13</time>
+                                    </button>
+                                    <button>
+                                    <time>14</time>
+                                    </button>
+                                    <button>
+                                    <time>15</time>
+                                    </button>
+                                    <button>
+                                    <time>16</time>
+                                    </button>
+                                    <button>
+                                    <time>17</time>
+                                    </button>
+                                    <button>
+                                    <time>18</time>
+                                    </button>
+                                    <button>
+                                    <time>19</time>
+                                    </button>
+                                    <button>
+                                    <time>20</time>
+                                    </button>
+                                    <button>
+                                    <time>21</time>
+                                    </button>
+                                    <button>
+                                    <time>22</time>
+                                    </button>
+                                    <button>
+                                    <time>23</time>
+                                    </button>
+                                    <button>
+                                    <time>24</time>
+                                    </button>
+                                    <button>
+                                    <time>25</time>
+                                    </button>
+                                    <button>
+                                    <time>26</time>
+                                    </button>
+                                    <button>
+                                    <time>27</time>
+                                    </button>
+                                    <button>
+                                    <time>28</time>
+                                    </button>
+                                    <button>
+                                    <time>29</time>
+                                    </button>
+                                    <button>
+                                    <time>30</time>
+                                    </button>
+                                    <button>
+                                    <time>31</time>
+                                    </button>
+                                </div>
+                            </Calendar>
+                            <br/>
+                            <br/>
+                            <br/>
+                        </div>
+                        <div className="customDateInfo">
+                            <h5>Periodo selecionado</h5>
+                            <br/>
+                            <div className="rowDateInfo">
+                                <p>De: <b>01/01/2023</b></p>
+                                <br/>
+                            </div>
+                            <div className="rowDateInfo">
+                                <p>Até: <b>14/01/2023</b></p>
+                                <br/>
+                            </div>
+                            <div className="rowDateInfo">
+                                <p>Qtd dias: <b>14 dias</b></p>
+                                <br/>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+
 
                 <h3>Quantas pessoas vão viajar?</h3>
 
