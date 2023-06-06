@@ -77,7 +77,6 @@ export const Container = styled.div`
     }
 
     small {
-        margin: 50px auto 20px auto;
         font-size: 16px;
         font-weight: 600;
     }
@@ -147,25 +146,25 @@ export const Container = styled.div`
         margin-left: -1px;
     }
     
-      .customBtn {
+    .customBtn {
         min-height: 10%;
         min-width: 10%;
-      }
-    
-      .customBtn input {
+    }
+
+    .customBtn input {
         display: none;
-      }
-    
-      .checkmark {
+    }
+
+    .checkmark {
         display: block;
         height: 24px;
         width: 24px;
-        margin: 10% auto 20% auto;
+        margin: 10% auto;
         border: 2px solid ${(props) => props.theme.colors.primaryColor};
         border-radius: 50%;
-      }
-    
-      .customBtn input:checked + .checkmark span {
+    }
+
+    .customBtn input:checked + .checkmark span {
         display: block;
         height: 12px;
         width: 12px;
@@ -173,7 +172,14 @@ export const Container = styled.div`
         background-color: ${(props) => props.theme.colors.primaryColor};
         border-radius: 50%;
         transition: opacity 0.5s ease;
-      }
+    }
+
+    .checkboxContent {
+        display: flex;
+        justify-content: center;
+        padding-top: 5%;
+        padding-bottom: 10%;
+    }
 
     .container {
         display: flex;
@@ -190,35 +196,6 @@ export const Container = styled.div`
         border: 1px solid #C1C1C1;
         border-radius: 16px;
     }
-      
-    /* Hide the browser's default radio button */
-    .container input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-    }
-      
-    // /* Create a custom radio button */
-    // .checkmark {
-    //     position: relative;
-    //     top: 2vh;
-    //     left: 5.3vw;
-    //     height: 25px;
-    //     width: 25px;
-    //     background-color: #FFF;
-    //     border: .1rem solid ${props => props.theme.colors.primaryColor};
-    //     border-radius: 50%;
-    // }
-    
-    // /* On mouse-over, add a grey background color */
-    // .container:hover input ~ .checkmark {
-    //     background-color: ${props => props.theme.colors.primaryColor};;
-    // }
-      
-    // /* When the radio button is checked, add a blue background */
-    // .container input:checked ~ .checkmark {
-    //     background-color: ${props => props.theme.colors.primaryColor};;
-    // }
 
     .horizontalLine {
         padding: 20px;
@@ -286,11 +263,15 @@ export const Container = styled.div`
         }
 
         .checkmark {
-            left: 6.8vw;
+            margin: 5% auto;
+        }
+    
+        .checkboxContent {
+            padding-top: 5%;
+            padding-bottom: 10%;
         }
         
         small {
-            margin: 40px auto 10px auto;
             font-size: 14px;
         }
 
@@ -376,21 +357,25 @@ export const Container = styled.div`
             margin-bottom: 10px;
         }
 
-        .checkmark {
-            top: 40%;
-            bottom: 30%;
-            left: 7%;
-            height: 15px;
-            width: 15px;
+        .customBtn {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 8vh;
         }
 
-        h3 {
-            margin: 10px 0px;
+        .checkmark {
+            margin: auto 5% auto 10%;
         }
         
         small {
-            margin: auto;
             font-size: 14px;
+        }
+
+        .checkboxContent {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin: auto 0;
         }
 
         .peopleIcon {

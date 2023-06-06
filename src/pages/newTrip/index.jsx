@@ -45,7 +45,9 @@ function NewTrip(){
                             value={1}
                         />
                         <div className="checkmark"><span/></div>
-                        <small>Um final de semana</small>
+                        <div className="checkboxContent">
+                            <small>Um final de semana</small>
+                        </div>
                         </div>
                     </label>
 
@@ -58,7 +60,9 @@ function NewTrip(){
                             value={2}
                         />
                         <div className="checkmark"><span/></div>
-                        <small>Uma semana</small>
+                        <div className="checkboxContent">
+                            <small>Uma semana</small>    
+                        </div>
                         </div>
                     </label>
 
@@ -71,7 +75,9 @@ function NewTrip(){
                             value={3}
                         />
                         <div className="checkmark"><span/></div>
-                        <small>Personalizado</small>
+                        <div className="checkboxContent">
+                            <small>Personalizado</small>
+                        </div>
                         </div>
                     </label>            
                 </div>
