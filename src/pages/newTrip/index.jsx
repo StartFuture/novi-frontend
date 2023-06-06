@@ -36,22 +36,44 @@ function NewTrip(){
                 
                 <h3>Qual o período que deseja viajar?</h3>
                 <div className="displayFlexColumnRow">
-                    
-                    <label class="container">
-                        <input type="radio" name="radio"/>
-                        <span class="checkmark"></span>
-                        <small>Um final de semana</small> 
+                    <label class="container" htmlFor="option1">
+                        <div className="customBtn">
+                        <input
+                            type="radio"
+                            name="period"
+                            id="option1"
+                            value={1}
+                        />
+                        <div className="checkmark"><span/></div>
+                        <small>Um final de semana</small>
+                        </div>
                     </label>
-                    <label class="container">
-                        <input type="radio" name="radio"/>
-                        <span class="checkmark"></span>
+
+                    <label class="container" htmlFor="option2">
+                        <div className="customBtn">
+                        <input
+                            type="radio"
+                            name="period"
+                            id="option2"
+                            value={2}
+                        />
+                        <div className="checkmark"><span/></div>
                         <small>Uma semana</small>
+                        </div>
                     </label>
-                    <label class="container">
-                        <input type="radio" name="radio"/>
-                        <span class="checkmark"></span>
+
+                    <label class="container" htmlFor="option3">
+                        <div className="customBtn">
+                        <input
+                            type="radio"
+                            name="period"
+                            id="option3"
+                            value={3}
+                        />
+                        <div className="checkmark"><span/></div>
                         <small>Personalizado</small>
-                    </label>                    
+                        </div>
+                    </label>            
                 </div>
                
 

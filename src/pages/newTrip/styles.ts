@@ -145,7 +145,35 @@ export const Container = styled.div`
         border-radius: 0px 5px 5px 0px;
         background-color: #FFF;
         margin-left: -1px;
-    }   
+    }
+    
+      .customBtn {
+        min-height: 10%;
+        min-width: 10%;
+      }
+    
+      .customBtn input {
+        display: none;
+      }
+    
+      .checkmark {
+        display: block;
+        height: 24px;
+        width: 24px;
+        margin: 10% auto 20% auto;
+        border: 2px solid ${(props) => props.theme.colors.primaryColor};
+        border-radius: 50%;
+      }
+    
+      .customBtn input:checked + .checkmark span {
+        display: block;
+        height: 12px;
+        width: 12px;
+        margin: 20% auto 20% auto;
+        background-color: ${(props) => props.theme.colors.primaryColor};
+        border-radius: 50%;
+        transition: opacity 0.5s ease;
+      }
 
     .container {
         display: flex;
@@ -170,27 +198,27 @@ export const Container = styled.div`
         cursor: pointer;
     }
       
-    /* Create a custom radio button */
-    .checkmark {
-        position: relative;
-        top: 2vh;
-        left: 5.3vw;
-        height: 25px;
-        width: 25px;
-        background-color: #FFF;
-        border: .1rem solid ${props => props.theme.colors.primaryColor};
-        border-radius: 50%;
-    }
+    // /* Create a custom radio button */
+    // .checkmark {
+    //     position: relative;
+    //     top: 2vh;
+    //     left: 5.3vw;
+    //     height: 25px;
+    //     width: 25px;
+    //     background-color: #FFF;
+    //     border: .1rem solid ${props => props.theme.colors.primaryColor};
+    //     border-radius: 50%;
+    // }
     
-    /* On mouse-over, add a grey background color */
-    .container:hover input ~ .checkmark {
-        background-color: ${props => props.theme.colors.primaryColor};;
-    }
+    // /* On mouse-over, add a grey background color */
+    // .container:hover input ~ .checkmark {
+    //     background-color: ${props => props.theme.colors.primaryColor};;
+    // }
       
-    /* When the radio button is checked, add a blue background */
-    .container input:checked ~ .checkmark {
-        background-color: ${props => props.theme.colors.primaryColor};;
-    }
+    // /* When the radio button is checked, add a blue background */
+    // .container input:checked ~ .checkmark {
+    //     background-color: ${props => props.theme.colors.primaryColor};;
+    // }
 
     .horizontalLine {
         padding: 20px;
