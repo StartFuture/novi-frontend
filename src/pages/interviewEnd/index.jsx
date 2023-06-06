@@ -6,7 +6,7 @@ import StyledButton from "../../components/button/index";
 import { MainContainer, BackgroundImg } from "./styles";
 
 const btnHome = {
-  text: "Ir para home",
+  text: "Prosseguir",
   link: "/home",
 };
 
