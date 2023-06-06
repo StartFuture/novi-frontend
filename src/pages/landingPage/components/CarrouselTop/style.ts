@@ -4,14 +4,15 @@ import styled from "styled-components";
 export const DivCarrouselTop = styled.div `
 width: auto;
 height: auto;
-margin-left: 1050px;
+
 
 
 
 .slideshow {
   margin: 0 auto;
   overflow: hidden;
-  max-width: 500px;
+  max-width: 600px;
+  
   }
 
 .slideshowSlider {
@@ -49,7 +50,8 @@ margin-left: 1050px;
   background-color: ${props => props.theme.colors.primaryColor};
 }
 
-@media (min-width: 384px)  {
+@media (min-width: 481px) and (max-width:768px)  {
+
   
 .slide {}
 

@@ -40,12 +40,12 @@ height: 115px;
 .BorderColor h2 {font-family: ${props => props.theme.fonts.fontMontserrat};
       font-weight: 700;
       font-size: 42px;
-    color: ${props => props.theme.colors.primaryColor};
+    color: ${props => props.theme.colors.primaryColor};}
 
-    @media (min-width: 481px) and (max-width:1000px){
-
-
+    @media (min-width: 481px) and (max-width:768px) {
+      margin-left: 30vh;
+      width: 150px;
 
     }
 
-`
+    `
