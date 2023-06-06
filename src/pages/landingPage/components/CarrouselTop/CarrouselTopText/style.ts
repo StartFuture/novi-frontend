@@ -43,8 +43,8 @@ height: 115px;
     color: ${props => props.theme.colors.primaryColor};}
 
     @media (min-width: 481px) and (max-width:768px) {
-      margin-left: 30vh;
-      width: 150px;
+      margin-left: 20vh;
+      width: 125px;
 
     }
 

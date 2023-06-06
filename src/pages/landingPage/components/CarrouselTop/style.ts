@@ -51,7 +51,7 @@ height: auto;
 }
 
 @media (min-width: 481px) and (max-width:768px)  {
-
+margin-left: 25px;
   
 .slide {}
 
