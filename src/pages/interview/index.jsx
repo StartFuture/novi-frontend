@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 
-import SignUpInfo from "./teste/SignUpInfo";
-import PersonalInfo from "./teste/PersonalInfo";
-import OtherInfo from "./teste/OtherInfo";
+// import SignUpInfo from "./teste/SignUpInfo";
+// import PersonalInfo from "./teste/PersonalInfo";
+// import OtherInfo from "./teste/OtherInfo";
 
-import TravelType from "./components/TravelType";
+// import TravelType from "./components/TravelType";
 
 import { Container, LeftContainer, MainContainer, FormStyled, NavStyled, Footer, ButtonPrev, ButtonNext } from "./styles";
 
@@ -33,15 +33,15 @@ function Interview(){
 
     const FormTitles = ["Qual o tipo de destino você prefere?", "Personal Info", "Other", "Last"];
 
-    const PageDisplay = () => {
-        if (page === 0) {
-        return <TravelType formData={formData} setFormData={setFormData} />;
-        } else if (page === 1) {
-        return <PersonalInfo formData={formData} setFormData={setFormData} />;
-        } else {
-        return <OtherInfo formData={formData} setFormData={setFormData} />;
-        }
-    };
+    // const PageDisplay = () => {
+    //     if (page === 0) {
+    //     return <TravelType formData={formData} setFormData={setFormData} />;
+    //     } else if (page === 1) {
+    //     return <PersonalInfo formData={formData} setFormData={setFormData} />;
+    //     } else {
+    //     return <OtherInfo formData={formData} setFormData={setFormData} />;
+    //     }
+    // };
   
     return (
         <div>
@@ -63,7 +63,7 @@ function Interview(){
                             {/* <div className="header">
                                 <h1>{FormTitles[page]}</h1>
                             </div> */}
-                            <div className="body">{PageDisplay()}</div>
+                            {/* <div className="body">{PageDisplay()}</div> */}
                             <Footer>
                                 <ButtonPrev
                                     disabled={page == 0}

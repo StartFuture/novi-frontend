@@ -49,13 +49,11 @@ margin-left: 1050px;
   background-color: ${props => props.theme.colors.primaryColor};
 }
 
-@media only screen and (max-width: 900px)  {
+@media (min-width: 384px)  {
   
-.slide {width: 85%;}
+.slide {}
 
-  .slideshow { position: absolute;
-left: 98px;
-top: -370px;}
+  .slideshow {}
   }
 
 `

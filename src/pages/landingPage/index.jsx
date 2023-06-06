@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { api } from "../../services/Api";
-import {DivStyleTop} from "pages/landingPage/components/CarrouselTop/style"
+import { DivStyleTop } from "pages/landingPage/components/CarrouselTop/style"
 
 import Footer from "../../components/footer";
 import Carrosel from "../../components/carrosel";
@@ -30,12 +30,17 @@ function LandingPage() {
       <div>
         <LandingTop />
       </div>
-      <div className="carroselTopContainer"> 
-        <DescubraNovasExperiencias></DescubraNovasExperiencias>
-        <CarrouselTop></CarrouselTop>
+
+      <div className="carroselTopContainer">
+       
+          <DescubraNovasExperiencias></DescubraNovasExperiencias>
+        
+        
+          <CarrouselTop></CarrouselTop>
+        
       </div>
       <div>
-        <LandingPageUs/>
+        <LandingPageUs />
       </div>
       <div className="lpCommentsContainer">
         <CarrosselComment></CarrosselComment>

@@ -11,8 +11,6 @@ import InterviewStart from "./pages/interviewStart";
 import Interview from "./pages/interview";
 import Registro from "./pages/registerPage/assets/css/img/svg/index";
 import TermsConditionsPage from "./pages/termsConditions/index";
-import LoggedHome from "pages/homePage/loggedHome";
-import QuizObejtivoViagem from "pages/quiz/quizObjetivosDaViagem";
 // import { Private } from "./components/Private";
 // import { AuthProvider } from "./contexts/auth";
 
@@ -24,7 +22,7 @@ const AppRoutes = () => {
         {/* <AuthProvider> */}
             <Routes>
                 <Route exact path="/" element={<LandingPage />}></Route>
-                <Route exact path="/defaultHome" element={<DefaultHome/>}></Route>
+                <Route exact path="/home" element={<DefaultHome/>}></Route>
                 <Route exact path="/login" element={<Login />}></Route>
                 <Route exact path="/interviewStart" element={<InterviewStart />}></Route>
                 <Route exact path="/registro" element={<Registro />}></Route>

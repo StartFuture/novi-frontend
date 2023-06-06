@@ -10,10 +10,7 @@ align-items: center;
 justify-content: center;
 margin-left: 325px;
 
-@media only screen and (max-width: 900px)  {margin-left: 100px;
-position:absolute;
-left: 0;
-top: -685px;}
+
 
 
 .divTextAlign {display: flex;
@@ -43,6 +40,12 @@ height: 115px;
 .BorderColor h2 {font-family: ${props => props.theme.fonts.fontMontserrat};
       font-weight: 700;
       font-size: 42px;
-    color: ${props => props.theme.colors.primaryColor};}
+    color: ${props => props.theme.colors.primaryColor};
+
+    @media (min-width: 481px) and (max-width:1000px){
+
+
+
+    }
 
 `

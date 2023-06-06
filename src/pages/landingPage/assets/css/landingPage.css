@@ -3,7 +3,10 @@
 
 .carroselTopContainer {display: flex;
 margin: 150px 0px;
-position: relative;}
+height: 425px;
+min-width: 384px;
+justify-content: center;
+border: 1px solid red;}
 
 .lp {
     background-color: #F3F3F3;
@@ -269,9 +272,15 @@ position: relative;}
         display: none;
     }
 
-    @media only screen and (max-width: 900px)  {
+    @media (max-width: 384px) {
 
-        .carroselTopContainer {position: relative;
+        .carroselTopContainer {display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+;
+
 
     }}
 
