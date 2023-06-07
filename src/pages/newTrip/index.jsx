@@ -29,11 +29,10 @@ function NewTrip(){
 
     useEffect(() => {
         if (activeCalendar) {
-            console.log("ATIVO")
             document.getElementById("calendar").style.display = "block";
+            
         }
         else {
-            console.log("INATIVO")
             document.getElementById("calendar").style.display = "none";
         }
       });
@@ -231,7 +230,6 @@ function NewTrip(){
                     </div>
                 </div>
 
-
                 <h3>Quantas pessoas vão viajar?</h3>
 
                 <div className="displayFlexRow">
@@ -267,7 +265,7 @@ function NewTrip(){
                 </div>
                 
                 <br/>
-                <div className="btnNavigator">
+                <div id="btnNavigator" className="btnNavigator">
                     <input className="btnNext" type="submit" value="Prosseguir" />
                     <input
                         className="btnPrevious"

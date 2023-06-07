@@ -13,6 +13,7 @@ export const MainContainer = styled.div`
 export const ContainerLeft = styled.div`
     width: 40%;    
     height: 100%;
+    background-color: #F6F6F6;
 
     @media only screen and (max-device-width: 1570px) {
         width: 30%;
@@ -327,7 +328,7 @@ export const Container = styled.div`
         }
 
         .verticalLine {
-            height: 9.7vh;
+            height: 6vh;
         }
 
         h4 {
@@ -364,7 +365,7 @@ export const Container = styled.div`
     @media only screen and (max-device-width: 900px) {
         width: 100vw;
         height: 100vh;
-        padding: 30px 80px 0px 80px;
+        padding: 30px 40px 0px 30px;
 
         .displayFlexColumnRow {
             flex-direction: column;
@@ -392,6 +393,10 @@ export const Container = styled.div`
         
         small {
             font-size: 14px;
+        }
+
+        .customDateInfo {
+            display: none;
         }
 
         .checkboxContent {
@@ -444,7 +449,7 @@ export const Calendar = styled.div`
     background:#fff;
     padding:30px 20px 20px 20px;
     border-radius:8px;
-    box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
+    // box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
     // position: relative;
     // top: -155px;
     // height: 525px;
@@ -460,6 +465,7 @@ export const Calendar = styled.div`
     }
 
     .month{
+        width: 100%;
         display:flex;
         justify-content:space-between;
         align-items:center;
@@ -559,6 +565,52 @@ export const Calendar = styled.div`
         color:#fff;
         font-weight:600;
     }
-      
+
+    @media only screen and (max-device-width: 900px) {
+
+        padding: 20px 10px 10px 10px;
+
+        .month span{
+            font-size: 1rem;
+        }
+        .month div{
+            font-size: 1rem;
+            margin-left: 2%;
+        }
+
+        .days{
+            width: 75vw;
+            margin-left: 2%;
+        }
+
+        .arrowRPosition {
+            position:relative;
+            left: 35vw;
+        }
     
+        .arrowLPosition {
+            position:relative;
+            left: 30vw;
+        }
+
+        span{
+            width: 10%;
+            justify-self:flex-start;
+            align-self:flex-start;
+            text-align:center;
+            font-family: ${props => props.theme.fonts.fontMontserrat};
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        button{
+            width: 100%;
+            height: 100%;
+            margin: 5px 0px;
+
+            // width:50px;
+            // height:30px;
+            // margin: 5px 10px;
+        }
+    }
 `
