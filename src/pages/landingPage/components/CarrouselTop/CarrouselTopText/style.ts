@@ -42,9 +42,10 @@ height: 115px;
       font-size: 42px;
     color: ${props => props.theme.colors.primaryColor};}
 
-    @media (min-width: 481px) and (max-width:768px) {
+    @media (min-width: 1px) and (max-width:768px) {
       margin-left: 20vh;
-      width: 125px;
+      width: 155px;
+      margin-left: 155px;
 
     }
 

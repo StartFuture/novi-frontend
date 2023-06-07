@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const BoxCarrossel1 = styled.div`
 width: auto;
 height: auto;
-margin-top: 300px;
+margin-top: 70px;
 margin-left: 30px;
 
 .slideshow {
@@ -55,6 +55,10 @@ margin-left: 30px;
   background-color: #6a0dad;
 }
 
+@media (min-width: 1px) and (max-width:768px) {
+  
+  .slide {width: 70%;}
 
+}
 
 `

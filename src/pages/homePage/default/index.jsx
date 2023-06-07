@@ -18,7 +18,7 @@ function DefaultHome() {
     if (travel.size > 0) {
     return <LoggedHome></LoggedHome>;
     } else {
-    return <><DefaultHome></DefaultHome>;</>;
+    return <DefaultHome></DefaultHome>;
     }
 };
 
@@ -26,11 +26,11 @@ function DefaultHome() {
 
     <PageGrid>
       <LayoutGrid>
-
+      <div>{HomeDisplay()}</div>
         <MainDiv>
           <p>Fala <b> Marcelo </b>, vamos viajar?</p>
           <SecondaryDiv>
-              <div>{HomeDisplay()}</div>
+             
             <ImAirplane className="iconAirplane" />
             <h2>Vamos achar a viagem certa para você !</h2>
 

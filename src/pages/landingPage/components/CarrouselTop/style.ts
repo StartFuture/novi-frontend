@@ -8,10 +8,11 @@ height: auto;
 
 
 
+
 .slideshow {
   margin: 0 auto;
   overflow: hidden;
-  max-width: 600px;
+  max-width: 705px;
   
   }
 
@@ -24,7 +25,7 @@ height: auto;
   display: inline-block;
 
   height: 400px;
-  width: 500px;
+  width: 440px;
   border-radius: 40px;
 }
 
@@ -50,7 +51,7 @@ height: auto;
   background-color: ${props => props.theme.colors.primaryColor};
 }
 
-@media (min-width: 481px) and (max-width:768px)  {
+@media (min-width: 1px) and (max-width:768px)  {
 margin-left: 25px;
   
 .slide {}

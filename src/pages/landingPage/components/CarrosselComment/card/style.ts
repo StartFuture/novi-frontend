@@ -68,8 +68,8 @@ padding-top: 20px;
 
    
 
-   @media only screen and (max-device-width: 900px) {
-    height:317px;
+   @media (min-width: 1px) and (max-width:768px) {
+    height: 317px;
     width: 316px;
     
 

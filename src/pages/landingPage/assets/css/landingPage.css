@@ -2,11 +2,10 @@
 
 
 .carroselTopContainer {display: flex;
-margin: 350px 0px;
+margin: 70px 0px;
 height: 425px;
 min-width: 384px;
 justify-content: space-between;
-border: 1px solid red;
 gap: 200px;}
 
 .lp {
@@ -184,10 +183,10 @@ gap: 200px;}
 }
 
 /*Tablet Query*/
-@media (min-width: 481px) and (max-width:768px) {
+@media (min-width: 1px) and (max-width:768px) {
 
     .carroselTopContainer {
-        border: 1px solid green;
+      
     flex-direction: column;
 justify-content: flex-start;
 margin-bottom: 500px;

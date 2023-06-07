@@ -42,7 +42,7 @@ function LandingPage() {
       <div>
         <LandingPageUs />
       </div>
-      <div className="lpCommentsContainer">
+      <div>
         <CarrosselComment></CarrosselComment>
       </div>
       <div>
