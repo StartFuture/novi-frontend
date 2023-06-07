@@ -16,6 +16,7 @@ import { Private } from "./components/Private";
 import { AuthProvider } from "./contexts/auth";
 
 import UserMenu from "pages/homePage/userMenu";
+import InterviewEnd from "pages/interviewEnd";
 
 const AppRoutes = () => {
   return (
@@ -25,11 +26,12 @@ const AppRoutes = () => {
                 <Route exact path="/" element={<LandingPage />}></Route>
                 <Route exact path="/defaultHome" element={<Private><DefaultHome/></Private>}></Route>
                 <Route exact path="/login" element={<Login />}></Route>
-                <Route exact path="/interviewStart" element={<InterviewStart />}></Route>
+                <Route exact path="/interview-start" element={<InterviewStart />}></Route>
                 <Route exact path="/registro" element={<Registro />}></Route>
                 <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
                 <Route exact path="/interview" element={<Interview/>}></Route>
                 <Route exact path="/menuUser" element={<UserMenu/>}></Route>
+                <Route exact path="/interview-end" element={<InterviewEnd/>}></Route>
             </Routes>
         </AuthProvider>
     </Router>
