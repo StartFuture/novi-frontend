@@ -1,8 +1,7 @@
 import React from "react";
 import { LayoutGrid, PageGrid, MainDiv, SecondaryDiv, Button, Wrapper } from "../default/style"
 import { ImAirplane } from "react-icons/im";
-import { useState } from "react";
-import LoggedHome from "../loggedHome";
+import UserMenu from "../userMenu";
 
 
 
@@ -12,21 +11,15 @@ import LoggedHome from "../loggedHome";
 
 function DefaultHome() {
 
-  const [travel, setTravel] = useState(0);
+  
 
-  const HomeDisplay = () => {
-    if (travel.size > 0) {
-    return <LoggedHome></LoggedHome>;
-    } else {
-    return <DefaultHome></DefaultHome>;
-    }
-};
+  
 
   return (
 
     <PageGrid>
       <LayoutGrid>
-      <div>{HomeDisplay()}</div>
+        <UserMenu></UserMenu>
         <MainDiv>
           <p>Fala <b> Marcelo </b>, vamos viajar?</p>
           <SecondaryDiv>

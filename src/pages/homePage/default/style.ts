@@ -5,13 +5,14 @@ import styled from "styled-components";
 export const PageGrid = styled.div`
     width:1920px ;
     height:1080px ;
-    
+    background-color: lightgray;
 `
 ;
 
 export const LayoutGrid = styled.div`
     
     display: flex;
+    gap: 90px;
     
 `
 ;
@@ -20,7 +21,8 @@ export const MainDiv = styled.div`
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   
+   margin-top: 55px;
+  
 
 
 

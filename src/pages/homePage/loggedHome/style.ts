@@ -13,8 +13,7 @@ export const LayoutGrid = styled.div`
     
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 130px;
     margin: 0 auto;
     
 
@@ -28,15 +27,22 @@ export const MainDiv = styled.div`
    width: 100%;
    display: flex;
    flex-direction: column;
-   align-items: center;
-  justify-content: center;
+   align-items: flex-start;
+   margin-top: 30px;
   
-
+  
+  .pStyle {  border-bottom: 1px solid;
+   border-bottom-color: black;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+width: 1200px;}
 
 
    p {font-family: ${props => props.theme.fonts.fontMontserrat};
    font-size: 24px;
    font-weight: 700;
+ 
+
    }`
 
 export const SecondaryDiv = styled.div`

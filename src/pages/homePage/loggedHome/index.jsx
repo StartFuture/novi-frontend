@@ -8,6 +8,7 @@ import { AiOutlineUser } from "react-icons/ai"
 import { BsFillSunFill } from "react-icons/bs"
 import { IoIosArrowBack } from "react-icons/io"
 import { IoIosArrowForward } from "react-icons/io"
+import UserMenu from "../userMenu";
 
 
 
@@ -17,10 +18,11 @@ function LoggedHome() {
 
     <PageGrid>
       <LayoutGrid>
-
+<UserMenu></UserMenu>
         <MainDiv>
+          <div className="pStyle">
           <p>Fala <b> Marcelo </b>, tudo pronto para sua viagem?</p>
-
+          </div>
 
 
           <UpperDiv>
