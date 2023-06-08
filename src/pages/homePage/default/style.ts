@@ -1,8 +1,18 @@
 import styled from "styled-components";
 
+
+
+export const PageGrid = styled.div`
+    width:1920px ;
+    height:1080px ;
+    background-color: lightgray;
+`
+;
+
 export const LayoutGrid = styled.div`
     
     display: flex;
+    gap: 90px;
     
 `
 ;
@@ -11,26 +21,14 @@ export const MainDiv = styled.div`
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   justify-content: flex-start;
-   width: 80vw;
-   background-color: #f6f6f6;
-   padding: 0px 148px;
-
-   h2 {
-        font-family: ${props => props.theme.fonts.fontMontserrat};
-        font-size: 24px;
-        font-weight: 700;
-        margin-top: 90px;
-        margin-bottom: 20px;
-    }
+   margin-top: 55px;
+  
 
 
-   p {
-        font-family: ${props => props.theme.fonts.fontMontserrat};
-        font-size: 24px;
-        font-weight: 400;
-    }
-`
+
+   p {font-family: ${props => props.theme.fonts.fontMontserrat};
+   font-size: 16px;
+   font-weight: 700;}`
 ;
 
 export const SecondaryDiv = styled.div`
@@ -73,3 +71,7 @@ export const Button = styled.button`
    font-weight: 500;
   cursor: pointer;
   margin-top: 20px;`
+
+
+
+ 
