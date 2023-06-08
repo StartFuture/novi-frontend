@@ -4,7 +4,7 @@ export const MainContainer = styled.div`
   height: 100%;
   width: 100vw;
   display: flex;
-  background-color: ${(props) => props.theme.colors.lightGreyColor};
+  background-color: #f6f6f6;
 `;
 
 export const LeftContent = styled.div`
@@ -57,7 +57,6 @@ export const PaymentMethods = styled.div`
     flex-direction: row;
     cursor: pointer;
     align-items: center;
-    border-bottom: 1px solid ${props => props.theme.colors.lightGreyColor};
   }
 
   .customBtn {
