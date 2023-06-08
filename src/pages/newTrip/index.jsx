@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { FaUserAlt, FaPlus, FaMinus } from "react-icons/fa";
 
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import { MainContainer, ContainerLeft, LeftImage, Container, Calendar } from "./styles";
 

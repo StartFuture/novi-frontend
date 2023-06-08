@@ -12,10 +12,10 @@ export const MainContainer = styled.div`
 export const ContainerLeft = styled.div`
     width: 40%;    
     height: 100%;
-    background-color: #F6F6F6;
+    background-color: #FFF;
 
     @media only screen and (max-device-width: 1570px) {
-        width: 45%;
+        width: 35%;
     }
 
     @media only screen and (max-device-width: 900px) {
@@ -34,7 +34,7 @@ export const LeftImage = styled.div`
     width: 70vw;
 
     @media only screen and (max-device-width: 1570px) {
-        max-width: 510px;
+        max-width: 610px;
     }
     
     @media only screen and (max-device-width: 900px) {
@@ -43,9 +43,9 @@ export const LeftImage = styled.div`
 `;
 
 export const Container = styled.div`
-    width: 80%;
+    width: 70%;
     height: 100vh;
-    background-color: ##4F4F4F4D;
+    background-color: #FFF;
     padding: 100px 150px 80px 150px;
     overflow : visible;
     display: flex;
@@ -53,6 +53,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: -3%;
+    margin-left: 2%;
 
     h2 {
         font-size: 42px;

@@ -16,7 +16,7 @@ export const ContainerLeft = styled.div`
     background-color: #F6F6F6;
 
     @media only screen and (max-device-width: 1570px) {
-        width: 30%;
+        width: 35%;
     }
 
     @media only screen and (max-device-width: 900px) {
@@ -35,7 +35,7 @@ export const LeftImage = styled.div`
     width: 70vw;
 
     @media only screen and (max-device-width: 1570px) {
-        max-width: 510px;
+        max-width: 610px;
     }
     
     @media only screen and (max-device-width: 900px) {
