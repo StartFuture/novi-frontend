@@ -65,6 +65,72 @@ function Interview() {
       },
       id_user: {},
     };
+
+    var crrFormData = sessionStorage.getItem("currInterview");
+
+    if (crrFormData) {
+      formData = JSON.parse(crrFormData);
+    }
+    return formData;
+  };
+
+  const [formData, setFormData] = useState(getFormData());
+  const [disableBtn, setDisableBtn] = useState(true);
+  const nav = useNavigate();
+
+  const FormTitles = [
+    "Qual o tipo de destino você prefere?",
+    "Qual é o seu estilo favorito de viagens?",
+    "Quais dessas acomodações você prefere?",
+    "Quais atividades você mais gosta durante a viagem?",
+    "Tem preferência por agitação à noite?",
+    "Quais são seus interesses culturais durante uma viagem?",
+    "Você topa viajar para fora do seu país?",
+    "Quais são suas preferências em relação a transporte durante a viagem?",
+    "Qual é a sua preferência em relação ao clima durante a viagem",
+  ];
+
+  const PageDisplay = () => {
+    if (page === 0) {
+      return <TravelType formData={formData} setDisableBtn={setDisableBtn} />;
+    } else if (page === 1) {
+      return (
+        <FavoriteTravelType formData={formData} setDisableBtn={setDisableBtn} />
+      );
+    } else if (page === 2) {
+      return (
+        <TravelAccomodation formData={formData} setDisableBtn={setDisableBtn} />
+      );
+    } else if (page === 3) {
+      return (
+        <TravelActivities formData={formData} setDisableBtn={setDisableBtn} />
+      );
+    } else if (page === 4) {
+      return <TravelNight formData={formData} setDisableBtn={setDisableBtn} />;
+    } else if (page === 5) {
+      return (
+        <TravelInterest formData={formData} setDisableBtn={setDisableBtn} />
+      );
+    } else if (page === 6) {
+      return (
+        <InternationalTravel
+          formData={formData}
+          setDisableBtn={setDisableBtn}
+        />
+      );
+    } else if (page === 7) {
+      return (
+        <TravelTransportation
+          formData={formData}
+          setDisableBtn={setDisableBtn}
+        />
+      );
+    } else {
+      return (
+        <TravelClimate formData={formData} setDisableBtn={setDisableBtn} />
+      );
+    }
+  };
   
     return (
         <div>
@@ -115,5 +181,5 @@ function Interview() {
             </Container>            
         </div>
     );
-  }}
+  }
   export default Interview
