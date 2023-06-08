@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import { useNavigate } from "react-router-dom";
+
 import { FaUserAlt, FaCalendarAlt } from "react-icons/fa";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -20,7 +22,14 @@ import {
 
 import ButtonBack from "./components/buttonBack";
 
-function LoadingTrip(){
+function ResultTrip(){
+
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        navigate('/newTrip');
+    }
+
     return (
         <div>
             <MainContainer>
@@ -205,7 +214,7 @@ function LoadingTrip(){
                         </div>
                     </div>
                 <Footer>
-                    <ButtonPrev>
+                    <ButtonPrev onClick={handleSubmit}>
                         Gerar outra viagem
                     </ButtonPrev>
                     <ButtonNext>
@@ -219,4 +228,4 @@ function LoadingTrip(){
     )
 }
 
-export default LoadingTrip;
+export default ResultTrip;

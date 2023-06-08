@@ -81,6 +81,7 @@ export const Container = styled.div`
     small {
         font-size: 16px;
         font-weight: 600;
+        color: #000;
     }
 
     .tripDetails {
@@ -213,7 +214,7 @@ export const Container = styled.div`
 
     .btnNavigator {
         position: relative;
-        top: 200px;
+        top: 180px;
     }
     
     .btnNext {

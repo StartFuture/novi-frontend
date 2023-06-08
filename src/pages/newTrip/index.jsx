@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { FaUserAlt, FaPlus, FaMinus } from "react-icons/fa";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
+import validator from 'validator';
+
 import { MainContainer, ContainerLeft, LeftImage, Container, Calendar } from "./styles";
+
+import { api } from "../../services/Api";
 
 function NewTrip(){
 
+    const navigate = useNavigate();
+    
     const [numberPeople, setNumberPeople] = useState(1);
     const [activeCalendar, setActiveCalendar] = useState(false)
+    const [tripInfo, setTripInfo] = useState({ period: '', start_date: '', end_date: '', days: '', numberPeople: 0});
+    const [periodError, setPeriodError] = useState("");
 
     const AddPeople = () => {
         setNumberPeople(numberPeople => numberPeople + 1);
@@ -35,7 +43,34 @@ function NewTrip(){
         else {
             document.getElementById("calendar").style.display = "none";
         }
-      });
+    });
+
+    const handleSubmit = (e) => {
+
+        e.preventDefault();
+        tripInfo.numberPeople = numberPeople;
+
+        if (validator.isEmpty(tripInfo.period)) {
+            setPeriodError("Por favor, insira um periodo!");
+            return;
+        }
+
+        setPeriodError("");
+
+        if(tripInfo.period === "custom"){
+            tripInfo.start_date = "2023-01-01";
+            tripInfo.end_date = "2023-01-14";
+            tripInfo.days = "14";
+        }
+        else {
+            tripInfo.start_date = "";
+            tripInfo.end_date = "";
+            tripInfo.days = "";
+        }
+
+        sessionStorage.setItem('trip', JSON.stringify(tripInfo));
+        navigate('/loadingTrip');
+    }
 
     return(
         <MainContainer>
@@ -43,6 +78,7 @@ function NewTrip(){
             <LeftImage/>
             </ContainerLeft>
             <Container>
+            <form>
                 <h1>A vida é mais leve viajando</h1>
                 <p className="tripDetails">Informe mais alguns detalhes sobre sua viagem</p>
                 
@@ -51,11 +87,13 @@ function NewTrip(){
                     <label class="container" htmlFor="option1">
                         <div className="customBtn">
                         <input
+                            required
                             type="radio"
                             name="period"
                             id="option1"
-                            value={1}
+                            value="weekend"
                             onClick={() => {setActiveCalendar(false)}}
+                            onChange={(e) => {setTripInfo({...tripInfo, period: e.target.value})}}
                         />
                         <div className="checkmark"><span/></div>
                         <div className="checkboxContent">
@@ -67,11 +105,13 @@ function NewTrip(){
                     <label class="container" htmlFor="option2">
                         <div className="customBtn">
                         <input
+                            required
                             type="radio"
                             name="period"
                             id="option2"
-                            value={2}
+                            value="week"
                             onClick={() => {setActiveCalendar(false)}}
+                            onChange={(e) => {setTripInfo({...tripInfo, period: e.target.value})}}
                         />
                         <div className="checkmark"><span/></div>
                         <div className="checkboxContent">
@@ -83,19 +123,22 @@ function NewTrip(){
                     <label class="container" htmlFor="option3">
                         <div className="customBtn">
                         <input
+                            required
                             type="radio"
                             name="period"
                             id="option3"
-                            value={3}
+                            value="custom"
                             onClick={() => {setActiveCalendar(true)}}
+                            onChange={(e) => {setTripInfo({...tripInfo, period: e.target.value})}}
                         />
                         <div className="checkmark"><span/></div>
                         <div className="checkboxContent">
                             <small>Personalizado</small>
                         </div>
                         </div>
-                    </label>            
+                    </label>
                 </div>
+                <small style={{color: "red", marginBottom: "0px"}}>{periodError}</small>
                
                 <div id="calendar" style={{display: 'none'}}>
                     <div className="customDate">
@@ -266,13 +309,14 @@ function NewTrip(){
                 
                 <br/>
                 <div id="btnNavigator" className="btnNavigator">
-                    <input className="btnNext" type="submit" value="Prosseguir" />
+                    <input className="btnNext" type="submit" value="Prosseguir" onClick={handleSubmit}/>
                     <input
                         className="btnPrevious"
                         type="submit"
                         value="Voltar"
                     />
                 </div>
+            </form>
                 
             </Container>
         </MainContainer>

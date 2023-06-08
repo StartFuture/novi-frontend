@@ -59,10 +59,25 @@ export const Container = styled.div`
         font-size: 42px;
         font-weight: 700;
         color: ${props => props.theme.colors.primaryColor};
+        padding: 1% 0;
     }
 
     p {
         font-size: 18px;
         font-weight: 400;
+    }
+
+    @media only screen and (max-device-width: 1570px) {
+        h2 {
+            font-size: 34px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+    
+    @media only screen and (max-device-width: 900px) {
+        background-image: none;
     }
 `;
