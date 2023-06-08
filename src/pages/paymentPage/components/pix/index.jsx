@@ -14,7 +14,7 @@ export default function Pix() {
             <input type="text" defaultValue={"39405080812030491820"} />
           </div>
           <div>
-            <IoCopyOutline fontSize={21} />
+            <IoCopyOutline fontSize={21} style={{color: "#3BB29D", transform: "scaleX(-1)", cursor: "pointer"}} />
           </div>
         </div>
         <p className="description">

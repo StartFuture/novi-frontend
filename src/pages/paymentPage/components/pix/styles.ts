@@ -15,7 +15,7 @@ export const MainContainer = styled.div`
 
 export const QrCode = styled.div`
   background-image: url("img/NoviQrCode.png");
-  background-size: cover;
+  background-size: cover; 
   height: 276px;
   width: 276px;
   border: 1px solid ${(props) => props.theme.colors.lightGreyColor};

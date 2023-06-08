@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
+  min-height: 100vh;
   height: 100%;
   width: 100vw;
   display: flex;
@@ -9,8 +10,8 @@ export const MainContainer = styled.div`
 
 export const LeftContent = styled.div`
   background: url("img/interviewStartBG.png") no-repeat left;
-  background-size: fill;
-  height: 100vh;
+  background-size: cover;
+  min-height: 100%;
   width: 22.2%;
 `;
 
