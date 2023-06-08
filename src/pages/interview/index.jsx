@@ -1,46 +1,69 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
-import SignUpInfo from "./teste/SignUpInfo";
-import PersonalInfo from "./teste/PersonalInfo";
-import OtherInfo from "./teste/OtherInfo";
+import TravelType from "./components/travelType";
+import FavoriteTravelType from "./components/favoriteTravelType";
+import TravelAccomodation from "./components/travelAccomodation";
+import TravelActivities from "./components/travelActivities";
+import TravelNight from "./components/travelNight";
+import TravelInterest from "./components/travelInterest";
+import InternationalTravel from "./components/internationalTravel";
+import TravelTransportation from "./components/travelTransportation";
+import TravelClimate from "./components/travelClimate";
 
-import TravelType from "./components/TravelType";
-
-import { Container, LeftContainer, MainContainer, FormStyled, NavStyled, Footer, ButtonPrev, ButtonNext } from "./styles";
+import {
+  Container,
+  LeftContainer,
+  MainContainer,
+  FormStyled,
+  NavStyled,
+  Footer,
+  ButtonPrev,
+  ButtonNext,
+} from "./styles";
 
 import ButtonBack from "./components/buttonBack";
 
-function Interview(){
-
-    const allItems = document.querySelectorAll("ul li a");
-    allItems.forEach(item => {
-        item.addEventListener("click", function(e){
-            this.classList.add("active")
-        });
-    })
-    const [page, setPage] = useState(0);
-
-    const [formData, setFormData] = useState({
-        email: "",
-        password: "",
-        confirmPassword: "",
-        firstName: "",
-        lastName: "",
-        username: "",
-        nationality: "",
-        other: "",
+function Interview() {
+  const allItems = document.querySelectorAll("ul li a");
+  allItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      this.classList.add("active");
     });
+  });
+  const [page, setPage] = useState(0);
 
-    const FormTitles = ["Qual o tipo de destino você prefere?", "Personal Info", "Other", "Last"];
-
-    const PageDisplay = () => {
-        if (page === 0) {
-        return <TravelType formData={formData} setFormData={setFormData} />;
-        } else if (page === 1) {
-        return <PersonalInfo formData={formData} setFormData={setFormData} />;
-        } else {
-        return <OtherInfo formData={formData} setFormData={setFormData} />;
-        }
+  const getFormData = () => {
+    var formData = {
+      options: {
+        travel_destination: 0,
+        travel_style: 0,
+        accomodation_style: 0,
+        night_style: 0,
+        can_leave_country: 0,
+        transport_style: 0,
+      },
+      activities: {
+        water_preference: 0,
+        walk_preference: 0,
+        historic_preference: 0,
+        sport_preference: 0,
+        food_preference: 0,
+      },
+      culture: {
+        music_preference: 0,
+        building_preference: 0,
+        tradiction_preference: 0,
+        party_preference: 0,
+        no_preference: 0,
+      },
+      weather: {
+        warm: 0,
+        mild: 0,
+        cold: 0,
+        no_preference: 0,
+      },
+      id_user: {},
     };
   
     return (
@@ -93,4 +116,4 @@ function Interview(){
         </div>
     );
   }
-  export default Interview;
+  export default Interview

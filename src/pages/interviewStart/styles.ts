@@ -6,10 +6,19 @@ const fontFamilyMontserrat = 'Montserrat';
 export const FilterStartImage = styled.div`
     background-color: #218581;
     background-size: 80vw;
+    @media screen and (max-width: 1100px) {
+    height: 46vh;
+    padding-top: -80%;
+    padding-bottom: 90%;
+  }
 `;
 
 export const InterviewStart = styled.div`
     display: flex;
+
+    @media screen and (max-width: 1100px) {
+        flex-direction: column;
+    }
 `;
 
 export const InterviewStartImage = styled.div`
@@ -21,6 +30,11 @@ export const InterviewStartImage = styled.div`
     width: 100vw;
     opacity: .6;
     background-color: #218581;
+    @media screen and (max-width: 1100px) {
+    height: 46vh;
+    padding-top: -80%;
+    padding-bottom: 90%;
+  }
     /* filter: grayscale(20%); */
 `;
 
@@ -31,6 +45,12 @@ export const InterviewStartWelcome = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 1100px) {
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-top: 37px;
+    }
 `;
 
 export const InterviewStartQuestion = styled.h2`
@@ -39,6 +59,10 @@ export const InterviewStartQuestion = styled.h2`
     font-weight: 500;
     font-size: 42px;
     margin-bottom: 16px;
+    
+    @media screen and (max-width: 1100px) {
+        font-size: 24px;
+    }
 `;
 
 export const InterviewStartText = styled.p`
@@ -47,4 +71,8 @@ export const InterviewStartText = styled.p`
     font-weight: 400;
     font-size: 18px;
     margin-bottom: 48px;
+
+    @media screen and (max-width: 1100px) {
+        font-size: 14px;
+    }
 `;
