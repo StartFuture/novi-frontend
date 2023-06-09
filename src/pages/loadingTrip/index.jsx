@@ -52,8 +52,8 @@ function LoadingTrip(){
                     color={"#3BB29D"}
                     loading={loading}
                     size={50}
-                    cssOverride={{marginTop: "5%"}}
                     speedMultiplier={.7}
+                    className="iconLoader"
                 />
 
             </Container>

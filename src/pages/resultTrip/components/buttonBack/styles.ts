@@ -23,7 +23,7 @@ export const Container = styled.button`
   }
 
   @media only screen and (max-device-width: 1570px) {
-    padding-top: 18%;
+    padding-top: 13%;
     margin-left: 30%;
 }
 

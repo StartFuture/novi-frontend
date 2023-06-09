@@ -4,7 +4,7 @@ export const MainContainer = styled.div`
     display: flex;
     flex-direction: row;
 
-    @media only screen and (max-device-width: 900px) {
+    @media only screen and (max-device-width: 1106px) {
         flex-direction: column;
     }
 `;
@@ -18,7 +18,7 @@ export const ContainerLeft = styled.div`
         width: 35%;
     }
 
-    @media only screen and (max-device-width: 900px) {
+    @media only screen and (max-device-width: 1106px) {
         height: 3vh;
         width: 100%;
         background-color: ${props => props.theme.colors.primaryColor}
@@ -32,15 +32,13 @@ export const LeftImage = styled.div`
     background-position-x: center;
     background-position-y: 30%;
     min-height: 100vh;
-    // max-width: 410px;
     width: 25vw;
-    // margin-top: -4.5%;
 
     @media only screen and (max-device-width: 1570px) {
-        max-width: 410px;
+        width: 31vw;
     }
     
-    @media only screen and (max-device-width: 900px) {
+    @media only screen and (max-device-width: 1106px) {
         background-image: none;
     }
 `;
@@ -73,6 +71,7 @@ export const Container = styled.div`
         h4 {
             font-size: 18px;
             font-weight: 600;
+            white-space: nowrap;
         }
 
         h5 {
@@ -85,27 +84,41 @@ export const Container = styled.div`
     .bannerInfo {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         align-items: center;
     }
 
-    .peopleIcon {
+    .iconsDescription {
+        display: inline-block;
+        min-width: 130px;
 
     }
 
+    .peopleIcon {
+        font-size: 16px;
+        min-width: 15px;
+    }
+
     .calendarIcon {
-        margin-left: 2%;
+        font-size: 16px;
+        min-width: 15px;
+        margin-left: 23%;
     }
     
     small {
         font-size: 16px;
         font-weight: 400;
-        margin-left: 1%;
+        position:relative;
+        top: -2px;
+        left: 8%;
+        white-space: nowrap;
     }
 
     h2 {
         font-size: 32px;
         font-weight: 700;
-        margin-left: 68%;
+        // margin-left: 68%;
+        white-space: nowrap;
     }
 
     .sectionInfo {
@@ -119,11 +132,13 @@ export const Container = styled.div`
         h3 {
             font-size: 24px;
             font-weight: 600;
+            white-space: nowrap;
         }
+        
         .horizontalLine {
             margin: 0 4%;
             border-top: 2px solid #CECECE;
-            width: 37vw;
+            width: 39vw;
         }
     }
 
@@ -146,12 +161,13 @@ export const Container = styled.div`
             display: flex;
             flex-direction: row;
             margin-bottom: 1%;
+            width: 90%;
         }
         
         .displayFlexColumn {
             display: flex;
             flex-direction: column;
-            min-width: 10vw;
+            min-width: 12vw;
             margin-top: 2%;
         }
 
@@ -159,7 +175,8 @@ export const Container = styled.div`
             font-size: 16px;
             font-weight: 400;
             margin-top: 2%;
-            margin-left: 59%;
+            margin-left: 52%;
+            min-padding: 0 3%;
         }
 
         h6 {
@@ -184,6 +201,33 @@ export const Container = styled.div`
         flex-direction: row;
         width: 30%;
         margin-left: 3vw
+    }
+
+    @media only screen and (max-device-width: 1570px) {
+
+        padding: 70px 150px 80px 150px;
+
+        .tripInfo {
+            padding: 0 2%;
+            
+            .dateTrip {
+                margin-left: 39%;
+            }
+        }
+
+        .displayFlexColumn {
+            margin-top: 0;
+        }
+
+        .displayFlexRow {
+            margin-bottom: 15%;
+        }
+    }
+
+    @media only screen and (max-device-width: 1106px) {
+        height: 3vh;
+        width: 100%;
+        background-color: ${props => props.theme.colors.primaryColor}
     }
 
 `;
@@ -313,7 +357,7 @@ export const Calendar = styled.div`
         font-weight:600;
     }
 
-    @media only screen and (max-device-width: 900px) {
+    @media only screen and (max-device-width: 1106px) {
 
         padding: 20px 10px 10px 10px;
 
@@ -369,6 +413,10 @@ export const Footer = styled.div`
   margin-top: 22%;
   margin-left: 28%;
 
+  @media screen and (max-width: 1550px) {
+    margin-top: 10%;
+  }
+
   @media screen and (max-width: 1100px) {
     margin: 0 auto;
     margin-top: 4%;
@@ -381,21 +429,24 @@ export const ButtonPrev = styled.button`
   color: ${(props) => props.theme.colors.primaryColor};
   border: none;
   background-color: #F6F6F6;;
-  padding: 16px;
+  padding: 18px;
   width: 12vw;
   font-family: ${(props) => props.theme.fonts.fontMontserrat};
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  white-space: nowrap;
+  margin-right: 4%;
 
   :hover {
     text-decoration: underline;
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1550px) {
     width: 100%;
     font-size: 14px;
-    padding: 12px 24px 12px 24px;
+    padding: 12px 1px;
+    width: 12vw;
   }
 `;
 
@@ -403,21 +454,23 @@ export const ButtonNext = styled.button`
   color: white;
   border: none;
   background-color: ${(props) => props.theme.colors.primaryColor};
-  padding: 16px;
+  padding: 18px;
   width: 12vw;
   font-family: ${(props) => props.theme.fonts.fontMontserrat};
   font-size: 18px;
   font-weight: 500;
   border-radius: 8px;
   cursor: pointer;
+  white-space: nowrap;
 
   :hover {
     background-color: #277567;
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1550px) {
     width: 100%;
     font-size: 14px;
-    padding: 12px 24px 12px 24px;
+    padding: 12px 1px;
+    width: 12vw;
   }
 `;

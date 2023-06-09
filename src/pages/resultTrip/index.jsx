@@ -45,20 +45,26 @@ function ResultTrip(){
                             <h5>Total a pagar</h5>
                         </div>
                         <div className="bannerInfo">
-                            <FaUserAlt className="peopleIcon"/>
-                            <small>2</small>
-                            <FaCalendarAlt className="calendarIcon"/>
-                            <small>14 dias</small>
+                            <div className="iconsDescription">
+                                <FaUserAlt className="peopleIcon"/>
+                                <small>2</small>
+                                <FaCalendarAlt className="calendarIcon"/>
+                                <small>14 dias</small>
+                            </div>
+                            <div>
                             <h2>R$ 5.000,00</h2>
+                            </div>
                         </div>                 
                     </div>
                     <div className="sectionInfo">
                         <h3>Rio de Janeiro</h3>
                         <div className="horizontalLine"></div>
-                        <FaUserAlt className="peopleIcon"/>
-                        <small>2</small>
-                        <FaCalendarAlt className="calendarIcon"/>
-                        <small>14 dias</small>
+                        <div className="iconsDescription">
+                            <FaUserAlt className="peopleIcon"/>
+                            <small>2</small>
+                            <FaCalendarAlt className="calendarIcon"/>
+                            <small>14 dias</small>
+                        </div>
                     </div>
                     <div className="sectionTripInfo">
                         <div className="tripInfo">

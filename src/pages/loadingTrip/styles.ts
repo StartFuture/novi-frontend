@@ -10,7 +10,7 @@ export const MainContainer = styled.div`
 `;
 
 export const ContainerLeft = styled.div`
-    width: 40%;    
+    width: 54%;
     height: 100%;
     background-color: #FFF;
 
@@ -19,52 +19,62 @@ export const ContainerLeft = styled.div`
     }
 
     @media only screen and (max-device-width: 900px) {
-        height: 3vh;
+        height: 40%;
         width: 100%;
-        background-color: ${props => props.theme.colors.primaryColor}
     }
 `
 
 export const LeftImage = styled.div`
     background-image: url("img/interviewStartBG.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 30%;
     height: 100vh;
     max-width: 810px;
-    width: 70vw;
+    width: 100%;
 
     @media only screen and (max-device-width: 1570px) {
         max-width: 610px;
     }
     
     @media only screen and (max-device-width: 900px) {
-        background-image: none;
+        background-position-x: center;
+        background-position-y: 45%;
+        background-size: cover;
+        height: 35vh;
+        width: 100.1vw;
+        max-width: 1200px;
+
     }
 `;
 
 export const Container = styled.div`
     width: 70%;
-    height: 100vh;
+    height: 105vh;
     background-color: #FFF;
-    padding: 100px 150px 80px 150px;
+    padding: 5% 8% 4% 8%;
     overflow : visible;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: -3%;
-    margin-left: 2%;
 
     h2 {
         font-size: 42px;
         font-weight: 700;
         color: ${props => props.theme.colors.primaryColor};
-        padding: 1% 0;
+        padding: 2% 0;
     }
 
     p {
         font-size: 18px;
         font-weight: 400;
+    }
+
+    .iconLoader {
+        margin-top: 5%;
     }
 
     @media only screen and (max-device-width: 1570px) {
@@ -78,6 +88,22 @@ export const Container = styled.div`
     }
     
     @media only screen and (max-device-width: 900px) {
-        background-image: none;
+        width: 100%;
+        height: 45vh;
+        margin-top: 0px;
+        padding: 5% 8% 4% 8%;
+
+        h2 {
+            font-size: 24px;
+            padding: 3% 0;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .iconLoader {
+            margin-top: 10%;
+        }
     }
 `;
