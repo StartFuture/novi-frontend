@@ -13,7 +13,8 @@ import Registro from "./pages/registerPage/assets/css/img/svg/index";
 import TermsConditionsPage from "./pages/termsConditions/index";
 import NewTrip from "./pages/newTrip/index";
 import LoadingTrip from "./pages/loadingTrip/index";
-import ResultTrip from "./pages/resultTrip/index"
+import ResultTrip from "./pages/resultTrip/index";
+import Teste from "./pages/teste/index";
 
 import { Private } from "./components/Private";
 import { AuthProvider } from "./contexts/auth";
@@ -36,6 +37,7 @@ const AppRoutes = () => {
                 <Route exact path="/newTrip" element={<NewTrip/>}></Route>
                 <Route exact path="/loadingTrip" element={<LoadingTrip/>}></Route>
                 <Route exact path="/resultTrip" element={<ResultTrip/>}></Route>
+                <Route exact path="/teste" element={<Teste/>}></Route>
             </Routes>
         </AuthProvider>
     </Router>

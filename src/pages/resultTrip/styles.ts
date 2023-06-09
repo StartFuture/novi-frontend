@@ -7,6 +7,39 @@ export const MainContainer = styled.div`
     @media only screen and (max-width: 1106px) {
         flex-direction: column;
     }
+
+    .tete {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    .modal-overlay {
+        background: #ececec;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .modal-content {
+        width: 90%;
+        max-width: 500px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      
+      button {
+        padding: 5px;
+        font-size: large;
+        float: right;
+        cursor: pointer;
+      }
 `;
 
 export const ContainerLeft = styled.div`
@@ -602,3 +635,4 @@ export const ButtonNext = styled.button`
     width: 86vw;
   }
 `;
+
