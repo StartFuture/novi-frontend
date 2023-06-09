@@ -11,7 +11,7 @@ export const MainContainer = styled.div`
     min-height: 100vh;
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1000px) {
     .container {
       grid-template-columns: none;
       grid-template-rows: 37% auto;
@@ -48,7 +48,7 @@ export const Content = styled.div`
     margin: 0 45%;
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 900px) {
     padding-left: 6.5%;
     padding-right: 6.5%;
     text-align: center;

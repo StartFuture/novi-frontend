@@ -19,6 +19,7 @@ import UserMenu from "pages/homePage/userMenu";
 import InterviewEnd from "pages/interviewEnd";
 import PaymentPage from "pages/paymentPage";
 import Loading from "pages/loadingPage";
+import Thanks from "pages/thanksPage";
 
 const AppRoutes = () => {
   return (
@@ -36,6 +37,7 @@ const AppRoutes = () => {
                 <Route exact path="/interview-end" element={<InterviewEnd/>}></Route>
                 <Route exact path="/payment" element={<PaymentPage/>}></Route>
                 <Route exact path="/loading" element={<Loading/>}></Route>
+                <Route exact path="/thank-you" element={<Thanks/>}></Route>
             </Routes>
         </AuthProvider>
     </Router>
