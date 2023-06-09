@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 
-import { MainContainer, LeftContent, Content, PaymentMethods } from "./styles";
+import { MainContainer, LeftContent, Content, PaymentMethods, Buttons, ButtonPrev, ButtonNext } from "./styles";
 import ButtonBack from "./components/buttonBack";
 import Pix from "./components/pix";
 import CreditCard from "./components/creditCard";
+import { useNavigate } from "react-router-dom";
+
+import { FaRegCreditCard } from "react-icons/fa";
+import { MdPix } from "react-icons/md";
 
 export default function PaymentPage() {
   const [showCardInfos, setShowCardInfos] = useState(false);
   const [showPixInfo, setShowPixInfo] = useState(false);
+  const nav = useNavigate();
+
   const toggleCardInfos = () => {
     setShowCardInfos(true);
     setShowPixInfo(false);
@@ -49,8 +55,9 @@ export default function PaymentPage() {
                     <span />
                   </div>
                 </div>
-                <div>
+                <div className="contentContainer">
                   <div className="checkboxContent">
+                    <FaRegCreditCard fontSize={50} style={{color: "#3BB39D", marginRight: "1.8%", marginLeft: "0.2%"}}/>
                     <h3>Cartão de Crédito</h3>
                   </div>
                 </div>
@@ -67,8 +74,9 @@ export default function PaymentPage() {
                     <span />
                   </div>
                 </div>
-                <div>
+                <div className="contentContainer">
                   <div className="checkboxContent">
+                    <MdPix fontSize={50} style={{color: "#3BB39D", marginRight: "1.8%", marginLeft: "0.2%"}}/>
                     <h3>PIX</h3>
                   </div>
                 </div>
@@ -77,6 +85,10 @@ export default function PaymentPage() {
             </label>
           </div>
         </PaymentMethods>
+        <Buttons>
+          <ButtonPrev onClick={() => {nav("/home")}}>Cancelar</ButtonPrev>
+          <ButtonNext onClick={() => {nav("/")}}>Prosseguir</ButtonNext>
+        </Buttons>
       </Content>
     </MainContainer>
   );

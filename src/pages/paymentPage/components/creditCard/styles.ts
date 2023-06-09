@@ -32,4 +32,8 @@ export const CardInfos = styled.div`
     grid-template-columns: 1fr 1fr;
     gap: 33px;
   }
+
+  @media screen and (max-width: 1340px) {
+    width: 92%;
+  }
 `;
