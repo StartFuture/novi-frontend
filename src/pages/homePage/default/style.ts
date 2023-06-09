@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 export const PageGrid = styled.div`
-    background-color: #F6F6F6;
+    
 `
 ;
 
@@ -11,7 +11,7 @@ export const LayoutGrid = styled.div`
     
     display: flex;
     gap: 90px;
-    
+    background-color: #F6F6F6;
     @media (max-width: 900px) {display: block;}
 
 `
@@ -92,6 +92,11 @@ export const Button = styled.button`
   margin-top: 20px;
   
   @media (max-width: 900px) {width: 350px;
+
+h2 {text-align: center;}
+
+p {text-align: center;}
+
 }
   `
 

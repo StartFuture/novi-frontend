@@ -12,6 +12,7 @@ display: none;
 width: 25px;
 height: 25px;
 margin-left: 25px;
+cursor: pointer;
 }
 
 
@@ -28,5 +29,10 @@ img {
     justify-content: space-between;
     background-color: ${props => props.theme.colors.primaryColor};
     
+
+    .menu.active {opacity: 1;
+    visibility: visible;}
+
+    .menu {opacity: 0;}
 }
 `
