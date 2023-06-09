@@ -1,9 +1,10 @@
 import React from "react";
 import { MainContainer, CardInfos } from "./styles";
 
-export default function CreditCard() {
-  
+import DropdownList from "react-widgets/DropdownList";
+import "react-widgets/styles.css";
 
+export default function CreditCard() {
   return (
     <MainContainer>
       <CardInfos>
@@ -12,26 +13,26 @@ export default function CreditCard() {
           <input type="text" id="cardName" placeholder="Digite aqui" />
         </div>
         <div className="form">
-          <label htmlFor="cardName">CPF</label>
-          <input type="text" id="cardName" placeholder="Digite aqui" />
+          <label htmlFor="cpf">CPF</label>
+          <input type="text" id="cpf" placeholder="Digite aqui" />
         </div>
         <div className="form">
-          <label htmlFor="cardName">Número do cartão</label>
-          <input type="text" id="cardName" placeholder="Digite aqui" />
+          <label htmlFor="cardNum">Número do cartão</label>
+          <input type="text" id="cardNum" placeholder="Digite aqui" />
         </div>
         <div className="formWrapper">
           <div className="form">
-            <label htmlFor="cardName">Data da validade</label>
-            <input type="text" id="cardName" placeholder="Digite aqui" />
+            <label htmlFor="cardExpire">Data da validade</label>
+            <input type="text" id="cardExpire" placeholder="Digite aqui" />
           </div>
           <div className="form">
-            <label htmlFor="cardName">CVV</label>
-            <input type="text" id="cardName" placeholder="Digite aqui" />
+            <label htmlFor="cardCVV">CVV</label>
+            <input type="text" id="cardCVV" placeholder="Digite aqui" />
           </div>
         </div>
-        <div className="form">
-          <label htmlFor="cardName">Quantidade de parcelas</label>
-          <input type="text" id="cardName" placeholder="Digite aqui" />
+        <div>
+          <label>Quantidade de parcelas</label>
+          <DropdownList data={[]} placeholder="Selecione aqui" containerClassName="dropdown"/>
         </div>
       </CardInfos>
     </MainContainer>

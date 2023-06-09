@@ -32,6 +32,14 @@ export const CardInfos = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 33px;
+    margin-bottom: 2%;
+  }
+
+  .dropdown {
+    height: 50px;
+    margin-top: 1.4%;
+    font-size: 16px;
+    border: 1px solid ${(props) => props.theme.colors.lightGreyColor};
   }
 
   @media screen and (max-width: 1340px) {
@@ -45,6 +53,10 @@ export const CardInfos = styled.div`
 
     .formWrapper {
       display: block;
+    }
+
+    .dropdown {
+      font-size: 14px;
     }
   }
 `;
