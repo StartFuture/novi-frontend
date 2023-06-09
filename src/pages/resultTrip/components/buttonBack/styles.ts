@@ -25,8 +25,11 @@ export const Container = styled.button`
   @media only screen and (max-device-width: 1570px) {
     padding-top: 13%;
     margin-left: 30%;
-}
+  }
 
+  @media only screen and (max-device-width: 1106px) {
+    display: none;
+  }
 `;
 
 

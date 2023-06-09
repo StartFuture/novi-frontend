@@ -35,14 +35,14 @@ function ResultTrip(){
             <MainContainer>
                 <ContainerLeft>
                     <LeftImage>
-                        <ButtonBack/>
+                        <ButtonBack className="buttonBack"/>
                     </LeftImage>
                 </ContainerLeft>
                 <Container>
                     <div className="bannerBasicInfo">
                         <div className="bannerTitle">
-                            <h4>Rio de Janeiro</h4>
-                            <h5>Total a pagar</h5>
+                            <h4 className="destinyCity">Rio de Janeiro</h4>
+                            <h5 className="totalPayment">Total a pagar</h5>
                         </div>
                         <div className="bannerInfo">
                             <div className="iconsDescription">
@@ -51,7 +51,7 @@ function ResultTrip(){
                                 <FaCalendarAlt className="calendarIcon"/>
                                 <small>14 dias</small>
                             </div>
-                            <div>
+                            <div className="totalPaymentValue">
                             <h2>R$ 5.000,00</h2>
                             </div>
                         </div>                 
