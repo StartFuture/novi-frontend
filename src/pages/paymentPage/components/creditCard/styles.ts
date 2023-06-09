@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
   width: 100%;
   height: 100%;
-  border-top: 1px solid ${props => props.theme.colors.lightGreyColor};
+  border-top: 1px solid ${(props) => props.theme.colors.lightGreyColor};
 `;
 
 export const CardInfos = styled.div`
@@ -12,7 +12,7 @@ export const CardInfos = styled.div`
   padding-bottom: 4.8%;
   width: 63%;
 
-  .form { 
+  .form {
     display: flex;
     flex-direction: column;
   }
@@ -23,8 +23,9 @@ export const CardInfos = styled.div`
     padding-left: 16px;
     margin-top: 1.4%;
     margin-bottom: 3.6%;
-    border-color: ${props => props.theme.colors.lightGreyColor};
+    border: 1px solid ${(props) => props.theme.colors.lightGreyColor};
     border-radius: 4px;
+    font-size: 16px;
   }
 
   .formWrapper {
@@ -35,5 +36,15 @@ export const CardInfos = styled.div`
 
   @media screen and (max-width: 1340px) {
     width: 92%;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .form input {
+      font-size: 14px;
+    }
+
+    .formWrapper {
+      display: block;
+    }
   }
 `;

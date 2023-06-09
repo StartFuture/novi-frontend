@@ -18,10 +18,12 @@ export const Container = styled.button`
     text-decoration: underline;
   }
 
-  p { 
+  p {
     font-size: 18px;
     margin-top: 5px;
   }
+
+  @media screen and (max-width: 1500px) {
+    margin-left: 20.5%;
+  }
 `;
-
-

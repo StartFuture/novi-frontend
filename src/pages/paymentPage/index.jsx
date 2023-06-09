@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 
-import { MainContainer, LeftContent, Content, PaymentMethods, Buttons, ButtonPrev, ButtonNext } from "./styles";
+import {
+  MainContainer,
+  LeftContent,
+  Content,
+  PaymentMethods,
+  Buttons,
+  ButtonPrev,
+  ButtonNext,
+} from "./styles";
 import ButtonBack from "./components/buttonBack";
 import Pix from "./components/pix";
 import CreditCard from "./components/creditCard";
@@ -8,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 
 import { FaRegCreditCard } from "react-icons/fa";
 import { MdPix } from "react-icons/md";
+import { BsFillPersonFill, BsFillCalendarFill } from "react-icons/bs";
 
 export default function PaymentPage() {
   const [showCardInfos, setShowCardInfos] = useState(false);
@@ -29,20 +38,36 @@ export default function PaymentPage() {
         <ButtonBack />
       </LeftContent>
       <Content>
-        <h2>Como deseja pagar ?</h2>
-        <div className="travelInfo">
-          <div>
-            <h3>Rio de Janeiro</h3>
-            <ul>
-              <li>Ida - Avião</li>
-              <li>Kart Outdoor</li>
-              <li>Restaurante - Paris 6</li>
-              <li>Volta - Avião</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Total a pagar</h3>
-            <p>R$ 5.000,00</p>
+        <div className="infos">
+          <h2>Como deseja pagar ?</h2>
+          <div className="travelInfo">
+            <div className="travelInfoContent">
+              <div className="travelInfoHeader">
+                <div className="destiny">
+                  <h3>Rio de Janeiro</h3>
+                  <div className="travelersDate">
+                    <h4>
+                      <BsFillPersonFill />
+                    </h4>
+                    <p>2</p>
+                    <h4>
+                      <BsFillCalendarFill />
+                    </h4>
+                    <p>14</p>
+                  </div>
+                </div>
+                <div className="value">
+                  <h3>Total a pagar</h3>
+                  <p>R$ 5.000,00</p>
+                </div>
+              </div>
+              <ul>
+                <li>Ida - Avião</li>
+                <li>Kart Outdoor</li>
+                <li>Restaurante - Paris 6</li>
+                <li>Volta - Avião</li>
+              </ul>
+            </div>
           </div>
         </div>
         <PaymentMethods>
@@ -57,7 +82,9 @@ export default function PaymentPage() {
                 </div>
                 <div className="contentContainer">
                   <div className="checkboxContent">
-                    <FaRegCreditCard fontSize={50} style={{color: "#3BB39D", marginRight: "1.8%", marginLeft: "0.2%"}}/>
+                    <h4>
+                      <FaRegCreditCard />
+                    </h4>
                     <h3>Cartão de Crédito</h3>
                   </div>
                 </div>
@@ -76,7 +103,9 @@ export default function PaymentPage() {
                 </div>
                 <div className="contentContainer">
                   <div className="checkboxContent">
-                    <MdPix fontSize={50} style={{color: "#3BB39D", marginRight: "1.8%", marginLeft: "0.2%"}}/>
+                    <h4>
+                      <MdPix />
+                    </h4>
                     <h3>PIX</h3>
                   </div>
                 </div>
@@ -86,8 +115,20 @@ export default function PaymentPage() {
           </div>
         </PaymentMethods>
         <Buttons>
-          <ButtonPrev onClick={() => {nav("/home")}}>Cancelar</ButtonPrev>
-          <ButtonNext onClick={() => {nav("/")}}>Prosseguir</ButtonNext>
+          <ButtonPrev
+            onClick={() => {
+              nav("/home");
+            }}
+          >
+            Cancelar
+          </ButtonPrev>
+          <ButtonNext
+            onClick={() => {
+              nav("/");
+            }}
+          >
+            Prosseguir
+          </ButtonNext>
         </Buttons>
       </Content>
     </MainContainer>
