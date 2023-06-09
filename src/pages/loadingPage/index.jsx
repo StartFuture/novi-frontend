@@ -1,8 +1,15 @@
 import React from "react";
 import { BackgroundImage, Content, MainContainer } from "./styles";
 import { TailSpin } from "react-loading-icons";
+import { useNavigate } from "react-router";
 
 export default function Loading() {
+  const nav = useNavigate()
+
+  setTimeout(function() {
+    nav("/thank-you")
+  }, 3000);
+
   return (
     <MainContainer>
       <div className="container">
