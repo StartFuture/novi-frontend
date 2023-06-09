@@ -23,7 +23,7 @@ const AppRoutes = () => {
         <AuthProvider>
             <Routes>
                 <Route exact path="/" element={<LandingPage />}></Route>
-                <Route exact path="/home" element={<Private><Home/></Private>}></Route>
+                <Route exact path="/home" element={<Home/>}></Route>
                 <Route exact path="/login" element={<Login />}></Route>
                 <Route exact path="/interview-start" element={<InterviewStart />}></Route>
                 <Route exact path="/registro" element={<Registro />}></Route>

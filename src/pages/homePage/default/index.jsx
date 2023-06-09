@@ -2,6 +2,7 @@ import React from "react";
 import { LayoutGrid, PageGrid, MainDiv, SecondaryDiv, Button, Wrapper } from "../default/style"
 import { ImAirplane } from "react-icons/im";
 import UserMenu from "../userMenu";
+import MenuMobile from "../components/headerMenuMobile";
 
 
 
@@ -17,11 +18,13 @@ function DefaultHome() {
 
   return (
 
-    <PageGrid>
+    
+      
       <LayoutGrid>
+        <MenuMobile></MenuMobile>
         <UserMenu></UserMenu>
         <MainDiv>
-          <p>Fala <b> Marcelo </b>, vamos viajar?</p>
+          <p className="pStyle">Fala <b> Marcelo </b>, vamos viajar?</p>
           <SecondaryDiv>
              
             <ImAirplane className="iconAirplane" />
@@ -40,7 +43,7 @@ function DefaultHome() {
 
 
       </LayoutGrid>
-    </PageGrid>
+   
 
 
 

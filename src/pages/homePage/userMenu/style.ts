@@ -38,6 +38,8 @@ export const UserMenuLeft = styled.div`
       margin: 0 0 0 -55px;
       transform: translateY(-1rem);
    }
+
+   @media (max-width:900px) {display:none;}
 `
 
 export const SelectedContainer = styled.div`
@@ -56,7 +58,7 @@ export const SelectedContainer = styled.div`
       color: #FFF;
    }
 
-
+   @media (max-width:900px) {display:none;}
 `
 
 export const Container = styled.div`
@@ -76,6 +78,8 @@ export const Container = styled.div`
    .icon {
       color : #FFF
    }
+
+   @media (max-width:900px) {display:none;}
 `
 
 export const MyProfile = styled.div`
@@ -86,6 +90,7 @@ export const MyProfile = styled.div`
 
    .verticalAlign {
       margin-top: 2px;
+      margin-bottom: 20px;
    }
 
    .verticalAlign input{
@@ -100,4 +105,6 @@ export const MyProfile = styled.div`
       font-weight: 400;
       color: #000;
    }
+   
+   @media (max-width:900px) {display:none;}
 `
