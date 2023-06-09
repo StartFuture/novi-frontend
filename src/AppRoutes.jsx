@@ -18,6 +18,7 @@ import { AuthProvider } from "./contexts/auth";
 import UserMenu from "pages/homePage/userMenu";
 import InterviewEnd from "pages/interviewEnd";
 import PaymentPage from "pages/paymentPage";
+import Loading from "pages/loadingPage";
 
 const AppRoutes = () => {
   return (
@@ -34,6 +35,7 @@ const AppRoutes = () => {
                 <Route exact path="/menuUser" element={<UserMenu/>}></Route>
                 <Route exact path="/interview-end" element={<InterviewEnd/>}></Route>
                 <Route exact path="/payment" element={<PaymentPage/>}></Route>
+                <Route exact path="/loading" element={<Loading/>}></Route>
             </Routes>
         </AuthProvider>
     </Router>
