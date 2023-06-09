@@ -4,7 +4,9 @@ import { MainContainer, CardInfos } from "./styles";
 import DropdownList from "react-widgets/DropdownList";
 import "react-widgets/styles.css";
 
-export default function CreditCard() {
+export default function CreditCard(props) {
+  props.setDisableBtn(true)
+
   return (
     <MainContainer>
       <CardInfos>
@@ -32,7 +34,11 @@ export default function CreditCard() {
         </div>
         <div>
           <label>Quantidade de parcelas</label>
-          <DropdownList data={[]} placeholder="Selecione aqui" containerClassName="dropdown"/>
+          <DropdownList
+            data={["1x", "2x"]}
+            placeholder="Selecione aqui"
+            containerClassName="dropdown"
+          />
         </div>
       </CardInfos>
     </MainContainer>

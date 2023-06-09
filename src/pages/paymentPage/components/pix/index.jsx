@@ -4,7 +4,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import { IoCopyOutline } from "react-icons/io5";
 
-export default function Pix() {
+export default function Pix(props) {
   
   const getPixCode = () => {
     var pixCode = {
@@ -16,6 +16,10 @@ export default function Pix() {
   }
 
   const [pixCode, setPixCode] = useState(getPixCode());
+
+  props.setDisableBtn(
+    pixCode.value == "" ? true : false 
+  );
 
   return (
     <MainContainer>

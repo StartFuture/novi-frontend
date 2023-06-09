@@ -21,6 +21,7 @@ import { BsFillPersonFill, BsFillCalendarFill } from "react-icons/bs";
 export default function PaymentPage() {
   const [showCardInfos, setShowCardInfos] = useState(false);
   const [showPixInfo, setShowPixInfo] = useState(false);
+  const [disableBtn, setDisableBtn] = useState(true);
   const nav = useNavigate();
 
   const toggleCardInfos = () => {
@@ -89,7 +90,7 @@ export default function PaymentPage() {
                   </div>
                 </div>
               </div>
-              <span>{showCardInfos ? <CreditCard /> : null}</span>
+              <span>{showCardInfos ? <CreditCard setDisableBtn={setDisableBtn} /> : null}</span>
             </label>
           </div>
           <div className="methods">
@@ -110,7 +111,7 @@ export default function PaymentPage() {
                   </div>
                 </div>
               </div>
-              <span>{showPixInfo ? <Pix /> : null}</span>
+              <span>{showPixInfo ? <Pix setDisableBtn={setDisableBtn} /> : null}</span>
             </label>
           </div>
         </PaymentMethods>
@@ -123,6 +124,8 @@ export default function PaymentPage() {
             Cancelar
           </ButtonPrev>
           <ButtonNext
+            disabled={disableBtn}
+            style={{ backgroundColor: !disableBtn ? "" : "gray" }}
             onClick={() => {
               nav("/loading");
             }}
