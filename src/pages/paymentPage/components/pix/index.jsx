@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { MainContainer, QrCode, Content } from "./styles";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import { IoCopyOutline } from "react-icons/io5";
 
 export default function Pix() {
+  
+  const getPixCode = () => {
+    var pixCode = {
+      value: "39405080812030491820",
+      copied: false,
+    };
+
+    return pixCode;
+  }
+
+  const [pixCode, setPixCode] = useState(getPixCode());
+
   return (
     <MainContainer>
       <QrCode />
@@ -11,10 +24,28 @@ export default function Pix() {
         <h2 className="title">PIX copia e cola</h2>
         <div className="copyPaste">
           <div>
-            <input type="text" defaultValue={"39405080812030491820"} />
+            <input
+              type="text"
+              value={pixCode.value}
+              onChange={({ target: { value } }) =>
+                setPixCode({ value, copied: false })
+              }
+            />
           </div>
           <div>
-            <IoCopyOutline fontSize={21} style={{color: "#3BB29D", transform: "scaleX(-1)", cursor: "pointer"}} />
+            <CopyToClipboard
+              text={pixCode.value}
+              onCopy={() => setPixCode({ copied: true })}
+            >
+              <IoCopyOutline
+                fontSize={21}
+                style={{
+                  color: "#3BB29D",
+                  transform: "scaleX(-1)",
+                  cursor: "pointer",
+                }}
+              />
+            </CopyToClipboard>
           </div>
         </div>
         <p className="description">
