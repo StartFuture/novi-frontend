@@ -7,24 +7,19 @@ export const Container = styled.div`
     align-items: center;
     
   .modal-overlay {
-    background: #ececec;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 111px;
+    right: 237px;
+    width: 300px;
+    background: darkgrey;
   }
   
   .modal-content {
-    width: 90%;
-    max-width: 500px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
+    position: absolute;
+        top: 111px;
+        right: 237px;
+        width: 300px;
+        background: darkgrey;
   }
   
   button {
