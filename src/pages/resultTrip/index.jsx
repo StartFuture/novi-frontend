@@ -47,9 +47,11 @@ function ResultTrip() {
 
   const customStyles = {
     content: {
-      width: '500px',
-      height: '400px',
+      width: '25vw',
+      height: '300px',
       margin: 'auto',
+      borderRadius: '24px',
+      overflowX: 'hidden',
     },
   };
 
@@ -62,24 +64,23 @@ function ResultTrip() {
           </LeftImage>
         </ContainerLeft>
         <Container>
-          <button onClick={openModal}>Open Modal</button>
+          {/* <button >Open Modal</button> */}
           <Modal
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
-            contentLabel="Example Modal"
+            contentLabel="Trip Info"
             style={customStyles}
           >
-            <h2>Hello - I am a modal!</h2>
-            <hr />
-            <p>
-              We maintain that accessibility is a key component of any modern web
-              application. As such, we have created this modal in such a way that it
-              fulfills the accessibility requirements of the modern web. We seek to
-              keep the focus on accessibility while providing a functional, capable
-              modal component for general use.
-            </p>
-            <button onClick={closeModal}>Close</button>
+            <div style={{marginTop: '-10%', marginLeft: '-9%',borderTop: '40px solid #3BB29D', width: '34vw', borderRadius:"24px 24px 0 0"}}></div>
+            <h4 style={{padding: '2%', marginTop: '4%', fontSize: '18px', fontWeight: '600'}}>Ida - Avião</h4>
+            <a style={{padding: '8% 2%', fontSize: '18px', fontWeight: '400'}}>02/01</a>
+            <p style={{padding: '2%', fontSize: '18px', fontWeight: '400'}}>Aeroporto de Guarulhos - GRU <br/>
+              <b style={{padding: '2% 0', fontSize: '18px', fontWeight: '500'}}>Azul linhas aereas</b><br/>
+              PNR: <b style={{padding: '2% 0',fontSize: '18px', fontWeight: '500'}}>ABC123</b>
+              </p>
+            <button style={{color: '#FFF', border: 'none', backgroundColor: '#3BB29D', padding: '18px', marginTop: '20px', width: '18.5vw', fontSize: '18px', fontWeight: '500', borderRadius: '8px', cursor: 'pointer', whiteSpace: 'nowrap'}} onClick={closeModal}>Fechar</button>
           </Modal>
+
           <div className="bannerBasicInfo">
             <div className="bannerTitle">
               <h4 className="destinyCity">Rio de Janeiro</h4>
@@ -113,9 +114,7 @@ function ResultTrip() {
                 <div className="verticalLine"></div>
                 <div className="displayFlexColumn">
                   <h4>Ida - Avião</h4>
-                  <Link to='/Tripdetails' className="link">
-                    <a>Ver detalhes</a>
-                  </Link>
+                    <a className="showDetailsTrip" onClick={openModal}>Ver detalhes</a>
                 </div>
                 <p className="dateTrip">02/Jan</p>
               </div>
@@ -123,9 +122,7 @@ function ResultTrip() {
                 <div className="verticalLine"></div>
                 <div className="displayFlexColumn">
                   <h4>Kart - Outdoor</h4>
-                  <Link to='/Tripdetails' className="link">
-                    <a>Ver detalhes</a>
-                  </Link>
+                    <a className="showDetailsTrip" onClick={openModal}>Ver detalhes</a>
                 </div>
                 <p className="dateTrip">02/Jan</p>
               </div>
@@ -133,9 +130,7 @@ function ResultTrip() {
                 <div className="verticalLine"></div>
                 <div className="displayFlexColumn">
                   <h4>Restaurante - Paris 6</h4>
-                  <Link to='/Tripdetails' className="link">
-                    <a>Ver detalhes</a>
-                  </Link>
+                    <a className="showDetailsTrip" onClick={openModal}>Ver detalhes</a>
                 </div>
                 <p className="dateTrip">02/Jan</p>
               </div>
@@ -143,9 +138,7 @@ function ResultTrip() {
                 <div className="verticalLine"></div>
                 <div className="displayFlexColumn">
                   <h4>Volta - Avião</h4>
-                  <Link to='/Tripdetails' className="link">
-                    <a>Ver detalhes</a>
-                  </Link>
+                    <a className="showDetailsTrip" onClick={openModal}>Ver detalhes</a>
                 </div>
                 <p className="dateTrip">02/Jan</p>
               </div>

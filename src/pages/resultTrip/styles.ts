@@ -8,12 +8,37 @@ export const MainContainer = styled.div`
         flex-direction: column;
     }
             
-      button {
-        padding: 5px;
-        font-size: large;
-        float: right;
+    //   button {
+    //     padding: 5px;
+    //     font-size: large;
+    //     float: right;
+    //     cursor: pointer;
+    //   }
+
+    #btnClose {
+        color: white;
+        border: none;
+        background-color: ${(props) => props.theme.colors.primaryColor};
+        padding: 18px;
+        width: 12vw;
+        font-family: ${(props) => props.theme.fonts.fontMontserrat};
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 8px;
         cursor: pointer;
-      }
+        white-space: nowrap;
+
+        :hover {
+            background-color: #277567;
+        }
+
+        @media screen and (max-width: 1550px) {
+            width: 100%;
+            font-size: 14px;
+            padding: 12px 1px;
+            width: 86vw;
+        }
+    }
 `;
 
 export const ContainerLeft = styled.div`
@@ -198,10 +223,12 @@ export const Container = styled.div`
             width: 10px;
         }
     
-        a {
+        .showDetailsTrip {
             color: #6e7d9e;
             text-decoration: underline;
+            cursor: pointer;
         }
+        
     }
 
     .tripCalendar {
@@ -357,7 +384,6 @@ export const Container = styled.div`
     }
 
 `;
-
 
 export const Calendar = styled.div`
     display:inline-grid;
@@ -578,7 +604,7 @@ export const ButtonPrev = styled.button`
   }
 
   @media screen and (max-width: 1106px) {
-    font-size: 14px;
+    font-size: 12px;
     padding: 12px 1px;
     width: 86vw;
     margin-right: 0;
