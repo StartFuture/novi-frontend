@@ -1,5 +1,13 @@
 @import url("../../../../assets/css/novi.css");
 
+
+.carroselTopContainer {display: flex;
+margin: 120px 0px;
+height: 425px;
+min-width: 384px;
+justify-content: space-between;
+gap: 200px;}
+
 .lp {
     background-color: #F3F3F3;
   }
@@ -175,7 +183,15 @@
 }
 
 /*Tablet Query*/
-@media (min-width: 481px) and (max-width:768px) {
+@media (min-width: 1px) and (max-width:768px) {
+
+    .carroselTopContainer {
+      
+    flex-direction: column;
+justify-content: flex-start;
+margin-bottom: 500px;
+margin-top: 180px;}
+
     .LPNavbar .btnLandingPage {
         display: none;
     }
@@ -263,4 +279,7 @@
     .lpCommentsContainer {
         display: none;
     }
+
+   
+
 }
