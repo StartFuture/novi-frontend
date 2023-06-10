@@ -19,6 +19,7 @@ import InterviewEnd from "pages/interviewEnd";
 import PaymentPage from "pages/paymentPage";
 import Loading from "pages/loadingPage";
 import Thanks from "pages/thanksPage";
+import MyProfile from "pages/myProfile";
 
 const AppRoutes = () => {
   return (
@@ -26,7 +27,7 @@ const AppRoutes = () => {
         <AuthProvider>
             <Routes>
                 <Route exact path="/" element={<LandingPage />}></Route>
-                <Route exact path="/home" element={<Private><Home/></Private>}></Route>
+                <Route exact path="/home" element={<Home/>}></Route>
                 <Route exact path="/login" element={<Login />}></Route>
                 <Route exact path="/interview-start" element={<InterviewStart />}></Route>
                 <Route exact path="/registro" element={<Registro />}></Route>
@@ -37,6 +38,7 @@ const AppRoutes = () => {
                 <Route exact path="/payment" element={<PaymentPage/>}></Route>
                 <Route exact path="/loading" element={<Loading/>}></Route>
                 <Route exact path="/thank-you" element={<Thanks/>}></Route>
+                <Route exact path="/my-profile" element={<MyProfile/>}></Route>
             </Routes>
         </AuthProvider>
     </Router>
