@@ -25,6 +25,7 @@ export default function MyProfile() {
   }
 
   const [user, setUser] = useState(getUser());
+  const [disableBtn, setDisableBtn] = useState(true);
 
   const submitBtn = {
     text: "Salvar alteração",
@@ -45,16 +46,16 @@ export default function MyProfile() {
               </div>
               <div className="formBox">
                 <label htmlFor="email">Email</label>
-                <input type="text" id="email" value={user.user_email}/>
+                <input disabled={disableBtn} style={{ backgroundColor: !disableBtn ? "" : "#c1c1c1" }} type="text" id="email" value={user.user_email}/>
               </div>
               <div className="formBox">
                 <label htmlFor="cpf">CPF</label>
-                <input type="text" id="cpf" value={user.user_cpf}/>
+                <input disabled={disableBtn} type="text" id="cpf" value={user.user_cpf}/>
               </div>
               <div className="personalInfoCouple">
                 <div className="formBox">
                   <label htmlFor="birthDate">Data de nascimento</label>
-                  <input type="text" id="birthDate" value={user.user_birth_date}/>
+                  <input disabled={disableBtn} type="text" id="birthDate" value={user.user_birth_date}/>
                 </div>
                 <div className="formBox">
                   <label htmlFor="phone">Celular</label>
