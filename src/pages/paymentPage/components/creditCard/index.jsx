@@ -1,16 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { MainContainer, CardInfos } from "./styles";
 
 import DropdownList from "react-widgets/DropdownList";
 import "react-widgets/styles.css";
 
 export default function CreditCard(props) {
+  const [installmentsValue, setInstallmentsValue] = useState("1x");
+
   const inputs = {
     cardName: "",
     cpf: "",
     cardNum: "",
     cardExpire: "",
     cardCVV: "",
+    installments: installmentsValue,
+  };
+
+  const getInstallments = () => {
+    const qtdInstallments = [
+      "1x",
+      "2x",
+      "3x",
+      "4x",
+      "5x",
+      "6x",
+      "7x",
+      "8x",
+      "9x",
+      "10x",
+      "11x",
+      "12x",
+    ];
+    return qtdInstallments;
   };
 
   const checkInputs = () => {
@@ -23,7 +44,10 @@ export default function CreditCard(props) {
         props.setDisableBtn(false);
       }
     }
+    console.log(inputs);
   };
+
+  const [qtdInstallments, setQtdInstallments] = useState(getInstallments());
 
   return (
     <MainContainer>
@@ -93,7 +117,9 @@ export default function CreditCard(props) {
         <div>
           <label>Quantidade de parcelas</label>
           <DropdownList
-            data={["1x", "2x"]}
+            data={qtdInstallments}
+            value={installmentsValue}
+            onChange={(nextValue) => setInstallmentsValue(nextValue)}
             placeholder="Selecione aqui"
             containerClassName="dropdown"
           />

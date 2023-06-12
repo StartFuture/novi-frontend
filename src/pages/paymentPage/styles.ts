@@ -279,7 +279,7 @@ export const ButtonPrev = styled.button`
   color: ${(props) => props.theme.colors.primaryColor};
   border: none;
   border-radius: 8px;
-  background-color: white;
+  background: none;
   padding: 16px;
   width: 12vw;
   font-family: ${(props) => props.theme.fonts.fontMontserrat};
