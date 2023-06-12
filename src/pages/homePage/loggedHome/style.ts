@@ -3,17 +3,15 @@ import React from "react";
 
 
 export const PageGrid = styled.div`
-    width: auto;
-    height: auto;
-    
+    width: 100vw;
+    height: 100vh;
+    background-color: #F6F6F6;
 `
 
 
 export const LayoutGrid = styled.div`
-    width: 100vw;
-    height: auto;
     display: flex;
-    gap: 70px;
+    gap: 50px;
     background-color: #F6F6F6;
 
 `
@@ -21,13 +19,14 @@ export const LayoutGrid = styled.div`
 
 export const MainDiv = styled.div`
    height: auto;
-   width: 100vw;
+   width: 100%;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
    margin-top: 30px;
 
    .lowerDiv {display: flex;
+    width: 81%;
   }
   
   
@@ -35,7 +34,7 @@ export const MainDiv = styled.div`
    border-bottom-color: black;
   margin-bottom: 20px;
   padding-bottom: 20px;
-width: 880px;}
+width: 82%;}
 
 .pStyle p {font-family: ${props => props.theme.fonts.fontMontserrat};
 font-size: 24px;
@@ -61,14 +60,14 @@ font-weight: 500;}
 
   .pStyle {border-bottom: none;
    margin-bottom: 20px;
-  width: 500px;}
+  width: 90%;}
      }
      
  
  `
 
 export const QuadroDeViagem = styled.div`
-width: 1275px;
+width: 82%;
 height: 101px;
 background-color: ${props => props.theme.colors.primaryColor};
 border-radius: 8px;
@@ -114,7 +113,7 @@ margin-right: 25px;}
    color: ${props => props.theme.colors.primaryColor};}
 
    @media (max-width: 900px) {
-    width: 70vh;
+    width: 65%;
     margin-top: 50px;
     background-color: white;
     flex-direction: column;
@@ -145,7 +144,7 @@ color: black;}
 `
 
 export const DaysLeft = styled.div`
-width: 386px;
+width: 40%;
 height: 130px;
 border-radius: 8px;
 background-color: white;
@@ -176,7 +175,7 @@ color: black;}
 {display: none;}
 `
 export const DaysLeftMobile = styled.div`
-width: 386px;
+width: 38%;
 height: 130px;
 border-radius: 8px;
 background-color: white;
@@ -231,7 +230,7 @@ justify-content: center;}
 
 
 export const Temperature = styled.div`
-width: 386px;
+width: 50%;
 height: 130px;
 border-radius: 8px;
 background-color: white;
@@ -255,7 +254,8 @@ color: ${props => props.theme.colors.primaryColor};
 
 .temperatureDiv {display: flex;
 gap: 20px;
-align-items:center;}
+align-items:center;
+width: 33%}
 
 .temperatureDiv h2 {font-family: ${props => props.theme.fonts.fontMontserrat};
 color: ${props => props.theme.colors.primaryColor};
@@ -264,6 +264,7 @@ font-size: 32px;}
 
 .usersDiv {display: flex;
     height: 90px;
+    width: 45%;
 gap: 20px;
 border-left: 1px gray solid;
 padding-left: 48px;
@@ -339,7 +340,7 @@ font-size: 32px;}
 `
 
 export const InfoTravel = styled.div`
-width: 796px;
+width: 92%;
 height: 344px;
 background-color: white;
 border-radius: 8px;
@@ -347,7 +348,7 @@ align-self: flex-start;
 padding-bottom: 40px;
 
 
-.infoBox {width: 748px;
+.infoBox {width: 95%;
 height: 68px;
 display: flex;
 justify-content: space-between;
@@ -478,6 +479,7 @@ export const Calendar = styled.div`
   border-radius:8px;
   box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
  height: 515px;
+ width: 40%;
  margin-top: 20px;
   
 

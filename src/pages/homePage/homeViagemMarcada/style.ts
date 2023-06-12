@@ -24,8 +24,15 @@ export const MainDiv = styled.div`
    flex-direction: column;
    align-items: flex-start;
    margin-top: 55px;
-   border: 1px solid red;
-  
+   
+
+   .boxImage {margin-left: 130px;
+}
+
+.boxImage img {width: 100%;
+height: 100%;}
+
+
 
    .pStyle { font-family: ${props => props.theme.fonts.fontMontserrat};
    font-size: 18px;
@@ -155,6 +162,7 @@ export const Button = styled.button`
   font-size: 18px;
    font-weight: 500;
   cursor: pointer;
+  margin-right: 15px;
   
   
   @media (max-width: 900px) {width: 350px;

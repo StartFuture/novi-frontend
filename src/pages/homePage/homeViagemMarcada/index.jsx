@@ -8,8 +8,8 @@ import { AiOutlineUser } from "react-icons/ai"
 import { IoIosArrowBack } from "react-icons/io"
 import { IoIosArrowForward } from "react-icons/io"
 import { AiFillCalendar } from "react-icons/ai"
-import {FaUser} from "react-icons/fa"
-
+import { FaUser } from "react-icons/fa"
+import LocalMap from "../../../pages/homePage/assets/images/map.svg"
 
 
 
@@ -31,23 +31,23 @@ function HomeViagemMarcada() {
                         <p className="pStyle">Fala <b> Marcelo </b>, tudo pronto para sua viagem?</p>
                         <Button>Nova viagem</Button>
                     </AlignNewTravel>
-            <div className="boxImage">
-                <div className="mapImage">
 
-                </div>
-            </div>
+                    <div className="boxImage">
+                        <img src={LocalMap} alt="map-image" />
+                    </div>
+
                     <PlaceInfo>
                         <h2>Rio de Janeiro</h2>
                         <div className="line"></div>
                         <div className="boxInfo">
-                        <div className="users">
-                            <FaUser className=".upUserIcon"></FaUser>
-                            <p>2</p>
-                        </div>
-                        <div className="days">
-                            <AiFillCalendar className=".upCalendarIcon"></AiFillCalendar>
-                            <p>14 dias</p>
-                        </div>
+                            <div className="users">
+                                <FaUser className=".upUserIcon"></FaUser>
+                                <p>2</p>
+                            </div>
+                            <div className="days">
+                                <AiFillCalendar className=".upCalendarIcon"></AiFillCalendar>
+                                <p>14 dias</p>
+                            </div>
                         </div>
                     </PlaceInfo>
                     <SecondaryDiv>
@@ -211,7 +211,7 @@ function HomeViagemMarcada() {
                     <PlaceInfo2>
                         <h2>Lembra dessa viagem?</h2>
                         <div className="line"></div>
-                        
+
                     </PlaceInfo2>
                     <OldTravels>
 
