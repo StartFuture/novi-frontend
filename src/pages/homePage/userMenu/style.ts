@@ -9,6 +9,7 @@ export const UserMenuLeft = styled.div`
    height: 100vh;
    padding-left: 55px;
    background-color: #FFF;
+   display: none;
    
 
    .LogoNovi h1 {
@@ -45,6 +46,7 @@ export const UserMenuLeft = styled.div`
    left: 0;
    z-index: 10;
    width: 295px;
+   display: block;
    
    .horizontalLine::after {
       width: 295px;
@@ -114,6 +116,7 @@ export const MyProfile = styled.div`
       font-weight: 500;
       border:0;
       outline:0;
+      width: 100%;
    }
 
    .verticalAlign p {

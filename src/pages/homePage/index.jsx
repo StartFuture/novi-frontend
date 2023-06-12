@@ -8,7 +8,7 @@ function Home() {
 
   
 
-    const [travel, setTravel] = useState(0);
+    const [travel, setTravel] = useState(1);
   
     
   
