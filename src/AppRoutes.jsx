@@ -38,7 +38,7 @@ const AppRoutes = () => {
                 <Route exact path="/payment" element={<PaymentPage/>}></Route>
                 <Route exact path="/loading" element={<Loading/>}></Route>
                 <Route exact path="/thank-you" element={<Thanks/>}></Route>
-                <Route exact path="/my-profile" element={<MyProfile/>}></Route>
+                <Route exact path="/profile" element={<MyProfile/>}></Route>
             </Routes>
         </AuthProvider>
     </Router>

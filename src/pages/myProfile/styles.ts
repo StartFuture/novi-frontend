@@ -19,8 +19,20 @@ export const MainContainer = styled.div`
     height: 56px;
     background-color: #f6f6f6;
     border: 1px solid ${(props) => props.theme.colors.lightGreyColor};
+    color: black;
+    font-weight: 400;
     border-radius: 4px;
     padding: 18px 16px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .container {
+      display: flex;
+    }
+
+    .menuContent {
+      display: none;
+    }
   }
 `;
 
@@ -82,5 +94,29 @@ export const Content = styled.div`
 
   .btnContainer {
     margin-top: 4.8%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+
+    .form {
+      margin: auto 2.4%;
+    }
+
+    .btnContainer {
+      margin-bottom: 2.2%;
+    }
+
+    .personalInfoCouple {
+      display: block;
+    }
+
+    .addressInfoCouple1 {
+      display: block;
+    }
+
+    .addressInfoCouple2 {
+      display: block;
+    }
   }
 `;
