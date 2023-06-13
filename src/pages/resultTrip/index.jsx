@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
 import { useNavigate } from "react-router-dom";
 
 import { FaUserAlt, FaCalendarAlt } from "react-icons/fa";
@@ -25,8 +23,6 @@ import {
 } from "./styles";
 
 import ButtonBack from "./components/buttonBack";
-
-// import ModalTripInfo from "./components/modalTripInfo";
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#root');
@@ -52,22 +48,27 @@ function ResultTrip() {
 
   const customStyles = {
     content: {
-      width: '25vw',
-      height: '17vw',
+      width: '367px',
+      height: '308px',
       margin: 'auto',
       padding: '30px',
       borderRadius: '24px',
       overflowX: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
     },
   };
 
   const customStylesMobile = {
     content: {
-      width: '84vw',
-      height: '300px',
-      margin: 'auto auto auto -2%',
+      width: '80%',
+      height: '37%',
+      margin: 'auto',
+      padding: '30px',
       borderRadius: '24px',
       overflowX: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
     },
   };
 
@@ -86,17 +87,20 @@ function ResultTrip() {
             onRequestClose={closeModal}
             contentLabel="Trip Info"
             style={customStylesMobile}
-          >
+          > 
             <div>
-              <div style={{marginTop: '-10%', marginLeft: '-9%',borderTop: '40px solid #3BB29D', width: '100vw', borderRadius:"24px 24px 0 0"}}></div>
-              <h4 style={{padding: '2%', marginTop: '4%', fontSize: '18px', fontWeight: '600'}}>Ida - Avião</h4>
-              <a style={{padding: '8% 2%', fontSize: '18px', fontWeight: '400'}}>02/01</a>
-              <p style={{padding: '2%', fontSize: '18px', fontWeight: '400'}}>
+              <div style={{marginTop: '-30px', marginLeft: '-30px',borderTop: '40px solid #3BB29D', width: '100vw', borderRadius:"24px 24px 0 0"}}></div>
+              <h4 style={{padding: '2% 0px', marginTop: '4%', fontSize: '18px', fontWeight: '600'}}>Ida - Avião</h4>
+              <a style={{padding: '2% 0px', fontSize: '18px', fontWeight: '400'}}>02/01</a>
+              <p style={{padding: '3% 0px 0px', fontSize: '18px', fontWeight: '400'}}>
                 Aeroporto de Guarulhos - GRU <br/>
-                <b style={{padding: '2% 0', fontSize: '18px', fontWeight: '500'}}>Azul linhas aereas</b><br/>
-                PNR: <b style={{padding: '2% 0',fontSize: '18px', fontWeight: '500'}}>ABC123</b>
+                <b style={{padding: '2% 0px', fontSize: '18px', fontWeight: '500'}}>Azul linhas aereas</b><br/>
+                PNR: <b style={{padding: '2% 0px',fontSize: '18px', fontWeight: '500'}}>ABC123</b>
               </p>
-              <button style={{color: '#FFF', border: 'none', backgroundColor: '#3BB29D', padding: '18px', marginTop: '20px', width: '69.5vw', fontSize: '18px', fontWeight: '500', borderRadius: '8px', cursor: 'pointer', whiteSpace: 'nowrap'}} onClick={closeModal}>Fechar</button></div>
+              <div style={{display: 'flex', alignItems: 'flex-end', height: '50%'}}>
+                <button style={{color: '#FFF', border: 'none', backgroundColor: '#3BB29D', width: '100%', height: '50%', fontSize: '18px', fontWeight: '500', borderRadius: '8px', cursor: 'pointer', whiteSpace: 'nowrap', verticalAlign: 'center'}} onClick={closeModal}>Fechar</button>
+              </div>
+            </div>
             </Modal>
             :
             <Modal
@@ -105,7 +109,20 @@ function ResultTrip() {
             contentLabel="Trip Info"
             style={customStyles}
           >
-            <div style={{marginTop: '-10%', marginLeft: '-9%',borderTop: '40px solid #3BB29D', width: '34vw', borderRadius:"24px 24px 0 0"}}></div><h4 style={{padding: '2%', marginTop: '4%', fontSize: '18px', fontWeight: '600'}}>Ida - Avião</h4><a style={{padding: '8% 2%', fontSize: '18px', fontWeight: '400'}}>02/01</a><p style={{padding: '2%', fontSize: '18px', fontWeight: '400'}}>Aeroporto de Guarulhos - GRU <br/><b style={{padding: '2% 0', fontSize: '18px', fontWeight: '500'}}>Azul linhas aereas</b><br/>PNR: <b style={{padding: '2% 0',fontSize: '18px', fontWeight: '500'}}>ABC123</b></p><button style={{color: '#FFF', border: 'none', backgroundColor: '#3BB29D', padding: '18px', marginTop: '20px', width: '18.5vw', fontSize: '18px', fontWeight: '500', borderRadius: '8px', cursor: 'pointer', whiteSpace: 'nowrap'}} onClick={closeModal}>Fechar</button>
+            <div>
+              <div style={{marginTop: '-30px', marginLeft: '-30px', borderTop: '40px solid #3BB29D', width: '34vw', borderRadius:"24px 24px 0 0"}}></div>
+              <h4 style={{padding: '2% 0px', marginTop: '4%', fontSize: '18px', fontWeight: '600'}}>Ida - Avião</h4>
+              <a style={{padding: '2% 0px', fontSize: '18px', fontWeight: '400'}}>02/01</a>
+              <p style={{padding: '3% 0px 0px', fontSize: '18px', fontWeight: '400'}}>
+                Aeroporto de Guarulhos - GRU <br/>
+                <b style={{padding: '2% 0px', fontSize: '18px', fontWeight: '500'}}>Azul linhas aereas</b>
+                <br/>PNR: <b style={{padding: '2% 0px',fontSize: '18px', fontWeight: '500'}}>ABC123</b>
+              </p>
+              <div style={{display: 'flex', alignItems: 'flex-end', height: '50%'}}>
+                <button style={{color: '#FFF', border: 'none', backgroundColor: '#3BB29D', width: '100%', height: '50%', fontSize: '18px', fontWeight: '500', borderRadius: '8px', cursor: 'pointer', whiteSpace: 'nowrap', verticalAlign: 'center'}} onClick={closeModal}>Fechar</button>
+              </div>
+            </div>
+            
           </Modal>
           }
 
