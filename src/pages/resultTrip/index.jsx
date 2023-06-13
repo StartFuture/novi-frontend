@@ -33,8 +33,12 @@ function ResultTrip() {
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
+  const handleBack = (e) => {
+    navigate('/new-trip');
+  }
+
   const handleSubmit = (e) => {
-    navigate('/newTrip');
+    navigate('/payment');
   }
 
   function openModal() {
@@ -299,10 +303,10 @@ function ResultTrip() {
             </div>
           </div>
           <Footer>
-            <ButtonPrev onClick={handleSubmit}>
+            <ButtonPrev onClick={handleBack}>
               Gerar outra viagem
             </ButtonPrev>
-            <ButtonNext>
+            <ButtonNext onClick={handleSubmit}>
               Prosseguir
             </ButtonNext>
           </Footer>
