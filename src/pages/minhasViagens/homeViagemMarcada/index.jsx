@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { LayoutGrid, PageGrid, MainDiv, SecondaryDiv, Button, Wrapper, AlignNewTravel, InfoTravel, Calendar, OldTravels, CardOldTravel, PlaceInfo, PlaceInfo2 } from "./style"
-import UserMenu from "../userMenu";
-import MenuMobile from "../components/headerMenuMobile"
-import UserMenuDesktop from "../userMenu/userMenuDesktop";
+import UserMenu from "../../homePage/userMenu";
+import MenuMobile from "../../homePage/components/headerMenuMobile"
+import UserMenuDesktop from "../../homePage/userMenu/userMenuDesktop";
 import { ImAirplane } from "react-icons/im";
 import { AiOutlineUser } from "react-icons/ai"
 import { IoIosArrowBack } from "react-icons/io"

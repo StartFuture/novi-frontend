@@ -5,8 +5,9 @@ import styled from "styled-components";
 export const PageGrid = styled.div`
     width: 100vw;
     height: 100vh;
+    background-color: #F6F6F6;
 `
-    ;
+    
 
 export const LayoutGrid = styled.div`
     display: flex;
@@ -15,7 +16,7 @@ export const LayoutGrid = styled.div`
     @media (max-width: 900px) {display: block;}
 
 `
-    ;
+    
 
 export const MainDiv = styled.div`
     width: 100%;
@@ -26,8 +27,8 @@ export const MainDiv = styled.div`
    margin-top: 55px;
    
 
-   .boxImage {margin-left: 130px;
-}
+   .boxImage {width: 81%;
+height: 100%;}
 
 .boxImage img {width: 100%;
 height: 100%;}
@@ -60,14 +61,15 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 gap: 10px;
-width: 100%;
+width: 82%;
+margin-top: 15px;
 
 .boxInfo{
 display: flex;
 gap: 13px;}
 
 .line {border-top: 1px solid gray;
-    width: 74%;
+    width: 70%;
     margin-top: 15px;
 }
 
@@ -98,7 +100,7 @@ export const PlaceInfo2 = styled.div`align-self: flex-start;
 display: flex;
 flex-direction: row;
 gap: 10px;
-width: 100%;
+width: 85%;
 
 .boxInfo{
 display: flex;
@@ -138,7 +140,7 @@ export const SecondaryDiv = styled.div`
    display: flex;
    flex-direction: row;
    align-items: center;
-   justify-content: center;
+   justify-content: flex-start;
    gap: 13px;
    
    
@@ -179,7 +181,7 @@ export const AlignNewTravel = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 81%;
   height: 60px;
   border-bottom: 1px solid gray;
   padding-bottom: 20px;
@@ -188,7 +190,7 @@ export const AlignNewTravel = styled.div`
   `
 
 export const InfoTravel = styled.div`
-width: 796px;
+width: 52%;
 height: 344px;
 background-color: white;
 border-radius: 8px;
@@ -197,7 +199,7 @@ padding-bottom: 40px;
 margin-top: 35px;
 
 
-.infoBox {width: 748px;
+.infoBox {width: 94%;
 height: 68px;
 display: flex;
 justify-content: space-between;
@@ -236,6 +238,7 @@ export const Calendar = styled.div`
   box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
  height: 515px;
  margin-top: 20px;
+ width: 32%;
   
 
 
@@ -252,11 +255,13 @@ right: -140px;}
     align-items:center;
     font-size:20px;
     margin-bottom:20px;
-    font-weight:300;}
+    font-weight:300;
+  width: 100%;}
 
     .month div{font-family: ${props => props.theme.fonts.fontMontserrat};
 font-weight: 600;
-font-size: 16px;}
+font-size: 16px;
+}
     
     .year{
       font-weight:600;
@@ -290,13 +295,14 @@ font-size: 16px;}
     margin-bottom:15px;}
     
     span{
-      width:50px;
+      width:100%;
       justify-self:center;
       align-self:center;
       text-align:center;
       font-family: ${props => props.theme.fonts.fontMontserrat};
       font-weight: 400;
       font-size: 16px;
+      
     }
   
   
@@ -318,7 +324,7 @@ color: white;}
       font-size:16px;
       justify-self:center;
       align-self:center;
-      width:50px;
+      width:100%;
       height:50px;
       border-radius:0px;
       margin: 5px 0px;
@@ -384,7 +390,7 @@ color: white;}
       height: 400px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 30px;
       
       
@@ -394,7 +400,7 @@ color: white;}
 
       export const CardOldTravel = styled.div`
       height: 48%;
-      width: 450px;
+      width: 350px;
       border-radius: 8px;
       display: flex;
       align-items: flex-start;
