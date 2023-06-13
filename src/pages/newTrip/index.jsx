@@ -69,7 +69,7 @@ function NewTrip(){
         }
 
         sessionStorage.setItem('trip', JSON.stringify(tripInfo));
-        navigate('/loadingTrip');
+        navigate('/loading-trip');
     }
 
     return(

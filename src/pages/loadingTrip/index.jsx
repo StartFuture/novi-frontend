@@ -37,7 +37,7 @@ function LoadingTrip(){
         // });
     }, [])
 
-    navigate('/resultTrip');
+    navigate('/result-trip');
     
     return (
         <div>

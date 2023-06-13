@@ -33,9 +33,9 @@ const AppRoutes = () => {
                 <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
                 <Route exact path="/interview" element={<Interview/>}></Route>
                 <Route exact path="/menuUser" element={<UserMenu/>}></Route>
-                <Route exact path="/newTrip" element={<NewTrip/>}></Route>
-                <Route exact path="/loadingTrip" element={<LoadingTrip/>}></Route>
-                <Route exact path="/resultTrip" element={<ResultTrip/>}></Route>
+                <Route exact path="/new-trip" element={<NewTrip/>}></Route>
+                <Route exact path="/loading-trip" element={<LoadingTrip/>}></Route>
+                <Route exact path="/result-trip" element={<ResultTrip/>}></Route>
             </Routes>
         </AuthProvider>
     </Router>

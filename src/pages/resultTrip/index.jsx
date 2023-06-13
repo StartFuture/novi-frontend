@@ -53,8 +53,9 @@ function ResultTrip() {
   const customStyles = {
     content: {
       width: '25vw',
-      height: '300px',
+      height: '17vw',
       margin: 'auto',
+      padding: '30px',
       borderRadius: '24px',
       overflowX: 'hidden',
     },
