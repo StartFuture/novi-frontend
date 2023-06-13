@@ -71,6 +71,13 @@ export const Content = styled.div`
   .copyPaste input {
     border: none;
     font-size: 16px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1340px) {
+    .copyPaste input {
+      font-size: 15px;
+    }
   }
 
   @media screen and (max-width: 1100px) {

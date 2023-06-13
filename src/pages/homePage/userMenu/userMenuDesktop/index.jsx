@@ -9,7 +9,7 @@ import { AiFillHeart } from "react-icons/ai";
 import { BsFillCircleFill } from "react-icons/bs";
 
 
-function UserMenu(){
+function UserMenuDesktop(){
     return(
         <UserMenuLeft >
             <div className="LogoNovi">
@@ -18,13 +18,13 @@ function UserMenu(){
             <small className="Menu">Menu</small>
             <SelectedContainer>
                 <MdDashboard className="icon" style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#FFF"}}/>
-                <Link to='/home' className="link">
+                <Link to='/homeDefault' className="link">
                     <p>Home</p>
                 </Link>
             </SelectedContainer>
             <Container>
                 <AiFillHeart style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
-                <Link to='/home' className="link">
+                <Link to='/homeDefault' className="link">
                     <p>Minhas viagens</p>
                 </Link>
             </Container>
@@ -35,7 +35,7 @@ function UserMenu(){
                 <BsFillCircleFill style={{fontSize: "50px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
                 <div className="verticalAlign">
                     <input type="text" value="Marcelo Henrique"></input>
-                    <Link to='/profile' className="link">
+                    <Link to='/registro' className="link">
                         <p>Ver perfil</p>
                     </Link>
                 </div>
@@ -45,4 +45,4 @@ function UserMenu(){
     )
 }
 
-export default UserMenu;
+export default UserMenuDesktop;

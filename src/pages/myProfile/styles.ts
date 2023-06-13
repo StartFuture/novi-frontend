@@ -25,13 +25,22 @@ export const MainContainer = styled.div`
     padding: 18px 16px;
   }
 
+  .mobileContent {
+    display: none;
+  }
+
   @media screen and (max-width: 1000px) {
     .container {
-      display: flex;
+      grid-template-columns: none;
+      grid-template-rows: 100% auto;
     }
 
     .menuContent {
       display: none;
+    }
+
+    .mobileContent {
+      display: block;
     }
   }
 `;

@@ -3,6 +3,7 @@ import { Content, MainContainer } from "./styles";
 import UserMenu from "pages/homePage/userMenu";
 import StyledButton from "../../components/button";
 import { useNavigate } from "react-router-dom";
+import MenuMobile from "pages/homePage/components/headerMenuMobile";
 
 export default function MyProfile() {
   const nav = useNavigate();
@@ -41,9 +42,8 @@ export default function MyProfile() {
   return (
     <MainContainer>
       <div className="container">
-        <div className="menuContent">
-          <UserMenu />
-        </div>
+        <UserMenu className="menuContent" />
+        <MenuMobile className="mobileMenu" />
         <Content>
           <form action="" className="form">
             <div className="personalInfo">

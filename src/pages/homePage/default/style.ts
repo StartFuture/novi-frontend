@@ -1,29 +1,48 @@
 import styled from "styled-components";
 
 export const PageGrid = styled.div`
-  max-width: 100vw;
-  max-height: 100vh;
-  background-color: #f6f6f6;
-`;
+    
+`
+;
 
 export const LayoutGrid = styled.div`
-  display: grid;
-  grid-template-columns: 20% auto;
-  gap: 90px;
-`;
+    
+    display: flex;
+    gap: 90px;
+    background-color: #F6F6F6;
+    @media (max-width: 900px) {display: block;}
+
+`
+;
 
 export const MainDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 55px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-top: 55px;
+  
 
-  p {
-    font-family: ${(props) => props.theme.fonts.fontMontserrat};
-    font-size: 16px;
-    font-weight: 700;
-  }
-`;
+   .pStyle { font-family: ${props => props.theme.fonts.fontMontserrat};
+   font-size: 16px;
+   font-weight: 500;}
+
+   p {font-family: ${props => props.theme.fonts.fontMontserrat};
+   font-size: 16px;
+   font-weight: 700;}
+   
+   @media (max-width: 900px) {
+width: auto;
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+
+p {align-self: flex-start;
+margin-left: 20px;}
+      
+   }
+   `
+
 
 export const SecondaryDiv = styled.div`
   height: 567px;
@@ -47,12 +66,14 @@ export const SecondaryDiv = styled.div`
     font-weight: 600;
   }
 
-  p {
-    font-family: ${(props) => props.theme.fonts.fontMontserrat};
-    font-size: 16px;
-    font-weight: 400;
-  }
-`;
+   p {font-family: ${props => props.theme.fonts.fontMontserrat};
+   font-size: 16px;
+   font-weight: 500;}
+   
+   @media (max-width: 900px) {border: none;
+   width: auto;}
+   `
+
 
 export const Button = styled.button`
   display: flex;
@@ -70,4 +91,16 @@ export const Button = styled.button`
   font-weight: 500;
   cursor: pointer;
   margin-top: 20px;
-`;
+  
+  @media (max-width: 900px) {width: 350px;
+
+h2 {text-align: center;}
+
+p {text-align: center;}
+
+}
+  `
+
+
+
+ 
