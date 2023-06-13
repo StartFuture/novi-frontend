@@ -4,51 +4,47 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
     display: flex;
     flex-direction: row;
+    background-color: #F6F6F6;
 
     @media only screen and (max-device-width: 900px) {
         flex-direction: column;
     }
 `;
 
-export const ContainerLeft = styled.div`
-    width: 40%;    
-    height: 100%;
-    background-color: #F6F6F6;
-
-    @media only screen and (max-device-width: 1570px) {
-        width: 35%;
-    }
-
-    @media only screen and (max-device-width: 900px) {
-        height: 3vh;
-        width: 100%;
-        background-color: ${props => props.theme.colors.primaryColor}
-    }
-`
-
 export const LeftImage = styled.div`
     background-image: url("img/interviewStartBG.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 100vh;
-    max-width: 810px;
-    width: 70vw;
+    width: 45%;
+    position: fixed;
 
-    @media only screen and (max-device-width: 1570px) {
-        max-width: 610px;
-    }
-    
-    @media only screen and (max-device-width: 900px) {
+    // @media only screen and (max-device-width: 1570px) {
+    //     width: 40%;
+    //     background-size: cover;
+    // }
+
+    @media only screen and (max-device-width: 1250px) {
         background-image: none;
     }
 `;
 
 export const Container = styled.div`
-    width: 80%;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     background-color: #F6F6F6;
-    padding: 100px 150px 80px 150px;
+    padding: 100px 0px 80px;
     overflow : visible;
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-end;
+    background: none;
+    z-index: 1;
+
+    form {    
+        width: 50%;
+        padding: 0px 5% 0px 0px;
+    }
 
     h1 {
         font-size: 42px;
@@ -191,10 +187,9 @@ export const Container = styled.div`
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        width: 12vw;
+        width: 100%;
         cursor: pointer;
-        margin-right: 30px;
-        margin-bottom: 30px;
+        margin: 0px 15px;
         background-color: #FFF;
         border: 1px solid #C1C1C1;
         border-radius: 16px;
@@ -203,7 +198,7 @@ export const Container = styled.div`
     .horizontalLine {
         padding: 20px;
         border-top: 2px solid #CECECE;
-        width: 39vw;
+        width: 100%;
     }
 
     .verticalLine {
@@ -213,8 +208,11 @@ export const Container = styled.div`
     }
 
     .btnNavigator {
-        position: relative;
-        top: 180px;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items:end;
+        justify-content: end;
     }
     
     .btnNext {
@@ -264,9 +262,8 @@ export const Container = styled.div`
     }
 
     @media only screen and (max-device-width: 1570px) {
-        width: 70%;
+        width: 100%;
         height: 100vh;
-        padding: 30px 0px 20px 80px;
 
         h1 {
             font-size: 28px;
@@ -279,15 +276,6 @@ export const Container = styled.div`
         h3 {
             font-size: 14px;
             margin: 20px 0px;
-        }
-
-        .container {
-            width: 16vw;
-            margin-bottom: 10px;
-        }
-
-        .checkmark {
-            margin: 5% auto;
         }
     
         .checkboxContent {
@@ -322,12 +310,6 @@ export const Container = styled.div`
             margin-left: -3px;
         }
 
-        .horizontalLine {
-            padding: 20px;
-            border-top: 2px solid #CECECE;
-            width: 52.5vw;
-        }
-
         .verticalLine {
             height: 6vh;
         }
@@ -344,32 +326,29 @@ export const Container = styled.div`
             font-size: 12px;
         }
 
-        .btnNavigator {
-            position: relative;
-            top: 40px;
-        }
-
         .btnNext {
-            padding: 2% 5%;
-            width: 85%;
             font-size: 14px;
         }
     
         .btnPrevious {
-            padding: 2% 5%;
-            width: 85%;
             font-size: 14px;
         }
 
     }
     
-    @media only screen and (max-device-width: 900px) {
+    @media only screen and (max-device-width: 1250px) {
         width: 100vw;
         height: 100vh;
         padding: 30px 40px 0px 30px;
 
         .displayFlexColumnRow {
             flex-direction: column;
+            align-items: center;
+        }
+
+        form {    
+            width: 100%;
+            padding: 0px 5%;
         }
 
         .container {
@@ -377,7 +356,6 @@ export const Container = styled.div`
             width: 100%;
             height: 8vh;
             cursor: pointer;
-            padding-right: 10px;
             margin-bottom: 10px;
         }
 
@@ -414,21 +392,9 @@ export const Container = styled.div`
             bottom: 10px;
         }
 
-        .horizontalLine {
-            padding: 10px;
-            border-top: 2px solid #CECECE;
-            margin-left: -80px !important;
-            width: 100vw;
-        }
-
         .verticalLine {
             height: 5.5vh;
             margin-right: 3%;
-        }
-
-        .btnNavigator {
-            position: relative;
-            top: 40px;
         }
 
         .btnNext {

@@ -8,7 +8,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import validator from 'validator';
 
-import { MainContainer, ContainerLeft, LeftImage, Container, Calendar } from "./styles";
+import { MainContainer, LeftImage, Container, Calendar } from "./styles";
 
 import { api } from "../../services/Api";
 
@@ -74,9 +74,7 @@ function NewTrip(){
 
     return(
         <MainContainer>
-            <ContainerLeft>
             <LeftImage/>
-            </ContainerLeft>
             <Container>
             <form>
                 <h1>A vida é mais leve viajando</h1>
