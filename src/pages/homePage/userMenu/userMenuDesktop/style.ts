@@ -40,11 +40,7 @@ export const UserMenuLeft = styled.div`
       transform: translateY(-1rem);
    }
 
-   @media (max-width:900px) {position: absolute;
-   top: 50px;
-   left: 0;
-   z-index: 10;
-   width: 295px;
+   @media (max-width:900px) {display: none;
    
    .horizontalLine::after {
       width: 295px;

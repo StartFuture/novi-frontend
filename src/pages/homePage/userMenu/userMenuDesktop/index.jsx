@@ -9,7 +9,7 @@ import { AiFillHeart } from "react-icons/ai";
 import { BsFillCircleFill } from "react-icons/bs";
 
 
-function UserMenu(){
+function UserMenuDesktop(){
     return(
         <UserMenuLeft >
             <div className="LogoNovi">
@@ -45,4 +45,4 @@ function UserMenu(){
     )
 }
 
-export default UserMenu;
+export default UserMenuDesktop;
