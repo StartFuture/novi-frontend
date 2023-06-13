@@ -11,6 +11,10 @@ import InterviewStart from "./pages/interviewStart";
 import Interview from "./pages/interview";
 import Registro from "./pages/registerPage/assets/css/img/svg/index";
 import TermsConditionsPage from "./pages/termsConditions/index";
+import NewTrip from "./pages/newTrip/index";
+import LoadingTrip from "./pages/loadingTrip/index";
+import ResultTrip from "./pages/resultTrip/index";
+
 import { Private } from "./components/Private";
 import { AuthProvider } from "./contexts/auth";
 
@@ -33,6 +37,9 @@ const AppRoutes = () => {
                 <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
                 <Route exact path="/interview" element={<Interview/>}></Route>
                 <Route exact path="/menuUser" element={<UserMenu/>}></Route>
+                <Route exact path="/new-trip" element={<NewTrip/>}></Route>
+                <Route exact path="/loading-trip" element={<LoadingTrip/>}></Route>
+                <Route exact path="/result-trip" element={<ResultTrip/>}></Route>
                 <Route exact path="/interview-end" element={<InterviewEnd/>}></Route>
                 <Route exact path="/payment" element={<PaymentPage/>}></Route>
                 <Route exact path="/loading" element={<Loading/>}></Route>
