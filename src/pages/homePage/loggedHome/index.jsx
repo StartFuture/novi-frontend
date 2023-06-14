@@ -125,7 +125,16 @@ function LoggedHome() {
 
 
               <CalendarMobile>
-                <div className="month"><div>January <span className="year">2019</span> <a><IoIosArrowBack className="arrowLPosition"></IoIosArrowBack></a><a><IoIosArrowForward className="arrowRPosition"></IoIosArrowForward></a></div></div>
+              <div className="month">
+                <div>January
+                  <span className="year">2019
+                  </span>
+                </div>
+                <div className="flexArrow">
+                  <a><IoIosArrowBack className="arrowLPosition"></IoIosArrowBack></a>
+                  <a><IoIosArrowForward className="arrowRPosition"></IoIosArrowForward></a>
+                </div>
+              </div>
                 <div className="days">
                   <span>Seg</span>
                   <span>Ter</span>
@@ -280,7 +289,16 @@ function LoggedHome() {
 
             </InfoTravelMobile>
             <Calendar>
-              <div className="month"><div>January <span className="year">2019</span> <a><IoIosArrowBack className="arrowLPosition"></IoIosArrowBack></a><a><IoIosArrowForward className="arrowRPosition"></IoIosArrowForward></a></div></div>
+              <div className="month">
+                <div>January
+                  <span className="year">2019
+                  </span>
+                </div>
+                <div className="flexArrow">
+                  <a><IoIosArrowBack className="arrowLPosition"></IoIosArrowBack></a>
+                  <a><IoIosArrowForward className="arrowRPosition"></IoIosArrowForward></a>
+                </div>
+              </div>
               <div className="days">
                 <span>Seg</span>
                 <span>Ter</span>

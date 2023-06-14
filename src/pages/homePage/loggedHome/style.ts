@@ -5,7 +5,7 @@ import React from "react";
 export const PageGrid = styled.div`
     width: 100vw;
     height: 100vh;
-    background-color: #F6F6F6;
+    
 `
 
 
@@ -23,7 +23,7 @@ export const MainDiv = styled.div`
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   margin-top: 30px;
+  background-color: #F6F6F6;
 
    .lowerDiv {display: flex;
     width: 81%;
@@ -34,6 +34,7 @@ export const MainDiv = styled.div`
    border-bottom-color: black;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  margin-top: 40px;
 width: 82%;}
 
 .pStyle p {font-family: ${props => props.theme.fonts.fontMontserrat};
@@ -46,8 +47,6 @@ font-weight: 500;}
  }
  
  @media (max-width: 900px) {
-  width: auto;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -175,7 +174,7 @@ color: black;}
 {display: none;}
 `
 export const DaysLeftMobile = styled.div`
-width: 38%;
+width: 50%;
 height: 130px;
 border-radius: 8px;
 background-color: white;
@@ -187,8 +186,8 @@ gap: 40px;
 margin-top: 10px;
 display: none;
 
-.iconAirplane {height: 51px;
-width: 51px;
+.iconAirplane {height: 35px;
+width: 35px;
 color: ${props => props.theme.colors.primaryColor};}
 
 .daysCount {}
@@ -196,7 +195,7 @@ color: ${props => props.theme.colors.primaryColor};}
 .daysCount h1 {font-family: ${props => props.theme.fonts.fontMontserrat};
 color: ${props => props.theme.colors.primaryColor};
 font-weight: 700;
-font-size: 32px;}
+font-size: 26px;}
 
 .daysCount p {font-family: ${props => props.theme.fonts.fontMontserrat};
 font-weight: 400;
@@ -208,7 +207,6 @@ color: black;}
   flex-direction: column;
   align-items: center;
   justify-content: center;
-width: 200px;
 height: 165px;
 margin-left: 30px;
 gap: 18px;
@@ -281,8 +279,7 @@ font-size: 32px;}
 
 
 export const TemperatureMobile = styled.div`
-width: 386px;
-height: 130px;
+width: 50%;
 border-radius: 8px;
 background-color: white;
 display: flex;
@@ -305,8 +302,11 @@ color: ${props => props.theme.colors.primaryColor};
 }
 
 .temperatureDiv {display: flex;
+  flex-direction: column;
 gap: 20px;
-align-items:center;}
+align-items:center;
+width: 33%;
+}
 
 .temperatureDiv h2 {font-family: ${props => props.theme.fonts.fontMontserrat};
 color: ${props => props.theme.colors.primaryColor};
@@ -314,8 +314,9 @@ font-weight: 700;
 font-size: 32px;}
 
 .usersDiv {display: flex;
-    height: 90px;
+    width: 45%;
 gap: 20px;
+flex-direction: column;
 border-left: 1px gray solid;
 padding-left: 48px;
 align-items:center}
@@ -327,15 +328,11 @@ font-size: 32px;}
 
 @media (max-width: 900px)
 {display: flex;
-  width: 200px;
-  height: 165px;
-
-  .usersDiv {display: flex;
-    height: 90px;
-    gap: 0px;
+  
+  .usersDiv {
     border-left: none;
     padding-left: 0px;
-    align-items:center}
+    }
 }
 `
 
@@ -379,28 +376,29 @@ font-size: 16px;}
 `
 
 export const InfoTravelMobile = styled.div`
-width: 796px;
+width: 100%;
 height: 344px;
 background-color: white;
 border-radius: 8px;
 align-self: flex-start;
 padding-bottom: 40px;
 display: none;
+margin-top: 30px;
 
 
-.infoBox {width: 748px;
+.infoBox {width: 80%;
 height: 68px;
 display: flex;
 justify-content: space-between;
 align-items: center;
 margin: 8px 8px;
 border-left: 8px solid;
-border-left-color:${props => props.theme.colors.primaryColor}; }
+border-left-color:${props => props.theme.colors.primaryColor}; 
+padding: 15px;}
 
 .infoBox p {font-family: ${props => props.theme.fonts.fontMontserrat};
 font-weight: 400;
-font-size: 16px;
-}
+font-size: 16px;}
 
 .alignItems {display: flex;
 flex-direction:column;
@@ -416,11 +414,8 @@ font-weight: 400;
 font-size: 16px;
 }
 
-.underlineDetail {text-decoration: underline black;
-margin-right: 20px;}
-
 @media (max-width: 900px)
-{width: 73vh;
+{
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -428,7 +423,7 @@ margin-right: 20px;}
   align-items: center;
 
 
-.infoBox{width: 70vh;
+.infoBox{width: 80%;
 background-color: white;
 border-radius: 8px;
 margin: 0px;
@@ -441,7 +436,7 @@ margin: 0px;
 
 
 export const UpperDiv = styled.div`
-width: 100vh;
+width: 100%;
 height: auto;
 display: flex;
 align-items: center;
@@ -464,10 +459,12 @@ export const AlignBoxMobile = styled.div`
 display: none;
 
 @media (max-width: 900px)
-{ display: flex;
+{ width: 70%;
+  display: flex;
   flex-direction: row;
   gap: 15px;
-  margin-top: 10px;}
+  margin-top: 10px;
+}
 
 
 `
@@ -479,25 +476,25 @@ export const Calendar = styled.div`
   border-radius:8px;
   box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
  height: 515px;
- width: 40%;
+ width: 385px;
  margin-top: 20px;
   
 
 
-.arrowRPosition {position:relative;
-right: -180px;}
-
-.arrowLPosition {position:relative;
-right: -140px;}
+.flexArrow {display: flex;
+gap: 20px;}
 
 
   .month{
     display:flex;
     justify-content:space-between;
+    flex-direction: row;
     align-items:center;
     font-size:20px;
     margin-bottom:20px;
-    font-weight:300;}
+    font-weight:300;
+  width: 100%;
+}
 
     .month div{font-family: ${props => props.theme.fonts.fontMontserrat};
 font-weight: 600;
@@ -514,7 +511,7 @@ font-size: 16px;}
       align-items:center;
       text-decoration:none;
       color:#0a3d62;
-      width:40px;
+      width: 100%;
       height:40px;
       border-radius:40px;
       transition-duration:.2s;
@@ -532,10 +529,11 @@ font-size: 16px;}
     grid-template-columns: repeat(7, 1fr);
     color:#999;
     font-weight:600;
-    margin-bottom:15px;}
+    margin-bottom:15px;
+  width: 100%;}
     
     span{
-      width:50px;
+      width: 100%;
       justify-self:center;
       align-self:center;
       text-align:center;
@@ -547,7 +545,8 @@ font-size: 16px;}
   
   .dates{
     display:grid;
-    grid-template-columns: repeat(7, 1fr);}
+    grid-template-columns: repeat(7, 1fr);
+  width: 100%}
     
 .dates button:nth-child(-n + 14) {background-color: ${props => props.theme.colors.primaryColor};
 color: white;}
@@ -563,7 +562,7 @@ color: white;}
       font-size:16px;
       justify-self:center;
       align-self:center;
-      width:50px;
+      width: 100%;
       height:50px;
       border-radius:0px;
       margin: 5px 0px;
@@ -587,7 +586,7 @@ color: white;}
         font-weight:600;
       }
       
-      .travelInfoBox {width: 321px;
+      .travelInfoBox {width: 100%;
       height: 39px;
       display: flex;
       align-items: center;
@@ -625,154 +624,155 @@ color: white;}
       `
 
       export const CalendarMobile = styled.div`
-  display:inline-grid;
-  background:#fff;
-  padding:20px;
-  border-radius:8px;
-  box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
- height: 515px;
- margin-top: 20px;
- display: none;
-  
-
-
-.arrowRPosition {position:relative;
-right: -180px;}
-
-.arrowLPosition {position:relative;
-right: -140px;}
-
-
-  .month{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:20px;
-    margin-bottom:20px;
-    font-weight:300;}
-
-    .month div{font-family: ${props => props.theme.fonts.fontMontserrat};
-font-weight: 600;
-font-size: 16px;}
+      display:inline-grid;
+      background:#fff;
+      padding:20px;
+      border-radius:8px;
+      box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
+     height: 515px;
+     width: 55%;
+     margin-top: 20px;
+      display: none;
     
-    .year{
-      font-weight:600;
-      margin-left:10px;
+    
+    .flexArrow {display: flex;
+    gap: 20px;}
+    
+    
+      .month{
+        display:flex;
+        justify-content:space-between;
+        flex-direction: row;
+        align-items:center;
+        font-size:20px;
+        margin-bottom:20px;
+        font-weight:300;
+      width: 100%;
     }
     
-    .nav{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-decoration:none;
-      color:#0a3d62;
-      width:40px;
-      height:40px;
-      border-radius:40px;
-      transition-duration:.2s;
-      position:relative;}
+        .month div{font-family: ${props => props.theme.fonts.fontMontserrat};
+    font-weight: 600;
+    font-size: 16px;}
+        
+        .year{
+          font-weight:600;
+          margin-left:10px;
+        }
+        
+        .nav{
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          text-decoration:none;
+          color:#0a3d62;
+          width: 100%;
+          height:40px;
+          border-radius:40px;
+          transition-duration:.2s;
+          position:relative;}
+          
+          &:hover{
+            background:#eee;
+          }
+        
       
-      &:hover{
-        background:#eee;
-      }
-    
-  
-  .days{
-    display: grid;
-    justify-content:center;
-    align-items:center;
-    grid-template-columns: repeat(7, 1fr);
-    color:#999;
-    font-weight:600;
-    margin-bottom:15px;}
-    
-    span{
-      width:50px;
-      justify-self:center;
-      align-self:center;
-      text-align:center;
-      font-family: ${props => props.theme.fonts.fontMontserrat};
-      font-weight: 400;
-      font-size: 16px;
-    }
-  
-  
-  .dates{
-    display:grid;
-    grid-template-columns: repeat(7, 1fr);}
-    
-.dates button:nth-child(-n + 14) {background-color: ${props => props.theme.colors.primaryColor};
-color: white;}
-
-
-
-    button{
-      cursor:pointer;
-      outline:0;
-      border:0;
-      background:transparent;
-      font-family: 'Montserrat', sans-serif;
-      font-size:16px;
-      justify-self:center;
-      align-self:center;
-      width:50px;
-      height:50px;
-      border-radius:0px;
-      margin: 5px 0px;
-      transition-duration:.2s;}
-      
-      &.today{
-        box-shadow:inset 0px 0px 0px 2px #0a3d62;
-      }
-      
-      &:first-child{
-        grid-column:3;
-      }
-      
-      &:hover{
-        background:#eee;
-      }
-      
-      &:focus{
-        background:#0a3d62;
-        color:#fff;
+      .days{
+        display: grid;
+        justify-content:center;
+        align-items:center;
+        grid-template-columns: repeat(7, 1fr);
+        color:#999;
         font-weight:600;
-      }
+        margin-bottom:15px;
+      width: 100%;}
+        
+        span{
+          width: 100%;
+          justify-self:center;
+          align-self:center;
+          text-align:center;
+          font-family: ${props => props.theme.fonts.fontMontserrat};
+          font-weight: 400;
+          font-size: 16px;
+        }
       
-      .travelInfoBox {width: 321px;
-      height: 39px;
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      margin-top: 25px;
-      border-top: 1px solid gray;
-        padding: 45px 0px;
-    }
-
-      .travelInfoBox .pointStyle {width: 16px;
-      height: 16px;
-    background-color: ${props => props.theme.colors.primaryColor};
-  border-radius: 18px;
-  }
-
-      .travelInfoBox .alignItems {display: flex;
-      align-items: center;
-    flex-direction: column;
-  gap: 5px;}
-
-      .travelInfoBox p {font-family: ${props => props.theme.fonts.fontMontserrat};
-      font-weight: 400;
-      font-size: 14px;}
-
-      .travelInfoBox h2 {font-family: ${props => props.theme.fonts.fontMontserrat};
-      font-weight: 500;
-      font-size: 16px;}
+      
+      .dates{
+        display:grid;
+        grid-template-columns: repeat(7, 1fr);
+      width: 100%}
+        
+    .dates button:nth-child(-n + 14) {background-color: ${props => props.theme.colors.primaryColor};
+    color: white;}
+    
+    
+    
+        button{
+          cursor:pointer;
+          outline:0;
+          border:0;
+          background:transparent;
+          font-family: 'Montserrat', sans-serif;
+          font-size:16px;
+          justify-self:center;
+          align-self:center;
+          width: 100%;
+          height:50px;
+          border-radius:0px;
+          margin: 5px 0px;
+          transition-duration:.2s;}
+          
+          &.today{
+            box-shadow:inset 0px 0px 0px 2px #0a3d62;
+          }
+          
+          &:first-child{
+            grid-column:3;
+          }
+          
+          &:hover{
+            background:#eee;
+          }
+          
+          &:focus{
+            background:#0a3d62;
+            color:#fff;
+            font-weight:600;
+          }
+          
+          .travelInfoBox {width: 100%;
+          height: 39px;
+          display: flex;
+          align-items: center;
+          gap: 25px;
+          margin-top: 25px;
+          border-top: 1px solid gray;
+            padding: 45px 0px;
+        }
+    
+          .travelInfoBox .pointStyle {width: 16px;
+          height: 16px;
+        background-color: ${props => props.theme.colors.primaryColor};
+      border-radius: 18px;
+      }
+    
+          .travelInfoBox .alignItems {display: flex;
+          align-items: center;
+        flex-direction: column;
+      gap: 5px;}
+    
+          .travelInfoBox p {font-family: ${props => props.theme.fonts.fontMontserrat};
+          font-weight: 400;
+          font-size: 14px;}
+    
+          .travelInfoBox h2 {font-family: ${props => props.theme.fonts.fontMontserrat};
+          font-weight: 500;
+          font-size: 16px;}
 
       @media (max-width: 900px)
-      { width: 380px;
-        display:inline-grid;
-        margin-bottom: 23px;
-        margin-left: 50px;
+      { display:inline-grid;
+        width: 342px;
+        margin-left: 60px;
       }
       
       `
