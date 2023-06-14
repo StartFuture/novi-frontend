@@ -18,13 +18,13 @@ function UserMenu(){
             <small className="Menu">Menu</small>
             <SelectedContainer>
                 <MdDashboard className="icon" style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#FFF"}}/>
-                <Link to='/homeDefault' className="link">
+                <Link to='/home' className="link">
                     <p>Home</p>
                 </Link>
             </SelectedContainer>
             <Container>
                 <AiFillHeart style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
-                <Link to='/homeDefault' className="link">
+                <Link to='/home' className="link">
                     <p>Minhas viagens</p>
                 </Link>
             </Container>
@@ -35,7 +35,7 @@ function UserMenu(){
                 <BsFillCircleFill style={{fontSize: "50px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
                 <div className="verticalAlign">
                     <input type="text" value="Marcelo Henrique"></input>
-                    <Link to='/registro' className="link">
+                    <Link to='/profile' className="link">
                         <p>Ver perfil</p>
                     </Link>
                 </div>
