@@ -29,10 +29,10 @@ export const MainContainer = styled.div`
     display: none;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1030px) {
     .container {
       grid-template-columns: none;
-      grid-template-rows: 100% auto;
+      /* grid-template-rows: 50px auto; */
     }
 
     .menuContent {
@@ -105,11 +105,18 @@ export const Content = styled.div`
     margin-top: 4.8%;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1340px) {
+    .form {
+      width: 100%;
+      margin-right: 28%;
+    }
+  }
+
+  @media screen and (max-width: 1030px) {
     width: 100%;
 
     .form {
-      margin: auto 2.4%;
+      margin: auto 6.4%;
     }
 
     .btnContainer {

@@ -4,6 +4,7 @@ import UserMenu from "pages/homePage/userMenu";
 import StyledButton from "../../components/button";
 import { useNavigate } from "react-router-dom";
 import MenuMobile from "pages/homePage/components/headerMenuMobile";
+import UserMenuDesktop from "pages/homePage/userMenu/userMenuDesktop";
 
 export default function MyProfile() {
   const nav = useNavigate();
@@ -42,8 +43,9 @@ export default function MyProfile() {
   return (
     <MainContainer>
       <div className="container">
-        <UserMenu className="menuContent" />
-        <MenuMobile className="mobileMenu" />
+        <div className="menuContent">
+          <UserMenu />
+        </div>
         <Content>
           <form action="" className="form">
             <div className="personalInfo">
@@ -55,7 +57,7 @@ export default function MyProfile() {
                   }}
                   type="text"
                   id="name"
-                  placeholder={user.user_name}
+                  defaultValue={user.user_name}
                 />
               </div>
               <div className="formBox">
@@ -68,7 +70,7 @@ export default function MyProfile() {
                   style={{ backgroundColor: !disableBtn ? "" : "#c1c1c1" }}
                   type="text"
                   id="email"
-                  placeholder={user.user_email}
+                  defaultValue={user.user_email}
                 />
               </div>
               <div className="formBox">
@@ -81,7 +83,7 @@ export default function MyProfile() {
                   style={{ backgroundColor: !disableBtn ? "" : "#c1c1c1" }}
                   type="text"
                   id="cpf"
-                  placeholder={user.user_cpf}
+                  defaultValue={user.user_cpf}
                 />
               </div>
               <div className="personalInfoCouple">
@@ -95,7 +97,7 @@ export default function MyProfile() {
                     style={{ backgroundColor: !disableBtn ? "" : "#c1c1c1" }}
                     type="text"
                     id="birthDate"
-                    placeholder={user.user_birth_date}
+                    defaultValue={user.user_birth_date}
                   />
                 </div>
                 <div className="formBox">
@@ -106,7 +108,7 @@ export default function MyProfile() {
                     }}
                     type="text"
                     id="phone"
-                    placeholder={user.user_phone}
+                    defaultValue={user.user_phone}
                     pattern="\(\d{2}\)\d{4}-\d{4}"
                   />
                 </div>
@@ -121,7 +123,7 @@ export default function MyProfile() {
                   }}
                   type="text"
                   id="cep"
-                  placeholder={user.user_cep}
+                  defaultValue={user.user_cep}
                 />
               </div>
               <div className="addressInfoCouple1">
@@ -133,7 +135,7 @@ export default function MyProfile() {
                     }}
                     type="text"
                     id="state"
-                    placeholder={user.user_state}
+                    defaultValue={user.user_state}
                   />
                 </div>
                 <div className="formBox">
@@ -144,7 +146,7 @@ export default function MyProfile() {
                     }}
                     type="text"
                     id="city"
-                    placeholder={user.user_city}
+                    defaultValue={user.user_city}
                   />
                 </div>
               </div>
@@ -157,7 +159,7 @@ export default function MyProfile() {
                     }}
                     type="text"
                     id="address"
-                    placeholder={user.user_address}
+                    defaultValue={user.user_address}
                   />
                 </div>
                 <div className="formBox">
@@ -168,7 +170,7 @@ export default function MyProfile() {
                     }}
                     type="text"
                     id="addressNum"
-                    placeholder={user.user_address_num}
+                    defaultValue={user.user_address_num}
                   />
                 </div>
               </div>
@@ -180,7 +182,7 @@ export default function MyProfile() {
                   }}
                   type="text"
                   id="complement"
-                  placeholder={user.user_address_complement}
+                  defaultValue={user.user_address_complement}
                 />
               </div>
             </div>
