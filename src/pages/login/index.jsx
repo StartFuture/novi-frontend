@@ -82,7 +82,7 @@ const LoginPage = () => {
               setEmail(e.target.value);
             }}
           />
-          <small>{emailError}</small>
+          {/* <small>{emailError}</small> */}
         </div>
         <div className="loginFields">
           <label htmlFor="password">Senha</label>
@@ -109,7 +109,7 @@ const LoginPage = () => {
               </h4>
             </div>
           </div>
-          <small>{}</small>
+          {/* <small>{setPasswordError}</small> */}
         </div>
         <button id="btnForgotPassword">Esqueci minha senha</button>
         <input className="loginSubmit" type="submit" value="Entrar" />
