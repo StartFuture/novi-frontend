@@ -9,7 +9,7 @@ function FavoriteTravelType(props) {
   );
 
   const handler = (e) => {
-    formData.current.options.travel_style = e.target.value;
+    formData.current.options.travel_style = Number(e.target.value);
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
     props.setDisableBtn(false);
   };

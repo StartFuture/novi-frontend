@@ -9,7 +9,7 @@ function TravelType(props) {
   );
 
   const handler = (e) => {
-    formData.current.options.travel_destination = e.target.value;
+    formData.current.options.travel_destination = Number(e.target.value);
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
     props.setDisableBtn(false);
   };
