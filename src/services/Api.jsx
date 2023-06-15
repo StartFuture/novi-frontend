@@ -11,6 +11,10 @@ export const authLogin = async (email, password_user) => {
   return api.post("/auth/login", params);
 };
 
+export const getComment = () => {
+  return api.get("/get-comment")
+}
+
 export const cepCheck = (cep) => {
   return axios.get(`https://viacep.com.br/ws/${cep}/json/`);
 };
