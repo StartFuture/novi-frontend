@@ -301,7 +301,7 @@ export const Container = styled.div`
         .bannerTitle {
             h4 {
                 font-size: 14px;
-                padding: 1% 0:
+                padding: 1% 0;
             }
         }
 
@@ -385,47 +385,41 @@ export const Container = styled.div`
 
 `;
 
+
 export const Calendar = styled.div`
-    display:inline-grid;
-    justify-content:center;
+  display:inline-grid;
+  background:#fff;
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
+ height: 515px;
+ width: 385px;
+ margin-top: 20px;
+  
+
+
+.flexArrow {display: flex;
+gap: 20px;}
+
+
+  .month{
+    display:flex;
+    justify-content:space-between;
+    flex-direction: row;
     align-items:center;
-    background:#fff;
-    padding:30px 20px 20px 20px;
-    border-radius:8px;
-    // box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
-    // position: relative;
-    // top: -155px;
-    // height: 525px;
+    font-size:20px;
+    margin-bottom:20px;
+    font-weight:300;
+  width: 100%;
+}
 
-    .arrowRPosition {
-        position:relative;
-        right: -180px;
-    }
-
-    .arrowLPosition {
-        position:relative;
-        right: -140px;
-    }
-
-    .month{
-        width: 100%;
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        font-size:16px;
-        margin-bottom:10px;
-        font-weight:600;
-    }
-
-    .month div{
-        font-family: ${props => props.theme.fonts.fontMontserrat};
-        font-weight: 600;
-        font-size: 16px;
-    }
+    .month div{font-family: ${props => props.theme.fonts.fontMontserrat};
+font-weight: 600;
+font-size: 16px;}
     
     .year{
       font-weight:600;
-      margin-left:5px;
+      margin-left:10px;
     }
     
     .nav{
@@ -434,7 +428,7 @@ export const Calendar = styled.div`
       align-items:center;
       text-decoration:none;
       color:#0a3d62;
-      width:40px;
+      width: 100%;
       height:40px;
       border-radius:40px;
       transition-duration:.2s;
@@ -445,35 +439,36 @@ export const Calendar = styled.div`
       }
     
   
-    .days{
-        display: grid;
-        justify-content:center;
-        align-items:center;
-        grid-template-columns: repeat(7, 1fr);
-        color:#999;
-        font-weight:400;
-        margin-bottom: 14px;
-    }
-        
-    span{
-        width:50px;
-        justify-self:center;
-        align-self:center;
-        text-align:center;
-        font-family: ${props => props.theme.fonts.fontMontserrat};
-        font-weight: 400;
-        font-size: 16px;
-    }
+  .days{
+    display: grid;
+    justify-content:center;
+    align-items:center;
+    grid-template-columns: repeat(7, 1fr);
+    color:#999;
+    font-weight:600;
+    margin-bottom:15px;
+  width: 100%;}
     
-    .dates{
-        display:grid;
-        grid-template-columns: repeat(7, 1fr);
+    span{
+      width: 100%;
+      justify-self:center;
+      align-self:center;
+      text-align:center;
+      font-family: ${props => props.theme.fonts.fontMontserrat};
+      font-weight: 400;
+      font-size: 16px;
     }
-        
-    .dates button:nth-child(-n + 14) {
-        background-color: ${props => props.theme.colors.primaryColor};
-        color: white;
-    }
+  
+  
+  .dates{
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+  width: 100%}
+    
+.dates button:nth-child(-n + 14) {background-color: ${props => props.theme.colors.primaryColor};
+color: white;}
+
+
 
     button{
       cursor:pointer;
@@ -484,83 +479,66 @@ export const Calendar = styled.div`
       font-size:16px;
       justify-self:center;
       align-self:center;
-      width:50px;
-      height:30px;
+      width: 100%;
+      height:50px;
       border-radius:0px;
       margin: 5px 0px;
-      transition-duration:.2s;
-    }
+      transition-duration:.2s;}
       
-    &.today{
+      &.today{
         box-shadow:inset 0px 0px 0px 2px #0a3d62;
-    }
-    
-    &:first-child{
+      }
+      
+      &:first-child{
         grid-column:3;
-    }
-    
-    &:hover{
+      }
+      
+      &:hover{
         background:#eee;
-    }
-    
-    &:focus{
+      }
+      
+      &:focus{
         background:#0a3d62;
         color:#fff;
         font-weight:600;
+      }
+      
+      .travelInfoBox {width: 100%;
+      height: 39px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-top: 25px;
+      border-top: 1px solid gray;
+        padding: 45px 0px;
     }
 
-    @media only screen and (max-width: 1570px) {
+      .travelInfoBox .pointStyle {width: 16px;
+      height: 16px;
+    background-color: ${props => props.theme.colors.primaryColor};
+  border-radius: 18px;
+  }
 
-        padding: 20px 10px 10px 10px;
+      .travelInfoBox .alignItems {display: flex;
+      align-items: center;
+    flex-direction: column;
+  gap: 5px;}
 
-        .month span{
-            font-size: 1rem;
-        }
-        .month div{
-            font-size: 1rem;
-            margin-left: 2%;
-        }
+      .travelInfoBox p {font-family: ${props => props.theme.fonts.fontMontserrat};
+      font-weight: 400;
+      font-size: 14px;}
 
-        .days{
-            width: 75vw;
-            margin-left: 2%;
-        }
+      .travelInfoBox h2 {font-family: ${props => props.theme.fonts.fontMontserrat};
+      font-weight: 500;
+      font-size: 16px;}
 
-        .arrowRPosition {
-            position:relative;
-            left: 35vw;
-        }
-    
-        .arrowLPosition {
-            position:relative;
-            left: 30vw;
-        }
+      @media (max-width: 1100px)
+      { display: none;
+        
 
-        span{
-            width: 10%;
-            justify-self:flex-start;
-            align-self:flex-start;
-            text-align:center;
-            font-family: ${props => props.theme.fonts.fontMontserrat};
-            font-weight: 400;
-            font-size: 12px;
-        }
-
-        button{
-            width: 100%;
-            height: 100%;
-            margin: 5px 0px;
-
-            // width:50px;
-            // height:30px;
-            // margin: 5px 10px;
-        }
-    }
-
-    @media only screen and (max-width: 1106px) {
-        display: none;
-    }
-`
+      }
+      
+      `
 
 export const Footer = styled.div`
   display: flex;
