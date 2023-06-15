@@ -35,7 +35,7 @@ function UserMenuDesktop(){
                 <BsFillCircleFill style={{fontSize: "50px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
                 <div className="verticalAlign">
                     <input type="text" value="Marcelo Henrique"></input>
-                    <Link to='/registro' className="link">
+                    <Link to='/profile' className="link">
                         <p>Ver perfil</p>
                     </Link>
                 </div>

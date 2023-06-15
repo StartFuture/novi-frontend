@@ -9,7 +9,7 @@ function TravelNight(props) {
   );
 
   const handler = (e) => {
-    formData.current.options.night_style = e.target.value;
+    formData.current.options.night_style = Number(e.target.value);
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
     props.setDisableBtn(false);
   };

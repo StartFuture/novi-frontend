@@ -8,7 +8,7 @@ export default function TravelTransportation(props) {
 
 
   const handler = (e) => {
-    formData.current.options.transport_style = e.target.value;
+    formData.current.options.transport_style = Number(e.target.value);
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
     props.setDisableBtn(false);
   };

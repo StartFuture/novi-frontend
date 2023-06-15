@@ -30,36 +30,33 @@ export default function TravelClimate(props) {
       case 0:
         value = weather.warm == 1 ? 0 : 1;
         formData.current.weather.warm = value;
-        value = 0;
-        formData.current.weather.no_preference = value;
+        formData.current.weather.no_preference = false;
         noPref.checked = false;
         break;
 
       case 1:
         value = weather.mild == 1 ? 0 : 1;
         formData.current.weather.mild = value;
-        value = 0;
-        formData.current.weather.no_preference = value;
+        formData.current.weather.no_preference = false;
         noPref.checked = false;
         break;
 
       case 2:
         value = weather.cold == 1 ? 0 : 1;
         formData.current.weather.cold = value;
-        value = 0;
-        formData.current.weather.no_preference = value;
+        formData.current.weather.no_preference = false;
         noPref.checked = false;
         break;
 
       case 3:
-        value = weather.no_preference == 1 ? 0 : 1;
+        var noPrefValue = weather.no_preference ? false : true;
 
         if (e.target.checked) {
           for (let i = 0; i < checkboxList.length; i++) {
             checkboxList[i].checked = false;
           }
         }
-        formData.current.weather.no_preference = value;
+        formData.current.weather.no_preference = noPrefValue;
         value = 0;
         formData.current.weather.warm = value;
         formData.current.weather.mild = value;
@@ -126,9 +123,7 @@ export default function TravelClimate(props) {
               id="noPref"
               onChange={handler}
               value={3}
-              defaultChecked={
-                formData.current.weather.no_preference == 1 ? true : false
-              }
+              defaultChecked={formData.current.weather.no_preference}
             />
             <label htmlFor="noPref">Não tenho preferência</label>
           </div>

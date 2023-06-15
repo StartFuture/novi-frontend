@@ -5,11 +5,11 @@ import { FormStyled } from "./styles";
 function TravelAccomodation(props) {
   var formData = useRef(props.formData);
   props.setDisableBtn(
-    formData.current.options.accomodation_style == 0 ? true : false
+    formData.current.options.acommodation_style == 0 ? true : false
   );
 
   const handler = (e) => {
-    formData.current.options.accomodation_style = e.target.value;
+    formData.current.options.acommodation_style = Number(e.target.value);
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
     props.setDisableBtn(false);
   };
@@ -25,7 +25,7 @@ function TravelAccomodation(props) {
             onChange={handler}
             value={1}
             defaultChecked={
-              formData.current.options.accomodation_style == 1 ? true : false
+              formData.current.options.acommodation_style == 1 ? true : false
             }
           />
           <div className="checkmark">
@@ -45,7 +45,7 @@ function TravelAccomodation(props) {
             onChange={handler}
             value={2}
             defaultChecked={
-              formData.current.options.accomodation_style == 2 ? true : false
+              formData.current.options.acommodation_style == 2 ? true : false
             }
           />
           <div className="checkmark">
@@ -65,7 +65,7 @@ function TravelAccomodation(props) {
             onChange={handler}
             value={3}
             defaultChecked={
-              formData.current.options.accomodation_style == 3 ? true : false
+              formData.current.options.acommodation_style == 3 ? true : false
             }
           />
           <div className="checkmark">
@@ -85,7 +85,7 @@ function TravelAccomodation(props) {
             onChange={handler}
             value={4}
             defaultChecked={
-              formData.current.options.accomodation_style == 4 ? true : false
+              formData.current.options.acommodation_style == 4 ? true : false
             }
           />
           <div className="checkmark">
@@ -105,7 +105,7 @@ function TravelAccomodation(props) {
             onChange={handler}
             value={5}
             defaultChecked={
-              formData.current.options.accomodation_style == 5 ? true : false
+              formData.current.options.acommodation_style == 5 ? true : false
             }
           />
           <div className="checkmark">

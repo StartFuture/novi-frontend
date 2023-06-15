@@ -1,39 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
 import { BoxCarrossel1 } from "./style";
 
-import CardComponent from "pages/landingPage/components/CarrosselComment/card/cardComponent"
+import CardComponent from "pages/landingPage/components/CarrosselComment/card/cardComponent";
+import { getComment } from "services/Api";
 
-const cardInfo = [
-{foto: "",
-
- nome: "",
-
- nota: "",
- 
- comentario: "",
-
-
-}
-
-
-]
-
-
-
-const images = [
-CardComponent,
-CardComponent,
-CardComponent,
-CardComponent,
-
-
-  
-];
 const delay = 2500;
 
 function CarrosselComment() {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
+  const [cardInfo, setCardInfo] = useState([]);
+
+  useEffect(() => {
+    getComment().then((ress) => {
+      setCardInfo(ress.data);
+    });
+  }, []);
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -43,8 +25,11 @@ function CarrosselComment() {
 
   useEffect(() => {
     resetTimeout();
-    timeoutRef.current = setTimeout(() =>
-      setIndex((prevIndex) => prevIndex === (images.length - 1) ? 0 : prevIndex + 1), 
+    timeoutRef.current = setTimeout(
+      () =>
+        setIndex((prevIndex) =>
+          prevIndex === cardInfo.length - 1 ? 0 : prevIndex + 1
+        ),
       delay
     );
 
@@ -54,25 +39,23 @@ function CarrosselComment() {
   }, [index]);
 
   return (
-<>
-
-
-    <BoxCarrossel1>
-    <div className="slideshow">
-      <div className="slideshowSlider"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-      >
-        {images.map((images, i) => (
-          <div key={i} className="slide">
-          
-           <CardComponent></CardComponent>
+    <>
+      <BoxCarrossel1>
+        <div className="slideshow">
+          <div
+            className="slideshowSlider"
+            style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+          >
+            {cardInfo.map((card) => (
+              <div key={card.id} className="slide">
+                <CardComponent cardInfo={card}></CardComponent>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
-    </BoxCarrossel1>
+        </div>
+      </BoxCarrossel1>
     </>
   );
 }
 
-export default CarrosselComment
+export default CarrosselComment;
