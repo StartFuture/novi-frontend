@@ -8,9 +8,9 @@ function DescubraNovasExperiencias() {
         <DivTextFather>
             <div className="divTextAlign">
                 <div className="BorderColor">
-                    <h2>Descubra novas<b></b> experiências</h2>
+                    <h2>Descubra novas experiências</h2>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint veritatis possimus alias sit recusandae, vel aliquam voluptates sunt amet, blanditiis sequi inventore eum vero aut, ex obcaecati quae quidem consectetur.</p>
+                <p>Através do seu perfil, podemos indicar novas sugestões de viagens, roteiros e locais turísticos que não podem faltar no seu destino para criar uma viagem inesquecível em sua vida!</p>
             </div>
         </DivTextFather>
 
