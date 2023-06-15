@@ -31,21 +31,20 @@ const AppRoutes = () => {
         <AuthProvider>
             <Routes>
                 <Route exact path="/" element={<LandingPage />}></Route>
-                <Route exact path="/home" element={<Home/>}></Route>
+                <Route exact path="/home" element={<Private><Home/></Private>}></Route>
                 <Route exact path="/login" element={<Login />}></Route>
-                <Route exact path="/interview-start" element={<InterviewStart />}></Route>
+                <Route exact path="/interview-start" element={<Private><InterviewStart /></Private>}></Route>
                 <Route exact path="/registro" element={<Registro />}></Route>
                 <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
-                <Route exact path="/interview" element={<Interview/>}></Route>
-                <Route exact path="/menuUser" element={<UserMenu/>}></Route>
-                <Route exact path="/new-trip" element={<NewTrip/>}></Route>
-                <Route exact path="/loading-trip" element={<LoadingTrip/>}></Route>
-                <Route exact path="/result-trip" element={<ResultTrip/>}></Route>
-                <Route exact path="/interview-end" element={<InterviewEnd/>}></Route>
-                <Route exact path="/payment" element={<PaymentPage/>}></Route>
-                <Route exact path="/loading" element={<Loading/>}></Route>
-                <Route exact path="/thank-you" element={<Thanks/>}></Route>
-                <Route exact path="/profile" element={<MyProfile/>}></Route>
+                <Route exact path="/interview" element={<Private><Interview/></Private>}></Route>
+                <Route exact path="/new-trip" element={<Private><NewTrip/></Private>}></Route>
+                <Route exact path="/loading-trip" element={<Private><LoadingTrip/></Private>}></Route>
+                <Route exact path="/result-trip" element={<Private><ResultTrip/></Private>}></Route>
+                <Route exact path="/interview-end" element={<Private><InterviewEnd/></Private>}></Route>
+                <Route exact path="/payment" element={<Private><PaymentPage/></Private>}></Route>
+                <Route exact path="/loading" element={<Private><Loading/></Private>}></Route>
+                <Route exact path="/thank-you" element={<Private><Thanks/></Private>}></Route>
+                <Route exact path="/profile" element={<Private><MyProfile/></Private>}></Route>
             </Routes>
         </AuthProvider>
     </Router>

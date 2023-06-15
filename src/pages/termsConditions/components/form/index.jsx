@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { FormStyled } from "./styles";
 
@@ -13,39 +13,55 @@ import { useNavigate } from "react-router-dom";
 import { api } from "../../../../services/Api";
 
 export default function Form() {
-
   const navigate = useNavigate();
+
+  const [noviNews, setNoviNews] = useState(false);
+  const [shareData, setShareData] = useState(false);
+  const [termConds, setTermConds] = useState(false);
+  const [disableBtn, setDisableBtn] = useState(true);
+
+  const handleChange = () => {
+    let acceptAll = document.getElementById("acceptAll");
+
+    if (acceptAll.checked == true) {
+      setNoviNews(true);
+      setShareData(true);
+      setTermConds(true);
+    } else {
+      setNoviNews(false);
+      setShareData(false);
+      setTermConds(false);
+    }
+    setDisableBtn(termConds);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const address = JSON.parse(sessionStorage.getItem('address'));
-    const user = JSON.parse(sessionStorage.getItem('user'));
+    const address = JSON.parse(sessionStorage.getItem("address"));
+    const user = JSON.parse(sessionStorage.getItem("user"));
 
-    user.news = document.getElementById("noviNews").checked;
-    user.info_conditions = document.getElementById("acceptTermsConditions").checked;
-    // user.share_data = document.getElementById("acceptUseData").checked;
-
-    if(address.complements || address.complements === ""){
-      address.complements = null
-    }
+    user.news = noviNews;
+    user.share_data = shareData;
+    user.info_conditions = termConds;
 
     const form_values = {
-      "address": address,
-      "user": user,
-    }
+      address: address,
+      user: user,
+    };
 
-    api.post("/user/user", form_values)
-      .catch((err) => {
-        console.log("error: " + err);
+    console.log({ user, address });
+
+    api.post("/user/create_user", form_values).catch((err) => {
+      console.log("error: " + err);
     });
 
-    navigate('/');
-  } 
+    navigate("/");
+  };
 
   return (
     <FormStyled id="termsConditionsForm">
-        <SecNameEmail/>
+      <SecNameEmail />
       <div>
         <Title>Termos e condições</Title>
         <p>
@@ -60,18 +76,40 @@ export default function Form() {
         </p>
       </div>
       <div className="formCheckbox">
-        <input type="checkbox" name="acceptAll" id="acceptAll" onClick={acceptAll}/>
+        <input
+          type="checkbox"
+          name="acceptAll"
+          id="acceptAll"
+          onClick={acceptAll}
+          onChange={handleChange}
+        />
         <label htmlFor="acceptAll">Aceito todos os termos</label>
       </div>
       <WrapperCheckbox>
         <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="noviNews" onClick={rmAcceptAll}/>
+          <input
+            type="checkbox"
+            name="acceptTerm"
+            id="noviNews"
+            onClick={rmAcceptAll}
+            onChange={(e) => {
+              setNoviNews(noviNews == false ? true : false);
+            }}
+          />
           <label htmlFor="noviNews">
             Você deseja receber novidades sobre a NOVI ?
           </label>
         </div>
         <div className="formCheckbox">
-          <input type="checkbox" name="acceptTerm" id="acceptUseData" onClick={rmAcceptAll}/>
+          <input
+            type="checkbox"
+            name="acceptTerm"
+            id="acceptUseData"
+            onClick={rmAcceptAll}
+            onChange={(e) => {
+              setShareData(shareData == false ? true : false);
+            }}
+          />
           <label htmlFor="acceptUseData">
             Aceito que utilizem os meus dados informados
           </label>
@@ -82,6 +120,10 @@ export default function Form() {
             name="acceptTerm"
             id="acceptTermsConditions"
             onClick={rmAcceptAll}
+            onChange={(e) => {
+              setTermConds(termConds == false ? true : false);
+              setDisableBtn(termConds);
+            }}
           />
           <label htmlFor="acceptTermsConditions">
             Aceito os termos e condições
@@ -89,7 +131,14 @@ export default function Form() {
         </div>
       </WrapperCheckbox>
       <div>
-        <input id="submit" type="submit" value="Continuar" onClick={handleSubmit}/>
+        <input
+          id="submit"
+          type="submit"
+          value="Continuar"
+          onClick={handleSubmit}
+          style={{ backgroundColor: disableBtn ? "grey" : "" }}
+          disabled={disableBtn}
+        />
       </div>
     </FormStyled>
   );

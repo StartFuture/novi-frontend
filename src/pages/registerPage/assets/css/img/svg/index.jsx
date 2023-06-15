@@ -1,33 +1,42 @@
-import React, {useCallback, useState} from "react";
+import React, { useCallback, useState } from "react";
 import ImgBackLogin from "../../../../../../components/imgbacklogin";
 import Inputs from "../../../../../../components/inputs";
 
-
-
-
 function Registro() {
-//autenticação e validação da mascara de CEP
+  const getUser = () => {
+    const user = {
+      id: "",
+      user_name: "Marcelo Henrique",
+      user_email: "marcelo.novi@gmail.com",
+      user_cpf: "444.111.222.33",
+      user_birth_date: "01/12/1980",
+      user_phone: "11 92212322",
+      user_cep: "02112-122",
+      user_state: "São Paulo",
+      user_city: "São Paulo",
+      user_address: "Rua Adamantino",
+      user_address_num: "123",
+      user_address_complement: "Bloco A",
+    };
 
-// const {usuario, setUsuario} = useState<usuario>({});
+    return user;
+  };
 
-// const handleChange = useCallback((e) => {
+  const handleSubmit = (e) => {
+    console.log(user);
+    // nav("/home")
+  };
 
-//     setUsuario({
-//         ... usuario,
-//         [e.currentTarget.name]: e.currentTarget.value
-//     })
-// }, [usuario]);
+  const [user, setUser] = useState(getUser());
+  const [disableBtn, setDisableBtn] = useState(true);
 
+  return (
+    <>
+      <ImgBackLogin />
 
-    return (
-            <>
-
-            <ImgBackLogin/>
-
-            <Inputs/>
-        
-            </>
-    )
+      <Inputs />
+    </>
+  );
 }
 
-export default Registro
+export default Registro;
