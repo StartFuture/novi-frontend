@@ -1,31 +1,18 @@
-import DivAlign from "./styles"
-
-
+import DivAlign from "./styles";
 
 export default function SecNameEmail() {
-    return (
+  const user = JSON.parse(sessionStorage.getItem("user"));
 
-        <DivAlign>
-            <div className="divSpace">
-                <h3>Marcelo Henrique</h3>
-                <p>Marcelohenrique@novi.com</p>
-            </div>
+  return (
+    <DivAlign>
+      <div className="divSpace">
+        <h3>{user.name_user}</h3>
+        <p>{user.email}</p>
+      </div>
 
-            <div className="divStyle">
-                <p className={"p-Viajante"}>Novo Viajante</p>
-            </div>
-
-        </DivAlign>
-
-
-
-
-
-
-    )
-
-
-
-
-
+      <div className="divStyle">
+        <p className={"p-Viajante"}>Novo Viajante</p>
+      </div>
+    </DivAlign>
+  );
 }

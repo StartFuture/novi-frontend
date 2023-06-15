@@ -10,7 +10,6 @@ export const UserMenuLeft = styled.div`
    padding-left: 55px;
    background-color: #FFF;
    display: none;
-   
 
    .LogoNovi h1 {
     font-family: 'Audiowide', cursive;

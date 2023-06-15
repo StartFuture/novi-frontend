@@ -1,15 +1,18 @@
 import React from "react";
-import {AiOutlineStar} from "react-icons/ai"
+import { AiOutlineStar } from "react-icons/ai";
 import { BoxComment } from "./style";
 
+const rating = [];
 
-
-function CardComponent() {
+function CardComponent({ cardInfo }) {
+  if (rating.length == 0) {
+    for (var i = 0; i < cardInfo.stars; i++) {
+      rating.push(i);
+    }
+  }
 
   return (
-
     <>
-
       <BoxComment>
         <div className="upperCard">
           <div className="boxUserImage">
@@ -17,28 +20,22 @@ function CardComponent() {
           </div>
 
           <div className="alignText">
-            <h3>Paula Lima Santos</h3>
-            <p>Viajante</p>
+            <h3>{cardInfo.user_name}</h3>
+            <p>{cardInfo.perfil}</p>
           </div>
 
           <div className="rating">
-            <AiOutlineStar className="starSize"></AiOutlineStar>
-            <AiOutlineStar className="starSize"></AiOutlineStar>
-            <AiOutlineStar className="starSize"></AiOutlineStar>
-            <AiOutlineStar className="starSize"></AiOutlineStar>
-            <AiOutlineStar className="starSize"></AiOutlineStar>
+            {rating.map((r) => (
+              <AiOutlineStar className="starSize"></AiOutlineStar>
+            ))}
           </div>
         </div>
 
         <div className="comment">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime dolore iusto possimus accusamus commodi laborum amet, praesentium quae quaerat quisquam reprehenderit odit explicabo modi sunt, repellat esse minima iste vero.</p>
-
+          <p>{cardInfo.comment}</p>
         </div>
       </BoxComment>
-
-
     </>
-
   );
 }
 

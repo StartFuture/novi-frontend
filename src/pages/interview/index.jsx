@@ -23,6 +23,7 @@ import {
 } from "./styles";
 
 import ButtonBack from "./components/buttonBack";
+import { postQuiz } from "services/Api";
 
 function Interview() {
   const allItems = document.querySelectorAll("ul li a");
@@ -38,12 +39,12 @@ function Interview() {
       options: {
         travel_destination: 0,
         travel_style: 0,
-        accomodation_style: 0,
+        acommodation_style: 0,
         night_style: 0,
         can_leave_country: 0,
         transport_style: 0,
       },
-      activities: {
+      activitie: {
         water_preference: 0,
         walk_preference: 0,
         historic_preference: 0,
@@ -53,17 +54,16 @@ function Interview() {
       culture: {
         music_preference: 0,
         building_preference: 0,
-        tradiction_preference: 0,
+        tradicion_preference: 0,
         party_preference: 0,
-        no_preference: 0,
+        no_preference: false,
       },
       weather: {
         warm: 0,
         mild: 0,
         cold: 0,
-        no_preference: 0,
-      },
-      id_user: {},
+        no_preference: false,
+      }
     };
 
     var crrFormData = sessionStorage.getItem("currInterview");
@@ -131,55 +131,79 @@ function Interview() {
       );
     }
   };
-  
-    return (
-        <div>
-            <Container>
-                <LeftContainer>
-                    <ButtonBack/>
-                    <NavStyled>
-                        <ul>
-                            <li><a className={page >= 0 ? "active" : ""}>Objetivo</a></li>
-                            <li><a className={page > 0 ? "active" : ""}>Destino</a></li>
-                            <li><a className={page > 1 ? "active" : ""}>Passeios</a></li>
-                            <li><a className={page === 3 ? "active" : ""}>Saúde</a></li>
-                        </ul>
-                    </NavStyled>
-                </LeftContainer>
-                <MainContainer>
-                    <FormStyled>
-                        <div className="form-container">
-                            <div className="header">
-                                <h1>{FormTitles[page]}</h1>
-                            </div> 
-                            <div className="body">{PageDisplay()}</div>
-                            <Footer>
-                                <ButtonPrev
-                                    disabled={page == 0}
-                                    onClick={() => {
-                                    setPage((currPage) => currPage - 1);
-                                    }}
-                                >
-                                    Voltar
-                                </ButtonPrev>
-                                <ButtonNext
-                                    onClick={() => {
-                                    if (page === FormTitles.length - 1) {
-                                        alert("FORM SUBMITTED");
-                                        console.log(formData);
-                                    } else {
-                                        setPage((currPage) => currPage + 1);
-                                    }
-                                    }}
-                                >
-                                    {page === FormTitles.length - 1 ? "Submit" : "Prosseguir"}
-                                </ButtonNext>
-                            </Footer>
-                        </div>
-                    </FormStyled>
-                </MainContainer>
-            </Container>            
-        </div>
-    );
-  }
-  export default Interview
+
+  return (
+    <Container>
+      <LeftContainer>
+        <ButtonBack />
+        <NavStyled>
+          <ul>
+            <li>
+              <a className={page >= 0 ? "act" : ""}>Destino</a>
+            </li>
+            <li>
+              <a className={page > 0 ? "act" : ""}>Estilo da viagem</a>
+            </li>
+            <li>
+              <a className={page > 1 ? "act" : ""}>Acomodações</a>
+            </li>
+            <li>
+              <a className={page > 2 ? "act" : ""}>Atividades</a>
+            </li>
+            <li>
+              <a className={page > 3 ? "act" : ""}>Preferência</a>
+            </li>
+            <li>
+              <a className={page > 4 ? "act" : ""}>Interesses culturais</a>
+            </li>
+            <li>
+              <a className={page > 5 ? "act" : ""}>Internacional</a>
+            </li>
+            <li>
+              <a className={page > 6 ? "act" : ""}>Transporte</a>
+            </li>
+            <li>
+              <a className={page > 7 ? "act" : ""}>Clima</a>
+            </li>
+          </ul>
+        </NavStyled>
+      </LeftContainer>
+      <MainContainer>
+        <FormStyled>
+          <div className="header">
+            <h2>{FormTitles[page]}</h2>
+          </div>
+          <div className="body">{PageDisplay()}</div>
+        </FormStyled>
+        <Footer>
+          <ButtonPrev
+            disabled={page == 0}
+            onClick={() => {
+              setPage((currPage) => currPage - 1);
+            }}
+          >
+            Voltar
+          </ButtonPrev>
+          <ButtonNext
+            disabled={disableBtn}
+            style={{ backgroundColor: !disableBtn ? "" : "gray" }}
+            onClick={() => {
+              if (page === FormTitles.length - 1) {
+                console.log(formData)
+                postQuiz(formData).then((ress) => {
+                  console.log(ress.data);
+                });
+                nav("/interview-end");
+              } else {
+                setPage((currPage) => currPage + 1);
+              }
+            }}
+          >
+            {page === FormTitles.length - 1 ? "Finalizar" : "Prosseguir"}
+          </ButtonNext>
+        </Footer>
+      </MainContainer>
+    </Container>
+  );
+}
+export default Interview;

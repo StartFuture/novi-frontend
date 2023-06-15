@@ -1,17 +1,18 @@
-import { AuthContext } from "contexts/auth";
-import { useContext } from "react";
-import { Navigate } from "react-router-dom";
+import { useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import { checkToken } from "services/Api";
 
 export const Private = ({ children }) => {
-    const { authenticated, loading } = useContext(AuthContext);
+  const nav = useNavigate();
 
-    if (loading) {
-        return <div className="loading">Loading .....</div>
-    }
+  useEffect(() => {
+    checkToken()
+      .then((ress) => {console.log(ress.data)})
+      .catch((err) => {
+        console.log(err)
+        nav("/login")
+      });
+  }, []);
 
-    if ( !authenticated ) {
-        return <Navigate to="/login"/>
-    }
-
-    return children;
+  return children;
 };
