@@ -11,13 +11,14 @@ import InterviewStart from "./pages/interviewStart";
 import Interview from "./pages/interview";
 import Registro from "./pages/registerPage/assets/css/img/svg/index";
 import TermsConditionsPage from "./pages/termsConditions/index";
+import HomeViagemMarcada from "pages/minhasViagens/homeViagemMarcada/index"
+import HomeSemViagemMarcada from "pages/minhasViagens/homeSemViagens/index"
+import UserMenu from "pages/homePage/userMenu";
 import NewTrip from "./pages/newTrip/index";
 import LoadingTrip from "./pages/loadingTrip/index";
 import ResultTrip from "./pages/resultTrip/index";
-
 import { Private } from "./components/Private";
 import { AuthProvider } from "./contexts/auth";
-
 import InterviewEnd from "pages/interviewEnd";
 import PaymentPage from "pages/paymentPage";
 import Loading from "pages/loadingPage";
@@ -30,7 +31,9 @@ const AppRoutes = () => {
         <AuthProvider>
             <Routes>
                 <Route exact path="/" element={<LandingPage />}></Route>
-                <Route exact path="/home" element={<Private><Home/></Private>}></Route>
+                <Route exact path="/home" element={<Home/>}></Route>
+                <Route exact path="/home-booked-travel" element={<HomeViagemMarcada/>}></Route>
+                <Route exact path="/home-without-travel" element={<HomeSemViagemMarcada/>}></Route>
                 <Route exact path="/login" element={<Login />}></Route>
                 <Route exact path="/interview-start" element={<Private><InterviewStart /></Private>}></Route>
                 <Route exact path="/registro" element={<Registro />}></Route>

@@ -7,18 +7,18 @@ import { useRef, useState } from "react"
 
 function MenuMobile() {
 
-const dropDownRef = useRef(null);
-const [isActive, setIsActive] = useState(false);
-const onClick = () => setIsActive(!isActive)
+    const dropDownRef = useRef(null);
+    const [isActive, setIsActive] = useState(false);
+    const onClick = () => setIsActive(!isActive)
 
     return (
 
         <BoxMenu>
             <HiMenu onClick={onClick} className="menuStyle"></HiMenu>
             <nav className={`menu ${isActive ? "active" : "inactive"}`} ref={dropDownRef}>
-           <UserMenu></UserMenu>
+                <UserMenu></UserMenu>
             </nav>
-           
+
             <img src={Novi} alt="logo-novi" />
         </BoxMenu>
 
