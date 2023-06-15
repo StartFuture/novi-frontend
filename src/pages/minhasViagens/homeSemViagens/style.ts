@@ -93,7 +93,18 @@ display: flex;
 align-items: center;
 gap: 8px;}
 
-.days .upCalendarIcon {}`
+.days .upCalendarIcon {}
+
+@media (max-width: 900px)
+{
+
+
+
+
+}
+
+
+`
 
 export const PlaceInfo2 = styled.div`align-self: flex-start;
 display: flex;
@@ -180,7 +191,10 @@ export const Button = styled.button`
   margin-right: 15px;
   
   
-  @media (max-width: 900px) {width: 350px;
+  @media (max-width: 900px) {width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 
 h2 {text-align: center;}
 
@@ -200,6 +214,9 @@ export const AlignNewTravel = styled.div`
   padding-bottom: 20px;
   margin-bottom: 20px;
   
+  @media (max-width: 900px)
+{border: none;}
+
   `
 
 export const InfoTravel = styled.div`
@@ -399,13 +416,16 @@ color: white;}
       `
 
       export const OldTravels = styled.div`
-      width: 80%;
-      height: auto;
+      width: 85%;
+      height: 400px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       gap: 30px;
-      margin: 20px 0px;
+      
+      @media (max-width: 900px)
+      {width: 75%;
+      margin-right: 60px;}
       
       `
 
@@ -413,7 +433,7 @@ color: white;}
 
       export const CardOldTravel = styled.div`
       height: 48%;
-      width: 350px;
+      width: 100%;
       border-radius: 8px;
       display: flex;
       align-items: flex-start;
@@ -425,7 +445,7 @@ color: white;}
     gap: 7px;
     margin-top: 20px;
     margin-left: 20px;
-    width: 220px;
+    width: 100%;
     height: 180px;
     
 
@@ -436,7 +456,7 @@ color: white;}
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 120px;
+        width: 55%;
     height: 35px;
     background-color: white;
     border-radius: 8px;
@@ -447,30 +467,39 @@ color: white;}
         font-family: ${props => props.theme.fonts.fontMontserrat};
       font-weight: 500;
       font-size: 16px;
-        color: ${props => props.theme.colors.primaryColor};}
+        color: ${props => props.theme.colors.primaryColor};
+      }
       
 
         .secondText {
-            width: 200px;
+            width: 90%;
             
         }
 
         .secondText h2 {font-family: ${props => props.theme.fonts.fontMontserrat};
       font-weight: 600;
       font-size: 20px;
-    color: white;}
+    color: white;
+    max-width: 100%;
+    white-space: break-spaces;
+    overflow: hidden;
+    text-overflow: ellipsis;}
 
         .secondText p {font-family: ${props => props.theme.fonts.fontMontserrat};
       font-weight: 500;
       font-size: 16px;
-    color: white;}
+    color: white;
+    max-width: 100%;
+    white-space: break-spaces;
+    overflow: hidden;
+    text-overflow: ellipsis;}
 
     .date {
         display: flex;
         align-items: center;
         gap: 8px;
-        margin-top: 25px;
-    width: 230px;
+        margin-top: 18px;
+    width: 100%;
     }
 
     .date .calendarIcon {color: white;
@@ -482,4 +511,21 @@ color: white;}
       font-size: 18px;
     color: white;}
       
+
+    @media (max-width: 900px)
+      {width: 35%;
+      display: flex;
+
+
+      .firstText {
+        width: 80%;
+    }
+
+    .boxContent {
+      margin-top: 7px;
+      margin-left: 7px;
+      }
+
+      .date {margin-top: 10px;}
+    }
       `
