@@ -5,6 +5,9 @@ export const FormStyled = styled.form`
     flex-direction: column;
     max-width: 100%;
     
+    .termsConditions {
+        // height: 100%;
+    }
 
     p {
         width: 100%;

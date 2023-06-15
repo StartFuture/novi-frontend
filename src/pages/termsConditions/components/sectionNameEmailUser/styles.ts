@@ -32,8 +32,9 @@ const DivAlign = styled.div`
     font-family: ${(props) => props.theme.fonts.fontMontserrat};
     font-weight: 500;
     color: white;
-    // margin-top: 9%;
-    padding: 2% 0 10% 14%;
+    padding: 2% 0 20% 14%;
+    overflow-y: hidden;
+    margin-bottom: 0px;
   }
 
   @media screen and (max-width: 1024px) {

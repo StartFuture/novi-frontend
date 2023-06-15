@@ -62,7 +62,7 @@ export default function Form() {
   return (
     <FormStyled id="termsConditionsForm">
       <SecNameEmail />
-      <div>
+      <div className="termsConditions">
         <Title>Termos e condições</Title>
         <p>
         Bem-vindo aos Termos e Condições da nossa empresa Novi. Ao utilizar nossos serviços, você concorda com os seguintes termos. Por favor, leia atentamente as cláusulas a seguir: <br/><br/>
