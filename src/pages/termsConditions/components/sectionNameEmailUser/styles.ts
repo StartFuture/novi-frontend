@@ -12,6 +12,7 @@ const DivAlign = styled.div`
   padding: 15px;
 
   .divSpace {
+    margin-top: 2.5%;
     padding-left: 20px;
   }
 
@@ -20,16 +21,19 @@ const DivAlign = styled.div`
     align-items: center;
     justify-content: center;
     width: 150px;
-    height: 38px;
+    height: 42px;
     border-radius: 8px;
     background-color: ${(props) => props.theme.colors.primaryColor};
     margin-right: 20px;
+    
   }
 
   .p-Viajante {
     font-family: ${(props) => props.theme.fonts.fontMontserrat};
     font-weight: 500;
     color: white;
+    // margin-top: 9%;
+    padding: 2% 0 10% 14%;
   }
 
   @media screen and (max-width: 1024px) {
