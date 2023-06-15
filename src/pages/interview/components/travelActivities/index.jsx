@@ -2,16 +2,16 @@ import React, { useRef, useState } from "react";
 
 import { Content } from "./styles";
 
-export default function TravelActivities(props) {
+export default function Travelactivitie(props) {
   var formData = useRef(props.formData);
 
-  const [activities, setActivities] = useState(formData.current.activities);
+  const [activitie, setactivitie] = useState(formData.current.activitie);
 
   const checkBtn = () => {
     var isDisable = true;
 
-    Object.keys(formData.current.activities).map(function (key, value) {
-      if (formData.current.activities[key] == 1) {
+    Object.keys(formData.current.activitie).map(function (key, value) {
+      if (formData.current.activitie[key] == 1) {
         isDisable = false;
       }
     });
@@ -26,28 +26,28 @@ export default function TravelActivities(props) {
 
     switch (Number(e.target.value)) {
       case 0:
-        value = activities.water_preference == 1 ? 0 : 1;
-        formData.current.activities.water_preference = value;
+        value = activitie.water_preference == 1 ? 0 : 1;
+        formData.current.activitie.water_preference = value;
         break;
 
       case 1:
-        value = activities.walk_preference == 1 ? 0 : 1;
-        formData.current.activities.walk_preference = value;
+        value = activitie.walk_preference == 1 ? 0 : 1;
+        formData.current.activitie.walk_preference = value;
         break;
 
       case 2:
-        value = activities.historic_preference == 1 ? 0 : 1;
-        formData.current.activities.historic_preference = value;
+        value = activitie.historic_preference == 1 ? 0 : 1;
+        formData.current.activitie.historic_preference = value;
         break;
 
       case 3:
-        value = activities.sport_preference == 1 ? 0 : 1;
-        formData.current.activities.sport_preference = value;
+        value = activitie.sport_preference == 1 ? 0 : 1;
+        formData.current.activitie.sport_preference = value;
         break;
 
       case 4:
-        value = activities.food_preference == 1 ? 0 : 1;
-        formData.current.activities.food_preference = value;
+        value = activitie.food_preference == 1 ? 0 : 1;
+        formData.current.activitie.food_preference = value;
         break;
 
       default:
@@ -70,7 +70,7 @@ export default function TravelActivities(props) {
               onChange={handler}
               value={0}
               defaultChecked={
-                formData.current.activities.water_preference == 1 ? true : false
+                formData.current.activitie.water_preference == 1 ? true : false
               }
             />
             <label htmlFor="relax">
@@ -85,7 +85,7 @@ export default function TravelActivities(props) {
               onChange={handler}
               value={1}
               defaultChecked={
-                formData.current.activities.walk_preference == 1 ? true : false
+                formData.current.activitie.walk_preference == 1 ? true : false
               }
             />
             <label htmlFor="hiking">
@@ -100,7 +100,7 @@ export default function TravelActivities(props) {
               onChange={handler}
               value={2}
               defaultChecked={
-                formData.current.activities.historic_preference == 1
+                formData.current.activitie.historic_preference == 1
                   ? true
                   : false
               }
@@ -115,7 +115,7 @@ export default function TravelActivities(props) {
               onChange={handler}
               value={3}
               defaultChecked={
-                formData.current.activities.sport_preference == 1 ? true : false
+                formData.current.activitie.sport_preference == 1 ? true : false
               }
             />
             <label htmlFor="sports">
@@ -130,7 +130,7 @@ export default function TravelActivities(props) {
               onChange={handler}
               value={4}
               defaultChecked={
-                formData.current.activities.food_preference == 1 ? true : false
+                formData.current.activitie.food_preference == 1 ? true : false
               }
             />
             <label htmlFor="gastronomic">

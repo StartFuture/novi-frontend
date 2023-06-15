@@ -18,7 +18,6 @@ import ResultTrip from "./pages/resultTrip/index";
 import { Private } from "./components/Private";
 import { AuthProvider } from "./contexts/auth";
 
-import UserMenu from "pages/homePage/userMenu";
 import InterviewEnd from "pages/interviewEnd";
 import PaymentPage from "pages/paymentPage";
 import Loading from "pages/loadingPage";

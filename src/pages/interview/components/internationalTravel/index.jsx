@@ -9,7 +9,7 @@ function InternationalTravel(props) {
   );
 
   const handler = (e) => {
-    formData.current.options.can_leave_country = e.target.value;
+    formData.current.options.can_leave_country = e.target.value == 1 ? true : false;
     sessionStorage.setItem("currInterview", JSON.stringify(formData.current));
     props.setDisableBtn(false);
   };
@@ -25,7 +25,7 @@ function InternationalTravel(props) {
             onChange={handler}
             value={1}
             defaultChecked={
-              formData.current.options.can_leave_country == 1 ? true : false
+              formData.current.options.can_leave_country
             }
           />
           <div className="checkmark"><span/></div>
@@ -44,7 +44,7 @@ function InternationalTravel(props) {
             onChange={handler}
             value={2}
             defaultChecked={
-              formData.current.options.can_leave_country == 2 ? true : false
+              !formData.current.options.can_leave_country
             }
           />
           <div className="checkmark"><span/></div>
