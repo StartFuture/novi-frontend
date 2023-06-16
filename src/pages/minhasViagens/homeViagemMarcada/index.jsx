@@ -11,25 +11,22 @@ import { AiFillCalendar } from "react-icons/ai"
 import { FaUser } from "react-icons/fa"
 import LocalMap from "../../../pages/homePage/assets/images/map.svg"
 
-
+import { Link } from "react-router-dom";
 
 function HomeViagemMarcada() {
 
-
-
-
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    const name = user.name_user.split(' ')[0];
 
     return (
-
-
         <PageGrid>
             <LayoutGrid>
-                <MenuMobile></MenuMobile>
-                <UserMenuDesktop></UserMenuDesktop>
+                <MenuMobile haveTrip="1" isHome="1"></MenuMobile>
+                <UserMenuDesktop haveTrip="1" isHome="1"></UserMenuDesktop>
                 <MainDiv>
                     <AlignNewTravel>
-                        <p className="pStyle">Fala <b> Marcelo </b>, tudo pronto para sua viagem?</p>
-                        <Button>Nova viagem</Button>
+                        <p className="pStyle">Fala <b>{name}</b>, tudo pronto para sua viagem?</p>
+                        <Link to='/new-trip' className="link"><Button>Nova viagem</Button></Link>
                     </AlignNewTravel>
 
                     <div className="boxImage">

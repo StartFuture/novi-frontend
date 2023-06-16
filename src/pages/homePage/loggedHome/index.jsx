@@ -16,17 +16,21 @@ import MenuMobile from "../components/headerMenuMobile";
 
 
 function LoggedHome() {
+
+  const user = JSON.parse(sessionStorage.getItem("user"));
+  const name = user.name_user.split(' ')[0];
+  
   return (
     <PageGrid>
-      <MenuMobile></MenuMobile>
+      <MenuMobile haveTrip="1" isHome="0"></MenuMobile>
       <LayoutGrid>
 
-        <UserMenuDesktop></UserMenuDesktop>
+        <UserMenuDesktop haveTrip="1" isHome="0"></UserMenuDesktop>
 
 
         <MainDiv>
           <div className="pStyle">
-            <p className="alignFirstP">Fala <b> Marcelo </b>, tudo pronto para sua viagem?</p>
+            <p className="alignFirstP">Fala <b>{name}</b>, tudo pronto para sua viagem?</p>
           </div>
           <QuadroDeViagem>
             <div className="titleAlign">

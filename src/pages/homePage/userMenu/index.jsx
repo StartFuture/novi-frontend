@@ -9,32 +9,70 @@ import { AiFillHeart } from "react-icons/ai";
 import { BsFillCircleFill } from "react-icons/bs";
 
 
-function UserMenu(){
+function UserMenu(props){
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    const name = user.name_user.split(' ')[0];
+    const haveTrip = parseInt(props.haveTrip);
+    const isHome = parseInt(props.isHome);
     return(
         <UserMenuLeft >
             <div className="LogoNovi">
                 <h1> Noví </h1>
             </div>
             <small className="Menu">Menu</small>
-            <SelectedContainer>
-                <MdDashboard className="icon" style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#FFF"}}/>
-                <Link to='/home' className="link">
-                    <p>Home</p>
-                </Link>
-            </SelectedContainer>
-            <Container>
-                <AiFillHeart style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
-                <Link to='/home' className="link">
-                    <p>Minhas viagens</p>
-                </Link>
-            </Container>
+            {
+                isHome > 0 ?
+                <>
+                    <Container>
+                        <MdDashboard className="icon" style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#FFF"}}/>
+                        <Link to='/home' className="link">
+                            <p>Home</p>
+                        </Link>
+                    </Container>
+                    <SelectedContainer>
+                        <AiFillHeart style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
+                        {
+                            haveTrip > 0 ? 
+                            <Link to='/home-booked-travel' className="link">
+                                <p>Minhas viagens</p>
+                            </Link>
+                            :
+                            <Link to='/home-without-travel' className="link">
+                                <p>Minhas viagens</p>
+                            </Link>
+                        }
+                    </SelectedContainer>
+                </>
+            :
+            <>
+                <SelectedContainer>
+                    <MdDashboard className="icon" style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#FFF"}}/>
+                    <Link to='/home' className="link">
+                        <p>Home</p>
+                    </Link>
+                </SelectedContainer>
+                <Container>
+                    <AiFillHeart style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
+                    {
+                        haveTrip > 0 ? 
+                        <Link to='/home-booked-travel' className="link">
+                            <p>Minhas viagens</p>
+                        </Link>
+                        :
+                        <Link to='/home-without-travel' className="link">
+                            <p>Minhas viagens</p>
+                        </Link>
+                    }
+                </Container>
+                </>
+            }
             <div className="lastContainer"/>
             <div className="horizontalLine"/>
             <MyProfile>
-                <div className="profilePhotoMobile"></div>
-                <BsFillCircleFill style={{fontSize: "50px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
+                <div className="profilePhotoMobile"><BsFillCircleFill style={{fontSize: "50px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/></div>
+                
                 <div className="verticalAlign">
-                    <input type="text" value="Marcelo Henrique"></input>
+                    <input type="text" value={user.name_user}></input>
                     <Link to='/profile' className="link">
                         <p>Ver perfil</p>
                     </Link>

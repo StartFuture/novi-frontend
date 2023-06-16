@@ -13,7 +13,7 @@ function Home() {
     
   
     const HomeDisplay = () => {
-      if (travel === 0) {
+      if (travel === 1) {
       return <DefaultHome></DefaultHome>;
       } else {
       return <LoggedHome></LoggedHome>;

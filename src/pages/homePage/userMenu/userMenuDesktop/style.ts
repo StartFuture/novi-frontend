@@ -106,16 +106,18 @@ export const MyProfile = styled.div`
    }
 
    .verticalAlign input{
-      font-size: 18px;
+      font-size: 1.2rem;
       font-weight: 500;
       border:0;
       outline:0;
+      width: 85%;
    }
 
    .verticalAlign p {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 400;
       color: #000;
+      width: 35%;
    }
    
    @media (max-width:900px) {width:100vh;

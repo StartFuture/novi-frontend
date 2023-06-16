@@ -5,7 +5,10 @@ import { BoxMenu } from "./style"
 import UserMenu from "pages/homePage/userMenu"
 import { useRef, useState } from "react"
 
-function MenuMobile() {
+function MenuMobile(props) {
+
+    const haveTrip = parseInt(props.haveTrip);
+    const isHome = parseInt(props.isHome)
 
     const dropDownRef = useRef(null);
     const [isActive, setIsActive] = useState(false);
@@ -16,7 +19,7 @@ function MenuMobile() {
         <BoxMenu>
             <HiMenu onClick={onClick} className="menuStyle"></HiMenu>
             <nav className={`menu ${isActive ? "active" : "inactive"}`} ref={dropDownRef}>
-                <UserMenu></UserMenu>
+                <UserMenu haveTrip={haveTrip} isHome={isHome}></UserMenu>
             </nav>
 
             <img src={Novi} alt="logo-novi" />

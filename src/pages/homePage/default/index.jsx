@@ -12,6 +12,9 @@ import UserMenuDesktop from "../userMenu/userMenuDesktop";
 
 function DefaultHome() {
 
+  const user = JSON.parse(sessionStorage.getItem("user"));
+  const name = user.name_user.split(' ')[0];
+
   
   const [menuOpen, setMenuOpen] = useState(false);
   
@@ -21,10 +24,10 @@ function DefaultHome() {
     
       
       <LayoutGrid>
-        <MenuMobile></MenuMobile>
-        <UserMenuDesktop></UserMenuDesktop>
+        <MenuMobile haveTrip="0" isHome="0"></MenuMobile>
+        <UserMenuDesktop haveTrip="0" isHome="0"></UserMenuDesktop>
         <MainDiv>
-          <p className="pStyle">Fala <b> Marcelo </b>, vamos viajar?</p>
+          <p className="pStyle">Fala <b>{name}</b>, vamos viajar?</p>
           <SecondaryDiv>
              
             <ImAirplane className="iconAirplane" />
