@@ -38,3 +38,13 @@ export const postQuiz = (formData) => {
 export const cepCheck = (cep) => {
   return axios.get(`https://viacep.com.br/ws/${cep}/json/`);
 };
+
+export const getUserInfo = (token) => {
+  var token = localStorage.getItem("token");
+
+  const config = {
+    headers: { Authorization: `Bearer ${token}` },
+  };
+
+  return api.get("/user/read_user", config);
+};

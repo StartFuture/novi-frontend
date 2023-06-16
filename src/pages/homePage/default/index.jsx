@@ -1,33 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { LayoutGrid, PageGrid, MainDiv, SecondaryDiv, Button, Wrapper } from "../default/style"
 import { ImAirplane } from "react-icons/im";
 import UserMenu from "../userMenu";
 import MenuMobile from "../components/headerMenuMobile"
 import UserMenuDesktop from "../userMenu/userMenuDesktop";
 
-
-
-
+import { getUserInfo } from "services/Api";
 
 
 function DefaultHome() {
 
-  const user = JSON.parse(sessionStorage.getItem("user"));
-  const name = user.name_user.split(' ')[0];
-
-  
   const [menuOpen, setMenuOpen] = useState(false);
+  const [userInfo, setUserInfo] = useState([]);
+
+  useEffect(() => {
+    getUserInfo()
+      .then((res) => {setUserInfo(res.data.user)})
+      .catch((err) => {
+        console.log(err)
+      });
+  }, []);
   
-
-  return (
-
-    
-      
+  return (      
       <LayoutGrid>
         <MenuMobile haveTrip="0" isHome="0"></MenuMobile>
         <UserMenuDesktop haveTrip="0" isHome="0"></UserMenuDesktop>
         <MainDiv>
-          <p className="pStyle">Fala <b>{name}</b>, vamos viajar?</p>
+          <p className="pStyle">Fala <b>{userInfo.name_user}</b>, vamos viajar?</p>
           <SecondaryDiv>
              
             <ImAirplane className="iconAirplane" />
