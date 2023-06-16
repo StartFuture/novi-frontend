@@ -79,11 +79,9 @@ function ResultTrip() {
   return (
     <div>
       <MainContainer>
-        <ContainerLeft>
           <LeftImage>
             <ButtonBack className="buttonBack" />
           </LeftImage>
-        </ContainerLeft>
         <Container>
           {
             isMobile ? <Modal
