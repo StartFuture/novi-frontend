@@ -5,10 +5,24 @@ export const FormStyled = styled.form`
     flex-direction: column;
     max-width: 100%;
     
+    .termsConditions {
+        // height: 100%;
+    }
 
     p {
+        width: 100%;
+        height: 24%;
         margin-top: 8px;
         margin-bottom: 16px;
+        overflow-y: scroll;
+    }
+
+    p::-webkit-scrollbar {
+        display: none;
+    }
+
+    .formInputs {
+        margin-top: -112%;
     }
 
     .formCheckbox {

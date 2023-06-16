@@ -36,7 +36,7 @@ const AppRoutes = () => {
                 <Route exact path="/home-without-travel" element={<HomeSemViagemMarcada/>}></Route>
                 <Route exact path="/login" element={<Login />}></Route>
                 <Route exact path="/interview-start" element={<Private><InterviewStart /></Private>}></Route>
-                <Route exact path="/registro" element={<Registro />}></Route>
+                <Route exact path="/register" element={<Registro />}></Route>
                 <Route exact path="/terms-conditions" element={<TermsConditionsPage/>}></Route>
                 <Route exact path="/interview" element={<Private><Interview/></Private>}></Route>
                 <Route exact path="/new-trip" element={<Private><NewTrip/></Private>}></Route>

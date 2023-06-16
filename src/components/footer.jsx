@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import '../assets/css/footer.css';
 import Facebook from '../assets/svg/facebookFooterIcon.svg';
 import Instagram from '../assets/svg/instagramFooterIcon.svg';
@@ -18,9 +20,9 @@ export default function Footer(){
                 <a href="#">Suporte</a>
             </div>
             <div className="socialMedias">
-                <img src={Facebook} alt="Icone Facebook" />
-                <img src={Instagram} alt="Icone Instagram" />
-                <img src={Tiktok} alt="Icone Tiktok" />
+                <Link to='https://www.facebook.com/startfuturebootcamp/' target="_blank" className="link"><img src={Facebook} alt="Icone Facebook" /></Link>
+                <Link to='https://www.instagram.com/startfuturebootcamp/' target="_blank" className="link"><img src={Instagram} alt="Icone Instagram" /></Link>
+                <Link to='https://www.tiktok.com/@startfuturebootcamp' target="_blank" className="link"><img src={Tiktok} alt="Icone Tiktok" /></Link>
             </div>
         </div>
     )

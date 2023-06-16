@@ -9,6 +9,7 @@
     padding: 10% 5%;
     background-color: #FFF;
     position: relative;
+    height: 100vh;
 }
 
 .LpUsText {
@@ -16,7 +17,7 @@
 }
 
 .h4AboutUs {
-    font-weight: 300;
+    font-weight: 400;
     color: #2D2D2D;
     font-size: 16px;
 }
@@ -37,22 +38,20 @@
 
 .LpOurImage {
     position: absolute;
-    width: 70vh;
-    height: 70vh;
+    width: 33%;
+    height: 65%;
     left: 55%;
-    top: 15%;
+    top: 18%;
     z-index: 1;
 }
 
 .LpBackgroundUs {
     background-image: url('../img/lpBackgroundUs.png');
     background-color: var(--primary-color);
-    height: 70vh;
-    /* width: 88.4vh; */
-    width: 51.2vh;
+    width: 23%;
+    height: 66%;
     opacity: .9;
     position: absolute;
-    left: 75%;
-    bottom: 20%;
-
+    left: 77%;
+    bottom: 21%;
 }
