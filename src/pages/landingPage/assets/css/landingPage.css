@@ -120,7 +120,7 @@ gap: 200px;}
         "LpUsText"
         "LpOurImage"
         "LpBackgroundUs";
-        height: 100vh;
+        height: 100%;
         width: 100vh;
         /* height: 160vh;
         max-height: 100vh;
@@ -147,19 +147,18 @@ gap: 200px;}
 
     .LpOurImage {
         position: relative;
-        width: 40vh;
-        height: 40vh;
+        width: 70vw;
+        height: 76%;
         left: 0;
         top: 0;
         z-index: 1;
     }
 
     .LpBackgroundUs {
-        position: relative;
-        width: 52vw;
-        height: 40vh;
-        left: 20%;
-        bottom: 95%;
+        width: 51vw;
+        height: 34%;
+        left: 22%;
+        top: 58%;
     }
 
     #layoutCarrosel{
@@ -184,22 +183,19 @@ gap: 200px;}
 
 /*Tablet Query*/
 @media (min-width: 1px) and (max-width: 900px) {
-
     .carroselTopContainer {
       
     flex-direction: column;
-justify-content: flex-start;
-margin-bottom: 500px;
-margin-top: 180px;}
+    justify-content: flex-start;
+    margin-bottom: 500px;
+    margin-top: 180px;}
 
     .LPNavbar .btnLandingPage {
         display: none;
     }
 
     .LPBanner .btnLandingPage {
-        width: 25vw;
-        height: 7vh;
-        padding: 1%;
+        padding: 2% 4%;
         margin-top: 3vh;
         font-size: .8rem;
     }
@@ -242,19 +238,18 @@ margin-top: 180px;}
 
     .LpOurImage {
         position: relative;
-        width: 75vw;
-        height: 85vh;
+        width: 75%;
+        height: 95%;
         left: 0;
         top: 0;
         z-index: 1;
     }
 
     .LpBackgroundUs {
-        position: relative;
-        width: 62.5vw;
-        height: 85vh;
-        left: 30%;
-        bottom: 95%;
+        width: 48.5%;
+        height: 42%;
+        left: 44%;
+        top: 54%;
     }
 
     #noviLogoUs {

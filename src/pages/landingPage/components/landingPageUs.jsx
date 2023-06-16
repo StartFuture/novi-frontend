@@ -11,11 +11,12 @@ function LandingPageUs(){
                 <h4 className="h4AboutUs">Quem somos nós</h4>
                 <h1 id="noviLogoUs"> Noví </h1>
                 <p className="descriptionUs">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur et arcu a ullamcorper.
-                    Morbi fringilla purus quis eros pharetra sollicitudin et in quam. Nam quis rhoncus ipsum, ac varius nibh.
-                    In mollis mi odio, vel tristique justo imperdiet non. Ut blandit sapien eu elit posuere pellentesque.
-                    Suspendisse interdum dui a placerat condimentum. Curabitur consequat rutrum egestas. Nulla molestie pharetra
-                    odio, et molestie elit blandit in.
+                Somos uma empresa recém-criada que se dedica ao setor de viagens e turismo. Nosso objetivo é posicionar-nos
+                entre as grandes empresas que oferecem pacotes de viagens.
+                Estamos desenvolvendo um site que se concentra em oferecer ao consumidor uma experiência personalizada para
+                cada perfil de cliente. Com nossa ferramenta, os clientes podem personalizar sua experiência de viagem de
+                acordo com suas preferências, o que garante que cada viagem seja única e perfeita para cada indivíduo.
+
                 </p>
             </div>
                 <img className="LpOurImage" src={LpUs} alt="Nossa Imagem"/>

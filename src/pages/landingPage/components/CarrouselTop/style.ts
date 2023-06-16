@@ -13,7 +13,6 @@ height: auto;
   margin: 0 auto;
   overflow: hidden;
   max-width: 705px;
-  
   }
 
 .slideshowSlider {
