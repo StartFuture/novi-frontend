@@ -20,6 +20,8 @@ export const MainDiv = styled.div`
    flex-direction: column;
    align-items: flex-start;
    margin-top: 55px;
+   margin-left: 30%;
+   min-height: 100vh;
   
 
    .pStyle { font-family: ${props => props.theme.fonts.fontMontserrat};
@@ -31,11 +33,13 @@ export const MainDiv = styled.div`
    font-weight: 700;}
    
    @media (max-width: 900px) {
-width: auto;
-height: auto;
-display: flex;
-justify-content: center;
-align-items: center;
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 55px;
+      margin-left: 0px;
 
 p {align-self: flex-start;
 margin-left: 20px;}
@@ -45,8 +49,8 @@ margin-left: 20px;}
 
 
 export const SecondaryDiv = styled.div`
-  height: 567px;
-  width: 1240px;
+  height: 52vh;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,8 +74,11 @@ export const SecondaryDiv = styled.div`
    font-size: 16px;
    font-weight: 500;}
    
-   @media (max-width: 900px) {border: none;
-   width: auto;}
+   @media (max-width: 900px) {
+    border: none;
+    width: auto;
+    padding: 10%;
+  }
    `
 
 
@@ -79,8 +86,8 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
-  width: 660px;
+  height: 5vh;
+  width: 34vw;
   text-align: center;
   border: none;
   border-radius: 8px;

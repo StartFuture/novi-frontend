@@ -13,17 +13,19 @@ export const LayoutGrid = styled.div`
     display: flex;
     gap: 50px;
     background-color: #F6F6F6;
+    min-height: 100vh;
 
 `
 
 
 export const MainDiv = styled.div`
    height: auto;
-   width: 100%;
+   width: 80%;
    display: flex;
    flex-direction: column;
-   align-items: flex-start;
-  background-color: #F6F6F6;
+   align-items: flex-end;
+   background-color: #F6F6F6;
+   margin-left: 10%;
 
    .lowerDiv {display: flex;
     width: 81%;
@@ -772,7 +774,7 @@ color: white;}
       @media (max-width: 900px)
       { display:inline-grid;
         width: 342px;
-        margin-left: 60px;
+        margin-left: 0px;
       }
       
       `

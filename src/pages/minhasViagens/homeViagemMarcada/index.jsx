@@ -406,8 +406,6 @@ function HomeViagemMarcada() {
 
                     </PlaceInfo2>
                     <OldTravels>
-
-
                         <CardOldTravel>
                             <div className="boxContent">
                                 <div className="firstText">

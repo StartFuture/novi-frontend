@@ -11,6 +11,8 @@ import { AiFillCalendar } from "react-icons/ai"
 import { FaUser } from "react-icons/fa"
 import LocalMap from "../../../pages/homePage/assets/images/map.svg"
 
+import { isMobile } from 'react-device-detect';
+
 import { Link } from "react-router-dom";
 
 import { getUserInfo } from "services/Api";
@@ -40,10 +42,21 @@ function HomeSemViagemMarcada() {
                     </AlignNewTravel>
                     <SecondaryDiv>
 
-
-                        <ImAirplane className="airplaneIcon"></ImAirplane>
-                        <h2><b>No momento não tem nenhuma viagem marcada :(</b></h2>
-                        <p>Bora viajar?</p>
+                    {
+                        isMobile ?
+                        <>
+                            <ImAirplane className="airplaneIcon"></ImAirplane>
+                            <h2><b>Vamos achar a viagem certa para você !</b></h2>
+                            <p>Com a entrevista do seu perfil vamos mapear a viagem perfeita.</p>
+                        </>
+                    :
+                        <>
+                            <ImAirplane className="airplaneIcon"></ImAirplane>
+                            <h2><b>No momento não tem nenhuma viagem marcada :(</b></h2>
+                            <p>Bora viajar?</p>
+                        </>
+                    }
+                    
 
 
                     </SecondaryDiv>
