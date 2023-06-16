@@ -42,11 +42,21 @@ height: 115px;
       font-size: 42px;
     color: ${props => props.theme.colors.primaryColor};}
 
-    @media (min-width: 1px) and (max-width:768px) {
+    @media (min-width: 1px) and (max-width:900px) {
       margin-left: 20vh;
       width: 155px;
       margin-left: 155px;
 
+
+
+      .BorderColor h2 {font-family: ${props => props.theme.fonts.fontMontserrat};
+      font-weight: 700;
+      font-size: 20px;
+    color: ${props => props.theme.colors.primaryColor};}
     }
+
+    .divTextAlign p {font-family: ${props => props.theme.fonts.fontMontserrat};
+      font-weight: 400;
+      font-size: 14px;}
 
     `
