@@ -1,14 +1,27 @@
 import styled from "styled-components";
 
+
 export const MainContainer = styled.div`
-    background: url("img/termsBg.png") no-repeat left;
-    background-size: fill;
     min-height: 100vh;
     display: flex;
 
     @media screen and (max-width: 1112px) {
-        background-image: none;
         margin: 0 auto;
+    }
+`;
+export const MainImage = styled.div`
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: url("img/termsBg.png") no-repeat left;
+    background-size: fill;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+
+    @media screen and (max-width: 1300px) {
+        display: none;
     }
 `;
 

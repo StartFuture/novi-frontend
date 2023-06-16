@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
+position: fixed;
+z-index: 10;
   display: flex;
   height: 22px;
   text-align: center;
