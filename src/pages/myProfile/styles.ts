@@ -36,7 +36,7 @@ export const MainContainer = styled.div`
     }
 
     .menuContent {
-      display: none;
+      // display: none;
     }
 
     .mobileContent {
@@ -113,27 +113,10 @@ export const Content = styled.div`
   }
 
   @media screen and (max-width: 1030px) {
-    width: 100%;
-    padding-top: 5vh;
+    margin-left: 20%;
+  }
 
-    .form {
-      margin: auto 6.4%;
-    }
-
-    .btnContainer {
-      margin-bottom: 2.2%;
-    }
-
-    .personalInfoCouple {
-      display: block;
-    }
-
-    .addressInfoCouple1 {
-      display: block;
-    }
-
-    .addressInfoCouple2 {
-      display: block;
-    }
+  @media screen and (max-width: 900px) {
+    margin-left: 0px;
   }
 `;
