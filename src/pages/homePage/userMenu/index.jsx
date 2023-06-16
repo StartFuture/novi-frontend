@@ -36,13 +36,13 @@ function UserMenu(props){
                 isHome > 0 ?
                 <>
                     <Container>
-                        <MdDashboard className="icon" style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#FFF"}}/>
+                        <MdDashboard className="icon" style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
                         <Link to='/home' className="link">
                             <p>Home</p>
                         </Link>
                     </Container>
                     <SelectedContainer>
-                        <AiFillHeart style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
+                        <AiFillHeart style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#FFF"}}/>
                         {
                             haveTrip > 0 ? 
                             <Link to='/home-booked-travel' className="link">
@@ -55,7 +55,7 @@ function UserMenu(props){
                         }
                     </SelectedContainer>
                 </>
-            :
+            : isHome === 0 ?
             <>
                 <SelectedContainer>
                     <MdDashboard className="icon" style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#FFF"}}/>
@@ -76,6 +76,28 @@ function UserMenu(props){
                         </Link>
                     }
                 </Container>
+                </>
+                : 
+                <>
+                    <Container>
+                        <MdDashboard className="icon" style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
+                        <Link to='/home' className="link">
+                            <p>Home</p>
+                        </Link>
+                    </Container>
+                    <Container>
+                        <AiFillHeart style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
+                        {
+                            haveTrip > 0 ? 
+                            <Link to='/home-booked-travel' className="link">
+                                <p>Minhas viagens</p>
+                            </Link>
+                            :
+                            <Link to='/home-without-travel' className="link">
+                                <p>Minhas viagens</p>
+                            </Link>
+                        }
+                    </Container>
                 </>
             }
             <div className="lastContainer"/>
