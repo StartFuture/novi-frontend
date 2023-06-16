@@ -99,13 +99,18 @@ export const Button = styled.button`
   cursor: pointer;
   margin-top: 20px;
   
-  @media (max-width: 900px) {width: 350px;
+  @media (max-width: 900px) {
+    // width: 350px; margin-top: 5vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 
-h2 {text-align: center;}
+    h2 {text-align: center;}
 
-p {text-align: center;}
+    p {text-align: center;}
 
-}
+  }
   `
 
 

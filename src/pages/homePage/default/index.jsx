@@ -7,6 +7,8 @@ import UserMenuDesktop from "../userMenu/userMenuDesktop";
 
 import { getUserInfo } from "services/Api";
 
+import { Link } from "react-router-dom";
+
 
 function DefaultHome() {
 
@@ -34,7 +36,7 @@ function DefaultHome() {
 
             <p>Com a entrevista do seu perfil vamos mapear a viagem perfeita.</p>
 
-            <Button>Quero Viajar</Button>
+            <Link to='/new-trip' className="link"><Button>Quero Viajar</Button></Link>
 
 
           </SecondaryDiv>

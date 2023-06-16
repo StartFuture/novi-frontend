@@ -112,6 +112,9 @@ export const MyProfile = styled.div`
       border:0;
       outline:0;
       width: 85%;
+      background-color: #fff;
+      padding: 0;
+      height: 25px;
    }
 
    .verticalAlign p {

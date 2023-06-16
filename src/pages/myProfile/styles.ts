@@ -114,6 +114,7 @@ export const Content = styled.div`
 
   @media screen and (max-width: 1030px) {
     width: 100%;
+    padding-top: 5vh;
 
     .form {
       margin: auto 6.4%;

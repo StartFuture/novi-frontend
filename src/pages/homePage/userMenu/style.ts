@@ -116,6 +116,7 @@ export const MyProfile = styled.div`
       font-weight: 500;
       border:0;
       outline:0;
+      background-color: #fff;
    }
 
    .verticalAlign p {
