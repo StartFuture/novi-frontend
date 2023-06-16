@@ -45,6 +45,10 @@ function NewTrip(){
         }
     });
 
+    const handleBack = (e) => {
+        navigate('/home');
+      }
+
     const handleSubmit = (e) => {
 
         e.preventDefault();
@@ -312,6 +316,7 @@ function NewTrip(){
                         className="btnPrevious"
                         type="submit"
                         value="Voltar"
+                        onClick={handleBack}
                     />
                 </div>
             </form>
