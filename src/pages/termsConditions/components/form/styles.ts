@@ -4,6 +4,7 @@ export const FormStyled = styled.form`
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    margin-bottom: 100px;
     
     .termsConditions {
         // height: 100%;
@@ -76,10 +77,19 @@ export const FormStyled = styled.form`
 
     @media screen and (max-width: 1112px){
         width: 500px;
+
+
+        .formInputs {
+        margin-top: -210%;
+    }
     }
 
     @media screen and (max-width: 1024px) {
         width: 340px;  
         font-size: 12px;
+
+        .formInputs {
+        margin-top: -210%;
+    }
     }
 `;
