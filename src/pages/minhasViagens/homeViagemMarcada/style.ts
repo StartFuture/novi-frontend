@@ -252,9 +252,9 @@ export const Calendar = styled.div`
   padding:20px;
   border-radius:8px;
   box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
- height: 515px;
- width: 385px;
- margin-top: 20px;
+  height: 515px;
+  width: 385px;
+  margin-top: 20px;
   
 
 

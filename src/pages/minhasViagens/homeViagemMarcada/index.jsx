@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { LayoutGrid, PageGrid, MainDiv, SecondaryDiv, Button, Wrapper, AlignNewTravel, InfoTravel, InfoTravelMobile, Calendar, CalendarMobile, OldTravels, CardOldTravel, CurrentTravel, CardCurrentTravel, PlaceInfo, PlaceInfo2 } from "./style"
 import UserMenu from "../../homePage/userMenu";
 import MenuMobile from "../../homePage/components/headerMenuMobile"
@@ -13,10 +13,20 @@ import LocalMap from "../../../pages/homePage/assets/images/map.svg"
 
 import { Link } from "react-router-dom";
 
+import { getUserInfo } from "services/Api";
+
+
 function HomeViagemMarcada() {
 
-    const user = JSON.parse(sessionStorage.getItem("user"));
-    const name = user.name_user.split(' ')[0];
+    const [userInfo, setUserInfo] = useState([]);
+
+    useEffect(() => {
+        getUserInfo()
+          .then((res) => {setUserInfo(res.data.user)})
+          .catch((err) => {
+            console.log(err)
+          });
+    }, []);
 
     return (
         <PageGrid>
@@ -25,7 +35,7 @@ function HomeViagemMarcada() {
                 <UserMenuDesktop haveTrip="1" isHome="1"></UserMenuDesktop>
                 <MainDiv>
                     <AlignNewTravel>
-                        <p className="pStyle">Fala <b>{name}</b>, tudo pronto para sua viagem?</p>
+                        <p className="pStyle">Fala <b>{userInfo.name_user}</b>, tudo pronto para sua viagem?</p>
                         <Link to='/new-trip' className="link"><Button>Nova viagem</Button></Link>
                     </AlignNewTravel>
 
