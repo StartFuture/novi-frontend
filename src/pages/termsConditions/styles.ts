@@ -10,10 +10,10 @@ export const MainContainer = styled.div`
     }
 `;
 export const MainImage = styled.div`
-position: fixed;
-left: 0;
-top: 0;
-z-index: -1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
     background: url("img/termsBg.png") no-repeat left;
     background-size: fill;
     min-height: 100vh;
