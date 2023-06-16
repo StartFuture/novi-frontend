@@ -183,7 +183,7 @@ gap: 200px;}
 }
 
 /*Tablet Query*/
-@media (min-width: 1px) and (max-width:768px) {
+@media (min-width: 1px) and (max-width: 900px) {
 
     .carroselTopContainer {
       
