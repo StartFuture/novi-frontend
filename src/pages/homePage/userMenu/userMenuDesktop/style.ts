@@ -121,7 +121,8 @@ export const MyProfile = styled.div`
       font-size: 1rem;
       font-weight: 400;
       color: #000;
-      width: 35%;
+      max-width: 100%;
+      max-height: 100%;
    }
    
    @media (max-width:900px) {width:100vh;
