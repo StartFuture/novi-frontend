@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { NoviLogo } from "../../components/noviLogo";
 import StyledButton from "../../components/button/index";
 
 import { MainContainer, BackgroundImg } from "./styles";
+import { getUserInfo } from "services/Api";
 
 const btnHome = {
   text: "Prosseguir",

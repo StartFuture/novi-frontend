@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   FilterStartImage,
@@ -9,6 +9,7 @@ import {
   InterviewStartText,
 } from "./styles.ts";
 import StyledButton from "../../components/button/index.jsx";
+import { getUserInfo } from "services/Api.jsx";
 
 const btnYes = {
   text: "Sim",
