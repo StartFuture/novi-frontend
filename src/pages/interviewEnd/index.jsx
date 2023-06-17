@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { NoviLogo } from "../../components/noviLogo";
 import StyledButton from "../../components/button/index";
 
 import { MainContainer, BackgroundImg } from "./styles";
+import { getUserInfo } from "services/Api";
 
 const btnHome = {
   text: "Prosseguir",
@@ -12,8 +13,17 @@ const btnHome = {
 
 export default function InterviewEnd() {
 
-  const user = JSON.parse(sessionStorage.getItem("user"));
-  const name = user.name_user.split(' ')[0];
+  const [userInfo, setUserInfo] = useState([]);
+
+  useEffect(() => {
+    getUserInfo()
+      .then((res) => {
+        setUserInfo(res.data.user)
+      })
+      .catch((err) => {
+        console.log(err)
+      });
+  }, []);
 
   return (
     <MainContainer>
@@ -21,7 +31,7 @@ export default function InterviewEnd() {
       <div className="content">
         <NoviLogo />
         <h2>
-          <strong>{name}</strong>, obrigado pela entrevista !
+          <strong>{userInfo.name_user}</strong>, obrigado pela entrevista !
         </h2>
         <p>Vamos escolher as melhores viagens pra você !</p>
         <StyledButton variant="primary" link={btnHome.link} text={btnHome.text} />

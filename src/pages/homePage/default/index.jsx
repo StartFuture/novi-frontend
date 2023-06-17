@@ -17,7 +17,9 @@ function DefaultHome() {
 
   useEffect(() => {
     getUserInfo()
-      .then((res) => {setUserInfo(res.data.user)})
+      .then((res) => {
+        setUserInfo(res.data.user)
+      })
       .catch((err) => {
         console.log(err)
       });

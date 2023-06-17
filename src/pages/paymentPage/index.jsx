@@ -33,6 +33,8 @@ export default function PaymentPage() {
     setShowCardInfos(false);
   };
 
+  let trip = JSON.parse(sessionStorage.getItem("trip"))
+
   return (
     <MainContainer>
       <LeftContent>
@@ -50,7 +52,7 @@ export default function PaymentPage() {
                     <h4>
                       <BsFillPersonFill />
                     </h4>
-                    <p>2</p>
+                    <p>{trip.numberPeople}</p>
                     <h4>
                       <BsFillCalendarFill />
                     </h4>

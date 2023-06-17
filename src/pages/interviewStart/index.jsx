@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   FilterStartImage,
@@ -9,6 +9,7 @@ import {
   InterviewStartText,
 } from "./styles.ts";
 import StyledButton from "../../components/button/index.jsx";
+import { getUserInfo } from "services/Api.jsx";
 
 const btnYes = {
   text: "Sim",
@@ -22,8 +23,17 @@ const btnLater = {
 
 function IntertviewStart() {
 
-  const user = JSON.parse(sessionStorage.getItem("user"));
-  const name = user.name_user.split(' ')[0];
+  const [userInfo, setUserInfo] = useState([]);
+
+  useEffect(() => {
+    getUserInfo()
+      .then((res) => {
+        setUserInfo(res.data.user)
+      })
+      .catch((err) => {
+        console.log(err)
+      });
+  }, []);
 
   return (
     <InterviewStart>
@@ -32,7 +42,7 @@ function IntertviewStart() {
       </FilterStartImage>
       <InterviewStartWelcome>
         <InterviewStartQuestion>
-          Vamos iniciar o mapeamento do seu perfil, <strong>{name} ?</strong>
+          Vamos iniciar o mapeamento do seu perfil, <strong>{userInfo.name_user} ?</strong>
         </InterviewStartQuestion>
         <InterviewStartText>
           O mapeamento é importante para conhecermos melhor você, assim

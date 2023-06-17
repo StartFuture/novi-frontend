@@ -6,7 +6,7 @@ export const UserMenuLeft = styled.div`
    flex-direction: column;
    align-items: flex-start;
    width: 20vw;
-   height: 100vh;
+   max-height: 100vh;
    padding-left: 55px;
    background-color: #FFF;
    position: fixed;
@@ -28,7 +28,7 @@ export const UserMenuLeft = styled.div`
    }
 
    .lastContainer{
-      margin-top: 44vh;
+      height: 44vh;
    }
 
    .horizontalLine::after {
@@ -121,7 +121,8 @@ export const MyProfile = styled.div`
       font-size: 1rem;
       font-weight: 400;
       color: #000;
-      width: 35%;
+      max-width: 100%;
+      max-height: 100%;
    }
    
    @media (max-width:900px) {width:100vh;

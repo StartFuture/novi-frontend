@@ -28,6 +28,8 @@ function HomeViagemMarcada() {
           });
     }, []);
 
+    let trip = JSON.parse(sessionStorage.getItem("trip"))
+
     return (
         <PageGrid>
             <LayoutGrid>
@@ -49,7 +51,7 @@ function HomeViagemMarcada() {
                         <div className="boxInfo">
                             <div className="users">
                                 <FaUser className=".upUserIcon"></FaUser>
-                                <p>2</p>
+                                <p>{trip.numberPeople}</p>
                             </div>
                             <div className="days">
                                 <AiFillCalendar className=".upCalendarIcon"></AiFillCalendar>
@@ -62,7 +64,7 @@ function HomeViagemMarcada() {
                         <CardCurrentTravel>
                             <div className="secondText">
                                 <h2>Rio de Janeiro</h2>
-                                <p>viagem para 2 pessoas</p>
+                                <p>viagem para {trip.numberPeople} pessoas</p>
                             </div>
 
                             <div className="firstText">

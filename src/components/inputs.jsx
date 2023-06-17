@@ -28,11 +28,11 @@ export default function Inputs(props) {
       cepCheck(cep).then((ress) => {
         setDefaultAdress(ress.data);
         setAddressInfo({
-          ...addressInfo,  
+          ...addressInfo,
           state_user: ress.data.uf,
           city: ress.data.localidade,
-          address_user: ress.data.logradouro
-        })
+          address_user: ress.data.logradouro,
+        });
       });
     }
   }, [cep]);
@@ -122,7 +122,7 @@ export default function Inputs(props) {
   };
 
   return (
-    <>
+    <div className="mainContent">
       <div className={styles["layout-grid"]}>
         <div className={styles["forms-align-logo"]}>
           <img src={LogoNovi} alt="Logo" />
@@ -192,7 +192,6 @@ export default function Inputs(props) {
                 />
                 <small>{phoneError}</small>
                 <br />
-                <hr></hr>
               </div>
             </div>
 
@@ -267,7 +266,6 @@ export default function Inputs(props) {
 
             <div className={styles["third-block-inputs"]}>
               <div className={styles["first-section"]}>
-                <hr></hr>
                 <label>Senha</label>
                 <input
                   required
@@ -298,6 +296,6 @@ export default function Inputs(props) {
           element={<TermsConditionsPage />}
         ></Route>
       </Routes>
-    </>
+    </div>
   );
 }

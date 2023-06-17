@@ -34,7 +34,7 @@ function ResultTrip() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   const handleBack = (e) => {
-    navigate('/new-trip');
+    navigate('/interview');
   }
 
   const handleSubmit = (e) => {
@@ -76,6 +76,8 @@ function ResultTrip() {
       flexDirection: 'column',
     },
   };
+
+  let trip = JSON.parse(sessionStorage.getItem("trip"))
 
   return (
     <div>
@@ -137,7 +139,7 @@ function ResultTrip() {
             <div className="bannerInfo">
               <div className="iconsDescription">
                 <FaUserAlt className="peopleIcon" />
-                <small>2</small>
+                <small>{trip.numberPeople}</small>
                 <FaCalendarAlt className="calendarIcon" />
                 <small>14 dias</small>
               </div>
@@ -151,7 +153,7 @@ function ResultTrip() {
             <div className="horizontalLine"></div>
             <div className="iconsDescription">
               <FaUserAlt className="peopleIcon" />
-              <small>2</small>
+              <small>{trip.numberPeople}</small>
               <FaCalendarAlt className="calendarIcon" />
               <small>14 dias</small>
             </div>

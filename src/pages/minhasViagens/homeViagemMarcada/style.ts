@@ -526,6 +526,16 @@ export const CardOldTravel = styled.div`
       margin-top: 7px;
       margin-left: 7px;
       }
+      
+    .date p {
+      margin-left: -1vw;
+      margin-top: -4vh;
+    }
+
+
+    .date .calendarIcon {
+      display: none;
+    }
     }
       `
 

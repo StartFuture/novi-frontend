@@ -539,6 +539,13 @@ color: white;}
       margin-left: 7px;
       }
 
-      .date {margin-top: 10px;}
-    }
+      .date p {
+        margin-left: -1vw;
+        margin-top: -4vh;
+      }
+  
+  
+      .date .calendarIcon {
+        display: none;
+      }
       `

@@ -5,7 +5,6 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { IoCopyOutline } from "react-icons/io5";
 
 export default function Pix(props) {
-  
   const getPixCode = () => {
     var pixCode = {
       value: "39405080812030491820",
@@ -13,13 +12,11 @@ export default function Pix(props) {
     };
 
     return pixCode;
-  }
+  };
 
   const [pixCode, setPixCode] = useState(getPixCode());
 
-  props.setDisableBtn(
-    pixCode.value == "" ? true : false 
-  );
+  props.setDisableBtn(pixCode.value == "" ? true : false);
 
   return (
     <MainContainer>
@@ -29,6 +26,7 @@ export default function Pix(props) {
         <div className="copyPaste">
           <div>
             <input
+              disabled
               type="text"
               value={pixCode.value}
               onChange={({ target: { value } }) =>

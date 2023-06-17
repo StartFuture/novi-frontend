@@ -4,7 +4,7 @@ export const api = axios.create({
   baseURL: "https://api.novi.startfuture.com.br",
 });
 
-export const authLogin = async (email, password_user) => {
+export const authLogin = (email, password_user) => {
   const params = new URLSearchParams();
   params.append("username", email);
   params.append("password", password_user);
