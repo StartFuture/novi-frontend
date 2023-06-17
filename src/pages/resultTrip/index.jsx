@@ -77,6 +77,8 @@ function ResultTrip() {
     },
   };
 
+  let trip = JSON.parse(sessionStorage.getItem("trip"))
+
   return (
     <div>
       <MainContainer>
@@ -137,7 +139,7 @@ function ResultTrip() {
             <div className="bannerInfo">
               <div className="iconsDescription">
                 <FaUserAlt className="peopleIcon" />
-                <small>2</small>
+                <small>{trip.numberPeople}</small>
                 <FaCalendarAlt className="calendarIcon" />
                 <small>14 dias</small>
               </div>
@@ -151,7 +153,7 @@ function ResultTrip() {
             <div className="horizontalLine"></div>
             <div className="iconsDescription">
               <FaUserAlt className="peopleIcon" />
-              <small>2</small>
+              <small>{trip.numberPeople}</small>
               <FaCalendarAlt className="calendarIcon" />
               <small>14 dias</small>
             </div>
