@@ -9,6 +9,7 @@ export const UserMenuLeft = styled.div`
    height: 100vh;
    padding-left: 55px;
    background-color: #FFF;
+   position: fixed;
    
 
    .LogoNovi h1 {
@@ -106,16 +107,21 @@ export const MyProfile = styled.div`
    }
 
    .verticalAlign input{
-      font-size: 18px;
+      font-size: 1.2rem;
       font-weight: 500;
       border:0;
       outline:0;
+      width: 85%;
+      background-color: #fff;
+      padding: 0;
+      height: 25px;
    }
 
    .verticalAlign p {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 400;
       color: #000;
+      width: 35%;
    }
    
    @media (max-width:900px) {width:100vh;

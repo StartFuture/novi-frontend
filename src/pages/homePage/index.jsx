@@ -6,14 +6,11 @@ import LoggedHome from "./loggedHome";
 
 function Home() {
 
-  
-
-    const [travel, setTravel] = useState(1);
-  
-    
+    const hasTrip = localStorage.getItem("hasTrip");
+    // const [travel, setTravel] = useState(1);
   
     const HomeDisplay = () => {
-      if (travel === 0) {
+      if (hasTrip === '0') {
       return <DefaultHome></DefaultHome>;
       } else {
       return <LoggedHome></LoggedHome>;

@@ -36,7 +36,7 @@ export const MainContainer = styled.div`
     }
 
     .menuContent {
-      display: none;
+      // display: none;
     }
 
     .mobileContent {
@@ -48,6 +48,7 @@ export const MainContainer = styled.div`
 export const Content = styled.div`
   background-color: #f6f6f6;
   display: flex;
+  z-index: 1;
 
   .form {
     width: 100%;
@@ -86,7 +87,7 @@ export const Content = styled.div`
 
   .addressInfoCouple2 {
     display: grid;
-    grid-template-columns: 57.3% auto;
+    grid-template-columns: 50% auto;
     gap: 8px;
     align-items: center;
   }
@@ -113,26 +114,17 @@ export const Content = styled.div`
   }
 
   @media screen and (max-width: 1030px) {
-    width: 100%;
+    margin-left: 20%;
+  }
+
+  @media screen and (max-width: 900px) {
+    // width: 100%;
+    // paddig: 2%;
+    margin-left: 0px;
 
     .form {
-      margin: auto 6.4%;
-    }
-
-    .btnContainer {
-      margin-bottom: 2.2%;
-    }
-
-    .personalInfoCouple {
-      display: block;
-    }
-
-    .addressInfoCouple1 {
-      display: block;
-    }
-
-    .addressInfoCouple2 {
-      display: block;
+      width: 100%;
+      margin: 5vh 5vw 0px;
     }
   }
 `;

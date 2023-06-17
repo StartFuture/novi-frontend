@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Content, MainContainer } from "./styles";
-import UserMenu from "pages/homePage/userMenu";
 import StyledButton from "../../components/button";
 import { useNavigate } from "react-router-dom";
 import MenuMobile from "pages/homePage/components/headerMenuMobile";
@@ -44,7 +43,8 @@ export default function MyProfile() {
     <MainContainer>
       <div className="container">
         <div className="menuContent">
-          <UserMenu />
+        <MenuMobile haveTrip="0" isHome="-1"></MenuMobile>
+        <UserMenuDesktop haveTrip="0" isHome="-1"></UserMenuDesktop>
         </div>
         <Content>
           <form action="" className="form">

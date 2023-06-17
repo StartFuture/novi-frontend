@@ -27,7 +27,7 @@ function LoadingTrip(){
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
-        }, 5000)
+        }, 3000)
         // api.post("/user/user", form_values)
         // .then(
         //     setLoading(false)

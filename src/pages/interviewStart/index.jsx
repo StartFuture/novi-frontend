@@ -21,6 +21,10 @@ const btnLater = {
 };
 
 function IntertviewStart() {
+
+  const user = JSON.parse(sessionStorage.getItem("user"));
+  const name = user.name_user.split(' ')[0];
+
   return (
     <InterviewStart>
       <FilterStartImage>
@@ -28,7 +32,7 @@ function IntertviewStart() {
       </FilterStartImage>
       <InterviewStartWelcome>
         <InterviewStartQuestion>
-          Vamos iniciar o mapeamento do seu perfil, <strong>*Nome* ?</strong>
+          Vamos iniciar o mapeamento do seu perfil, <strong>{name} ?</strong>
         </InterviewStartQuestion>
         <InterviewStartText>
           O mapeamento é importante para conhecermos melhor você, assim
