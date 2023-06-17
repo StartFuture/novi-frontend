@@ -114,12 +114,12 @@ margin-right: 25px;}
    color: ${props => props.theme.colors.primaryColor};}
 
    @media (max-width: 900px) {
-    width: 65%;
+    width: 100%;
     margin-top: 50px;
     background-color: white;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 28px;
+    margin-left: 0px;
     height: 175px;
     justify-content: flex-start;
     gap: 15px;
@@ -210,8 +210,9 @@ color: black;}
   align-items: center;
   justify-content: center;
 height: 165px;
-margin-left: 30px;
+margin-left: 0px;
 gap: 18px;
+width: 100%;
 
 .daysCount {display: flex;
 flex-direction: column;
@@ -330,6 +331,8 @@ font-size: 32px;}
 
 @media (max-width: 900px)
 {display: flex;
+  width: 100%;
+  // padding: 0px 5%;
   
   .usersDiv {
     border-left: none;
@@ -420,6 +423,7 @@ font-size: 16px;
 {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 10px;
   background-color: rgb(246, 246, 246);
   align-items: center;
@@ -461,11 +465,11 @@ export const AlignBoxMobile = styled.div`
 display: none;
 
 @media (max-width: 900px)
-{ width: 70%;
+{ width: 80vw;
   display: flex;
   flex-direction: row;
   gap: 15px;
-  margin-top: 10px;
+  margin-top: 5vh;
 }
 
 
