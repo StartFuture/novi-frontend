@@ -58,7 +58,7 @@ const LoginPage = () => {
     }
   };
 
-  try {login}
+  
 
   //HTML structure
   return (
