@@ -113,7 +113,7 @@ const LoginPage = () => {
         </div>
         <button id="btnForgotPassword">Esqueci minha senha</button>
         <input className="loginSubmit" type="submit" value="Entrar" />
-        <Link to='/registro' className="link">
+        <Link to='/register' className="link">
         <input
           className="loginNewAccountSubmit"
           type="submit"
