@@ -33,7 +33,7 @@ padding-left: 20px;
 display: flex;
 justify-content: flex-start;
 align-items: center;
-width: 400px;
+width: 100%;
 height: 115px;
 }
 
@@ -51,7 +51,7 @@ height: 115px;
 
       .BorderColor h2 {font-family: ${props => props.theme.fonts.fontMontserrat};
       font-weight: 700;
-      font-size: 20px;
+      font-size: 24px;
     color: ${props => props.theme.colors.primaryColor};}
     }
 

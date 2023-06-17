@@ -1,12 +1,12 @@
 .background-image {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
 }
 
 .arrow-icon {
-    position: absolute;
+    position: fixed;
     top: 80px;
     left: 170px;
     z-index: 2;
@@ -18,9 +18,12 @@
 }
 
 .p-back-to-login {
-    position: absolute;
+    position: fixed;
     top: 80px;
     left: 210px;
     z-index: 3;
     color: white;
 }
+
+@media (max-width: 1100px)
+{.background-image {display: none;} }
