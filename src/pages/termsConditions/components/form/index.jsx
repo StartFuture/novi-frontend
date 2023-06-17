@@ -56,7 +56,7 @@ export default function Form() {
       console.log("error: " + err);
     });
 
-    navigate("/");
+    navigate("/interview-start");
   };
 
   return (
