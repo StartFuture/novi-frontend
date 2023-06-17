@@ -12,10 +12,9 @@ export const Container = styled.div`
 `;
 
 export const LeftContainer = styled.div`
-  min-width: 25%;
+  min-width: 30%;
   background-color: ${(props) => props.theme.colors.primaryColor};
-  min-height: 100%;
-  height: 100%;
+  height: auto;
   @media screen and (max-width: 1100px) {
     display: none;
   }

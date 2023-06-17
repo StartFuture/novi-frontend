@@ -312,7 +312,7 @@ function NewTrip(){
                     <div className="displayFlexColumn">
                         <h4>Entrevista {userInfo.name_user}</h4>
                         <p>Para pesquisar a melhor viagem, levamos em consideração a sua entrevista de perfil</p>
-                        <Link to='/profile' className="link">
+                        <Link to='/interview' className="link">
                             <a>Editar Perfil</a>
                         </Link>
                     </div>

@@ -43,8 +43,12 @@ export const DivTextFather = styled.div`
   }
 
   @media (min-width: 1px) and (max-width: 768px) {
-    margin-left: 20vh;
-    width: 155px;
-    margin-left: 155px;
+    .divTextAlign {
+      width: inherit;
+    }
+  }
+
+  @media (min-width: 1px) and (max-width: 768px) {
+    margin-left: 10%;
   }
 `;

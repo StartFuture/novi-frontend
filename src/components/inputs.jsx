@@ -192,7 +192,6 @@ export default function Inputs(props) {
                 />
                 <small>{phoneError}</small>
                 <br />
-                <hr></hr>
               </div>
             </div>
 
@@ -267,7 +266,6 @@ export default function Inputs(props) {
 
             <div className={styles["third-block-inputs"]}>
               <div className={styles["first-section"]}>
-                <hr></hr>
                 <label>Senha</label>
                 <input
                   required
