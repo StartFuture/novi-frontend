@@ -31,9 +31,9 @@ const AppRoutes = () => {
         <AuthProvider>
             <Routes>
                 <Route exact path="/" element={<LandingPage />}></Route>
-                <Route exact path="/home" element={<Home/>}></Route>
-                <Route exact path="/home-booked-travel" element={<HomeViagemMarcada/>}></Route>
-                <Route exact path="/home-without-travel" element={<HomeSemViagemMarcada/>}></Route>
+                <Route exact path="/home" element={<Private><Home/></Private>}></Route>
+                <Route exact path="/home-booked-travel" element={<Private><HomeViagemMarcada/></Private>}></Route>
+                <Route exact path="/home-without-travel" element={<Private><HomeSemViagemMarcada/></Private>}></Route>
                 <Route exact path="/login" element={<Login />}></Route>
                 <Route exact path="/interview-start" element={<Private><InterviewStart /></Private>}></Route>
                 <Route exact path="/register" element={<Registro />}></Route>

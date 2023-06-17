@@ -25,6 +25,7 @@ export const MainDiv = styled.div`
    flex-direction: column;
    align-items: flex-start;
    margin-top: 55px;
+   margin-left: 30%;
    
 
    .boxImage {width: 81%;
@@ -44,12 +45,13 @@ height: 100%;}
    font-weight: 700;}
    
    @media (max-width: 900px) {
-width: auto;
-height: auto;
-display: flex;
-justify-content: center;
-align-items: center;
-
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 55px;
+    margin-left: 0px;
 
       
    }
@@ -97,10 +99,6 @@ gap: 8px;}
 
 @media (max-width: 900px)
 {
-
-
-
-
 }
 
 
@@ -142,7 +140,22 @@ display: flex;
 align-items: center;
 gap: 8px;}
 
-.days .upCalendarIcon {}`
+.days .upCalendarIcon {}
+
+@media (max-width: 900px)
+{
+  align-self: center;
+  font-size: .7rem;
+
+  .line {
+    border-top: 1px solid gray;
+    width: 25vw;
+    margin-top: 1.5vh;
+    margin-left: 5vw;
+  }
+}
+
+`
 
 export const SecondaryDiv = styled.div`
    height: 345px;

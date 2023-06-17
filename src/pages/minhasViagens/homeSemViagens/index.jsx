@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { LayoutGrid, PageGrid, MainDiv, SecondaryDiv, Button, Wrapper, AlignNewTravel, InfoTravel, Calendar, OldTravels, CardOldTravel, PlaceInfo, PlaceInfo2 } from "./style"
 import UserMenu from "../../homePage/userMenu";
 import MenuMobile from "../../homePage/components/headerMenuMobile"
@@ -11,32 +11,52 @@ import { AiFillCalendar } from "react-icons/ai"
 import { FaUser } from "react-icons/fa"
 import LocalMap from "../../../pages/homePage/assets/images/map.svg"
 
+import { isMobile } from 'react-device-detect';
+
+import { Link } from "react-router-dom";
+
+import { getUserInfo } from "services/Api";
 
 
 function HomeSemViagemMarcada() {
 
+    const [userInfo, setUserInfo] = useState([]);
 
-
-
+    useEffect(() => {
+        getUserInfo()
+        .then((res) => {setUserInfo(res.data.user)})
+        .catch((err) => {
+            console.log(err)
+        });
+    }, []);
 
     return (
-
-
         <PageGrid>
             <LayoutGrid>
-                <MenuMobile></MenuMobile>
-                <UserMenuDesktop></UserMenuDesktop>
+                <MenuMobile isHome="1"></MenuMobile>
+                <UserMenuDesktop isHome="1"></UserMenuDesktop>
                 <MainDiv>
                     <AlignNewTravel>
-                        <p className="pStyle">Fala <b> Marcelo </b>, Vamos viajar?</p>
-                        <Button>Nova viagem</Button>
+                        <p className="pStyle">Fala <b>{userInfo.name_user}</b>, Vamos viajar?</p>
+                        <Link to='/new-trip' className="link"><Button>Nova viagem</Button></Link>
                     </AlignNewTravel>
                     <SecondaryDiv>
 
-
-                        <ImAirplane className="airplaneIcon"></ImAirplane>
-                        <h2><b>No momento não tem nenhuma viagem marcada :(</b></h2>
-                        <p>Bora viajar?</p>
+                    {
+                        isMobile ?
+                        <>
+                            <ImAirplane className="airplaneIcon"></ImAirplane>
+                            <h2><b>Vamos achar a viagem certa para você !</b></h2>
+                            <p>Com a entrevista do seu perfil vamos mapear a viagem perfeita.</p>
+                        </>
+                    :
+                        <>
+                            <ImAirplane className="airplaneIcon"></ImAirplane>
+                            <h2><b>No momento não tem nenhuma viagem marcada :(</b></h2>
+                            <p>Bora viajar?</p>
+                        </>
+                    }
+                    
 
 
                     </SecondaryDiv>

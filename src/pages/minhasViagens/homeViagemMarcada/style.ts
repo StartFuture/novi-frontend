@@ -21,11 +21,10 @@ export const LayoutGrid = styled.div`
 export const MainDiv = styled.div`
     width: 100%;
     height: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   
-   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30%;
 
    .boxImage {width: 81%;
 height: 100%;}
@@ -47,6 +46,7 @@ height: 100%;}
 display: flex;
 justify-content: center;
 align-items: center;
+margin-left: 0px;
 
 .pStyle p {align-self: flex-start;
   font-size: 18px;
@@ -72,7 +72,7 @@ display: flex;
 gap: 13px;}
 
 .line {border-top: 1px solid gray;
-    width: 70%;
+    width: 33vw;
     margin-top: 15px;
 }
 
@@ -108,6 +108,7 @@ display: flex;
 flex-direction: row;
 gap: 10px;
 width: 85%;
+margin-top: 10%;
 
 .boxInfo{
 display: flex;
@@ -139,7 +140,22 @@ display: flex;
 align-items: center;
 gap: 8px;}
 
-.days .upCalendarIcon {}`
+.days .upCalendarIcon {}
+
+  
+  @media (max-width: 900px)
+  {
+    align-self: center;
+    font-size: .7rem;
+
+    .line {
+      border-top: 1px solid gray;
+      width: 25vw;
+      margin-top: 1.5vh;
+      margin-left: 5vw;
+    }
+  }
+`
 
 export const SecondaryDiv = styled.div`
    height: 567px;
@@ -252,9 +268,9 @@ export const Calendar = styled.div`
   padding:20px;
   border-radius:8px;
   box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
- height: 515px;
- width: 385px;
- margin-top: 20px;
+  height: 515px;
+  width: 385px;
+  margin-top: 20px;
   
 
 
@@ -523,7 +539,10 @@ export const CurrentTravel = styled.div`
       display: none;
       
       @media (max-width: 900px)
-      {display: flex;
+      {
+        display: flex;
+        margin-top: -10vh;
+        height: 40vh;
       }
       
       `
@@ -613,24 +632,28 @@ export const CardCurrentTravel = styled.div`
       
 
     @media (max-width: 900px)
-      {width: 65%;
+      {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 30px;
 
-
       .firstText {
-        width: 60%;
-    }
-
-    .boxContent {
-      margin-top: 7px;
-      margin-left: 7px;
+          margin-top: 5vh;
       }
-    
+
+      .firstText p{
+        width: 60%;
+      }
+
+      .boxContent {
+        margin-top: 7px;
+        margin-left: 7px;
+        }
+      
       .date {
         display: none;
-    }
+      }
     
     }
       
@@ -785,7 +808,7 @@ export const CalendarMobile = styled.div`
       @media (max-width: 900px)
       { display:inline-grid;
         width: 342px;
-        margin-left: 60px;
+        margin-left: 20px;
       }
       
       `

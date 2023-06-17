@@ -38,6 +38,7 @@ function ResultTrip() {
   }
 
   const handleSubmit = (e) => {
+    localStorage.setItem("hasTrip", "1");
     navigate('/payment');
   }
 
@@ -79,11 +80,9 @@ function ResultTrip() {
   return (
     <div>
       <MainContainer>
-        <ContainerLeft>
           <LeftImage>
             <ButtonBack className="buttonBack" />
           </LeftImage>
-        </ContainerLeft>
         <Container>
           {
             isMobile ? <Modal

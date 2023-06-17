@@ -65,6 +65,8 @@ export const LeftImage = styled.div`
     background-position-y: 30%;
     min-height: 100vh;
     width: 25vw;
+    position: fixed;
+    
 
     @media only screen and (max-width: 1570px) {
         width: 31vw;
@@ -76,8 +78,8 @@ export const LeftImage = styled.div`
 `;
 
 export const Container = styled.div`
-    width: 75%;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     background-color: #F6F6F6;
     padding: 100px 150px 80px 150px;
     overflow : visible;
@@ -85,6 +87,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-left: 25%;
 
     .bannerBasicInfo {
         display: flex;
@@ -262,6 +265,7 @@ export const Container = styled.div`
     @media only screen and (max-width: 1106px) {
         width: 100%;
         height: 100vh;
+        margin-left: 0px;
 
         padding: 7% 7% 8%;
         
@@ -532,7 +536,7 @@ color: white;}
       font-weight: 500;
       font-size: 16px;}
 
-      @media (max-width: 1100px)
+      @media (max-width: 1106px)
       { display: none;
         
 
@@ -544,15 +548,15 @@ export const Footer = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 70%;
-  margin-top: 22%;
+  margin-top: 13%;
   margin-left: 28%;
 
   @media screen and (max-width: 1550px) {
     margin-top: 10%;
   }
 
-  @media screen and (max-width: 1100px) {
-    margin: 47% auto 0;
+  @media screen and (max-width: 1106px) {
+    margin: 22vh auto 0;
     width: 100%;
     flex-direction: column-reverse;
   }

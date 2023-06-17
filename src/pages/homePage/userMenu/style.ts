@@ -92,7 +92,7 @@ export const Container = styled.div`
       color : #FFF
    }
 
-   @media (max-width:900px) {width:100%;
+   @media (max-width:900px) {width:295px;
    }
 `
 
@@ -103,7 +103,7 @@ export const MyProfile = styled.div`
    margin-left: -55px;
 
 
-.profilePhotoMobile {display: none;}
+// .profilePhotoMobile {display: none;}
 
    .verticalAlign {
       margin-top: 2px;
@@ -112,25 +112,30 @@ export const MyProfile = styled.div`
    }
 
    .verticalAlign input{
-      font-size: 18px;
+      font-size: 1.2rem;
       font-weight: 500;
       border:0;
       outline:0;
-      width: 77%;
+      background-color: #fff;
    }
 
    .verticalAlign p {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 400;
       color: #000;
    }
    
-   @media (max-width:900px) {width:100vh;
+   @media (max-width:900px) {width:33vw;
 
+      .verticalAlign input{
+         // font-size: 18px;
+         width: 20vw;
+      }
 
-      .profilePhotoMobile {width: 50px;
-      height: 50px;
-   background-color: ${props => props.theme.colors.primaryColor}};
+      .verticalAlign p {
+         // font-size: 16px;
+         width: 100%;
+      }
 
    }
 `

@@ -10,7 +10,7 @@ import validator from 'validator';
 
 import { MainContainer, LeftImage, Container, Calendar } from "./styles";
 
-import { api } from "../../services/Api";
+import { getUserInfo } from "services/Api";
 
 function NewTrip(){
 
@@ -20,6 +20,16 @@ function NewTrip(){
     const [activeCalendar, setActiveCalendar] = useState(false)
     const [tripInfo, setTripInfo] = useState({ period: '', start_date: '', end_date: '', days: '', numberPeople: 0});
     const [periodError, setPeriodError] = useState("");
+      
+    const [userInfo, setUserInfo] = useState([]);
+
+    useEffect(() => {
+        getUserInfo()
+        .then((res) => {setUserInfo(res.data.user)})
+        .catch((err) => {
+            console.log(err)
+        });
+    }, []);
 
     const AddPeople = () => {
         setNumberPeople(numberPeople => numberPeople + 1);
@@ -44,6 +54,10 @@ function NewTrip(){
             document.getElementById("calendar").style.display = "none";
         }
     });
+
+    const handleBack = (e) => {
+        navigate('/home');
+      }
 
     const handleSubmit = (e) => {
 
@@ -283,10 +297,10 @@ function NewTrip(){
                             {numberPeople}
                         </span>
                         {/* <button className="btnPlus" onClick={AddPeople}> */}
-                            <FaPlus style={{fontSize: "40px", padding: "9px", color: "#3BB29D"}} className="btnPlus" onClick={AddPeople}/>
+                            <FaPlus style={{fontSize: "40px", padding: "9px", color: "#3BB29D", cursor: "pointer"}} className="btnPlus" onClick={AddPeople}/>
                         {/* </button> */}
                         {/* <button className="btnMinus" onClick={RemovePeople}> */}
-                        <FaMinus style={{fontSize: "40px", padding: "0px 11px", color: "#3BB29D"}} className="btnMinus" onClick={RemovePeople}/>
+                        <FaMinus style={{fontSize: "40px", padding: "0px 11px", color: "#3BB29D", cursor: "pointer"}} className="btnMinus" onClick={RemovePeople}/>
                         {/* </button> */}
                         
                     </div>
@@ -296,9 +310,9 @@ function NewTrip(){
                 <div className="displayFlexRow">
                     <div className="verticalLine"></div>
                     <div className="displayFlexColumn">
-                        <h4>Entrevista Marcelo</h4>
+                        <h4>Entrevista {userInfo.name_user}</h4>
                         <p>Para pesquisar a melhor viagem, levamos em consideração a sua entrevista de perfil</p>
-                        <Link to='/editProfile' className="link">
+                        <Link to='/profile' className="link">
                             <a>Editar Perfil</a>
                         </Link>
                     </div>
@@ -312,6 +326,7 @@ function NewTrip(){
                         className="btnPrevious"
                         type="submit"
                         value="Voltar"
+                        onClick={handleBack}
                     />
                 </div>
             </form>

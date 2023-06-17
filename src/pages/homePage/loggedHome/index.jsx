@@ -12,21 +12,33 @@ import UserMenu from "../userMenu";
 import UserMenuDesktop from "../userMenu/userMenuDesktop";
 import MenuMobile from "../components/headerMenuMobile";
 
-
+import { useState, useEffect } from "react";
+import { getUserInfo } from "services/Api";
 
 
 function LoggedHome() {
+
+  const [userInfo, setUserInfo] = useState([]);
+
+  useEffect(() => {
+    getUserInfo()
+      .then((res) => {setUserInfo(res.data.user)})
+      .catch((err) => {
+        console.log(err)
+      });
+  }, []);
+  
   return (
     <PageGrid>
-      <MenuMobile></MenuMobile>
+      <MenuMobile isHome="0"></MenuMobile>
       <LayoutGrid>
 
-        <UserMenuDesktop></UserMenuDesktop>
+        <UserMenuDesktop isHome="0"></UserMenuDesktop>
 
 
         <MainDiv>
           <div className="pStyle">
-            <p className="alignFirstP">Fala <b> Marcelo </b>, tudo pronto para sua viagem?</p>
+            <p className="alignFirstP">Fala <b>{userInfo.name_user}</b>, tudo pronto para sua viagem?</p>
           </div>
           <QuadroDeViagem>
             <div className="titleAlign">

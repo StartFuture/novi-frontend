@@ -12,8 +12,14 @@ import CarrouselTop from "./components/CarrouselTop/carrouselTop";
 import DescubraNovasExperiencias from "./components/CarrouselTop/CarrouselTopText/DescubraNovasExperiencias"
 
 
+
+
 function LandingPage() {
   const [comments, setComments] = useState([]);
+
+  localStorage.setItem("hasTrip", "0");
+
+  console.log(localStorage.getItem("hasTrip"));
 
   useEffect(() => {
     api.get("/get-comment")

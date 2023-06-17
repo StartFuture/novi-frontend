@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { LayoutGrid, PageGrid, MainDiv, SecondaryDiv, Button, Wrapper, AlignNewTravel, InfoTravel, InfoTravelMobile, Calendar, CalendarMobile, OldTravels, CardOldTravel, CurrentTravel, CardCurrentTravel, PlaceInfo, PlaceInfo2 } from "./style"
 import UserMenu from "../../homePage/userMenu";
 import MenuMobile from "../../homePage/components/headerMenuMobile"
@@ -11,25 +11,32 @@ import { AiFillCalendar } from "react-icons/ai"
 import { FaUser } from "react-icons/fa"
 import LocalMap from "../../../pages/homePage/assets/images/map.svg"
 
+import { Link } from "react-router-dom";
+
+import { getUserInfo } from "services/Api";
 
 
 function HomeViagemMarcada() {
 
+    const [userInfo, setUserInfo] = useState([]);
 
-
-
+    useEffect(() => {
+        getUserInfo()
+          .then((res) => {setUserInfo(res.data.user)})
+          .catch((err) => {
+            console.log(err)
+          });
+    }, []);
 
     return (
-
-
         <PageGrid>
             <LayoutGrid>
-                <MenuMobile></MenuMobile>
-                <UserMenuDesktop></UserMenuDesktop>
+                <MenuMobile isHome="1"></MenuMobile>
+                <UserMenuDesktop isHome="1"></UserMenuDesktop>
                 <MainDiv>
                     <AlignNewTravel>
-                        <p className="pStyle">Fala <b> Marcelo </b>, tudo pronto para sua viagem?</p>
-                        <Button>Nova viagem</Button>
+                        <p className="pStyle">Fala <b>{userInfo.name_user}</b>, tudo pronto para sua viagem?</p>
+                        <Link to='/new-trip' className="link"><Button>Nova viagem</Button></Link>
                     </AlignNewTravel>
 
                     <div className="boxImage">
@@ -399,8 +406,6 @@ function HomeViagemMarcada() {
 
                     </PlaceInfo2>
                     <OldTravels>
-
-
                         <CardOldTravel>
                             <div className="boxContent">
                                 <div className="firstText">
