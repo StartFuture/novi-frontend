@@ -58,6 +58,8 @@ const LoginPage = () => {
     }
   };
 
+  
+
   //HTML structure
   return (
     <div className="login">
@@ -122,10 +124,10 @@ const LoginPage = () => {
         <div className="loginOtherOption">
           <span className="loginOtherOptionText"> Ou entre com </span>
         </div>
-        <button className="loginFacebook" type="submit">
+        <button disabled className="loginFacebook" type="submit">
           <img src={Facebook} alt="Icone Facebook" /> Entrar com Facebook
         </button>
-        <button className="loginGoogle" type="submit">
+        <button disabled className="loginGoogle" type="submit">
           <img src={Google} alt="Icone Google" /> Entrar com Google
         </button>
       </form>
