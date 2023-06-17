@@ -15,6 +15,7 @@ export const LeftContainer = styled.div`
   min-width: 25%;
   background-color: ${(props) => props.theme.colors.primaryColor};
   min-height: 100%;
+  height: 100%;
   @media screen and (max-width: 1100px) {
     display: none;
   }
@@ -88,6 +89,7 @@ export const FormStyled = styled.div`
   flex-direction: column;
   margin-left: 18%;
   margin-top: 5.5%;
+  overflow: scroll;
 
   .header {
     font-size: 22px;

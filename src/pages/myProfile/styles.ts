@@ -126,5 +126,17 @@ export const Content = styled.div`
       width: 100%;
       margin: 5vh 5vw 0px;
     }
+
+    .personalInfoCouple {
+      display: block;
+    }
+
+    .addressInfoCouple1 {
+      display: block;
+    }
+
+    .addressInfoCouple2 {
+      display: block;
+    }
   }
 `;

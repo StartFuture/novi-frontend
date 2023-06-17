@@ -34,7 +34,7 @@ function ResultTrip() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   const handleBack = (e) => {
-    navigate('/new-trip');
+    navigate('/interview');
   }
 
   const handleSubmit = (e) => {
