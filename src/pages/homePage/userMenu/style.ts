@@ -27,7 +27,7 @@ export const UserMenuLeft = styled.div`
    }
 
    .lastContainer{
-      margin-top: 44vh;
+      height: 44vh;
    }
 
    .horizontalLine::after {
