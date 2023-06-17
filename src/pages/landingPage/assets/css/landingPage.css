@@ -1,281 +1,287 @@
 @import url("../../../../assets/css/novi.css");
 
-
-.carroselTopContainer {display: flex;
-margin: 120px 0px;
-height: 425px;
-min-width: 384px;
-justify-content: space-between;
-gap: 200px;}
-
-.lp {
-    background-color: #F3F3F3;
-  }
-
-.lpCommentsContainer { 
-    display: block;
-    max-width: 100%;
+.main {
+  max-width: 100vw;
+  overflow: hidden;
 }
 
-.lpCommentsContent { 
-    display: flex;
-    padding: 24px;
-    gap: 21px;
-    list-style: none;
-    justify-content: space-between;
+.carroselTopContainer {
+  display: flex;
+  margin: 120px 0px;
+  height: 425px;
+  min-width: 384px;
+  justify-content: space-between;
+  gap: 200px;
+}
+
+.lp {
+  background-color: #f3f3f3;
+}
+
+.lpCommentsContainer {
+  display: block;
+  max-width: 100%;
+}
+
+.lpCommentsContent {
+  display: flex;
+  padding: 24px;
+  gap: 21px;
+  list-style: none;
+  justify-content: space-between;
 }
 
 .lpCommentsCards {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    margin: 1rem;
-    padding: 10px;
-    width: 650px;
-    height: 160px;
-    border: 1px solid var(--light-gray-color);
-    border-radius: 10px;
-    font-size: 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: 1rem;
+  padding: 10px;
+  width: 650px;
+  height: 160px;
+  border: 1px solid var(--light-gray-color);
+  border-radius: 10px;
+  font-size: 10px;
 }
 
-.lpCommentsCards #commentsCardsGrid1 { 
-    display: flex;
-    justify-content: space-between;
+.lpCommentsCards #commentsCardsGrid1 {
+  display: flex;
+  justify-content: space-between;
 }
 
-.lpCommentsCards #commentsGrid1ImgName { 
-    display: flex;
+.lpCommentsCards #commentsGrid1ImgName {
+  display: flex;
 }
 
 .lpCommentsCards #cardImg {
-    display: flex; 
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-    width: 60px;
-    height: 60px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: var(--light-gray-color);
+  display: flex;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--light-gray-color);
 }
 
-.lpCommentsCards #cardNamePerfil { 
-    display: flex;
-    flex-direction: column;
+.lpCommentsCards #cardNamePerfil {
+  display: flex;
+  flex-direction: column;
 }
 
 .lpCommentsCards #cardName {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .lpCommentsCards #cardStars {
-    display: flex;
-    padding: 1rem;
-    color: var(--primary-color);
+  display: flex;
+  padding: 1rem;
+  color: var(--primary-color);
 }
 
-.lpCommentsCards #cardStars h4{
-    font-size: 1rem;
+.lpCommentsCards #cardStars h4 {
+  font-size: 1rem;
 }
 
 .lpCommentsCards #cardComment {
-    padding: 8px;
-    font-size: 10px;
+  padding: 8px;
+  font-size: 10px;
 }
 
 /*Mobile Query*/
-@media (max-width:480px) {
+@media (max-width: 480px) {
+  .LPNavbar .btnLandingPage {
+    display: none;
+  }
 
-    .LPNavbar .btnLandingPage {
-        display: none;
-    }
+  .LPBanner .btnLandingPage {
+    width: 40%;
+    height: 14%;
+    padding: 3%;
+    font-size: 0.8rem;
+    margin-top: 5%;
+  }
 
-    .LPBanner .btnLandingPage {
-        width: 40%;
-        height: 14%;
-        padding: 3%;
-        font-size: .8rem;
-        margin-top: 5%;
-    }
+  .LPHeader {
+    height: 41vh;
+    background-image: url("../img/lpTopBackground.png");
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: center 0;
+  }
 
-    .LPHeader {
-        height: 41vh;
-        background-image: url('../img/lpTopBackground.png');
-        background-repeat: no-repeat;
-        background-size: 200%;
-        background-position: center 0;
-    }    
-    
-    #bannerPhrase {
-        color: #FFF;
-        font-size: 32px;
-        max-width: 40vh;
-        margin-top: 10%;
-    }
+  #bannerPhrase {
+    color: #fff;
+    font-size: 32px;
+    max-width: 40vh;
+    margin-top: 10%;
+  }
 
-    .LPUs {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-        "LpUsText"
-        "LpOurImage"
-        "LpBackgroundUs";
-        height: 100%;
-        width: 100vh;
-        /* height: 160vh;
+  .LPUs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "LpUsText"
+      "LpOurImage"
+      "LpBackgroundUs";
+    height: 100%;
+    width: 100vh;
+    /* height: 160vh;
         max-height: 100vh;
         max-width: 10vh; */
-    }
+  }
 
-    .h4AboutUs {
-        font-size: 14px;
-    }
+  .h4AboutUs {
+    font-size: 14px;
+  }
 
-    #noviLogoUs {
-        font-size: 80px;
-    }
+  #noviLogoUs {
+    font-size: 80px;
+  }
 
-    .LpUsText {
-        max-width: 100vh;
-    }
+  .LpUsText {
+    max-width: 100vh;
+  }
 
-    .descriptionUs {
-        margin-bottom: 10%;
-        width: 40vh;
-        position: relative;
-    }
+  .descriptionUs {
+    margin-bottom: 10%;
+    width: 40vh;
+    position: relative;
+  }
 
-    .LpOurImage {
-        position: relative;
-        width: 70vw;
-        height: 76%;
-        left: 0;
-        top: 0;
-        z-index: 1;
-    }
+  .LpOurImage {
+    position: relative;
+    width: 70vw;
+    height: 76%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
 
-    .LpBackgroundUs {
-        width: 51vw;
-        height: 34%;
-        left: 22%;
-        top: 58%;
-    }
+  .LpBackgroundUs {
+    width: 51vw;
+    height: 34%;
+    left: 22%;
+    top: 58%;
+  }
 
-    #layoutCarrosel{
-        padding-top: 7vh;
-    }
+  #layoutCarrosel {
+    padding-top: 7vh;
+  }
 
-    #layoutImagesCarrosel {
-        display: none;
-    }
+  #layoutImagesCarrosel {
+    display: none;
+  }
 
-    #verticalLineCarrosel {
-        margin-top: -.2vh;
-        height: 10vh;
-        padding-right: 2vw;
-    }
+  #verticalLineCarrosel {
+    margin-top: -0.2vh;
+    height: 10vh;
+    padding-right: 2vw;
+  }
 
-    .lpCommentsContainer {
-        display: none;
-    }
-    
+  .lpCommentsContainer {
+    display: none;
+  }
 }
 
+@media (max-width: 1315px) {
+  .carroselTopContainer {
+    flex-direction: column;
+    height: 100%;
+  }
+}
 /*Tablet Query*/
-@media (min-width: 481px) and (max-width:768px) {
-
-    .carroselTopContainer {
-      
+@media (max-width: 768px) {
+  .carroselTopContainer {
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 500px;
-    margin-top: 180px;}
+    margin-top: 180px;
+  }
 
-    .LPNavbar .btnLandingPage {
-        display: none;
-    }
+  .LPNavbar .btnLandingPage {
+    display: none;
+  }
 
-    .LPBanner .btnLandingPage {
-        padding: 2% 4%;
-        margin-top: 3vh;
-        font-size: .8rem;
-    }
+  .LPBanner .btnLandingPage {
+    padding: 2% 4%;
+    margin-top: 3vh;
+    font-size: 0.8rem;
+  }
 
-    #bannerPhrase {
-        color: #FFF;
-        font-size: 32px;
-        max-width: 70vh;
-        margin-top: 10%;
-    }
-    .LPHeader {
-        height: 50vh;
-        background-image: url('../img/lpTopBackground.png');
-        background-repeat: no-repeat;
-        background-size: 200%;
-        background-position: center center;
-    }    
+  #bannerPhrase {
+    color: #fff;
+    font-size: 32px;
+    max-width: 70vh;
+    margin-top: 10%;
+  }
+  .LPHeader {
+    height: 50vh;
+    background-image: url("../img/lpTopBackground.png");
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: center center;
+  }
 
-    .LPUs {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-        "LpUsText"
-        "LpOurImage"
-        "LpBackgroundUs";
-        height: 100%;
-        width: 108vw;
-    }
+  .LPUs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "LpUsText"
+      "LpOurImage"
+      "LpBackgroundUs";
+    height: 100%;
+    width: 108vw;
+  }
 
-    .LpUsText {
-        max-width: 100%;
-    }
+  .LpUsText {
+    max-width: 100%;
+  }
 
-    .descriptionUs {
-        margin-bottom: 10%;
-        width: 90vw;
-        position: relative;
-    }
+  .descriptionUs {
+    margin-bottom: 10%;
+    width: 90vw;
+    position: relative;
+  }
 
-    .LpOurImage {
-        position: relative;
-        width: 75%;
-        height: 95%;
-        left: 0;
-        top: 0;
-        z-index: 1;
-    }
+  .LpOurImage {
+    position: relative;
+    width: 75%;
+    height: 95%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
 
-    .LpBackgroundUs {
-        width: 48.5%;
-        height: 42%;
-        left: 44%;
-        top: 54%;
-    }
+  .LpBackgroundUs {
+    width: 48.5%;
+    height: 42%;
+    left: 44%;
+    top: 54%;
+  }
 
-    #noviLogoUs {
-        font-size: 100px;
-    }
+  #noviLogoUs {
+    font-size: 100px;
+  }
 
-    #layoutCarrosel{
-        padding-top: 10vh;
-    }
+  #layoutCarrosel {
+    padding-top: 10vh;
+  }
 
-    #verticalLineCarrosel {
-        margin-top: -.2vh;
-        height: 13vh;
-        padding-right: 2vw;
-    }
+  #verticalLineCarrosel {
+    margin-top: -0.2vh;
+    height: 13vh;
+    padding-right: 2vw;
+  }
 
-    #layoutImagesCarrosel {
-        display: none;
-        padding-top: 5vh;
-    }
+  #layoutImagesCarrosel {
+    display: none;
+    padding-top: 5vh;
+  }
 
-    .lpCommentsContainer {
-        display: none;
-    }
-
-   
-
+  .lpCommentsContainer {
+    display: none;
+  }
 }
