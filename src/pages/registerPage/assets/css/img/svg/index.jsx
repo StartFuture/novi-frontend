@@ -177,7 +177,6 @@ function Registro() {
                   type="text"
                   id="name"
                   placeholder="Digite aqui"
-                  required
                   value={userInfo.name_user}
                   onChange={(e) => {
                     setUserInfo({ ...userInfo, name_user: e.target.value });
