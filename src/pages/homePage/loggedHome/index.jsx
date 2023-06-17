@@ -30,10 +30,10 @@ function LoggedHome() {
   
   return (
     <PageGrid>
-      <MenuMobile haveTrip="1" isHome="0"></MenuMobile>
+      <MenuMobile isHome="0"></MenuMobile>
       <LayoutGrid>
 
-        <UserMenuDesktop haveTrip="1" isHome="0"></UserMenuDesktop>
+        <UserMenuDesktop isHome="0"></UserMenuDesktop>
 
 
         <MainDiv>

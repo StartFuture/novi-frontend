@@ -13,7 +13,7 @@ import { getUserInfo } from "services/Api";
 
 
 function UserMenu(props){
-    const haveTrip = parseInt(props.haveTrip);
+    const hasTrip = parseInt(localStorage.hasTrip);
     const isHome = parseInt(props.isHome);
 
     const [userInfo, setUserInfo] = useState([]);
@@ -44,7 +44,7 @@ function UserMenu(props){
                     <SelectedContainer>
                         <AiFillHeart style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#FFF"}}/>
                         {
-                            haveTrip > 0 ? 
+                            hasTrip > 0 ? 
                             <Link to='/home-booked-travel' className="link">
                                 <p>Minhas viagens</p>
                             </Link>
@@ -66,7 +66,7 @@ function UserMenu(props){
                 <Container>
                     <AiFillHeart style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
                     {
-                        haveTrip > 0 ? 
+                        hasTrip > 0 ? 
                         <Link to='/home-booked-travel' className="link">
                             <p>Minhas viagens</p>
                         </Link>
@@ -88,7 +88,7 @@ function UserMenu(props){
                     <Container>
                         <AiFillHeart style={{fontSize: "40px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/>
                         {
-                            haveTrip > 0 ? 
+                            hasTrip > 0 ? 
                             <Link to='/home-booked-travel' className="link">
                                 <p>Minhas viagens</p>
                             </Link>
@@ -106,7 +106,7 @@ function UserMenu(props){
                 <div className="profilePhotoMobile"><BsFillCircleFill style={{fontSize: "50px", marginRight: "20px", marginLeft: "55px", color: "#3BB29D"}}/></div>
                 
                 <div className="verticalAlign">
-                    <input type="text" value={userInfo.name_user}></input>
+                    <input type="text" value={userInfo.name_user} disabled></input>
                     <Link to='/profile' className="link">
                         <p>Ver perfil</p>
                     </Link>

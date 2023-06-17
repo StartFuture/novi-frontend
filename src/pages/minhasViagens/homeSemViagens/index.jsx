@@ -33,8 +33,8 @@ function HomeSemViagemMarcada() {
     return (
         <PageGrid>
             <LayoutGrid>
-                <MenuMobile haveTrip="0" isHome="1"></MenuMobile>
-                <UserMenuDesktop haveTrip="0" isHome="1"></UserMenuDesktop>
+                <MenuMobile isHome="1"></MenuMobile>
+                <UserMenuDesktop isHome="1"></UserMenuDesktop>
                 <MainDiv>
                     <AlignNewTravel>
                         <p className="pStyle">Fala <b>{userInfo.name_user}</b>, Vamos viajar?</p>

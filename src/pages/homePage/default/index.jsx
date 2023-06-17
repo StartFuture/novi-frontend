@@ -25,8 +25,8 @@ function DefaultHome() {
   
   return (      
       <LayoutGrid>
-        <MenuMobile haveTrip="0" isHome="0"></MenuMobile>
-        <UserMenuDesktop haveTrip="0" isHome="0"></UserMenuDesktop>
+        <MenuMobile isHome="0"></MenuMobile>
+        <UserMenuDesktop isHome="0"></UserMenuDesktop>
         <MainDiv>
           <p className="pStyle">Fala <b>{userInfo.name_user}</b>, vamos viajar?</p>
           <SecondaryDiv>

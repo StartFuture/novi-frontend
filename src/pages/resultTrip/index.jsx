@@ -38,6 +38,7 @@ function ResultTrip() {
   }
 
   const handleSubmit = (e) => {
+    localStorage.setItem("hasTrip", "1");
     navigate('/payment');
   }
 
