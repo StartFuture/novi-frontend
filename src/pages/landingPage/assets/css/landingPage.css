@@ -182,8 +182,7 @@ gap: 200px;}
 }
 
 /*Tablet Query*/
-@media (min-width: 481px) and (max-width:768px) {
-
+@media (min-width: 1px) and (max-width: 900px) {
     .carroselTopContainer {
       
     flex-direction: column;
@@ -223,8 +222,8 @@ gap: 200px;}
         "LpUsText"
         "LpOurImage"
         "LpBackgroundUs";
-        height: 100%;
-        width: 108vw;
+        height: 160vh;
+        width: 100vw;
     }
 
     .LpUsText {

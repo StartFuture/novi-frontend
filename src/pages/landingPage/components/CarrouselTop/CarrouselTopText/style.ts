@@ -33,7 +33,7 @@ padding-left: 20px;
 display: flex;
 justify-content: flex-start;
 align-items: center;
-width: 400px;
+width: 100%;
 height: 115px;
 }
 
@@ -42,11 +42,21 @@ height: 115px;
       font-size: 42px;
     color: ${props => props.theme.colors.primaryColor};}
 
-    @media (min-width: 1px) and (max-width:768px) {
+    @media (min-width: 1px) and (max-width:900px) {
       margin-left: 20vh;
       width: 155px;
       margin-left: 155px;
 
+
+
+      .BorderColor h2 {font-family: ${props => props.theme.fonts.fontMontserrat};
+      font-weight: 700;
+      font-size: 24px;
+    color: ${props => props.theme.colors.primaryColor};}
     }
+
+    .divTextAlign p {font-family: ${props => props.theme.fonts.fontMontserrat};
+      font-weight: 400;
+      font-size: 14px;}
 
     `
